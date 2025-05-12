@@ -129,7 +129,7 @@
             <tr><th>Вика</th><td style="--size: calc(1 / 44.5 * 13.21);">13,2</td></tr>
         </tbody>
     </table>
-    <div class="button-group">
+    <div id="group-1" class="button-group">
         <button class="toggle-btn active" onclick="tableGroup1('hours')">Часы</button>
         <button class="toggle-btn" onclick="tableGroup1('days')">Дни</button>
     </div>
@@ -168,7 +168,7 @@
             <tr><th>Денис</th><td style="--size: calc(1 / 7.28 * 6.96);">6.96</td></tr>
         </tbody>
     </table>
-    <div class="button-group">
+    <div id="group-2" class="button-group">
         <button class="toggle-btn active" onclick="tableGroup2('all')">Общий</button>
         <button class="toggle-btn" onclick="tableGroup2('imdb')">IMDb</button>
         <button class="toggle-btn" onclick="tableGroup2('kp')">КП</button>
@@ -180,7 +180,7 @@
         function tableGroup1(type) {
             const tableHours = document.getElementById("group-1-button-1");
             const tableDays = document.getElementById("group-1-button-2");
-            const buttons = document.querySelectorAll(".toggle-btn");
+            const buttons = document.querySelectorAll("#group-1 .toggle-btn");
             if (type === 'hours') {
                 tableHours.classList.remove("hidden");
                 tableDays.classList.add("hidden");
@@ -189,13 +189,13 @@
                 tableDays.classList.remove("hidden");
             }
             buttons.forEach(btn => btn.classList.remove("active"));
-            document.querySelector(`.toggle-btn[onclick*="${type}"]`).classList.add("active");
+            document.querySelector(`#group-1 .toggle-btn[onclick*="${type}"]`).classList.add("active");
         }
         function tableGroup2(type) {
             const tableAll = document.getElementById("group-2-button-1");
             const tableImdb = document.getElementById("group-2-button-2");
             const tableKp = document.getElementById("group-2-button-3");
-            const buttons = document.querySelectorAll(".toggle-btn");
+            const buttons = document.querySelectorAll("#group-2 .toggle-btn");
             if (type === 'all') {
                 tableAll.classList.remove("hidden");
                 tableImdb.classList.add("hidden");
@@ -210,7 +210,7 @@
                 tableKp.classList.remove("hidden");
             }
             buttons.forEach(btn => btn.classList.remove("active"));
-            document.querySelector(`.toggle-btn[onclick*="${type}"]`).classList.add("active");
+            document.querySelector(`#group-2 .toggle-btn[onclick*="${type}"]`).classList.add("active");
         }
     </script>
 
