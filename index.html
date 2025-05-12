@@ -126,35 +126,6 @@
 
 
 
-    <table id="table-minutes" class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2 hidden">
-        <caption>Потрачено времени</caption>
-        <tbody>
-            <tr>
-                <th>Артур</th>
-                <td style="--size: calc(1);">64 090</td>
-            </tr>
-            <tr>
-                <th>Денис</th>
-                <td style="--size: calc(1 / 1068 * 1067);">64 043</td>
-            </tr>
-            <tr>
-                <th>Никита</th>
-                <td style="--size: calc(1 / 1068 * 652);">39 149</td>
-            </tr>
-            <tr>
-                <th>Ваня</th>
-                <td style="--size: calc(1 / 1068 * 472);">28 338</td>
-            </tr>
-            <tr>
-                <th>Федя</th>
-                <td style="--size: calc(1 / 1068 * 384);">23 069</td>
-            </tr>
-            <tr>
-                <th>Вика</th>
-                <td style="--size: calc(1 / 1068 * 317);">19 036</td>
-            </tr>
-        </tbody>
-    </table>
 
     <table id="table-hours" class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2">
         <caption>Потрачено времени</caption>
@@ -218,7 +189,6 @@
 
 
     <div class="button-group">
-        <button class="toggle-btn" onclick="showTable('minutes')">Минуты</button>
         <button class="toggle-btn active" onclick="showTable('hours')">Часы</button>
         <button class="toggle-btn" onclick="showTable('days')">Дни</button>
     </div>
@@ -226,21 +196,14 @@
 
     <script>
         function showTable(type) {
-            const tableMinutes = document.getElementById("table-minutes");
             const tableHours = document.getElementById("table-hours");
             const tableDays = document.getElementById("table-days");
             const buttons = document.querySelectorAll(".toggle-btn");
 
             if (type === 'hours') {
-                tableMinutes.classList.add("hidden");
                 tableHours.classList.remove("hidden");
                 tableDays.classList.add("hidden");
-            } else if (type === 'minutes') {
-                tableMinutes.classList.remove("hidden");
-                tableHours.classList.add("hidden");
-                tableDays.classList.add("hidden");
             } else {
-                tableDays.classList.add("hidden");
                 tableHours.classList.add("hidden");
                 tableDays.classList.remove("hidden");
             }
