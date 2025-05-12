@@ -34,23 +34,24 @@
 
         .movie-chart {
             --color: #749C6C;
+            --aspect-ratio: 2 / 1;
         }
 
         .charts-css.show-heading caption {
-            font-size: 1.1rem;
+            font-size: 1.25rem;
             padding: 2.5rem 0 0.5rem 0;
-            color: #90b089;
+            /* color: #90b089; */
             font-family: 'Sf Pro Display Bold', Arial, sans-serif;
         }
-        
+
         /* Уменьшить ширину места для имён */
         .charts-css.bar {
             --labels-size: 3.75rem;
         }
-        
+
         table.charts-css td {
             padding: 0.25rem;
-            font-size: 0.85rem;
+            /* font-size: 0.85rem; */
             border-radius: 0.35rem;
         }
 
@@ -58,6 +59,36 @@
         /* th {
             color: #749C6C;
         } */
+
+
+
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            margin-top: 0.5rem;
+            gap: 0.5rem;
+        }
+
+        .toggle-btn {
+            padding: 0.25rem 2rem;
+            background-color: #000000;
+            color: #749C6C;
+            border: 1px solid #749C6C;
+            cursor: pointer;
+            border-radius: 0.35rem;
+            font-size: 0.9rem;
+            font-family: 'Sf Pro Display Bold', Arial, sans-serif;
+        }
+
+        .toggle-btn.active {
+            background-color: #2e3e2b;
+            /* color: black; */
+        }
+
+        .hidden {
+            display: none !important;
+        }
     </style>
 </head>
 
@@ -67,32 +98,157 @@
         <caption>Просмотренно фильмов</caption>
         <tbody>
             <tr>
-                <th>ВСЕГО</th>
-                <td style="--size: calc(1);">1096</td>
-            </tr>
-            <tr>
                 <th>Денис</th>
-                <td style="--size: calc(1 / 1096 * 558);">558</td>
+                <td style="--size: calc(1);">558</td>
             </tr>
             <tr>
                 <th>Артур</th>
-                <td style="--size: calc(1 / 1096 * 530);">530</td>
+                <td style="--size: calc(1 / 558 * 530);">530</td>
             </tr>
             <tr>
                 <th>Никита</th>
-                <td style="--size: calc(1 / 1096 * 336);">336</td>
+                <td style="--size: calc(1 / 558 * 336);">336</td>
             </tr>
             <tr>
                 <th>Ваня</th>
-                <td style="--size: calc(1 / 1096 * 242);">242</td>
+                <td style="--size: calc(1 / 558 * 242);">242</td>
             </tr>
             <tr>
                 <th>Федя</th>
-                <td style="--size: calc(1 / 1096 * 184);">184</td>
+                <td style="--size: calc(1 / 558 * 184);">184</td>
+            </tr>
+            <tr>
+                <th>Вика</th>
+                <td style="--size: calc(1 / 558 * 158);">158</td>
             </tr>
         </tbody>
-
     </table>
+
+
+
+    <table id="table-minutes" class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2 hidden">
+        <caption>Потрачено времени</caption>
+        <tbody>
+            <tr>
+                <th>Артур</th>
+                <td style="--size: calc(1);">64 090</td>
+            </tr>
+            <tr>
+                <th>Денис</th>
+                <td style="--size: calc(1 / 1068 * 1067);">64 043</td>
+            </tr>
+            <tr>
+                <th>Никита</th>
+                <td style="--size: calc(1 / 1068 * 652);">39 149</td>
+            </tr>
+            <tr>
+                <th>Ваня</th>
+                <td style="--size: calc(1 / 1068 * 472);">28 338</td>
+            </tr>
+            <tr>
+                <th>Федя</th>
+                <td style="--size: calc(1 / 1068 * 384);">23 069</td>
+            </tr>
+            <tr>
+                <th>Вика</th>
+                <td style="--size: calc(1 / 1068 * 317);">19 036</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table id="table-hours" class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2">
+        <caption>Потрачено времени</caption>
+        <tbody>
+            <tr>
+                <th>Артур</th>
+                <td style="--size: calc(1);">1068</td>
+            </tr>
+            <tr>
+                <th>Денис</th>
+                <td style="--size: calc(1 / 1068 * 1067);">1067</td>
+            </tr>
+            <tr>
+                <th>Никита</th>
+                <td style="--size: calc(1 / 1068 * 652);">652</td>
+            </tr>
+            <tr>
+                <th>Ваня</th>
+                <td style="--size: calc(1 / 1068 * 472);">472</td>
+            </tr>
+            <tr>
+                <th>Федя</th>
+                <td style="--size: calc(1 / 1068 * 384);">384</td>
+            </tr>
+            <tr>
+                <th>Вика</th>
+                <td style="--size: calc(1 / 1068 * 317);">317</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table id="table-days" class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2 hidden">
+        <caption>Потрачено времени</caption>
+        <tbody>
+            <tr>
+                <th>Артур</th>
+                <td style="--size: calc(1);">44,5</td>
+            </tr>
+            <tr>
+                <th>Денис</th>
+                <td style="--size: calc(1 / 44.5 * 44.46);">44,5</td>
+            </tr>
+            <tr>
+                <th>Никита</th>
+                <td style="--size: calc(1 / 44.5 * 27.17);">27,2</td>
+            </tr>
+            <tr>
+                <th>Ваня</th>
+                <td style="--size: calc(1 / 44.5 * 19.67);">19,7</td>
+            </tr>
+            <tr>
+                <th>Федя</th>
+                <td style="--size: calc(1 / 44.5 * 16);">16</td>
+            </tr>
+            <tr>
+                <th>Вика</th>
+                <td style="--size: calc(1 / 44.5 * 13.21);">13,2</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <div class="button-group">
+        <button class="toggle-btn" onclick="showTable('minutes')">Минуты</button>
+        <button class="toggle-btn active" onclick="showTable('hours')">Часы</button>
+        <button class="toggle-btn" onclick="showTable('days')">Дни</button>
+    </div>
+
+
+    <script>
+        function showTable(type) {
+            const tableMinutes = document.getElementById("table-minutes");
+            const tableHours = document.getElementById("table-hours");
+            const tableDays = document.getElementById("table-days");
+            const buttons = document.querySelectorAll(".toggle-btn");
+
+            if (type === 'hours') {
+                tableMinutes.classList.add("hidden");
+                tableHours.classList.remove("hidden");
+                tableDays.classList.add("hidden");
+            } else if (type === 'minutes') {
+                tableMinutes.classList.remove("hidden");
+                tableHours.classList.add("hidden");
+                tableDays.classList.add("hidden");
+            } else {
+                tableDays.classList.add("hidden");
+                tableHours.classList.add("hidden");
+                tableDays.classList.remove("hidden");
+            }
+
+            buttons.forEach(btn => btn.classList.remove("active"));
+            document.querySelector(`.toggle-btn[onclick*="${type}"]`).classList.add("active");
+        }
+    </script>
 
 </body>
 
