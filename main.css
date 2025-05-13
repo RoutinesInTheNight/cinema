@@ -17,6 +17,7 @@ body {
   background-color: black;
   color: #d5e1d3;
   font-family: 'Sf Pro Display Regular', Arial, sans-serif;
+  overflow-x: hidden;
 }
 
 .movie-chart {
