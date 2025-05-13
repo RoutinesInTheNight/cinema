@@ -49,12 +49,15 @@ table.charts-css td {
 
 .button-group {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin-top: 0.5rem;
   gap: 0.5rem;
 }
 
 .toggle-btn {
+  flex: 1 1 30%;
+  max-width: 30%;
   padding: 0.25rem 2rem;
   background-color: #000000;
   color: #749C6C;
