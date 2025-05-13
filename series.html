@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta
+        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height"
+        name="viewport" />
+    <title>Банда «Псы»</title>
+    <link href="charts.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="css/home.css"> -->
+    <!-- <script src="https://telegram.org/js/telegram-web-app.js"></script> -->
+    <style>
+        @font-face {
+            font-family: 'Sf Pro Display Regular';
+            src: url('fonts/SFPRODISPLAYREGULAR.OTF') format('truetype')
+        }
+
+        @font-face {
+            font-family: 'Sf Pro Display Medium';
+            src: url('fonts/SFPRODISPLAYMEDIUM.OTF') format('truetype')
+        }
+
+        @font-face {
+            font-family: 'Sf Pro Display Bold';
+            src: url('fonts/SFPRODISPLAYBOLD.OTF') format('truetype')
+        }
+
+        body {
+            background-color: black;
+            color: #d5e1d3;
+            font-family: 'Sf Pro Display Regular', Arial, sans-serif;
+        }
+
+        .movie-chart {
+            --color: #749C6C;
+            --aspect-ratio: 2 / 1;
+        }
+
+        .charts-css.show-heading caption {
+            font-size: 1.25rem;
+            padding: 4rem 0 0.5rem 0;
+            /* color: #90b089; */
+            font-family: 'Sf Pro Display Bold', Arial, sans-serif;
+        }
+
+        /* Уменьшить ширину места для имён */
+        .charts-css.bar {
+            --labels-size: 3.75rem;
+        }
+
+        table.charts-css td {
+            padding: 0.25rem;
+            /* font-size: 0.85rem; */
+            border-radius: 0.35rem;
+        }
+
+
+
+
+
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            margin-top: 0.5rem;
+            gap: 0.5rem;
+        }
+
+        .toggle-btn {
+            padding: 0.25rem 2rem;
+            background-color: #000000;
+            color: #749C6C;
+            border: 1px solid #749C6C;
+            cursor: pointer;
+            border-radius: 0.35rem;
+            font-size: 0.9rem;
+            font-family: 'Sf Pro Display Bold', Arial, sans-serif;
+            transition: background-color 0.1s;
+        }
+
+        .toggle-btn.active {
+            background-color: #2e3e2b;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+
+
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #1C1C1C;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-top: 0.1rem solid #3D3C3F;
+            padding: 1rem 0 1.5rem 0;
+            z-index: 1000;
+        }
+
+        .nav-item {
+            flex: 1;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-family: 'Sf Pro Display Medium', Arial, sans-serif;
+            opacity: 0.5;
+        }
+
+        .nav-item img {
+            width: 1.8rem;
+            height: 1.8rem;
+            display: block;
+            margin: 0 auto 0.25rem auto;
+        }
+
+        .bottom-nav .selected {
+            opacity: 1;
+        }
+
+        .logo-container {
+            position: relative;
+            pointer-events: none;
+            margin: 0 auto;
+            width: 100%;
+            text-align: center;
+            padding: 4rem 0 0 0;
+        }
+
+        .logo {
+            width: 50%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo-container">
+        <img class="logo" src="img/logo.png" />
+    </div>
+    <table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2" id="table-1">
+        <caption>Просмотрено сериалов</caption>
+        <tbody>
+            <tr>
+                <th>Артур</th>
+                <td style="--size: calc(1);">66</td>
+            </tr>
+            <tr>
+                <th>Никита</th>
+                <td style="--size: calc(1 / 66 * 47);">47</td>
+            </tr>
+            <tr>
+                <th>Федя</th>
+                <td style="--size: calc(1 / 66 * 41);">41</td>
+            </tr>
+            <tr>
+                <th>Денис</th>
+                <td style="--size: calc(1 / 66 * 40);">40</td>
+            </tr>
+            <tr>
+                <th>Вика</th>
+                <td style="--size: calc(1 / 66 * 13);">13</td>
+            </tr>
+            <tr>
+                <th>Ваня</th>
+                <td style="--size: calc(1 / 66 * 11);">11</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2" id="group-2-table-1">
+        <caption>Средний рейтинг</caption>
+        <tbody>
+            <tr>
+                <th>Федя</th>
+                <td style="--size: calc(0.9658122358582233);">8.23</td>
+            </tr>
+            <tr>
+                <th>Ваня</th>
+                <td style="--size: calc(0.9401328993086093);">8.20</td>
+            </tr>
+            <tr>
+                <th>Вика</th>
+                <td style="--size: calc(0.8561668664905675);">8.08</td>
+            </tr>
+            <tr>
+                <th>Артур</th>
+                <td style="--size: calc(0.8117251423708212);">8.02</td>
+            </tr>
+            <tr>
+                <th>Денис</th>
+                <td style="--size: calc(0.5797900573216255);">7.71</td>
+            </tr>
+            <tr>
+                <th>Никита</th>
+                <td style="--size: calc(0.5285498687705358);">7.64</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2 hidden"
+        id="group-2-table-2">
+        <caption>Средний рейтинг</caption>
+        <tbody>
+            <tr>
+                <th>Ваня</th>
+                <td style="--size: calc(1.0);">8.28</td>
+            </tr>
+            <tr>
+                <th>Федя</th>
+                <td style="--size: calc(0.9962331793079546);">8.27</td>
+            </tr>
+            <tr>
+                <th>Артур</th>
+                <td style="--size: calc(0.8456046310440739);">8.07</td>
+            </tr>
+            <tr>
+                <th>Вика</th>
+                <td style="--size: calc(0.8150042773813857);">8.03</td>
+            </tr>
+            <tr>
+                <th>Никита</th>
+                <td style="--size: calc(0.31818362783413107);">7.36</td>
+            </tr>
+            <tr>
+                <th>Денис</th>
+                <td style="--size: calc(0.3);">7.33</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2 hidden"
+        id="group-2-table-3">
+        <caption>Средний рейтинг</caption>
+        <tbody>
+            <tr>
+                <th>Ваня</th>
+                <td style="--size: calc(0.8151106382563702);">8.03</td>
+            </tr>
+            <tr>
+                <th>Федя</th>
+                <td style="--size: calc(0.8070968941783541);">8.02</td>
+            </tr>
+            <tr>
+                <th>Вика</th>
+                <td style="--size: calc(0.773727631578884);">7.97</td>
+            </tr>
+            <tr>
+                <th>Артур</th>
+                <td style="--size: calc(0.6911941070254712);">7.86</td>
+            </tr>
+            <tr>
+                <th>Никита</th>
+                <td style="--size: calc(0.5108474322003058);">7.62</td>
+            </tr>
+            <tr>
+                <th>Денис</th>
+                <td style="--size: calc(0.5034001151222579);">7.61</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="button-group" id="group-2">
+        <button class="toggle-btn active" onclick="tableGroup2('all')">Общий</button>
+        <button class="toggle-btn" onclick="tableGroup2('imdb')">IMDb</button>
+        <button class="toggle-btn" onclick="tableGroup2('kp')">КП</button>
+    </div>
+
+
+    <table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2" id="group-3-table-1">
+        <caption>Среднее кол-во оценок сериала</caption>
+        <tbody>
+            <tr>
+                <th>Федя</th>
+                <td style="--size: calc(0.8122244149127729);">392k</td>
+            </tr>
+            <tr>
+                <th>Артур</th>
+                <td style="--size: calc(0.6351982962682221);">315k</td>
+            </tr>
+            <tr>
+                <th>Вика</th>
+                <td style="--size: calc(0.5638353547441108);">284k</td>
+            </tr>
+            <tr>
+                <th>Ваня</th>
+                <td style="--size: calc(0.5618440237748951);">283k</td>
+            </tr>
+            <tr>
+                <th>Денис</th>
+                <td style="--size: calc(0.42187055687013464);">222k</td>
+            </tr>
+            <tr>
+                <th>Никита</th>
+                <td style="--size: calc(0.3982432021652504);">212k</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2 hidden"
+        id="group-3-table-2">
+        <caption>Среднее кол-во оценок сериала</caption>
+        <tbody>
+            <tr>
+                <th>Федя</th>
+                <td style="--size: calc(1.0);">473k</td>
+            </tr>
+            <tr>
+                <th>Артур</th>
+                <td style="--size: calc(0.7611810814870978);">370k</td>
+            </tr>
+            <tr>
+                <th>Ваня</th>
+                <td style="--size: calc(0.6061403379909158);">302k</td>
+            </tr>
+            <tr>
+                <th>Денис</th>
+                <td style="--size: calc(0.43718483575660094);">229k</td>
+            </tr>
+            <tr>
+                <th>Вика</th>
+                <td style="--size: calc(0.3673736206288926);">199k</td>
+            </tr>
+            <tr>
+                <th>Никита</th>
+                <td style="--size: calc(0.3);">170k</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2 hidden"
+        id="group-3-table-3">
+        <caption>Среднее кол-во оценок сериала</caption>
+        <tbody>
+            <tr>
+                <th>Вика</th>
+                <td style="--size: calc(0.7602665470474662);">369k</td>
+            </tr>
+            <tr>
+                <th>Федя</th>
+                <td style="--size: calc(0.624448829825546);">310k</td>
+            </tr>
+            <tr>
+                <th>Никита</th>
+                <td style="--size: calc(0.5405827339613598);">274k</td>
+            </tr>
+            <tr>
+                <th>Артур</th>
+                <td style="--size: calc(0.5220394688582614);">266k</td>
+            </tr>
+            <tr>
+                <th>Ваня</th>
+                <td style="--size: calc(0.5175477095588743);">264k</td>
+            </tr>
+            <tr>
+                <th>Денис</th>
+                <td style="--size: calc(0.44107262618380394);">231k</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="button-group" id="group-3">
+        <button class="toggle-btn active" onclick="tableGroup3('all')">Общее</button>
+        <button class="toggle-btn" onclick="tableGroup3('imdb')">IMDb</button>
+        <button class="toggle-btn" onclick="tableGroup3('kp')">КП</button>
+    </div>
+    <table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2" id="table-3"
+        style="--labels-size: 7.75rem; --aspect-ratio: 1 / 1;">
+        <caption>Общие просмотренные сериалы</caption>
+        <tbody>
+            <tr>
+                <th>Федя и Артур</th>
+                <td style="--size: calc(1);">25</td>
+            </tr>
+            <tr>
+                <th>Никита и Артур</th>
+                <td style="--size: calc(1 / 25 * 16);">16</td>
+            </tr>
+            <tr>
+                <th>Денис и Артур</th>
+                <td style="--size: calc(1 / 25 * 9);">9</td>
+            </tr>
+            <tr>
+                <th>Федя и Денис</th>
+                <td style="--size: calc(1 / 25 * 8);">8</td>
+            </tr>
+            <tr>
+                <th>Вика и Артур</th>
+                <td style="--size: calc(1 / 25 * 7);">7</td>
+            </tr>
+            <tr>
+                <th>Федя и Никита</th>
+                <td style="--size: calc(1 / 25 * 7);">7</td>
+            </tr>
+            <tr>
+                <th>Ваня и Артур</th>
+                <td style="--size: calc(1 / 25 * 7);">7</td>
+            </tr>
+            <tr>
+                <th>Вика и Никита</th>
+                <td style="--size: calc(1 / 25 * 6);">6</td>
+            </tr>
+            <tr>
+                <th>Никита и Денис</th>
+                <td style="--size: calc(1 / 25 * 5);">5</td>
+            </tr>
+            <tr>
+                <th>Вика и Федя</th>
+                <td style="--size: calc(1 / 25 * 3);">3</td>
+            </tr>
+            <tr>
+                <th>Федя и Ваня</th>
+                <td style="--size: calc(1 / 25 * 3);">3</td>
+            </tr>
+            <tr>
+                <th>Никита и Ваня</th>
+                <td style="--size: calc(1 / 25 * 3);">3</td>
+            </tr>
+            <tr>
+                <th>Вика и Денис</th>
+                <td style="--size: calc(1 / 25 * 2);">2</td>
+            </tr>
+            <tr>
+                <th>Денис и Ваня</th>
+                <td style="--size: calc(1 / 25 * 1);">1</td>
+            </tr>
+            <tr>
+                <th>Вика и Ваня</th>
+                <td style="--size: calc(1 / 25 * 0);">0</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="bottom-nav">
+        <a class="nav-item" href="page1.html">
+            <img src="img/all.png" />
+            <span>Общее</span>
+        </a>
+        <a class="nav-item" href="index.html">
+            <img src="img/movie.png" />
+            <span>Фильмы</span>
+        </a>
+        <a class="nav-item selected">
+            <img src="img/tv.png" />
+            <span>Сериалы</span>
+        </a>
+    </div>
+    <div class="logo-container">
+        <img class="logo" src="img/logo.png" />
+    </div>
+    <script>
+        function tableGroup1(type) {
+            const tableHours = document.getElementById("group-1-table-1");
+            const tableDays = document.getElementById("group-1-table-2");
+            const buttons = document.querySelectorAll("#group-1 .toggle-btn");
+            if (type === 'hours') {
+                tableHours.classList.remove("hidden");
+                tableDays.classList.add("hidden");
+            } else {
+                tableHours.classList.add("hidden");
+                tableDays.classList.remove("hidden");
+            }
+            buttons.forEach(btn => btn.classList.remove("active"));
+            document.querySelector(`#group-1 .toggle-btn[onclick*="${type}"]`).classList.add("active");
+        }
+        function tableGroup2(type) {
+            const tableAll = document.getElementById("group-2-table-1");
+            const tableImdb = document.getElementById("group-2-table-2");
+            const tableKp = document.getElementById("group-2-table-3");
+            const buttons = document.querySelectorAll("#group-2 .toggle-btn");
+            if (type === 'all') {
+                tableAll.classList.remove("hidden");
+                tableImdb.classList.add("hidden");
+                tableKp.classList.add("hidden");
+            } else if (type === 'imdb') {
+                tableAll.classList.add("hidden");
+                tableImdb.classList.remove("hidden");
+                tableKp.classList.add("hidden");
+            } else {
+                tableAll.classList.add("hidden");
+                tableImdb.classList.add("hidden");
+                tableKp.classList.remove("hidden");
+            }
+            buttons.forEach(btn => btn.classList.remove("active"));
+            document.querySelector(`#group-2 .toggle-btn[onclick*="${type}"]`).classList.add("active");
+        }
+        function tableGroup3(type) {
+            const tableAll = document.getElementById("group-3-table-1");
+            const tableImdb = document.getElementById("group-3-table-2");
+            const tableKp = document.getElementById("group-3-table-3");
+            const buttons = document.querySelectorAll("#group-3 .toggle-btn");
+            if (type === 'all') {
+                tableAll.classList.remove("hidden");
+                tableImdb.classList.add("hidden");
+                tableKp.classList.add("hidden");
+            } else if (type === 'imdb') {
+                tableAll.classList.add("hidden");
+                tableImdb.classList.remove("hidden");
+                tableKp.classList.add("hidden");
+            } else {
+                tableAll.classList.add("hidden");
+                tableImdb.classList.add("hidden");
+                tableKp.classList.remove("hidden");
+            }
+            buttons.forEach(btn => btn.classList.remove("active"));
+            document.querySelector(`#group-3 .toggle-btn[onclick*="${type}"]`).classList.add("active");
+        }
+    </script>
+</body>
+
+</html>

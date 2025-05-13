@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 
 <html>
-
 <head>
-    <meta charset="utf-8" />
-    <meta
-        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height"
-        name="viewport" />
-    <title>Банда «Псы»</title>
-    <link href="charts.css" rel="stylesheet" />
-    <!-- <link rel="stylesheet" href="css/home.css"> -->
-    <!-- <script src="https://telegram.org/js/telegram-web-app.js"></script> -->
-    <style>
+<meta charset="utf-8"/>
+<meta content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" name="viewport"/>
+<title>Банда «Псы»</title>
+<link href="charts.css" rel="stylesheet"/>
+<!-- <link rel="stylesheet" href="css/home.css"> -->
+<!-- <script src="https://telegram.org/js/telegram-web-app.js"></script> -->
+<style>
         @font-face {
             font-family: 'Sf Pro Display Regular';
             src: url('fonts/SFPRODISPLAYREGULAR.OTF') format('truetype')
@@ -82,8 +79,6 @@
 
         .toggle-btn.active {
             background-color: #2e3e2b;
-
-            /* color: black; */
         }
 
         .hidden {
@@ -143,350 +138,161 @@
         }
     </style>
 </head>
-
 <body>
-
-
-
-    <div class="logo-container">
-        <img src="img/logo.png" class="logo">
-    </div>
-
-    <table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2" id="table-1">
-        <caption>Просмотрено фильмов</caption>
-        <tbody>
-            <tr>
-                <th>Денис</th>
-                <td style="--size: calc(1);">558</td>
-            </tr>
-            <tr>
-                <th>Артур</th>
-                <td style="--size: calc(1 / 558 * 530);">530</td>
-            </tr>
-            <tr>
-                <th>Никита</th>
-                <td style="--size: calc(1 / 558 * 336);">336</td>
-            </tr>
-            <tr>
-                <th>Ваня</th>
-                <td style="--size: calc(1 / 558 * 242);">242</td>
-            </tr>
-            <tr>
-                <th>Федя</th>
-                <td style="--size: calc(1 / 558 * 184);">184</td>
-            </tr>
-            <tr>
-                <th>Вика</th>
-                <td style="--size: calc(1 / 558 * 158);">158</td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2" id="group-2-table-1">
-        <caption>Средний рейтинг</caption>
-        <tbody>
-            <tr>
-                <th>Федя</th>
-                <td style="--size: calc(0.9832013324912556);">7.26</td>
-            </tr>
-            <tr>
-                <th>Артур</th>
-                <td style="--size: calc(0.8736786039926041);">7.15</td>
-            </tr>
-            <tr>
-                <th>Вика</th>
-                <td style="--size: calc(0.8572720042559252);">7.13</td>
-            </tr>
-            <tr>
-                <th>Ваня</th>
-                <td style="--size: calc(0.777890641593785);">7.06</td>
-            </tr>
-            <tr>
-                <th>Никита</th>
-                <td style="--size: calc(0.6942467316180385);">6.97</td>
-            </tr>
-            <tr>
-                <th>Денис</th>
-                <td style="--size: calc(0.5643368733247538);">6.85</td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2 hidden"
-        id="group-2-table-2">
-        <caption>Средний рейтинг</caption>
-        <tbody>
-            <tr>
-                <th>Федя</th>
-                <td style="--size: calc(0.932894893978689);">7.21</td>
-            </tr>
-            <tr>
-                <th>Артур</th>
-                <td style="--size: calc(0.7698972398573383);">7.05</td>
-            </tr>
-            <tr>
-                <th>Вика</th>
-                <td style="--size: calc(0.7690076855648205);">7.05</td>
-            </tr>
-            <tr>
-                <th>Ваня</th>
-                <td style="--size: calc(0.6248031520330846);">6.91</td>
-            </tr>
-            <tr>
-                <th>Никита</th>
-                <td style="--size: calc(0.5423196618944836);">6.82</td>
-            </tr>
-            <tr>
-                <th>Денис</th>
-                <td style="--size: calc(0.3);">6.58</td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2 hidden"
-        id="group-2-table-3">
-        <caption>Средний рейтинг</caption>
-        <tbody>
-            <tr>
-                <th>Федя</th>
-                <td style="--size: calc(1.0);">7.28</td>
-            </tr>
-            <tr>
-                <th>Артур</th>
-                <td style="--size: calc(0.9502190998694213);">7.23</td>
-            </tr>
-            <tr>
-                <th>Вика</th>
-                <td style="--size: calc(0.9245952345020942);">7.20</td>
-            </tr>
-            <tr>
-                <th>Ваня</th>
-                <td style="--size: calc(0.900131469722363);">7.18</td>
-            </tr>
-            <tr>
-                <th>Никита</th>
-                <td style="--size: calc(0.7617848438201587);">7.04</td>
-            </tr>
-            <tr>
-                <th>Денис</th>
-                <td style="--size: calc(0.6794727750373818);">6.96</td>
-            </tr>
-        </tbody>
-    </table>
-    <div class="button-group" id="group-2">
-        <button class="toggle-btn active" onclick="tableGroup2('all')">Общий</button>
-        <button class="toggle-btn" onclick="tableGroup2('imdb')">IMDb</button>
-        <button class="toggle-btn" onclick="tableGroup2('kp')">КП</button>
-    </div>
-    <table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2" id="group-1-table-1">
-        <caption>Потрачено времени</caption>
-        <tbody>
-            <tr>
-                <th>Артур</th>
-                <td style="--size: calc(1);">1068 ч 10 м</td>
-            </tr>
-            <tr>
-                <th>Денис</th>
-                <td style="--size: calc(1 / 64090 * 64043);">1067 ч 23 м</td>
-            </tr>
-            <tr>
-                <th>Никита</th>
-                <td style="--size: calc(1 / 64090 * 39149);">652 ч 29 м</td>
-            </tr>
-            <tr>
-                <th>Ваня</th>
-                <td style="--size: calc(1 / 64090 * 28338);">472 ч 18 м</td>
-            </tr>
-            <tr>
-                <th>Федя</th>
-                <td style="--size: calc(1 / 64090 * 23069);">384 ч 29 м</td>
-            </tr>
-            <tr>
-                <th>Вика</th>
-                <td style="--size: calc(1 / 64090 * 19036);">317 ч 16 м</td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2 hidden"
-        id="group-1-table-2">
-        <caption>Потрачено времени</caption>
-        <tbody>
-            <tr>
-                <th>Артур</th>
-                <td style="--size: calc(1);">44 д 12 ч</td>
-            </tr>
-            <tr>
-                <th>Денис</th>
-                <td style="--size: calc(1 / 64090 * 64043);">44 д 11 ч</td>
-            </tr>
-            <tr>
-                <th>Никита</th>
-                <td style="--size: calc(1 / 64090 * 39149);">27 д 4 ч</td>
-            </tr>
-            <tr>
-                <th>Ваня</th>
-                <td style="--size: calc(1 / 64090 * 28338);">19 д 16 ч</td>
-            </tr>
-            <tr>
-                <th>Федя</th>
-                <td style="--size: calc(1 / 64090 * 23069);">16 д</td>
-            </tr>
-            <tr>
-                <th>Вика</th>
-                <td style="--size: calc(1 / 64090 * 19036);">13 д 5 ч</td>
-            </tr>
-        </tbody>
-    </table>
-    <div class="button-group" id="group-1">
-        <button class="toggle-btn active" onclick="tableGroup1('hours')">Часы</button>
-        <button class="toggle-btn" onclick="tableGroup1('days')">Дни</button>
-    </div>
-    <table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2" id="table-2">
-        <caption>Средняя длина фильма</caption>
-        <tbody>
-            <tr>
-                <th>Федя</th>
-                <td style="--size: calc(1.0);">2:05 ч</td>
-            </tr>
-            <tr>
-                <th>Артур</th>
-                <td style="--size: calc(0.7901235404566095);">2:01 ч</td>
-            </tr>
-            <tr>
-                <th>Вика</th>
-                <td style="--size: calc(0.7692081185963358);">2:00 ч</td>
-            </tr>
-            <tr>
-                <th>Ваня</th>
-                <td style="--size: calc(0.6097265026811924);">1:57 ч</td>
-            </tr>
-            <tr>
-                <th>Никита</th>
-                <td style="--size: calc(0.5821722857746521);">1:57 ч</td>
-            </tr>
-            <tr>
-                <th>Денис</th>
-                <td style="--size: calc(0.5);">1:55 ч</td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2" id="group-3-table-1">
-        <caption>Среднее кол-во оценок фильма</caption>
-        <tbody>
-            <tr>
-                <th>Федя</th>
-                <td style="--size: calc(0.7997379313546489);">517k</td>
-            </tr>
-            <tr>
-                <th>Ваня</th>
-                <td style="--size: calc(0.6619058039267482);">450k</td>
-            </tr>
-            <tr>
-                <th>Вика</th>
-                <td style="--size: calc(0.6562143123776003);">448k</td>
-            </tr>
-            <tr>
-                <th>Артур</th>
-                <td style="--size: calc(0.5858822282228295);">414k</td>
-            </tr>
-            <tr>
-                <th>Никита</th>
-                <td style="--size: calc(0.5071701223989518);">376k</td>
-            </tr>
-            <tr>
-                <th>Денис</th>
-                <td style="--size: calc(0.3117265494502347);">282k</td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2 hidden"
-        id="group-3-table-2">
-        <caption>Среднее кол-во оценок фильма</caption>
-        <tbody>
-            <tr>
-                <th>Федя</th>
-                <td style="--size: calc(1.0);">613k</td>
-            </tr>
-            <tr>
-                <th>Ваня</th>
-                <td style="--size: calc(0.8375924422603522);">535k</td>
-            </tr>
-            <tr>
-                <th>Вика</th>
-                <td style="--size: calc(0.809391643226145);">521k</td>
-            </tr>
-            <tr>
-                <th>Артур</th>
-                <td style="--size: calc(0.7704443730387719);">503k</td>
-            </tr>
-            <tr>
-                <th>Никита</th>
-                <td style="--size: calc(0.6246713832205377);">432k</td>
-            </tr>
-            <tr>
-                <th>Денис</th>
-                <td style="--size: calc(0.3244427498371666);">288k</td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2 hidden"
-        id="group-3-table-3">
-        <caption>Среднее кол-во оценок фильма</caption>
-        <tbody>
-            <tr>
-                <th>Федя</th>
-                <td style="--size: calc(0.599475862709298);">420k</td>
-            </tr>
-            <tr>
-                <th>Вика</th>
-                <td style="--size: calc(0.5030369815290556);">374k</td>
-            </tr>
-            <tr>
-                <th>Ваня</th>
-                <td style="--size: calc(0.4862191655931442);">366k</td>
-            </tr>
-            <tr>
-                <th>Артур</th>
-                <td style="--size: calc(0.40132008340688746);">325k</td>
-            </tr>
-            <tr>
-                <th>Никита</th>
-                <td style="--size: calc(0.3967970160987977);">323k</td>
-            </tr>
-            <tr>
-                <th>Денис</th>
-                <td style="--size: calc(0.3);">276k</td>
-            </tr>
-        </tbody>
-    </table>
-    <div class="button-group" id="group-3">
-        <button class="toggle-btn active" onclick="tableGroup3('all')">Общее</button>
-        <button class="toggle-btn" onclick="tableGroup3('imdb')">IMDb</button>
-        <button class="toggle-btn" onclick="tableGroup3('kp')">КП</button>
-    </div>
-
-
-
-    <div class="bottom-nav">
-        <a href="page1.html" class="nav-item">
-            <img src="img/all.png">
-            <span>Общее</span>
-        </a>
-        <a class="nav-item selected">
-            <img src="img/movie.png">
-            <span>Фильмы</span>
-        </a>
-        <a href="page3.html" class="nav-item">
-            <img src="img/tv.png">
-            <span>Сериалы</span>
-        </a>
-    </div>
-
-
-    <div class="logo-container">
-        <img src="img/logo.png" class="logo">
-    </div>
-
-
-
-    <script>
+<div class="logo-container">
+<img class="logo" src="img/logo.png"/>
+</div>
+<table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2" id="table-1">
+<caption>Просмотрено фильмов</caption>
+<tbody><tr><th>Денис</th><td style="--size: calc(1);">558</td></tr>
+<tr><th>Артур</th><td style="--size: calc(1 / 558 * 530);">530</td></tr>
+<tr><th>Никита</th><td style="--size: calc(1 / 558 * 336);">336</td></tr>
+<tr><th>Ваня</th><td style="--size: calc(1 / 558 * 242);">242</td></tr>
+<tr><th>Федя</th><td style="--size: calc(1 / 558 * 184);">184</td></tr>
+<tr><th>Вика</th><td style="--size: calc(1 / 558 * 158);">158</td></tr>
+</tbody>
+</table>
+<table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2" id="group-2-table-1">
+<caption>Средний рейтинг</caption>
+<tbody><tr><th>Федя</th><td style="--size: calc(0.9832013324912556);">7.26</td></tr>
+<tr><th>Артур</th><td style="--size: calc(0.8736786039926041);">7.15</td></tr>
+<tr><th>Вика</th><td style="--size: calc(0.8572720042559252);">7.13</td></tr>
+<tr><th>Ваня</th><td style="--size: calc(0.777890641593785);">7.06</td></tr>
+<tr><th>Никита</th><td style="--size: calc(0.6942467316180385);">6.97</td></tr>
+<tr><th>Денис</th><td style="--size: calc(0.5643368733247538);">6.85</td></tr>
+</tbody>
+</table>
+<table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2 hidden" id="group-2-table-2">
+<caption>Средний рейтинг</caption>
+<tbody><tr><th>Федя</th><td style="--size: calc(0.932894893978689);">7.21</td></tr>
+<tr><th>Артур</th><td style="--size: calc(0.7698972398573383);">7.05</td></tr>
+<tr><th>Вика</th><td style="--size: calc(0.7690076855648205);">7.05</td></tr>
+<tr><th>Ваня</th><td style="--size: calc(0.6248031520330846);">6.91</td></tr>
+<tr><th>Никита</th><td style="--size: calc(0.5423196618944836);">6.82</td></tr>
+<tr><th>Денис</th><td style="--size: calc(0.3);">6.58</td></tr>
+</tbody>
+</table>
+<table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2 hidden" id="group-2-table-3">
+<caption>Средний рейтинг</caption>
+<tbody><tr><th>Федя</th><td style="--size: calc(1.0);">7.28</td></tr>
+<tr><th>Артур</th><td style="--size: calc(0.9502190998694213);">7.23</td></tr>
+<tr><th>Вика</th><td style="--size: calc(0.9245952345020942);">7.20</td></tr>
+<tr><th>Ваня</th><td style="--size: calc(0.900131469722363);">7.18</td></tr>
+<tr><th>Никита</th><td style="--size: calc(0.7617848438201587);">7.04</td></tr>
+<tr><th>Денис</th><td style="--size: calc(0.6794727750373818);">6.96</td></tr>
+</tbody>
+</table>
+<div class="button-group" id="group-2">
+<button class="toggle-btn active" onclick="tableGroup2('all')">Общий</button>
+<button class="toggle-btn" onclick="tableGroup2('imdb')">IMDb</button>
+<button class="toggle-btn" onclick="tableGroup2('kp')">КП</button>
+</div>
+<table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2" id="group-1-table-1">
+<caption>Потрачено времени</caption>
+<tbody><tr><th>Артур</th><td style="--size: calc(1);">1068 ч 10 м</td></tr>
+<tr><th>Денис</th><td style="--size: calc(1 / 64090 * 64043);">1067 ч 23 м</td></tr>
+<tr><th>Никита</th><td style="--size: calc(1 / 64090 * 39149);">652 ч 29 м</td></tr>
+<tr><th>Ваня</th><td style="--size: calc(1 / 64090 * 28338);">472 ч 18 м</td></tr>
+<tr><th>Федя</th><td style="--size: calc(1 / 64090 * 23069);">384 ч 29 м</td></tr>
+<tr><th>Вика</th><td style="--size: calc(1 / 64090 * 19036);">317 ч 16 м</td></tr>
+</tbody>
+</table>
+<table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2 hidden" id="group-1-table-2">
+<caption>Потрачено времени</caption>
+<tbody><tr><th>Артур</th><td style="--size: calc(1);">44 д 12 ч</td></tr>
+<tr><th>Денис</th><td style="--size: calc(1 / 64090 * 64043);">44 д 11 ч</td></tr>
+<tr><th>Никита</th><td style="--size: calc(1 / 64090 * 39149);">27 д 4 ч</td></tr>
+<tr><th>Ваня</th><td style="--size: calc(1 / 64090 * 28338);">19 д 16 ч</td></tr>
+<tr><th>Федя</th><td style="--size: calc(1 / 64090 * 23069);">16 д</td></tr>
+<tr><th>Вика</th><td style="--size: calc(1 / 64090 * 19036);">13 д 5 ч</td></tr>
+</tbody>
+</table>
+<div class="button-group" id="group-1">
+<button class="toggle-btn active" onclick="tableGroup1('hours')">Часы</button>
+<button class="toggle-btn" onclick="tableGroup1('days')">Дни</button>
+</div>
+<table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2" id="table-2">
+<caption>Средняя длина фильма</caption>
+<tbody><tr><th>Федя</th><td style="--size: calc(1.0);">2:05 ч</td></tr>
+<tr><th>Артур</th><td style="--size: calc(0.7901235404566095);">2:01 ч</td></tr>
+<tr><th>Вика</th><td style="--size: calc(0.7692081185963358);">2:00 ч</td></tr>
+<tr><th>Ваня</th><td style="--size: calc(0.6097265026811924);">1:57 ч</td></tr>
+<tr><th>Никита</th><td style="--size: calc(0.5821722857746521);">1:57 ч</td></tr>
+<tr><th>Денис</th><td style="--size: calc(0.5);">1:55 ч</td></tr>
+</tbody>
+</table>
+<table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2" id="group-3-table-1">
+<caption>Среднее кол-во оценок фильма</caption>
+<tbody><tr><th>Федя</th><td style="--size: calc(0.7997379313546489);">517k</td></tr>
+<tr><th>Ваня</th><td style="--size: calc(0.6619058039267482);">450k</td></tr>
+<tr><th>Вика</th><td style="--size: calc(0.6562143123776003);">448k</td></tr>
+<tr><th>Артур</th><td style="--size: calc(0.5858822282228295);">414k</td></tr>
+<tr><th>Никита</th><td style="--size: calc(0.5071701223989518);">376k</td></tr>
+<tr><th>Денис</th><td style="--size: calc(0.3117265494502347);">282k</td></tr>
+</tbody>
+</table>
+<table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2 hidden" id="group-3-table-2">
+<caption>Среднее кол-во оценок фильма</caption>
+<tbody><tr><th>Федя</th><td style="--size: calc(1.0);">613k</td></tr>
+<tr><th>Ваня</th><td style="--size: calc(0.8375924422603522);">535k</td></tr>
+<tr><th>Вика</th><td style="--size: calc(0.809391643226145);">521k</td></tr>
+<tr><th>Артур</th><td style="--size: calc(0.7704443730387719);">503k</td></tr>
+<tr><th>Никита</th><td style="--size: calc(0.6246713832205377);">432k</td></tr>
+<tr><th>Денис</th><td style="--size: calc(0.3244427498371666);">288k</td></tr>
+</tbody>
+</table>
+<table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2 hidden" id="group-3-table-3">
+<caption>Среднее кол-во оценок фильма</caption>
+<tbody><tr><th>Федя</th><td style="--size: calc(0.599475862709298);">420k</td></tr>
+<tr><th>Вика</th><td style="--size: calc(0.5030369815290556);">374k</td></tr>
+<tr><th>Ваня</th><td style="--size: calc(0.4862191655931442);">366k</td></tr>
+<tr><th>Артур</th><td style="--size: calc(0.40132008340688746);">325k</td></tr>
+<tr><th>Никита</th><td style="--size: calc(0.3967970160987977);">323k</td></tr>
+<tr><th>Денис</th><td style="--size: calc(0.3);">276k</td></tr>
+</tbody>
+</table>
+<div class="button-group" id="group-3">
+<button class="toggle-btn active" onclick="tableGroup3('all')">Общее</button>
+<button class="toggle-btn" onclick="tableGroup3('imdb')">IMDb</button>
+<button class="toggle-btn" onclick="tableGroup3('kp')">КП</button>
+</div>
+<table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2" id="table-3" style="--labels-size: 7.75rem; --aspect-ratio: 1 / 1;">
+<caption>Общие просмотренные фильмы</caption>
+<tbody><tr><th>Денис и Артур</th><td style="--size: calc(1);">202</td></tr>
+<tr><th>Ваня и Артур</th><td style="--size: calc(1 / 202 * 200);">200</td></tr>
+<tr><th>Никита и Артур</th><td style="--size: calc(1 / 202 * 186);">186</td></tr>
+<tr><th>Федя и Артур</th><td style="--size: calc(1 / 202 * 133);">133</td></tr>
+<tr><th>Денис и Ваня</th><td style="--size: calc(1 / 202 * 129);">129</td></tr>
+<tr><th>Никита и Ваня</th><td style="--size: calc(1 / 202 * 127);">127</td></tr>
+<tr><th>Никита и Денис</th><td style="--size: calc(1 / 202 * 121);">121</td></tr>
+<tr><th>Федя и Никита</th><td style="--size: calc(1 / 202 * 101);">101</td></tr>
+<tr><th>Вика и Артур</th><td style="--size: calc(1 / 202 * 99);">99</td></tr>
+<tr><th>Федя и Денис</th><td style="--size: calc(1 / 202 * 90);">90</td></tr>
+<tr><th>Федя и Ваня</th><td style="--size: calc(1 / 202 * 78);">78</td></tr>
+<tr><th>Вика и Ваня</th><td style="--size: calc(1 / 202 * 68);">68</td></tr>
+<tr><th>Вика и Никита</th><td style="--size: calc(1 / 202 * 67);">67</td></tr>
+<tr><th>Вика и Денис</th><td style="--size: calc(1 / 202 * 62);">62</td></tr>
+<tr><th>Вика и Федя</th><td style="--size: calc(1 / 202 * 58);">58</td></tr>
+</tbody>
+</table>
+<div class="bottom-nav">
+<a class="nav-item" href="page1.html">
+<img src="img/all.png"/>
+<span>Общее</span>
+</a>
+<a class="nav-item selected">
+<img src="img/movie.png"/>
+<span>Фильмы</span>
+</a>
+<a class="nav-item" href="series.html">
+<img src="img/tv.png"/>
+<span>Сериалы</span>
+</a>
+</div>
+<div class="logo-container">
+<img class="logo" src="img/logo.png"/>
+</div>
+<script>
         function tableGroup1(type) {
             const tableHours = document.getElementById("group-1-table-1");
             const tableDays = document.getElementById("group-1-table-2");
@@ -545,5 +351,4 @@
         }
     </script>
 </body>
-
 </html>
