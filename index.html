@@ -102,30 +102,6 @@
 <tr><th>Вика</th><td style="--size: calc(1 / 558 * 158);">158</td></tr>
 </tbody>
 </table>
-<table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2" id="group-1-table-1">
-<caption>Потрачено времени</caption>
-<tbody><tr><th>Артур</th><td style="--size: calc(1);">1068 ч 10 м</td></tr>
-<tr><th>Денис</th><td style="--size: calc(1 / 64090 * 64043);">1067 ч 23 м</td></tr>
-<tr><th>Никита</th><td style="--size: calc(1 / 64090 * 39149);">652 ч 29 м</td></tr>
-<tr><th>Ваня</th><td style="--size: calc(1 / 64090 * 28338);">472 ч 18 м</td></tr>
-<tr><th>Федя</th><td style="--size: calc(1 / 64090 * 23069);">384 ч 29 м</td></tr>
-<tr><th>Вика</th><td style="--size: calc(1 / 64090 * 19036);">317 ч 16 м</td></tr>
-</tbody>
-</table>
-<table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2 hidden" id="group-1-table-2">
-<caption>Потрачено времени</caption>
-<tbody><tr><th>Артур</th><td style="--size: calc(1);">44 д 12 ч</td></tr>
-<tr><th>Денис</th><td style="--size: calc(1 / 64090 * 64043);">44 д 11 ч</td></tr>
-<tr><th>Никита</th><td style="--size: calc(1 / 64090 * 39149);">27 д 4 ч</td></tr>
-<tr><th>Ваня</th><td style="--size: calc(1 / 64090 * 28338);">19 д 16 ч</td></tr>
-<tr><th>Федя</th><td style="--size: calc(1 / 64090 * 23069);">16 д</td></tr>
-<tr><th>Вика</th><td style="--size: calc(1 / 64090 * 19036);">13 д 5 ч</td></tr>
-</tbody>
-</table>
-<div class="button-group" id="group-1">
-<button class="toggle-btn active" onclick="tableGroup1('hours')">Часы</button>
-<button class="toggle-btn" onclick="tableGroup1('days')">Дни</button>
-</div>
 <table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2" id="group-2-table-1">
 <caption>Средний рейтинг</caption>
 <tbody><tr><th>Федя</th><td style="--size: calc(0.9832013324912556);">7.26</td></tr>
@@ -161,6 +137,40 @@
 <button class="toggle-btn" onclick="tableGroup2('imdb')">IMDb</button>
 <button class="toggle-btn" onclick="tableGroup2('kp')">КП</button>
 </div>
+<table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2" id="group-1-table-1">
+<caption>Потрачено времени</caption>
+<tbody><tr><th>Артур</th><td style="--size: calc(1);">1068 ч 10 м</td></tr>
+<tr><th>Денис</th><td style="--size: calc(1 / 64090 * 64043);">1067 ч 23 м</td></tr>
+<tr><th>Никита</th><td style="--size: calc(1 / 64090 * 39149);">652 ч 29 м</td></tr>
+<tr><th>Ваня</th><td style="--size: calc(1 / 64090 * 28338);">472 ч 18 м</td></tr>
+<tr><th>Федя</th><td style="--size: calc(1 / 64090 * 23069);">384 ч 29 м</td></tr>
+<tr><th>Вика</th><td style="--size: calc(1 / 64090 * 19036);">317 ч 16 м</td></tr>
+</tbody>
+</table>
+<table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2 hidden" id="group-1-table-2">
+<caption>Потрачено времени</caption>
+<tbody><tr><th>Артур</th><td style="--size: calc(1);">44 д 12 ч</td></tr>
+<tr><th>Денис</th><td style="--size: calc(1 / 64090 * 64043);">44 д 11 ч</td></tr>
+<tr><th>Никита</th><td style="--size: calc(1 / 64090 * 39149);">27 д 4 ч</td></tr>
+<tr><th>Ваня</th><td style="--size: calc(1 / 64090 * 28338);">19 д 16 ч</td></tr>
+<tr><th>Федя</th><td style="--size: calc(1 / 64090 * 23069);">16 д</td></tr>
+<tr><th>Вика</th><td style="--size: calc(1 / 64090 * 19036);">13 д 5 ч</td></tr>
+</tbody>
+</table>
+<div class="button-group" id="group-1">
+<button class="toggle-btn active" onclick="tableGroup1('hours')">Часы</button>
+<button class="toggle-btn" onclick="tableGroup1('days')">Дни</button>
+</div>
+<table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2" id="table-2">
+<caption>Средняя длина фильма</caption>
+<tbody><tr><th>Федя</th><td style="--size: calc(1.0);">2:05 ч</td></tr>
+<tr><th>Артур</th><td style="--size: calc(0.7901235404566095);">2:01 ч</td></tr>
+<tr><th>Вика</th><td style="--size: calc(0.7692081185963358);">2:00 ч</td></tr>
+<tr><th>Ваня</th><td style="--size: calc(0.6097265026811924);">1:57 ч</td></tr>
+<tr><th>Никита</th><td style="--size: calc(0.5821722857746521);">1:57 ч</td></tr>
+<tr><th>Денис</th><td style="--size: calc(0.5);">1:55 ч</td></tr>
+</tbody>
+</table>
 <script>
         function tableGroup1(type) {
             const tableHours = document.getElementById("group-1-table-1");
