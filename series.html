@@ -1,324 +1,226 @@
 <!DOCTYPE html>
 
 <html>
-
 <head>
-    <meta charset="utf-8" />
-    <meta
-        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height"
-        name="viewport" />
-    <title>Банда «Псы»</title>
-    <link href="charts.css" rel="stylesheet" />
-    <link href="main.css" rel="stylesheet" />
+<meta charset="utf-8"/>
+<meta content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" name="viewport"/>
+<title>Банда «Псы»</title>
+<link href="charts.css" rel="stylesheet"/>
+<link href="main.css" rel="stylesheet"/>
 </head>
-
 <body>
-    <div class="logo-container">
-        <img class="logo" src="img/logo.png" />
-    </div>
-    <table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2" id="table-1">
-        <caption>Просмотрено сериалов</caption>
-        <tbody>
-            <tr>
-                <th>Артур</th>
-                <td style="--size: calc(1);">66</td>
-            </tr>
-            <tr>
-                <th>Никита</th>
-                <td style="--size: calc(1 / 66 * 47);">47</td>
-            </tr>
-            <tr>
-                <th>Федя</th>
-                <td style="--size: calc(1 / 66 * 41);">41</td>
-            </tr>
-            <tr>
-                <th>Денис</th>
-                <td style="--size: calc(1 / 66 * 40);">40</td>
-            </tr>
-            <tr>
-                <th>Вика</th>
-                <td style="--size: calc(1 / 66 * 13);">13</td>
-            </tr>
-            <tr>
-                <th>Ваня</th>
-                <td style="--size: calc(1 / 66 * 11);">11</td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2" id="group-2-table-1">
-        <caption>Средний рейтинг</caption>
-        <tbody>
-            <tr>
-                <th>Федя</th>
-                <td style="--size: calc(0.9658122358582233);">8.23</td>
-            </tr>
-            <tr>
-                <th>Ваня</th>
-                <td style="--size: calc(0.9401328993086093);">8.20</td>
-            </tr>
-            <tr>
-                <th>Вика</th>
-                <td style="--size: calc(0.8561668664905675);">8.08</td>
-            </tr>
-            <tr>
-                <th>Артур</th>
-                <td style="--size: calc(0.8117251423708212);">8.02</td>
-            </tr>
-            <tr>
-                <th>Денис</th>
-                <td style="--size: calc(0.5797900573216255);">7.71</td>
-            </tr>
-            <tr>
-                <th>Никита</th>
-                <td style="--size: calc(0.5285498687705358);">7.64</td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2 hidden"
-        id="group-2-table-2">
-        <caption>Средний рейтинг</caption>
-        <tbody>
-            <tr>
-                <th>Ваня</th>
-                <td style="--size: calc(1.0);">8.28</td>
-            </tr>
-            <tr>
-                <th>Федя</th>
-                <td style="--size: calc(0.9962331793079546);">8.27</td>
-            </tr>
-            <tr>
-                <th>Артур</th>
-                <td style="--size: calc(0.8456046310440739);">8.07</td>
-            </tr>
-            <tr>
-                <th>Вика</th>
-                <td style="--size: calc(0.8150042773813857);">8.03</td>
-            </tr>
-            <tr>
-                <th>Никита</th>
-                <td style="--size: calc(0.31818362783413107);">7.36</td>
-            </tr>
-            <tr>
-                <th>Денис</th>
-                <td style="--size: calc(0.3);">7.33</td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2 hidden"
-        id="group-2-table-3">
-        <caption>Средний рейтинг</caption>
-        <tbody>
-            <tr>
-                <th>Ваня</th>
-                <td style="--size: calc(0.8151106382563702);">8.03</td>
-            </tr>
-            <tr>
-                <th>Федя</th>
-                <td style="--size: calc(0.8070968941783541);">8.02</td>
-            </tr>
-            <tr>
-                <th>Вика</th>
-                <td style="--size: calc(0.773727631578884);">7.97</td>
-            </tr>
-            <tr>
-                <th>Артур</th>
-                <td style="--size: calc(0.6911941070254712);">7.86</td>
-            </tr>
-            <tr>
-                <th>Никита</th>
-                <td style="--size: calc(0.5108474322003058);">7.62</td>
-            </tr>
-            <tr>
-                <th>Денис</th>
-                <td style="--size: calc(0.5034001151222579);">7.61</td>
-            </tr>
-        </tbody>
-    </table>
-    <div class="button-group" id="group-2">
-        <button class="toggle-btn active" onclick="tableGroup2('all')">Общий</button>
-        <button class="toggle-btn" onclick="tableGroup2('imdb')">IMDb</button>
-        <button class="toggle-btn" onclick="tableGroup2('kp')">КП</button>
-    </div>
-
-
-    <table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2" id="group-3-table-1">
-        <caption>Среднее кол-во оценок сериала</caption>
-        <tbody>
-            <tr>
-                <th>Федя</th>
-                <td style="--size: calc(0.8122244149127729);">392k</td>
-            </tr>
-            <tr>
-                <th>Артур</th>
-                <td style="--size: calc(0.6351982962682221);">315k</td>
-            </tr>
-            <tr>
-                <th>Вика</th>
-                <td style="--size: calc(0.5638353547441108);">284k</td>
-            </tr>
-            <tr>
-                <th>Ваня</th>
-                <td style="--size: calc(0.5618440237748951);">283k</td>
-            </tr>
-            <tr>
-                <th>Денис</th>
-                <td style="--size: calc(0.42187055687013464);">222k</td>
-            </tr>
-            <tr>
-                <th>Никита</th>
-                <td style="--size: calc(0.3982432021652504);">212k</td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2 hidden"
-        id="group-3-table-2">
-        <caption>Среднее кол-во оценок сериала</caption>
-        <tbody>
-            <tr>
-                <th>Федя</th>
-                <td style="--size: calc(1.0);">473k</td>
-            </tr>
-            <tr>
-                <th>Артур</th>
-                <td style="--size: calc(0.7611810814870978);">370k</td>
-            </tr>
-            <tr>
-                <th>Ваня</th>
-                <td style="--size: calc(0.6061403379909158);">302k</td>
-            </tr>
-            <tr>
-                <th>Денис</th>
-                <td style="--size: calc(0.43718483575660094);">229k</td>
-            </tr>
-            <tr>
-                <th>Вика</th>
-                <td style="--size: calc(0.3673736206288926);">199k</td>
-            </tr>
-            <tr>
-                <th>Никита</th>
-                <td style="--size: calc(0.3);">170k</td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2 hidden"
-        id="group-3-table-3">
-        <caption>Среднее кол-во оценок сериала</caption>
-        <tbody>
-            <tr>
-                <th>Вика</th>
-                <td style="--size: calc(0.7602665470474662);">369k</td>
-            </tr>
-            <tr>
-                <th>Федя</th>
-                <td style="--size: calc(0.624448829825546);">310k</td>
-            </tr>
-            <tr>
-                <th>Никита</th>
-                <td style="--size: calc(0.5405827339613598);">274k</td>
-            </tr>
-            <tr>
-                <th>Артур</th>
-                <td style="--size: calc(0.5220394688582614);">266k</td>
-            </tr>
-            <tr>
-                <th>Ваня</th>
-                <td style="--size: calc(0.5175477095588743);">264k</td>
-            </tr>
-            <tr>
-                <th>Денис</th>
-                <td style="--size: calc(0.44107262618380394);">231k</td>
-            </tr>
-        </tbody>
-    </table>
-    <div class="button-group" id="group-3">
-        <button class="toggle-btn active" onclick="tableGroup3('all')">Общее</button>
-        <button class="toggle-btn" onclick="tableGroup3('imdb')">IMDb</button>
-        <button class="toggle-btn" onclick="tableGroup3('kp')">КП</button>
-    </div>
-    <table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2" id="table-3"
-        style="--labels-size: 8.5rem; --aspect-ratio: 1 / 1;">
-        <caption>Общие просмотренные сериалы</caption>
-        <tbody>
-            <tr>
-                <th>Федя и Артур</th>
-                <td style="--size: calc(1);">25</td>
-            </tr>
-            <tr>
-                <th>Никита и Артур</th>
-                <td style="--size: calc(1 / 25 * 16);">16</td>
-            </tr>
-            <tr>
-                <th>Денис и Артур</th>
-                <td style="--size: calc(1 / 25 * 9);">9</td>
-            </tr>
-            <tr>
-                <th>Федя и Денис</th>
-                <td style="--size: calc(1 / 25 * 8);">8</td>
-            </tr>
-            <tr>
-                <th>Вика и Артур</th>
-                <td style="--size: calc(1 / 25 * 7);">7</td>
-            </tr>
-            <tr>
-                <th>Федя и Никита</th>
-                <td style="--size: calc(1 / 25 * 7);">7</td>
-            </tr>
-            <tr>
-                <th>Ваня и Артур</th>
-                <td style="--size: calc(1 / 25 * 7);">7</td>
-            </tr>
-            <tr>
-                <th>Вика и Никита</th>
-                <td style="--size: calc(1 / 25 * 6);">6</td>
-            </tr>
-            <tr>
-                <th>Никита и Денис</th>
-                <td style="--size: calc(1 / 25 * 5);">5</td>
-            </tr>
-            <tr>
-                <th>Вика и Федя</th>
-                <td style="--size: calc(1 / 25 * 3);">3</td>
-            </tr>
-            <tr>
-                <th>Федя и Ваня</th>
-                <td style="--size: calc(1 / 25 * 3);">3</td>
-            </tr>
-            <tr>
-                <th>Никита и Ваня</th>
-                <td style="--size: calc(1 / 25 * 3);">3</td>
-            </tr>
-            <tr>
-                <th>Вика и Денис</th>
-                <td style="--size: calc(1 / 25 * 2);">2</td>
-            </tr>
-            <tr>
-                <th>Денис и Ваня</th>
-                <td style="--size: calc(1 / 25 * 1);">1</td>
-            </tr>
-            <tr>
-                <th>Вика и Ваня</th>
-                <td style="--size: calc(1 / 25 * 0);">0</td>
-            </tr>
-        </tbody>
-    </table>
-    <div class="bottom-nav">
-        <a class="nav-item" href="general.html">
-            <img src="img/all.png" />
-            <span>Общее</span>
-        </a>
-        <a class="nav-item" href="index.html">
-            <img src="img/movie.png" />
-            <span>Фильмы</span>
-        </a>
-        <a class="nav-item selected">
-            <img src="img/tv.png" />
-            <span>Сериалы</span>
-        </a>
-    </div>
-    <div class="logo-container" style="opacity: 0;">
-        <img class="logo" src="img/logo.png" />
-    </div>
-    <script>
+<div class="logo-container">
+<img class="logo" src="img/logo.png"/>
+</div>
+<table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2" id="table-1">
+<caption>Просмотрено сериалов</caption>
+<tbody><tr><th>Артур</th><td style="--size: calc(1);">66</td></tr>
+<tr><th>Никита</th><td style="--size: calc(1 / 66 * 47);">47</td></tr>
+<tr><th>Федя</th><td style="--size: calc(1 / 66 * 41);">41</td></tr>
+<tr><th>Денис</th><td style="--size: calc(1 / 66 * 40);">40</td></tr>
+<tr><th>Вика</th><td style="--size: calc(1 / 66 * 13);">13</td></tr>
+<tr><th>Ваня</th><td style="--size: calc(1 / 66 * 11);">11</td></tr>
+</tbody>
+</table>
+<table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2" id="group-2-table-1">
+<caption>Средний рейтинг</caption>
+<tbody><tr><th>Федя</th><td style="--size: calc(0.9658122358582233);">8.23</td></tr>
+<tr><th>Ваня</th><td style="--size: calc(0.9401328993086093);">8.20</td></tr>
+<tr><th>Вика</th><td style="--size: calc(0.8561668664905675);">8.08</td></tr>
+<tr><th>Артур</th><td style="--size: calc(0.8117251423708212);">8.02</td></tr>
+<tr><th>Денис</th><td style="--size: calc(0.5797900573216255);">7.71</td></tr>
+<tr><th>Никита</th><td style="--size: calc(0.5285498687705358);">7.64</td></tr>
+</tbody>
+</table>
+<table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2 hidden" id="group-2-table-2">
+<caption>Средний рейтинг</caption>
+<tbody><tr><th>Ваня</th><td style="--size: calc(1.0);">8.28</td></tr>
+<tr><th>Федя</th><td style="--size: calc(0.9962331793079546);">8.27</td></tr>
+<tr><th>Артур</th><td style="--size: calc(0.8456046310440739);">8.07</td></tr>
+<tr><th>Вика</th><td style="--size: calc(0.8150042773813857);">8.03</td></tr>
+<tr><th>Никита</th><td style="--size: calc(0.31818362783413107);">7.36</td></tr>
+<tr><th>Денис</th><td style="--size: calc(0.3);">7.33</td></tr>
+</tbody>
+</table>
+<table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2 hidden" id="group-2-table-3">
+<caption>Средний рейтинг</caption>
+<tbody><tr><th>Ваня</th><td style="--size: calc(0.8151106382563702);">8.03</td></tr>
+<tr><th>Федя</th><td style="--size: calc(0.8070968941783541);">8.02</td></tr>
+<tr><th>Вика</th><td style="--size: calc(0.773727631578884);">7.97</td></tr>
+<tr><th>Артур</th><td style="--size: calc(0.6911941070254712);">7.86</td></tr>
+<tr><th>Никита</th><td style="--size: calc(0.5108474322003058);">7.62</td></tr>
+<tr><th>Денис</th><td style="--size: calc(0.5034001151222579);">7.61</td></tr>
+</tbody>
+</table>
+<div class="button-group" id="group-2">
+<button class="toggle-btn active" onclick="tableGroup2('all')">Общий</button>
+<button class="toggle-btn" onclick="tableGroup2('imdb')">IMDb</button>
+<button class="toggle-btn" onclick="tableGroup2('kp')">КП</button>
+</div>
+<table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2" id="group-3-table-1">
+<caption>Среднее кол-во оценок сериала</caption>
+<tbody><tr><th>Федя</th><td style="--size: calc(0.8122244149127729);">392k</td></tr>
+<tr><th>Артур</th><td style="--size: calc(0.6351982962682221);">315k</td></tr>
+<tr><th>Вика</th><td style="--size: calc(0.5638353547441108);">284k</td></tr>
+<tr><th>Ваня</th><td style="--size: calc(0.5618440237748951);">283k</td></tr>
+<tr><th>Денис</th><td style="--size: calc(0.42187055687013464);">222k</td></tr>
+<tr><th>Никита</th><td style="--size: calc(0.3982432021652504);">212k</td></tr>
+</tbody>
+</table>
+<table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2 hidden" id="group-3-table-2">
+<caption>Среднее кол-во оценок сериала</caption>
+<tbody><tr><th>Федя</th><td style="--size: calc(1.0);">473k</td></tr>
+<tr><th>Артур</th><td style="--size: calc(0.7611810814870978);">370k</td></tr>
+<tr><th>Ваня</th><td style="--size: calc(0.6061403379909158);">302k</td></tr>
+<tr><th>Денис</th><td style="--size: calc(0.43718483575660094);">229k</td></tr>
+<tr><th>Вика</th><td style="--size: calc(0.3673736206288926);">199k</td></tr>
+<tr><th>Никита</th><td style="--size: calc(0.3);">170k</td></tr>
+</tbody>
+</table>
+<table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2 hidden" id="group-3-table-3">
+<caption>Среднее кол-во оценок сериала</caption>
+<tbody><tr><th>Вика</th><td style="--size: calc(0.7602665470474662);">369k</td></tr>
+<tr><th>Федя</th><td style="--size: calc(0.624448829825546);">310k</td></tr>
+<tr><th>Никита</th><td style="--size: calc(0.5405827339613598);">274k</td></tr>
+<tr><th>Артур</th><td style="--size: calc(0.5220394688582614);">266k</td></tr>
+<tr><th>Ваня</th><td style="--size: calc(0.5175477095588743);">264k</td></tr>
+<tr><th>Денис</th><td style="--size: calc(0.44107262618380394);">231k</td></tr>
+</tbody>
+</table>
+<div class="button-group" id="group-3">
+<button class="toggle-btn active" onclick="tableGroup3('all')">Общее</button>
+<button class="toggle-btn" onclick="tableGroup3('imdb')">IMDb</button>
+<button class="toggle-btn" onclick="tableGroup3('kp')">КП</button>
+</div>
+<table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2" id="table-3" style="--labels-size: 8.5rem; --aspect-ratio: 1 / 1;">
+<caption>Общие просмотренные сериалы</caption>
+<tbody><tr><th>Федя и Артур</th><td style="--size: calc(1);">25</td></tr>
+<tr><th>Никита и Артур</th><td style="--size: calc(1 / 25 * 16);">16</td></tr>
+<tr><th>Денис и Артур</th><td style="--size: calc(1 / 25 * 9);">9</td></tr>
+<tr><th>Федя и Денис</th><td style="--size: calc(1 / 25 * 8);">8</td></tr>
+<tr><th>Вика и Артур</th><td style="--size: calc(1 / 25 * 7);">7</td></tr>
+<tr><th>Федя и Никита</th><td style="--size: calc(1 / 25 * 7);">7</td></tr>
+<tr><th>Ваня и Артур</th><td style="--size: calc(1 / 25 * 7);">7</td></tr>
+<tr><th>Вика и Никита</th><td style="--size: calc(1 / 25 * 6);">6</td></tr>
+<tr><th>Никита и Денис</th><td style="--size: calc(1 / 25 * 5);">5</td></tr>
+<tr><th>Вика и Федя</th><td style="--size: calc(1 / 25 * 3);">3</td></tr>
+<tr><th>Федя и Ваня</th><td style="--size: calc(1 / 25 * 3);">3</td></tr>
+<tr><th>Никита и Ваня</th><td style="--size: calc(1 / 25 * 3);">3</td></tr>
+<tr><th>Вика и Денис</th><td style="--size: calc(1 / 25 * 2);">2</td></tr>
+<tr><th>Денис и Ваня</th><td style="--size: calc(1 / 25 * 1);">1</td></tr>
+<tr><th>Вика и Ваня</th><td style="--size: calc(1 / 25 * 0);">0</td></tr>
+</tbody>
+</table>
+<table class="movie-chart charts-css column show-labels show-heading show-data-on-hover show-primary-axis show-data-axes multiple data-spacing-2 hidden" id="group-4-table-1" style="--aspect-ratio: 10 / 8;">
+<caption>Распределение сериалов по годам</caption>
+<tbody><tr class="clickable-row" data-href="series_of_the_year.html#1970"><th style="font-size: 0.8rem;">1970</th><td style="--size: 0;"></td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#1971"><th style="font-size: 0.8rem;">1971</th><td style="--size: 0;"></td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#1972"><th style="font-size: 0.8rem;">1972</th><td style="--size: 0;"></td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#1973"><th style="font-size: 0.8rem;">1973</th><td style="--size: 0;"></td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#1974"><th style="font-size: 0.8rem;">1974</th><td style="--size: calc(0.08);">1</td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#1975"><th style="font-size: 0.8rem;">1975</th><td style="--size: 0;"></td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#1976"><th style="font-size: 0.8rem;">1976</th><td style="--size: 0;"></td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#1977"><th style="font-size: 0.8rem;">1977</th><td style="--size: 0;"></td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#1978"><th style="font-size: 0.8rem;">1978</th><td style="--size: 0;"></td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#1979"><th style="font-size: 0.8rem;">1979</th><td style="--size: calc(0.08);">1</td></tr>
+</tbody>
+</table>
+<table class="movie-chart charts-css column show-labels show-heading show-data-on-hover show-primary-axis show-data-axes multiple data-spacing-2 hidden" id="group-4-table-2" style="--aspect-ratio: 10 / 8;">
+<caption>Распределение сериалов по годам</caption>
+<tbody><tr class="clickable-row" data-href="series_of_the_year.html#1980"><th style="font-size: 0.8rem;">1980</th><td style="--size: 0;"></td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#1981"><th style="font-size: 0.8rem;">1981</th><td style="--size: 0;"></td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#1982"><th style="font-size: 0.8rem;">1982</th><td style="--size: 0;"></td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#1983"><th style="font-size: 0.8rem;">1983</th><td style="--size: 0;"></td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#1984"><th style="font-size: 0.8rem;">1984</th><td style="--size: 0;"></td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#1985"><th style="font-size: 0.8rem;">1985</th><td style="--size: 0;"></td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#1986"><th style="font-size: 0.8rem;">1986</th><td style="--size: 0;"></td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#1987"><th style="font-size: 0.8rem;">1987</th><td style="--size: 0;"></td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#1988"><th style="font-size: 0.8rem;">1988</th><td style="--size: 0;"></td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#1989"><th style="font-size: 0.8rem;">1989</th><td style="--size: 0;"></td></tr>
+</tbody>
+</table>
+<table class="movie-chart charts-css column show-labels show-heading show-data-on-hover show-primary-axis show-data-axes multiple data-spacing-2 hidden" id="group-4-table-3" style="--aspect-ratio: 10 / 8;">
+<caption>Распределение сериалов по годам</caption>
+<tbody><tr class="clickable-row" data-href="series_of_the_year.html#1990"><th style="font-size: 0.8rem;">1990</th><td style="--size: calc(0.08);">1</td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#1991"><th style="font-size: 0.8rem;">1991</th><td style="--size: 0;"></td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#1992"><th style="font-size: 0.8rem;">1992</th><td style="--size: 0;"></td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#1993"><th style="font-size: 0.8rem;">1993</th><td style="--size: 0;"></td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#1994"><th style="font-size: 0.8rem;">1994</th><td style="--size: calc(0.08);">1</td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#1995"><th style="font-size: 0.8rem;">1995</th><td style="--size: 0;"></td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#1996"><th style="font-size: 0.8rem;">1996</th><td style="--size: 0;"></td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#1997"><th style="font-size: 0.8rem;">1997</th><td style="--size: calc(0.08);">1</td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#1998"><th style="font-size: 0.8rem;">1998</th><td style="--size: calc(0.15666666666666668);">2</td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#1999"><th style="font-size: 0.8rem;">1999</th><td style="--size: calc(0.08);">1</td></tr>
+</tbody>
+</table>
+<table class="movie-chart charts-css column show-labels show-heading show-data-on-hover show-primary-axis show-data-axes multiple data-spacing-2 hidden" id="group-4-table-4" style="--aspect-ratio: 10 / 8;">
+<caption>Распределение сериалов по годам</caption>
+<tbody><tr class="clickable-row" data-href="series_of_the_year.html#2000"><th style="font-size: 0.8rem;">2000</th><td style="--size: calc(0.15666666666666668);">2</td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#2001"><th style="font-size: 0.8rem;">2001</th><td style="--size: calc(0.23333333333333334);">3</td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#2002"><th style="font-size: 0.8rem;">2002</th><td style="--size: calc(0.08);">1</td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#2003"><th style="font-size: 0.8rem;">2003</th><td style="--size: 0;"></td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#2004"><th style="font-size: 0.8rem;">2004</th><td style="--size: calc(0.15666666666666668);">2</td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#2005"><th style="font-size: 0.8rem;">2005</th><td style="--size: calc(0.23333333333333334);">3</td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#2006"><th style="font-size: 0.8rem;">2006</th><td style="--size: calc(0.15666666666666668);">2</td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#2007"><th style="font-size: 0.8rem;">2007</th><td style="--size: calc(0.08);">1</td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#2008"><th style="font-size: 0.8rem;">2008</th><td style="--size: calc(0.23333333333333334);">3</td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#2009"><th style="font-size: 0.8rem;">2009</th><td style="--size: calc(0.23333333333333334);">3</td></tr>
+</tbody>
+</table>
+<table class="movie-chart charts-css column show-labels show-heading show-data-on-hover show-primary-axis show-data-axes multiple data-spacing-2 hidden" id="group-4-table-5" style="--aspect-ratio: 10 / 8;">
+<caption>Распределение сериалов по годам</caption>
+<tbody><tr class="clickable-row" data-href="series_of_the_year.html#2010"><th style="font-size: 0.8rem;">2010</th><td style="--size: calc(0.3866666666666667);">5</td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#2011"><th style="font-size: 0.8rem;">2011</th><td style="--size: calc(0.3866666666666667);">5</td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#2012"><th style="font-size: 0.8rem;">2012</th><td style="--size: calc(0.4633333333333334);">6</td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#2013"><th style="font-size: 0.8rem;">2013</th><td style="--size: calc(0.54);">7</td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#2014"><th style="font-size: 0.8rem;">2014</th><td style="--size: calc(0.31);">4</td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#2015"><th style="font-size: 0.8rem;">2015</th><td style="--size: calc(0.6166666666666667);">8</td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#2016"><th style="font-size: 0.8rem;">2016</th><td style="--size: calc(0.4633333333333334);">6</td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#2017"><th style="font-size: 0.8rem;">2017</th><td style="--size: calc(0.6933333333333334);">9</td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#2018"><th style="font-size: 0.8rem;">2018</th><td style="--size: calc(0.15666666666666668);">2</td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#2019"><th style="font-size: 0.8rem;">2019</th><td style="--size: calc(1.0);">13</td></tr>
+</tbody>
+</table>
+<table class="movie-chart charts-css column show-labels show-heading show-data-on-hover show-primary-axis show-data-axes multiple data-spacing-2" id="group-4-table-6" style="--aspect-ratio: 10 / 8;">
+<caption>Распределение сериалов по годам</caption>
+<tbody><tr class="clickable-row" data-href="series_of_the_year.html#2020"><th style="font-size: 0.8rem;">2020</th><td style="--size: calc(0.8466666666666667);">11</td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#2021"><th style="font-size: 0.8rem;">2021</th><td style="--size: calc(0.77);">10</td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#2022"><th style="font-size: 0.8rem;">2022</th><td style="--size: calc(0.6933333333333334);">9</td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#2023"><th style="font-size: 0.8rem;">2023</th><td style="--size: calc(0.8466666666666667);">11</td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#2024"><th style="font-size: 0.8rem;">2024</th><td style="--size: calc(1.0);">13</td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#2025"><th style="font-size: 0.8rem;">2025</th><td style="--size: 0;"></td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#2026"><th style="font-size: 0.8rem;">2026</th><td style="--size: 0;"></td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#2027"><th style="font-size: 0.8rem;">2027</th><td style="--size: 0;"></td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#2028"><th style="font-size: 0.8rem;">2028</th><td style="--size: 0;"></td></tr>
+<tr class="clickable-row" data-href="series_of_the_year.html#2029"><th style="font-size: 0.8rem;">2029</th><td style="--size: 0;"></td></tr>
+</tbody>
+</table>
+<div class="button-group" id="group-4">
+<button class="toggle-btn" onclick="tableGroup4('tbl-1')">1970-е</button>
+<button class="toggle-btn" onclick="tableGroup4('tbl-2')">1980-е</button>
+<button class="toggle-btn" onclick="tableGroup4('tbl-3')">1990-е</button>
+<button class="toggle-btn" onclick="tableGroup4('tbl-4')">2000-е</button>
+<button class="toggle-btn" onclick="tableGroup4('tbl-5')">2010-е</button>
+<button class="toggle-btn active" onclick="tableGroup4('tbl-6')">2020-е</button>
+</div>
+<div class="bottom-nav">
+<a class="nav-item" href="general.html">
+<img src="img/all.png"/>
+<span>Общее</span>
+</a>
+<a class="nav-item" href="index.html">
+<img src="img/movie.png"/>
+<span>Фильмы</span>
+</a>
+<a class="nav-item selected">
+<img src="img/tv.png"/>
+<span>Сериалы</span>
+</a>
+</div>
+<div class="logo-container" style="opacity: 0;">
+<img class="logo" src="img/logo.png"/>
+</div>
+<script>
         function tableGroup1(type) {
             const tableHours = document.getElementById("group-1-table-1");
             const tableDays = document.getElementById("group-1-table-2");
@@ -375,7 +277,69 @@
             buttons.forEach(btn => btn.classList.remove("active"));
             document.querySelector(`#group-3 .toggle-btn[onclick*="${type}"]`).classList.add("active");
         }
+
+
+        function tableGroup4(type) {
+            const table1 = document.getElementById("group-4-table-1");
+            const table2 = document.getElementById("group-4-table-2");
+            const table3 = document.getElementById("group-4-table-3");
+            const table4 = document.getElementById("group-4-table-4");
+            const table5 = document.getElementById("group-4-table-5");
+            const table6 = document.getElementById("group-4-table-6");
+            const buttons = document.querySelectorAll("#group-4 .toggle-btn");
+            if (type === 'tbl-1') {
+                table1.classList.remove("hidden");
+                table2.classList.add("hidden");
+                table3.classList.add("hidden");
+                table4.classList.add("hidden");
+                table5.classList.add("hidden");
+                table6.classList.add("hidden");
+            } else if (type === 'tbl-2') {
+                table1.classList.add("hidden");
+                table2.classList.remove("hidden");
+                table3.classList.add("hidden");
+                table4.classList.add("hidden");
+                table5.classList.add("hidden");
+                table6.classList.add("hidden");
+            } else if (type === 'tbl-3') {
+                table1.classList.add("hidden");
+                table2.classList.add("hidden");
+                table3.classList.remove("hidden");
+                table4.classList.add("hidden");
+                table5.classList.add("hidden");
+                table6.classList.add("hidden");
+            } else if (type === 'tbl-4') {
+                table1.classList.add("hidden");
+                table2.classList.add("hidden");
+                table3.classList.add("hidden");
+                table4.classList.remove("hidden");
+                table5.classList.add("hidden");
+                table6.classList.add("hidden");
+            } else if (type === 'tbl-5') {
+                table1.classList.add("hidden");
+                table2.classList.add("hidden");
+                table3.classList.add("hidden");
+                table4.classList.add("hidden");
+                table5.classList.remove("hidden");
+                table6.classList.add("hidden");
+            } else {
+                table1.classList.add("hidden");
+                table2.classList.add("hidden");
+                table3.classList.add("hidden");
+                table4.classList.add("hidden");
+                table5.classList.add("hidden");
+                table6.classList.remove("hidden");
+            }
+            buttons.forEach(btn => btn.classList.remove("active"));
+            document.querySelector(`#group-4 .toggle-btn[onclick*="${type}"]`).classList.add("active");
+        }
+
+
+        document.querySelectorAll(".clickable-row").forEach(row => {
+            row.addEventListener("click", () => {
+                window.location.href = row.dataset.href;
+            });
+        });
     </script>
 </body>
-
 </html>
