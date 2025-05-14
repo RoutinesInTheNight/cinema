@@ -348,7 +348,7 @@
 
     <table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2" id="group-5-table-1"
         style="--labels-size: 8.5rem; --aspect-ratio: 1 / 1;">
-        <caption>Общие фильмы</caption>
+        <caption>Общие просмотренные фильмы</caption>
         <tbody>
             <tr>
                 <th>Денис и Артур</th>
@@ -414,7 +414,7 @@
     </table>
 
     <table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2 hidden" id="group-5-table-2" style="--labels-size: 6rem; --aspect-ratio: 2 / calc(1 / 6 * 5);">
-        <caption>Общие фильмы</caption>
+        <caption>Общие просмотренные фильмы</caption>
         <tbody>
             <tr><th>С Артуром</th><td style="--size: calc(1);">202</td></tr>
             <tr><th>С Ваней</th><td style="--size: calc(1 / 202 * 129);">129</td></tr>
@@ -425,7 +425,7 @@
     </table>
 
     <table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2 hidden" id="group-5-table-3" style="--labels-size: 6rem; --aspect-ratio: 2 / calc(1 / 6 * 5);">
-        <caption>Общие фильмы</caption>
+        <caption>Общие просмотренные фильмы</caption>
         <tbody>
             <tr><th>С Денисом</th><td style="--size: calc(1);">202</td></tr>
             <tr><th>С Ваней</th><td style="--size: calc(1 / 202 * 200);">200</td></tr>
@@ -436,7 +436,7 @@
     </table>
 
     <table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2 hidden" id="group-5-table-4" style="--labels-size: 6rem; --aspect-ratio: 2 / calc(1 / 6 * 5);">
-        <caption>Общие фильмы</caption>
+        <caption>Общие просмотренные фильмы</caption>
         <tbody>
             <tr><th>С Артуром</th><td style="--size: calc(1);">186</td></tr>
             <tr><th>С Ваней</th><td style="--size: calc(1 / 186 * 127);">127</td></tr>
@@ -447,7 +447,7 @@
     </table>
 
     <table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2 hidden" id="group-5-table-5" style="--labels-size: 6rem; --aspect-ratio: 2 / calc(1 / 6 * 5);">
-        <caption>Общие фильмы</caption>
+        <caption>Общие просмотренные фильмы</caption>
         <tbody>
             <tr><th>С Артуром</th><td style="--size: calc(1);">200</td></tr>
             <tr><th>С Денисом</th><td style="--size: calc(1 / 200 * 129);">129</td></tr>
@@ -458,7 +458,7 @@
     </table>
 
     <table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2 hidden" id="group-5-table-6" style="--labels-size: 6rem; --aspect-ratio: 2 / calc(1 / 6 * 5);">
-        <caption>Общие фильмы</caption>
+        <caption>Общие просмотренные фильмы</caption>
         <tbody>
             <tr><th>С Артуром</th><td style="--size: calc(1);">133</td></tr>
             <tr><th>С Никитой</th><td style="--size: calc(1 / 133 * 101);">101</td></tr>
@@ -469,13 +469,16 @@
     </table>
 
     <table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2 hidden" id="group-5-table-7" style="--labels-size: 6rem; --aspect-ratio: 2 / calc(1 / 6 * 5);">
-        <caption>Общие фильмы</caption>
+        <caption>Общие просмотренные фильмы</caption>
         <tbody>
             <tr><th>С Артуром</th><td style="--size: calc(1);">99</td></tr>
             <tr><th>С Ваней</th><td style="--size: calc(1 / 99 * 68);">68</td></tr>
             <tr><th>С Никитой</th><td style="--size: calc(1 / 99 * 67);">67</td></tr>
             <tr><th>С Денисом</th><td style="--size: calc(1 / 99 * 62);">62</td></tr>
-            <tr><th>С Федей</th><td style="--size: calc(1 / 99 * 58);">58</td></tr>
+            <tr><th>С Федей</th>
+                <td class="group-5-td-count" style="--size: calc(1 / 99 * 58);">58</td>
+                <td class="group-5-td-percent hidden" style="--size: calc(1 / 99 * 58);">36.7%</td>
+            </tr>
         </tbody>
     </table>
 
@@ -488,6 +491,13 @@
         <button class="toggle-btn" onclick="tableGroup5('6')">Федя</button>
         <button class="toggle-btn" onclick="tableGroup5('7')">Вика</button>
     </div>
+
+    <div id="group-5-percent-toggle-wrapper" class="group-5-toggle-wrapper hidden">
+        <button id="group-5-toggle-btn" class="group-5-toggle-btn"></button>
+        <span class="group-5-toggle-label">Показать % от общего числа фильмов</span>
+    </div>
+
+
 
 
 
@@ -4105,6 +4115,9 @@
     <div class="logo-container" style="opacity: 0;">
         <img class="logo" src="img/logo.png" />
     </div>
+
+
+
     <script>
         function tableGroup1(type) {
             const tableHours = document.getElementById("group-1-table-1");
@@ -4185,6 +4198,13 @@
 
             buttons.forEach(btn => btn.classList.remove("active"));
             document.querySelector(`#group-5 .toggle-btn[onclick*="'${type}'"]`)?.classList.add("active");
+
+            const percentToggleWrapper = document.getElementById("group-5-percent-toggle-wrapper");
+            if (type === "1") {
+                percentToggleWrapper?.classList.add("hidden");
+            } else {
+                percentToggleWrapper?.classList.remove("hidden");
+            }
         }
 
 
@@ -4199,6 +4219,14 @@
             if (container) {
                 container.scrollLeft = container.scrollWidth;
             }
+        });
+
+
+        const toggleBtn5 = document.getElementById('group-5-toggle-btn');
+        toggleBtn5.addEventListener('click', () => {
+            toggleBtn5.classList.toggle('active');
+            document.querySelectorAll('.group-5-td-count').forEach(td => td.classList.toggle('hidden'));
+            document.querySelectorAll('.group-5-td-percent').forEach(td => td.classList.toggle('hidden'));
         });
 
     </script>
