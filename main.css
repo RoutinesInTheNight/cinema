@@ -162,16 +162,16 @@ table.charts-css td {
   width: 1.5rem;
   height: 1.5rem;
   background-color: #000;
-  border: 1px solid #749C6C;
+  border: 1px solid #d5e1d3;
   cursor: pointer;
   border-radius: 0.35rem;
   transition: background-color 0.1s;
 }
 .group-5-toggle-btn.active {
-  background-color: #2e3e2b;
+  background-color: #749C6C;
 }
 .group-5-toggle-label {
-  color: #749C6C;
+  color: #d5e1d3;
   font-size: 0.9rem;
   font-family: 'Sf Pro Display Regular', Arial, sans-serif;
 }

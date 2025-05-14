@@ -4222,8 +4222,10 @@
         });
 
 
+
+        const toggleWrp5 = document.getElementById('group-5-percent-toggle-wrapper');
         const toggleBtn5 = document.getElementById('group-5-toggle-btn');
-        toggleBtn5.addEventListener('click', () => {
+        toggleWrp5.addEventListener('click', () => {
             toggleBtn5.classList.toggle('active');
             document.querySelectorAll('.group-5-td-count').forEach(td => td.classList.toggle('hidden'));
             document.querySelectorAll('.group-5-td-percent').forEach(td => td.classList.toggle('hidden'));
