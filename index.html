@@ -4264,6 +4264,7 @@
             document.querySelector(`#group-1 .toggle-btn[onclick*="${type}"]`).classList.add("active");
         }
         function tableGroup2(type) {
+            hapticFeedback("light");
             const tableAll = document.getElementById("group-2-table-1");
             const tableImdb = document.getElementById("group-2-table-2");
             const tableKp = document.getElementById("group-2-table-3");
