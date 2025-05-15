@@ -63,8 +63,9 @@ function hapticFeedback(type, redirectUrl) {
     }
   }
 
+  console.log(redirectUrl)
   if (redirectUrl && redirectUrl !== '#') {
-    const children = document.querySelectorAll('.content > *');
+    const children = document.querySelectorAll('.body > *');
     children.forEach((child, index) => {
       setTimeout(() => {
         child.classList.remove('visible');
