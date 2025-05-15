@@ -203,12 +203,12 @@ table.charts-css td {
 .switch {
   --button-width: 2.5em;
   --button-height: 1.5rem;
-  --toggle-diameter: 1.25rem;
+  --toggle-diameter: 1rem;
   --button-toggle-offset: calc((var(--button-height) - var(--toggle-diameter)) / 2);
   --toggle-shadow-offset: 10px;
-  --toggle-wider: 2rem;
+  --toggle-wider: 1rem;
   --color-grey: #000000;
-  --color-green: #2e3e2b;
+  --color-green: #749C6C;
 }
 
 .slider {
