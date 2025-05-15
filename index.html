@@ -616,9 +616,17 @@
         <button class="toggle-btn" onclick="tableGroup5('7')">Вика</button>
     </div>
 
-    <div id="group-5-percent-toggle-wrapper" class="group-5-toggle-wrapper hidden">
+    <!-- <div id="group-5-percent-toggle-wrapper" class="group-5-toggle-wrapper hidden">
         <button id="group-5-toggle-btn" class="group-5-toggle-btn"></button>
         <span class="group-5-toggle-label">Показывать % общих фильмов вместо кол-ва</span>
+    </div> -->
+
+    <div id="group-5-percent-toggle-wrapper" class="group-5-toggle-wrapper hidden">
+        <label id="group-5-toggle-btn" class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+        <span class="group-5-toggle-label">Показывать % общих фильмов вместо кол-ва (100% - все фильмы выбранного участника )</span>
     </div>
 
 
@@ -4300,7 +4308,6 @@
             buttons.forEach(btn => btn.classList.remove("active"));
             document.querySelector(`#group-3 .toggle-btn[onclick*="${type}"]`).classList.add("active");
         }
-
         function tableGroup4(type) {
             const tables = document.querySelectorAll('[id^="group-4-table-"]');
             const buttons = document.querySelectorAll("#group-4 .toggle-btn");
@@ -4348,12 +4355,29 @@
 
 
 
-        const toggleWrp5 = document.getElementById('group-5-percent-toggle-wrapper');
-        const toggleBtn5 = document.getElementById('group-5-toggle-btn');
-        toggleWrp5.addEventListener('click', () => {
-            toggleBtn5.classList.toggle('active');
-            document.querySelectorAll('.group-5-td-count').forEach(td => td.classList.toggle('hidden'));
-            document.querySelectorAll('.group-5-td-percent').forEach(td => td.classList.toggle('hidden'));
+        // const toggleWrp5 = document.getElementById('group-5-percent-toggle-wrapper');
+        // const toggleBtn5 = document.getElementById('group-5-toggle-btn');
+        // toggleWrp5.addEventListener('click', () => {
+        //     toggleBtn5.classList.toggle('active');
+        //     document.querySelectorAll('.group-5-td-count').forEach(td => td.classList.toggle('hidden'));
+        //     document.querySelectorAll('.group-5-td-percent').forEach(td => td.classList.toggle('hidden'));
+        // });
+
+
+
+
+        const toggleInput5 = document.querySelector('#group-5-toggle-btn input[type="checkbox"]');
+
+        toggleInput5.addEventListener('change', () => {
+            const isChecked = toggleInput5.checked;
+
+            document.querySelectorAll('.group-5-td-count').forEach(td => {
+                td.classList.toggle('hidden', isChecked);
+            });
+
+            document.querySelectorAll('.group-5-td-percent').forEach(td => {
+                td.classList.toggle('hidden', !isChecked);
+            });
         });
 
     </script>
