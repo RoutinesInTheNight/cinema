@@ -4250,6 +4250,7 @@
 
     <script>
         function tableGroup1(type) {
+            hapticFeedback("change");
             const tableHours = document.getElementById("group-1-table-1");
             const tableDays = document.getElementById("group-1-table-2");
             const buttons = document.querySelectorAll("#group-1 .toggle-btn");
@@ -4286,6 +4287,7 @@
             document.querySelector(`#group-2 .toggle-btn[onclick*="${type}"]`).classList.add("active");
         }
         function tableGroup3(type) {
+            hapticFeedback("change");
             const tableAll = document.getElementById("group-3-table-1");
             const tableImdb = document.getElementById("group-3-table-2");
             const tableKp = document.getElementById("group-3-table-3");
@@ -4307,6 +4309,7 @@
             document.querySelector(`#group-3 .toggle-btn[onclick*="${type}"]`).classList.add("active");
         }
         function tableGroup4(type) {
+            hapticFeedback("change");
             const tables = document.querySelectorAll('[id^="group-4-table-"]');
             const buttons = document.querySelectorAll("#group-4 .toggle-btn");
 
@@ -4319,6 +4322,7 @@
         }
 
         function tableGroup5(type) {
+            hapticFeedback("change");
             const tables = document.querySelectorAll('[id^="group-5-table-"]');
             const buttons = document.querySelectorAll("#group-5 .toggle-btn");
 
@@ -4355,6 +4359,7 @@
         // Селектор переклюения на проценты для группы 5
         const toggleInput5 = document.querySelector('#group-5-toggle-btn input[type="checkbox"]');
         toggleInput5.addEventListener('change', () => {
+            hapticFeedback("change");
             const isChecked = toggleInput5.checked;
             document.querySelectorAll('.group-5-td-count').forEach(td => {
                 td.classList.toggle('hidden', isChecked);
