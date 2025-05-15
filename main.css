@@ -168,8 +168,21 @@ table.charts-css td {
 
 
 
-
-
+.notice {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: calc(90% + 1rem);
+  margin: 0.5rem auto 0 auto;
+  border-radius: 0.7rem;
+  background-color: #3b2b3e;
+}
+.notice span {
+  color: #d5e1d3;
+  font-size: 0.9rem;
+  font-family: 'Sf Pro Display Regular', Arial, sans-serif;
+  padding: .5rem;
+}
 
 
 
