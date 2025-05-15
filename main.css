@@ -239,3 +239,19 @@ table.charts-css td {
 }
 
 
+
+
+
+
+
+
+/* Появление всех элементов при загрузке страницы */
+body > * {
+  transform: scale(0.9);
+  opacity: 0;
+  transition: transform 0.25s ease-out, opacity 0.25s ease-out;
+}
+body > *.visible {
+  transform: scale(1);
+  opacity: 1;
+}
