@@ -31,6 +31,18 @@ body {
   overflow-x: hidden;
 }
 
+/* Появление всех элементов при загрузке страницы */
+body > * {
+  transform: scale(0.9);
+  opacity: 0;
+  transition: transform 0.25s ease-out, opacity 0.25s ease-out;
+}
+body > *.visible {
+  transform: scale(1);
+  opacity: 1;
+}
+
+
 .movie-chart {
   --color: #749C6C;
   --aspect-ratio: 2 / 1;
@@ -102,7 +114,7 @@ table.charts-css td {
   justify-content: space-around;
   align-items: center;
   border-top: 0.1rem solid #3D3C3F;
-  padding: .25rem 0 .75rem 0;
+  padding-top: .25rem;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   box-shadow: 0 0 1rem 0.25rem rgba(0, 0, 0, 1);  
@@ -244,14 +256,3 @@ table.charts-css td {
 
 
 
-
-/* Появление всех элементов при загрузке страницы */
-body > * {
-  transform: scale(0.9);
-  opacity: 0;
-  transition: transform 0.25s ease-out, opacity 0.25s ease-out;
-}
-body > *.visible {
-  transform: scale(1);
-  opacity: 1;
-}

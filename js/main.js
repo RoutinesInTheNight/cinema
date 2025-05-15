@@ -86,19 +86,15 @@ function hapticFeedback(type, redirectUrl) {
 // Нижний паддинг в нижнем меню с учётом безопасной зоны
 document.addEventListener('DOMContentLoaded', () => {
   const bottomMenu = document.querySelector('.bottom-menu');
-  const menuImage = document.querySelector('.bottom-menu .bottom-menu-item img');
   let safeAreaBottom = 0;
   let contentSafeAreaBottom = 0;
   bottomMenu.style.paddingBottom = '0px';
   function updatePadding() {
     const totalPadding = safeAreaBottom + contentSafeAreaBottom;
-    bottomMenu.style.paddingBottom = `${totalPadding}px`;
-    if (menuImage) {
-      const menuImageMarginTop = parseFloat(getComputedStyle(menuImage).marginTop) || 0;
-      const currentPadding = parseFloat(getComputedStyle(bottomMenu).paddingBottom) || 0;
-      if (currentPadding < menuImageMarginTop) {
-        bottomMenu.style.paddingBottom = `${menuImageMarginTop}px`;
-      }
+    if (totalPadding === 0) {
+      bottomMenu.style.paddingBottom = `0.25rem`;
+    } else {
+      bottomMenu.style.paddingBottom = `${totalPadding}px`;
     }
   }
   function onContentSafeAreaChanged() {
