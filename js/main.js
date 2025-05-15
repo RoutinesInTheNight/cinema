@@ -63,19 +63,18 @@ function hapticFeedback(type, redirectUrl) {
     }
   }
 
-  console.log(redirectUrl)
+  console.log(redirectUrl )
   if (redirectUrl && redirectUrl !== '#') {
-    const children = document.querySelectorAll('.body > *');
+    const children = document.querySelectorAll('body > *');
     children.forEach((child, index) => {
       setTimeout(() => {
         child.classList.remove('visible');
-        child.classList.add('hidden');
-      }, index * 25);
+      }, index * 5);
     });
 
     setTimeout(() => {
       window.location.href = redirectUrl;
-    }, children.length * 25);
+    }, children.length * 5);
   }
 }
 
