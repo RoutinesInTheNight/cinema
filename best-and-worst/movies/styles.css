@@ -43,7 +43,9 @@ body > *.visible {
 }
 
 
-
+.hidden {
+  display: none !important;
+}
 
 
 

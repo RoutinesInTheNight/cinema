@@ -16,355 +16,90 @@
 
 <body>
 
-
-    <div class="movie-card" style="margin-top: 10rem;">
-        <div class="movie-number">1</div>
-        <div class="movie-info">
-            <div class="movie-title">Интерстеллар</div>
-            <span class="movie-meta">Interstellar • 2014 • 2 ч 49 мин</span>
-            <div class="movie-rating-row">
-                <div class="movie-score">
-                    <img src="../../img/star.svg" class="score-icon" />
-                    <span>8.703</span>
+    <div class="movies" id="sort1=Денис&sort2=all&sort3=best">
+        <div class="movie-card" style="margin-top: 10rem;">
+            <div class="movie-number">1</div>
+            <div class="movie-info">
+                <div class="movie-title">Интерстеллар</div>
+                <span class="movie-meta">Interstellar • 2014 • 2 ч 49 мин</span>
+                <div class="movie-rating-row">
+                    <div class="movie-score">
+                        <img src="../../img/star.svg" class="score-icon" />
+                        <span>8.703</span>
+                    </div>
+                    <div class="movie-ratings">
+                        <span>IMDb: н/д</span>
+                        <span>-</span>
+                    </div>
+                    <div class="movie-ratings">
+                        <span>КП: 8.66</span>
+                        <span>1 051 306</span>
+                    </div>
                 </div>
-                <div class="movie-ratings">
-                    <span>IMDb: 8.73</span>
-                    <span>2 319 944</span>
+                <div class="movie-tags">
+                    <span onclick="hapticFeedback('soft', 'http://hdrezka0ddqyq.org/films/action/968-vlastelin-kolec-bratstvo-kolca-2001.html')">HDREZKA</span>
+                    <span>IMDb</span>
+                    <span>КП</span>
                 </div>
-                <div class="movie-ratings">
-                    <span>КП: 8.66</span>
-                    <span>1 051 306</span>
-                </div>
-            </div>
-            <div class="movie-tags">
-                <span>HDREZKA</span>
-                <span>IMDb</span>
-                <span>КП</span>
             </div>
         </div>
     </div>
 
-    <div class="movie-card">
-        <div class="movie-number">192</div>
-        <div class="movie-info">
-            <div class="movie-title">Оппенгеймер</div>
-            <span class="movie-meta">Oppenheimer • 2023 • 3 ч</span>
-            <div class="movie-rating-row">
-                <div class="movie-score">
-                    <img src="../../img/star.svg" class="score-icon" />
-                    <span>8.231</span>
-                </div>
-                <div class="movie-ratings">
-                    <span>IMDb: 8.34</span>
-                    <span>870 492</span>
-                </div>
-                <div class="movie-ratings">
-                    <span>КП: 8.11</span>
-                    <span>286 761</span>
-                </div>
-            </div>
-            <div class="movie-tags">
-                <span>HDREZKA</span>
-                <span>IMDb</span>
-                <span>КП</span>
-            </div>
-        </div>
-    </div>
-    <div class="movie-card">
-        <div class="movie-number">1237</div>
-        <div class="movie-info">
-            <div class="movie-title">Кровью и потом: Анаболики</div>
-            <span class="movie-meta">Pain & Gain • 2013 • 2 ч 9 мин</span>
-            <div class="movie-rating-row">
-                <div class="movie-score">
-                    <img src="../../img/star.svg" class="score-icon" />
-                    <span>6.474</span>
-                </div>
-                <div class="movie-ratings">
-                    <span>IMDb: 6.45</span>
-                    <span>235 403</span>
-                </div>
-                <div class="movie-ratings">
-                    <span>КП: 6.48</span>
-                    <span>210 785</span>
-                </div>
-            </div>
-            <div class="movie-tags">
-                <span>HDREZKA</span>
-                <span>IMDb</span>
-                <span>КП</span>
-            </div>
-        </div>
-    </div>
-    <div class="movie-card">
-        <div class="movie-number">235</div>
-        <div class="movie-info">
-            <div class="movie-title">Борат</div>
-            <span class="movie-meta">Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan • 2006 • 1 ч 24 мин</span>
-            <div class="movie-rating-row">
-                <div class="movie-score">
-                    <img src="../../img/star.svg" class="score-icon" />
-                    <span>7.053</span>
-                </div>
-                <div class="movie-ratings">
-                    <span>IMDb: 7.39</span>
-                    <span>455 698</span>
-                </div>
-                <div class="movie-ratings">
-                    <span>КП: 6.72</span>
-                    <span>219 329</span>
-                </div>
-            </div>
-            <div class="movie-tags">
-                <span>HDREZKA</span>
-                <span>IMDb</span>
-                <span>КП</span>
-            </div>
-        </div>
-    </div>
+    <div class="movies hidden" id="Денис/all/best"></div>
+    <div class="movies hidden" id="Денис/all/worst"></div>
+    <div class="movies hidden" id="Денис/imdb/best"></div>
+    <div class="movies hidden" id="Денис/imdb/worst"></div>
+    <div class="movies hidden" id="Денис/kp/best"></div>
+    <div class="movies hidden" id="Денис/kp/worst"></div>
+
+    <div class="movies hidden" id="Артур/all/best"></div>
+    <div class="movies hidden" id="Артур/all/worst"></div>
+    <div class="movies hidden" id="Артур/imdb/best"></div>
+    <div class="movies hidden" id="Артур/imdb/worst"></div>
+    <div class="movies hidden" id="Артур/kp/best"></div>
+    <div class="movies hidden" id="Артур/kp/worst"></div>
+
+    <div class="movies hidden" id="Никита/all/best"></div>
+    <div class="movies hidden" id="Никита/all/worst"></div>
+    <div class="movies hidden" id="Никита/imdb/best"></div>
+    <div class="movies hidden" id="Никита/imdb/worst"></div>
+    <div class="movies hidden" id="Никита/kp/best"></div>
+    <div class="movies hidden" id="Никита/kp/worst"></div>
+
+    <div class="movies hidden" id="Ваня/all/best"></div>
+    <div class="movies hidden" id="Ваня/all/worst"></div>
+    <div class="movies hidden" id="Ваня/imdb/best"></div>
+    <div class="movies hidden" id="Ваня/imdb/worst"></div>
+    <div class="movies hidden" id="Ваня/kp/best"></div>
+    <div class="movies hidden" id="Ваня/kp/worst"></div>
+
+    <div class="movies hidden" id="Федя/all/best"></div>
+    <div class="movies hidden" id="Федя/all/worst"></div>
+    <div class="movies hidden" id="Федя/imdb/best"></div>
+    <div class="movies hidden" id="Федя/imdb/worst"></div>
+    <div class="movies hidden" id="Федя/kp/best"></div>
+    <div class="movies hidden" id="Федя/kp/worst"></div>
+
+    <div class="movies hidden" id="Вика/all/best"></div>
+    <div class="movies hidden" id="Вика/all/worst"></div>
+    <div class="movies hidden" id="Вика/imdb/best"></div>
+    <div class="movies hidden" id="Вика/imdb/worst"></div>
+    <div class="movies hidden" id="Вика/kp/best"></div>
+    <div class="movies hidden" id="Вика/kp/worst"></div>
+
+    <!-- <div class="movies hidden" id="Артур/all/best"></div>
+    <div class="movies hidden" id="Артур/all/worst"></div>
+    <div class="movies hidden" id="Артур/imdb/best"></div>
+    <div class="movies hidden" id="Артур/imdb/worst"></div>
+    <div class="movies hidden" id="Артур/kp/best"></div>
+    <div class="movies hidden" id="Артур/kp/worst"></div> -->
 
 
-        
-    <div class="movie-card">
-        <div class="movie-number">192</div>
-        <div class="movie-info">
-            <div class="movie-title">Оппенгеймер</div>
-            <span class="movie-meta">Oppenheimer • 2023 • 3 ч</span>
-            <div class="movie-rating-row">
-                <div class="movie-score">
-                    <img src="../../img/star.svg" class="score-icon" />
-                    <span>8.231</span>
-                </div>
-                <div class="movie-ratings">
-                    <span>IMDb: 8.34</span>
-                    <span>870 492</span>
-                </div>
-                <div class="movie-ratings">
-                    <span>КП: 8.11</span>
-                    <span>286 761</span>
-                </div>
-            </div>
-            <div class="movie-tags">
-                <span>HDREZKA</span>
-                <span>IMDb</span>
-                <span>КП</span>
-            </div>
-        </div>
-    </div>
-    <div class="movie-card">
-        <div class="movie-number">1237</div>
-        <div class="movie-info">
-            <div class="movie-title">Кровью и потом: Анаболики</div>
-            <span class="movie-meta">Pain & Gain • 2013 • 2 ч 9 мин</span>
-            <div class="movie-rating-row">
-                <div class="movie-score">
-                    <img src="../../img/star.svg" class="score-icon" />
-                    <span>6.474</span>
-                </div>
-                <div class="movie-ratings">
-                    <span>IMDb: 6.45</span>
-                    <span>235 403</span>
-                </div>
-                <div class="movie-ratings">
-                    <span>КП: 6.48</span>
-                    <span>210 785</span>
-                </div>
-            </div>
-            <div class="movie-tags">
-                <span>HDREZKA</span>
-                <span>IMDb</span>
-                <span>КП</span>
-            </div>
-        </div>
-    </div>
-    <div class="movie-card">
-        <div class="movie-number">235</div>
-        <div class="movie-info">
-            <div class="movie-title">Борат</div>
-            <span class="movie-meta">Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan • 2006 • 1 ч 24 мин</span>
-            <div class="movie-rating-row">
-                <div class="movie-score">
-                    <img src="../../img/star.svg" class="score-icon" />
-                    <span>7.053</span>
-                </div>
-                <div class="movie-ratings">
-                    <span>IMDb: 7.39</span>
-                    <span>455 698</span>
-                </div>
-                <div class="movie-ratings">
-                    <span>КП: 6.72</span>
-                    <span>219 329</span>
-                </div>
-            </div>
-            <div class="movie-tags">
-                <span>HDREZKA</span>
-                <span>IMDb</span>
-                <span>КП</span>
-            </div>
-        </div>
-    </div>
-        
-    <div class="movie-card">
-        <div class="movie-number">192</div>
-        <div class="movie-info">
-            <div class="movie-title">Оппенгеймер</div>
-            <span class="movie-meta">Oppenheimer • 2023 • 3 ч</span>
-            <div class="movie-rating-row">
-                <div class="movie-score">
-                    <img src="../../img/star.svg" class="score-icon" />
-                    <span>8.231</span>
-                </div>
-                <div class="movie-ratings">
-                    <span>IMDb: 8.34</span>
-                    <span>870 492</span>
-                </div>
-                <div class="movie-ratings">
-                    <span>КП: 8.11</span>
-                    <span>286 761</span>
-                </div>
-            </div>
-            <div class="movie-tags">
-                <span>HDREZKA</span>
-                <span>IMDb</span>
-                <span>КП</span>
-            </div>
-        </div>
-    </div>
-    <div class="movie-card">
-        <div class="movie-number">1237</div>
-        <div class="movie-info">
-            <div class="movie-title">Кровью и потом: Анаболики</div>
-            <span class="movie-meta">Pain & Gain • 2013 • 2 ч 9 мин</span>
-            <div class="movie-rating-row">
-                <div class="movie-score">
-                    <img src="../../img/star.svg" class="score-icon" />
-                    <span>6.474</span>
-                </div>
-                <div class="movie-ratings">
-                    <span>IMDb: 6.45</span>
-                    <span>235 403</span>
-                </div>
-                <div class="movie-ratings">
-                    <span>КП: 6.48</span>
-                    <span>210 785</span>
-                </div>
-            </div>
-            <div class="movie-tags">
-                <span>HDREZKA</span>
-                <span>IMDb</span>
-                <span>КП</span>
-            </div>
-        </div>
-    </div>
-    <div class="movie-card">
-        <div class="movie-number">235</div>
-        <div class="movie-info">
-            <div class="movie-title">Борат</div>
-            <span class="movie-meta">Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan • 2006 • 1 ч 24 мин</span>
-            <div class="movie-rating-row">
-                <div class="movie-score">
-                    <img src="../../img/star.svg" class="score-icon" />
-                    <span>7.053</span>
-                </div>
-                <div class="movie-ratings">
-                    <span>IMDb: 7.39</span>
-                    <span>455 698</span>
-                </div>
-                <div class="movie-ratings">
-                    <span>КП: 6.72</span>
-                    <span>219 329</span>
-                </div>
-            </div>
-            <div class="movie-tags">
-                <span>HDREZKA</span>
-                <span>IMDb</span>
-                <span>КП</span>
-            </div>
-        </div>
-    </div>
-        
-    <div class="movie-card">
-        <div class="movie-number">192</div>
-        <div class="movie-info">
-            <div class="movie-title">Оппенгеймер</div>
-            <span class="movie-meta">Oppenheimer • 2023 • 3 ч</span>
-            <div class="movie-rating-row">
-                <div class="movie-score">
-                    <img src="../../img/star.svg" class="score-icon" />
-                    <span>8.231</span>
-                </div>
-                <div class="movie-ratings">
-                    <span>IMDb: 8.34</span>
-                    <span>870 492</span>
-                </div>
-                <div class="movie-ratings">
-                    <span>КП: 8.11</span>
-                    <span>286 761</span>
-                </div>
-            </div>
-            <div class="movie-tags">
-                <span>HDREZKA</span>
-                <span>IMDb</span>
-                <span>КП</span>
-            </div>
-        </div>
-    </div>
-    <div class="movie-card">
-        <div class="movie-number">1237</div>
-        <div class="movie-info">
-            <div class="movie-title">Кровью и потом: Анаболики</div>
-            <span class="movie-meta">Pain & Gain • 2013 • 2 ч 9 мин</span>
-            <div class="movie-rating-row">
-                <div class="movie-score">
-                    <img src="../../img/star.svg" class="score-icon" />
-                    <span>6.474</span>
-                </div>
-                <div class="movie-ratings">
-                    <span>IMDb: 6.45</span>
-                    <span>235 403</span>
-                </div>
-                <div class="movie-ratings">
-                    <span>КП: 6.48</span>
-                    <span>210 785</span>
-                </div>
-            </div>
-            <div class="movie-tags">
-                <span>HDREZKA</span>
-                <span>IMDb</span>
-                <span>КП</span>
-            </div>
-        </div>
-    </div>
-    <div class="movie-card">
-        <div class="movie-number">235</div>
-        <div class="movie-info">
-            <div class="movie-title">Борат</div>
-            <span class="movie-meta">Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan • 2006 • 1 ч 24 мин</span>
-            <div class="movie-rating-row">
-                <div class="movie-score">
-                    <img src="../../img/star.svg" class="score-icon" />
-                    <span>7.053</span>
-                </div>
-                <div class="movie-ratings">
-                    <span>IMDb: 7.39</span>
-                    <span>455 698</span>
-                </div>
-                <div class="movie-ratings">
-                    <span>КП: 6.72</span>
-                    <span>219 329</span>
-                </div>
-            </div>
-            <div class="movie-tags">
-                <span>HDREZKA</span>
-                <span>IMDb</span>
-                <span>КП</span>
-            </div>
-        </div>
-    </div>
+
 
 
     <div class="sorting visible">
-        
+
         <div id="sort1" class="sorting-users-scroll">
             <div class="sorting-user" onclick="hapticFeedback('soft', 'general')">
                 <span>Все</span>
