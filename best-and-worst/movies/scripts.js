@@ -67,18 +67,24 @@ function hapticFeedback(type, redirectUrl) {
     }
   }
 
-  console.log(redirectUrl )
   if (redirectUrl && redirectUrl !== '#') {
-    const children = document.querySelectorAll('body > *');
-    children.forEach((child, index) => {
-      setTimeout(() => {
-        child.classList.remove('visible');
-      }, index * 5);
-    });
+    const externalPrefixes = ['http://hdrezka', 'https://www.imdb', 'https://www.kinopoisk'];
+    const isExternal = externalPrefixes.some(prefix => redirectUrl.startsWith(prefix));
 
-    setTimeout(() => {
-      window.location.href = redirectUrl;
-    }, children.length * 5);
+    if (isExternal) {
+      telegram.openLink(redirectUrl);
+    } else {
+      const children = document.querySelectorAll('body > *');
+      children.forEach((child, index) => {
+        setTimeout(() => {
+          child.classList.remove('visible');
+        }, index * 5);
+      });
+
+      setTimeout(() => {
+        window.location.href = redirectUrl;
+      }, children.length * 5);
+    }
   }
 }
 
@@ -147,7 +153,7 @@ window.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-  
+
 
   // === STEP 2: sort2 – таблица по ID ===
   const sort2 = params.get("sort2");
