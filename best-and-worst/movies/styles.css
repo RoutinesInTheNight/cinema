@@ -333,7 +333,6 @@ table.charts-css td {
   /* gap: 0.5rem; */
   margin-top: 0.25rem;
   width: 100%;
-  font-family: 'Sf Pro Display Medium', Arial, sans-serif;
   opacity: .75;
 }
 
@@ -343,6 +342,7 @@ table.charts-css td {
   gap: 0.5rem;
   font-size: 1.5rem;
   color: #FFD43B;
+  font-family: 'Sf Pro Display Medium', Arial, sans-serif;
 }
 
 .score-icon {
@@ -356,6 +356,7 @@ table.charts-css td {
   font-size: .75rem;
   border-left: 1px solid #C6A635;
   color: #C6A635;
+  font-family: 'Sf Pro Display Bold', Arial, sans-serif;
   /* white-space: pre-wrap; */
 }
 
