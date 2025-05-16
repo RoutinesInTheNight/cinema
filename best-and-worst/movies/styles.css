@@ -133,11 +133,12 @@ table.charts-css td {
 
 .users {
   border-top: none;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .users .bottom-menu-item {
-  min-width: calc((100 / 428 * 123.06) * 1vw);
+  /* min-width: calc((100 / 428 * 123.06) * 1vw); */
+  min-width: 25%;
   padding: .25rem 0 .25rem 0;
 }
 
