@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-window.addEventListener("DOMContentLoaded", () => {
+function updateSelectionsFromURL() {
   const params = new URLSearchParams(window.location.search);
 
   // === STEP 1: sort1 – имя пользователя ===
@@ -154,18 +154,13 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-
   // === STEP 2: sort2 – таблица по ID ===
   const sort2 = params.get("sort2");
   if (sort2) {
     const sort2Container = document.getElementById("sort2");
     if (sort2Container) {
       sort2Container.querySelectorAll("div").forEach((div) => {
-        if (div.id === sort2) {
-          div.classList.add("selected");
-        } else {
-          div.classList.remove("selected");
-        }
+        div.classList.toggle("selected", div.id === sort2);
       });
     }
   }
@@ -176,12 +171,63 @@ window.addEventListener("DOMContentLoaded", () => {
     const sort3Container = document.getElementById("sort3");
     if (sort3Container) {
       sort3Container.querySelectorAll("div").forEach((div) => {
-        if (div.id === sort3) {
-          div.classList.add("selected");
-        } else {
-          div.classList.remove("selected");
-        }
+        div.classList.toggle("selected", div.id === sort3);
       });
     }
   }
+}
+
+
+window.addEventListener("DOMContentLoaded", () => {
+  updateSelectionsFromURL();
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function change(sortKey, value) {
+  const url = new URL(window.location);
+  url.searchParams.set(sortKey, value);
+  window.history.replaceState({}, '', url);
+
+  updateSelectionsFromURL();
+  applySortingFromURL(); // если нужно обновлять видимые блоки
+}
+
+
+function applySortingFromURL() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const sort1 = urlParams.get("sort1");
+  const sort2 = urlParams.get("sort2");
+  const sort3 = urlParams.get("sort3");
+
+  const allMovieBlocks = document.querySelectorAll('.movies');
+  allMovieBlocks.forEach(el => el.classList.add('hidden'));
+
+  const targetId = `${sort1}/${sort2}/${sort3}`;
+  const target = document.getElementById(targetId);
+  if (target) {
+      target.classList.remove('hidden');
+  } else {
+      console.warn(`Не найден элемент с id="${targetId}"`);
+  }
+}
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    applySortingFromURL();
+});
+
+
