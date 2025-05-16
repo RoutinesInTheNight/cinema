@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function updatePadding() {
     const totalPadding = safeAreaBottom + contentSafeAreaBottom;
     if (totalPadding === 0) {
-      bottomMenu.style.paddingBottom = `0.25rem`;
+      bottomMenu.style.paddingBottom = `2.5vw`;
     } else {
       bottomMenu.style.paddingBottom = `${totalPadding}px`;
     }
