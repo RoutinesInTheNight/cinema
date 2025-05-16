@@ -366,6 +366,11 @@
     <div class="bottom-menu visible">
 
         <div class="bottom-menu-row users" style="overflow-x: auto; overflow-y: hidden; max-width: 100vw; scrollbar-width: none; -ms-overflow-style: none;">
+            <style>
+                div::-webkit-scrollbar {
+                    display: none;
+                }
+            </style>
             <div style="margin-left: 5%;" class="bottom-menu-item selected" onclick="hapticFeedback('soft', 'general')">
                 <span>Все</span>
             </div>
