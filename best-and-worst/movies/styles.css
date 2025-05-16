@@ -110,7 +110,6 @@ table.charts-css td {
   left: 0;
   width: 100%;
   background-color: #1C1C1C;
-
   border-top: 0.1rem solid #3D3C3F;
   padding-top: .25rem;
   border-top-left-radius: 1rem;
@@ -119,7 +118,6 @@ table.charts-css td {
   touch-action: none;
   color: #749C6C;
 }
-
 .bottom-menu-row {
   display: flex;
   justify-content: space-around;
@@ -130,6 +128,54 @@ table.charts-css td {
   border-top: 1px solid #97979D;
   padding-top: 0.5rem;
 }
+.bottom-menu-item {
+  flex: 1;
+  text-align: center;
+  font-size: 1rem;
+  font-family: 'Sf Pro Display Medium', Arial, sans-serif;
+  cursor: pointer;
+  background-color: #2e3e2b;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+}
+.bottom-menu .selected  {
+  background-color: #749C6C;
+  color: #d5e1d3;
+  cursor: default;
+}
+
+
+
+
+
+.bottom-menu-scroll {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100vw;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  gap: .5rem;
+}
+.bottom-menu-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.bottom-menu-scroll div {
+  flex: 0 0 auto;
+  min-width: 25%;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .users {
   display: inline-flex;
@@ -141,24 +187,35 @@ table.charts-css td {
   padding-top: 0;
   /* margin-top: 0; */
 }
+
+
+
+
+
 .scroll-container {
-  padding-left: 5%;
-  /* padding-right: 5%; */
+  /* padding-left: 5%;
   overflow-x: auto;
   overflow-y: hidden;
   max-width: 90%;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch; */
+
+
+  overflow-x: auto;
+  overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-snap-type: x mandatory;
+
   border-right: 1px solid white;
   margin-top: .5rem;
 }
 
 
 
-.scroll-container::-webkit-scrollbar {
-  display: none;
-}
+
 
 .users .bottom-menu-item {
   /* min-width: calc((100 / 428 * 123.06) * 1vw); */
@@ -169,22 +226,9 @@ table.charts-css td {
 
 
 
-.bottom-menu-item {
-  flex: 1;
-  text-align: center;
-  font-size: 1rem;
-  font-family: 'Sf Pro Display Medium', Arial, sans-serif;
-  cursor: pointer;
-  background-color: #2e3e2b;
-  padding: 0.25rem;
-  border-radius: 0.5rem;
-}
 
-.bottom-menu .selected  {
-  background-color: #749C6C;
-  color: #d5e1d3;
-  cursor: default;
-}
+
+
 
 
 
