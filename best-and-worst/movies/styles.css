@@ -326,21 +326,23 @@ table.charts-css td {
 
 
 .movie-rating-row {
+
   display: flex;
   align-items: flex-start;
   align-items: center;
-  gap: 0.5rem;
-  color: #FFD43B;
-  font-family: 'Sf Pro Display Medium', Arial, sans-serif;
+  /* gap: 0.5rem; */
   margin-top: 0.25rem;
+  width: 100%;
+  font-family: 'Sf Pro Display Medium', Arial, sans-serif;
   opacity: .75;
 }
 
 .movie-score {
   display: inline-flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.5rem;
   font-size: 1.5rem;
+  color: #FFD43B;
 }
 
 .score-icon {
@@ -350,11 +352,35 @@ table.charts-css td {
 
 
 
+.movie-ratings {
+  font-size: .75rem;
+  border-left: 1px solid #C6A635;
+  color: #C6A635;
+  /* white-space: pre-wrap; */
+}
+
 .movie-ratings span {
   display: block;
-  font-size: .75rem;
-  white-space: pre-wrap;
 }
+
+.movie-rating-row div {
+  flex: 1;
+  text-align: center;
+  max-width: calc(100% / 3);
+  /* padding: 0.25rem; */
+  
+  /* border: 1px solid #97979D; */
+}
+
+
+
+
+
+
+
+
+
+
 
 
 .movie-tags {
@@ -370,7 +396,7 @@ table.charts-css td {
   opacity: .75;
 }
 
-.tag {
+.movie-tags span {
   flex: 1;
   text-align: center;
   max-width: calc((100% / 3) - 1rem);
