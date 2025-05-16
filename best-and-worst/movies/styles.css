@@ -132,14 +132,21 @@ table.charts-css td {
 }
 
 .users {
+  display: inline-flex;
+  width: max-content;
+  margin: 0;
+  gap: 0.5rem;
+
   border-top: none;
   padding-top: 0;
-  margin-top: 0;
+  /* margin-top: 0; */
 }
 .scroll-container {
+  padding-left: 5%;
+  /* padding-right: 5%; */
   overflow-x: auto;
   overflow-y: hidden;
-  max-width: 95%;
+  max-width: 90%;
   scrollbar-width: none;
   -ms-overflow-style: none;
   -webkit-overflow-scrolling: touch;
