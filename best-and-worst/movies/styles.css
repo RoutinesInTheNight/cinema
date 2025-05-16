@@ -152,7 +152,8 @@ table.charts-css td {
   display: flex;
   overflow-x: auto;
   overflow-y: hidden;
-  max-width: 100vw;
+  max-width: 90vw;
+  margin-left: 5%;
   scrollbar-width: none;
   -ms-overflow-style: none;
   gap: .5rem;
