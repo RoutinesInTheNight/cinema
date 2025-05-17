@@ -270,44 +270,35 @@ function applySortingFromURL() {
 
 
   const children = container.querySelectorAll(':scope > *');
-  const scrolledEnough = window.scrollY > window.innerHeight;
 
-  if (scrolledEnough) {
-    // Применяем анимацию к первым 10 карточкам
-    children.forEach((child, index) => {
-      if (index < 10) {
-        setTimeout(() => {
-          child.classList.add('visible');
-        }, index * 25);
+  children.forEach((child, index) => {
+    if (index < 10) {
+      setTimeout(() => {
+        child.classList.add('visible');
+      }, index * 25);
+    }
+  });
+
+  // Для остальных — добавляем анимацию при появлении в зоне видимости
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // чтобы не триггерилось повторно
       }
     });
+  }, {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1 // 10% видимости элемента
+  });
 
-    // Анимация при появлении в зоне видимости для остальных
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.1
-    });
-
-    children.forEach((child, index) => {
-      if (index >= 10) {
-        observer.observe(child);
-      }
-    });
-  } else {
-    // Без анимации — сразу показываем все
-    children.forEach(child => {
-      child.classList.add('visible');
-    });
-  }
-
+  // Наблюдаем за карточками начиная с 10-й
+  children.forEach((child, index) => {
+    if (index >= 10) {
+      observer.observe(child);
+    }
+  });
 
 }
 
