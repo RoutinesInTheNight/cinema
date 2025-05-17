@@ -203,31 +203,29 @@ function updateSelectionsFromURL() {
 
 function change(sortKey, value) {
   hapticFeedback('change')
-  window.scrollTo({ top: 0, behavior: 'auto' });
+  // window.scrollTo({ top: 0, behavior: 'auto' });
   const url = new URL(window.location);
   url.searchParams.set(sortKey, value);
   window.history.replaceState({}, '', url);
 
   updateSelectionsFromURL();
   applySortingFromURL();
-  // window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 
 function applySortingFromURL() {
-  const chldrn = document.querySelectorAll('#movies-container > *');
 
-  // Определяем видимые элементы
+  // Убираем элементы прошлой таблицы
+  const chldrn = document.querySelectorAll('#movies-container > *');
   const visibleChildren = Array.from(chldrn).filter((child) => {
     const rect = child.getBoundingClientRect();
     return rect.top < window.innerHeight && rect.bottom > 0;
   });
-
-  // Запускаем анимацию только для видимых
   visibleChildren.forEach((child, index) => {
     setTimeout(() => {
       child.classList.remove('visible');
-    }, index * 5);
+    }, index * 25);
   });
 
 
@@ -284,6 +282,9 @@ function applySortingFromURL() {
     `;
     container.appendChild(card);
   });
+
+
+
 
   const children = container.querySelectorAll(':scope > *');
 
