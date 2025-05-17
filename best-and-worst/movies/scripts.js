@@ -70,15 +70,25 @@ function hapticFeedback(type, redirectUrl) {
       telegram.openLink(redirectUrl);
     } else {
       const children = document.querySelectorAll('#movies-container > *');
-      children.forEach((child, index) => {
+
+      // Определяем видимые элементы
+      const visibleChildren = Array.from(children).filter((child) => {
+        const rect = child.getBoundingClientRect();
+        return rect.top < window.innerHeight && rect.bottom > 0;
+      });
+
+      // Запускаем анимацию только для видимых
+      visibleChildren.forEach((child, index) => {
         setTimeout(() => {
           child.classList.remove('visible');
         }, index * 5);
       });
 
+      // Переход после окончания анимации
+      const delay = visibleChildren.length * 5;
       setTimeout(() => {
         window.location.href = redirectUrl;
-      }, children.length * 5);
+      }, delay);
     }
   }
 }
@@ -205,6 +215,31 @@ function change(sortKey, value) {
 
 
 function applySortingFromURL() {
+  const chldrn = document.querySelectorAll('#movies-container > *');
+
+  // Определяем видимые элементы
+  const visibleChildren = Array.from(chldrn).filter((child) => {
+    const rect = child.getBoundingClientRect();
+    return rect.top < window.innerHeight && rect.bottom > 0;
+  });
+
+  // Запускаем анимацию только для видимых
+  visibleChildren.forEach((child, index) => {
+    setTimeout(() => {
+      child.classList.remove('visible');
+    }, index * 5);
+  });
+
+  // Переход после окончания анимации
+  const delay = visibleChildren.length * 5;
+  setTimeout(() => {
+    window.location.href = redirectUrl;
+  }, delay);
+
+
+  
+
+
   if (!movieData || !movieData.movies_data || !movieData.sort) return;
 
   const urlParams = new URLSearchParams(window.location.search);
@@ -255,7 +290,7 @@ function applySortingFromURL() {
     `;
     container.appendChild(card);
   });
-  
+
   const children = container.querySelectorAll(':scope > *');
 
   children.forEach((child, index) => {
