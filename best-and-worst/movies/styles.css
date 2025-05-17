@@ -31,13 +31,16 @@ body {
   overflow-x: hidden;
 }
 
+
+
+
 /* Появление всех элементов при загрузке страницы */
-body > * {
+#movies-container > * {
   transform: scale(0.9);
   opacity: 0;
   transition: transform 0.25s ease-out, opacity 0.25s ease-out;
 }
-body > *.visible {
+#movies-container > *.visible {
   transform: scale(1);
   opacity: 1;
 }

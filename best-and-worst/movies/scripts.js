@@ -15,7 +15,7 @@ if (telegram.isVersionAtLeast("8.0")) {
 
 
 
-const children = document.querySelectorAll('body > *');
+const children = document.querySelectorAll('#movies-container > *');
 children.forEach((child, index) => {
   setTimeout(() => {
     child.classList.add('visible');
@@ -74,7 +74,7 @@ function hapticFeedback(type, redirectUrl) {
     if (isExternal) {
       telegram.openLink(redirectUrl);
     } else {
-      const children = document.querySelectorAll('body > *');
+      const children = document.querySelectorAll('#movies-container > *');
       children.forEach((child, index) => {
         setTimeout(() => {
           child.classList.remove('visible');
@@ -209,7 +209,7 @@ function change(sortKey, value) {
 
 
 function applySortingFromURL() {
-  if (!movieData || !movieData.movies_data || !movieData.users_data) return;
+  if (!movieData || !movieData.movies_data || !movieData.sort) return;
 
   const urlParams = new URLSearchParams(window.location.search);
   const sort1 = urlParams.get("sort1");
