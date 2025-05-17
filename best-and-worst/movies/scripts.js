@@ -271,34 +271,51 @@ function applySortingFromURL() {
 
   const children = container.querySelectorAll(':scope > *');
 
-  children.forEach((child, index) => {
-    if (index < 10) {
-      setTimeout(() => {
-        child.classList.add('visible');
-      }, index * 25);
-    }
-  });
+  const allowedReferrers = [
+    "https://routinesinthenight.github.io/cinema/",
+    "https://routinesinthenight.github.io/cinema/general"
+  ];
 
-  // Для остальных — добавляем анимацию при появлении в зоне видимости
+  const cameFromAllowedPage = allowedReferrers.some(ref => document.referrer.startsWith(ref));
+
+  if (cameFromAllowedPage) {
+    // Пришли с нужной страницы — делаем анимацию
+    children.forEach((child, index) => {
+      if (index < 10) {
+        setTimeout(() => {
+          child.classList.add('visible');
+        }, index * 25);
+      }
+    });
+  } else {
+    // Не с нужной страницы — показываем первые 10 мгновенно
+    children.forEach((child, index) => {
+      if (index < 10) {
+        child.classList.add('visible');
+      }
+    });
+  }
+
+  // Остальные — через IntersectionObserver
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        observer.unobserve(entry.target); // чтобы не триггерилось повторно
+        observer.unobserve(entry.target);
       }
     });
   }, {
     root: null,
     rootMargin: '0px',
-    threshold: 0.1 // 10% видимости элемента
+    threshold: 0.1
   });
 
-  // Наблюдаем за карточками начиная с 10-й
   children.forEach((child, index) => {
     if (index >= 10) {
       observer.observe(child);
     }
   });
+
 
 }
 
