@@ -15,12 +15,7 @@ if (telegram.isVersionAtLeast("8.0")) {
 
 
 
-const children = document.querySelectorAll('#movies-container > *');
-children.forEach((child, index) => {
-  setTimeout(() => {
-    child.classList.add('visible');
-  }, index * 25);
-});
+
 
 
 
@@ -258,6 +253,13 @@ function applySortingFromURL() {
       </div>
     `;
     container.appendChild(card);
+  });
+
+  const children = document.querySelectorAll('#movies-container > *');
+  children.forEach((child, index) => {
+    setTimeout(() => {
+      child.classList.add('visible');
+    }, index * 25);
   });
 }
 
