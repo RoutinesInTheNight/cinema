@@ -169,20 +169,12 @@ table.charts-css td {
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 45%;
+  width: 50%;
   margin: 0 auto;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-  background-color: #1C1C1C;
-  border: 0.05rem solid #3D3C3F;
   padding-top: calc(var(--tg-safe-area-inset-top, 0px) + var(--tg-content-safe-area-inset-top));
-}
-
-.last-update span {
-  color: #8C8C8C;
-  font-size: 0.9rem;
-  font-family: 'Sf Pro Display Regular', Arial, sans-serif;
-  padding: .5rem;
+    color: #8C8C8C;
+  font-size: 1rem;
+  font-family: 'Sf Pro Display Medium', Arial, sans-serif;
 }
 
 
