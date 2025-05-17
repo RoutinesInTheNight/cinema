@@ -217,7 +217,7 @@ function applySortingFromURL() {
   const sort3 = urlParams.get("sort3");
 
   const key = `${sort1}/${sort2}/${sort3}`;
-  const movieIds = movieData.users_data[key];
+  const movieIds = movieData.sort[key];
 
   const container = document.getElementById("movies-container");
   container.innerHTML = '';
