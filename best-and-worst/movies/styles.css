@@ -37,7 +37,7 @@ body {
 /* Появление всех элементов при загрузке страницы */
 #movies-container > * {
   transform: scale(0.9);
-  opacity: .25;
+  opacity: .5;
   transition: transform 0.25s ease-out, opacity 0.25s ease-out;
 }
 #movies-container > *.visible {
