@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta
+        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height"
+        name="viewport" />
+    <title>Лучшие и худшие фильмы</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link href="styles.css" rel="stylesheet" />
+    <!-- <link href="favicon.png" rel="icon" type="image/png" /> -->
+</head>
+
+<body>
+
+
+    <svg style="display: none;">
+        <symbol id="icon-star" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#FFD43B"
+                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z" />
+        </symbol>
+    </svg>
+
+
+    <div id="movies-container"></div>
+
+    <div class="sorting">
+        <div class="sorting-users-scroll" id="sort1">
+            <div class="sorting-user" onclick="change('sort1', 'Все')">
+                <span>Все</span>
+            </div>
+            <div class="sorting-user" onclick="change('sort1', 'Денис')">
+                <span>Денис</span>
+            </div>
+            <div class="sorting-user" onclick="change('sort1', 'Артур')">
+                <span>Артур</span>
+            </div>
+            <div class="sorting-user" onclick="change('sort1', 'Никита')">
+                <span>Никита</span>
+            </div>
+            <div class="sorting-user" onclick="change('sort1', 'Ваня')">
+                <span>Ваня</span>
+            </div>
+            <div class="sorting-user" onclick="change('sort1', 'Федя')">
+                <span>Федя</span>
+            </div>
+            <div class="sorting-user" onclick="change('sort1', 'Вика')">
+                <span>Вика</span>
+            </div>
+        </div>
+
+        <div class="sorting-row" id="sort2">
+            <div class="sorting-item" id="all" onclick="change('sort2', 'all')">
+                <span>По всем</span>
+            </div>
+            <div class="sorting-item" id="imdb" onclick="change('sort2', 'imdb')">
+                <span>По IMDb</span>
+            </div>
+            <div class="sorting-item" id="kp" onclick="change('sort2', 'kp')">
+                <span>По КП</span>
+            </div>
+        </div>
+
+        <div class="sorting-row" id="sort3">
+            <div class="sorting-item" id="best" onclick="change('sort3', 'best')">
+                <span>Лучшие фильмы</span>
+            </div>
+            <div class="sorting-item" id="worst" onclick="change('sort3', 'worst')">
+                <span>Худшие фильмы</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>
