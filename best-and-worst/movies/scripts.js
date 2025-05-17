@@ -178,9 +178,9 @@ function updateSelectionsFromURL() {
 }
 
 
-window.addEventListener("DOMContentLoaded", () => {
-  updateSelectionsFromURL();
-});
+// window.addEventListener("DOMContentLoaded", () => {
+//   updateSelectionsFromURL();
+// });
 
 
 
@@ -197,32 +197,59 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 function change(sortKey, value) {
+  hapticFeedback('change')
   const url = new URL(window.location);
   url.searchParams.set(sortKey, value);
   window.history.replaceState({}, '', url);
 
   updateSelectionsFromURL();
   applySortingFromURL(); // если нужно обновлять видимые блоки
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 
 function applySortingFromURL() {
+  if (!movieData) return;
+
   const urlParams = new URLSearchParams(window.location.search);
   const sort1 = urlParams.get("sort1");
   const sort2 = urlParams.get("sort2");
   const sort3 = urlParams.get("sort3");
 
-  const allMovieBlocks = document.querySelectorAll('.movies');
-  allMovieBlocks.forEach(el => el.classList.add('hidden'));
+  const key = `${sort1}/${sort2}/${sort3}`;
+  const movies = movieData[key];
 
-  const targetId = `${sort1}/${sort2}/${sort3}`;
-  const target = document.getElementById(targetId);
-  if (target) {
-      target.classList.remove('hidden');
-  } else {
-      console.warn(`Не найден элемент с id="${targetId}"`);
+  const container = document.getElementById("movies-container");
+  container.innerHTML = '';
+
+  if (!movies || movies.length === 0) {
+    container.innerHTML = '<div class="no-data">Нет данных для выбранной сортировки</div>';
+    return;
   }
+
+  movies.forEach((movie, index) => {
+    const card = document.createElement("div");
+    card.className = "movie-card";
+    card.innerHTML = `
+      <div class="movie-number">${index + 1}</div>
+      <div class="movie-info">
+        <div class="movie-title">${movie.title}</div>
+        <span class="movie-meta">${movie.meta}</span>
+        <div class="movie-rating-row">
+          <div class="movie-score"><img class="score-icon" src="../../img/star.svg" /><span>${movie.score}</span></div>
+          <div class="movie-ratings"><span>IMDb: ${movie.imdb.rating}</span><span>${movie.imdb.votes}</span></div>
+          <div class="movie-ratings"><span>КП: ${movie.kp.rating}</span><span>${movie.kp.votes}</span></div>
+        </div>
+        <div class="movie-tags">
+          <span onclick='hapticFeedback("soft", "${movie.links.hdrezka}")'>HDREZKA</span>
+          <span onclick='hapticFeedback("soft", "${movie.links.imdb}")'>IMDb</span>
+          <span onclick='hapticFeedback("soft", "${movie.links.kp}")'>КП</span>
+        </div>
+      </div>`;
+    container.appendChild(card);
+  });
 }
+
 
 
 
@@ -230,4 +257,29 @@ document.addEventListener("DOMContentLoaded", () => {
     applySortingFromURL();
 });
 
+
+
+
+
+
+
+
+
+
+let movieData = null;
+
+async function loadMoviesJson() {
+  try {
+    const response = await fetch('data.json'); // укажи правильный путь
+    movieData = await response.json();
+    applySortingFromURL(); // отрисовать после загрузки данных
+  } catch (e) {
+    console.error('Ошибка при загрузке JSON:', e);
+  }
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  updateSelectionsFromURL();
+  loadMoviesJson(); // загружаем и применяем
+});
 
