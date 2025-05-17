@@ -248,7 +248,7 @@ function applySortingFromURL() {
         <span class="movie-meta">${movie["2"]}</span>
         <div class="movie-rating-row">
           <div class="movie-score">
-            <svg class="score-icon"><use href="#icon-star" /></svg>
+            <svg class="score-icon"><use href="#icon-star"/></svg>
             <span>${movie["3"]}</span>
           </div>
           <div class="movie-ratings"><span>IMDb: ${movie["4"]}</span><span>${movie["5"]}</span></div>
