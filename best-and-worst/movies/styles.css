@@ -125,7 +125,7 @@ body > *.visible {
 
 
 
-.movies {
+.movies-container {
   padding-top: calc(var(--tg-safe-area-inset-top, 0px) + var(--tg-content-safe-area-inset-top));
   padding-bottom: 10rem;
 }

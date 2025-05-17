@@ -209,7 +209,7 @@ function change(sortKey, value) {
 
 
 function applySortingFromURL() {
-  if (!movieData) return;
+  if (!movieData || !movieData.movies_data || !movieData.users_data) return;
 
   const urlParams = new URLSearchParams(window.location.search);
   const sort1 = urlParams.get("sort1");
@@ -217,35 +217,46 @@ function applySortingFromURL() {
   const sort3 = urlParams.get("sort3");
 
   const key = `${sort1}/${sort2}/${sort3}`;
-  const movies = movieData[key];
+  const movieIds = movieData.users_data[key];
 
   const container = document.getElementById("movies-container");
   container.innerHTML = '';
 
-  if (!movies || movies.length === 0) {
+  if (!movieIds || movieIds.length === 0) {
     container.innerHTML = '<div class="no-data">Нет данных для выбранной сортировки</div>';
     return;
   }
 
-  movies.forEach((movie, index) => {
+  movieIds.forEach((id, index) => {
+    const movie = movieData.movies_data[id];
+    if (!movie) return;
     const card = document.createElement("div");
     card.className = "movie-card";
+
+    let tagsHTML = "";
+    if (movie["8"] || movie["9"] || movie["10"]) {
+      tagsHTML = '<div class="movie-tags">';
+      if (movie["8"]) tagsHTML += `<span onclick='hapticFeedback("soft", "${movie["8"]}")'>HDREZKA</span>`;
+      if (movie["9"]) tagsHTML += `<span onclick='hapticFeedback("soft", "${movie["9"]}")'>IMDb</span>`;
+      if (movie["10"]) tagsHTML += `<span onclick='hapticFeedback("soft", "${movie["10"]}")'>КП</span>`;
+      tagsHTML += "</div>";
+    }
     card.innerHTML = `
       <div class="movie-number">${index + 1}</div>
       <div class="movie-info">
-        <div class="movie-title">${movie.title}</div>
-        <span class="movie-meta">${movie.meta}</span>
+        <div class="movie-title">${movie["1"]}</div>
+        <span class="movie-meta">${movie["2"]}</span>
         <div class="movie-rating-row">
-          <div class="movie-score"><img class="score-icon" src="../../img/star.svg" /><span>${movie.score}</span></div>
-          <div class="movie-ratings"><span>IMDb: ${movie.imdb.rating}</span><span>${movie.imdb.votes}</span></div>
-          <div class="movie-ratings"><span>КП: ${movie.kp.rating}</span><span>${movie.kp.votes}</span></div>
+          <div class="movie-score">
+            <svg class="score-icon"><use href="#icon-star" /></svg>
+            <span>${movie["3"]}</span>
+          </div>
+          <div class="movie-ratings"><span>IMDb: ${movie["4"]}</span><span>${movie["5"]}</span></div>
+          <div class="movie-ratings"><span>КП: ${movie["6"]}</span><span>${movie["7"]}</span></div>
         </div>
-        <div class="movie-tags">
-          <span onclick='hapticFeedback("soft", "${movie.links.hdrezka}")'>HDREZKA</span>
-          <span onclick='hapticFeedback("soft", "${movie.links.imdb}")'>IMDb</span>
-          <span onclick='hapticFeedback("soft", "${movie.links.kp}")'>КП</span>
-        </div>
-      </div>`;
+        ${tagsHTML}
+      </div>
+    `;
     container.appendChild(card);
   });
 }
@@ -254,7 +265,7 @@ function applySortingFromURL() {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    applySortingFromURL();
+  applySortingFromURL();
 });
 
 

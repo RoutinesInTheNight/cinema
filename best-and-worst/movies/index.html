@@ -9,7 +9,6 @@
         name="viewport" />
     <title>Лучшие и худшие фильмы</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <!-- <link href="charts.css" rel="stylesheet" /> -->
     <link href="styles.css" rel="stylesheet" />
     <!-- <link href="favicon.png" rel="icon" type="image/png" /> -->
 </head>
@@ -17,12 +16,6 @@
 <body>
     <div id="movies-container"></div>
 
-    <!-- <div class="movies hidden" id="Артур/all/best"></div>
-    <div class="movies hidden" id="Артур/all/worst"></div>
-    <div class="movies hidden" id="Артур/imdb/best"></div>
-    <div class="movies hidden" id="Артур/imdb/worst"></div>
-    <div class="movies hidden" id="Артур/kp/best"></div>
-    <div class="movies hidden" id="Артур/kp/worst"></div> -->
     <div class="sorting visible">
         <div class="sorting-users-scroll" id="sort1">
             <div class="sorting-user" onclick="change('sort1', 'Все')">
@@ -47,6 +40,7 @@
                 <span>Вика</span>
             </div>
         </div>
+
         <div class="sorting-row" id="sort2">
             <div class="sorting-item" id="all" onclick="change('sort2', 'all')">
                 <span>По всем</span>
@@ -58,6 +52,7 @@
                 <span>По КП</span>
             </div>
         </div>
+
         <div class="sorting-row" id="sort3">
             <div class="sorting-item" id="best" onclick="change('sort3', 'best')">
                 <span>Лучшие фильмы</span>
@@ -67,7 +62,9 @@
             </div>
         </div>
     </div>
+
     <script src="scripts.js"></script>
+
 </body>
 
 </html>
