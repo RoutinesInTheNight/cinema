@@ -183,9 +183,7 @@ function updateSelectionsFromURL() {
 }
 
 
-// window.addEventListener("DOMContentLoaded", () => {
-//   updateSelectionsFromURL();
-// });
+
 
 
 
@@ -203,14 +201,14 @@ function updateSelectionsFromURL() {
 
 function change(sortKey, value) {
   hapticFeedback('change')
-  // window.scrollTo({ top: 0, behavior: 'auto' });
   const url = new URL(window.location);
   url.searchParams.set(sortKey, value);
   window.history.replaceState({}, '', url);
 
   updateSelectionsFromURL();
   applySortingFromURL();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({ top: 0, behavior: 'auto' });
+  // window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 
@@ -268,53 +266,47 @@ function applySortingFromURL() {
 
 
 
-
   const children = container.querySelectorAll(':scope > *');
 
-  const allowedReferrers = [
-    "https://routinesinthenight.github.io/cinema/",
-    "https://routinesinthenight.github.io/cinema/general"
-  ];
+  // Проверка: есть ли new-load=true
+  const hasNewLoad = urlParams.get('new-load') === 'true';
 
-  const cameFromAllowedPage = allowedReferrers.some(ref => document.referrer.startsWith(ref));
+  // Удаляем параметр из URL без перезагрузки
+  if (hasNewLoad) {
+    urlParams.delete('new-load');
+    const newUrl = `${window.location.pathname}?${urlParams.toString()}`;
+    window.history.replaceState({}, '', newUrl);
+  }
 
-  if (cameFromAllowedPage) {
-    // Пришли с нужной страницы — делаем анимацию
-    children.forEach((child, index) => {
-      if (index < 10) {
-        setTimeout(() => {
-          child.classList.add('visible');
-        }, index * 25);
-      }
+  // Первые 10 — всегда мгновенно
+  children.forEach((child, index) => {
+    if (index < 10) {
+      child.classList.add('visible');
+    }
+  });
+
+  // Если включена "новая загрузка" — включаем анимации при скролле
+  if (hasNewLoad) {
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
     });
-  } else {
-    // Не с нужной страницы — показываем первые 10 мгновенно
+
     children.forEach((child, index) => {
-      if (index < 10) {
-        child.classList.add('visible');
+      if (index >= 10) {
+        observer.observe(child);
       }
     });
   }
 
-  // Остальные — через IntersectionObserver
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-  });
-
-  children.forEach((child, index) => {
-    if (index >= 10) {
-      observer.observe(child);
-    }
-  });
 
 
 }
