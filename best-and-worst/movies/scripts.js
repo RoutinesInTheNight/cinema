@@ -193,13 +193,14 @@ function updateSelectionsFromURL() {
 
 function change(sortKey, value) {
   hapticFeedback('change')
+  window.scrollTo({ top: 0, behavior: 'auto' });
   const url = new URL(window.location);
   url.searchParams.set(sortKey, value);
   window.history.replaceState({}, '', url);
 
   updateSelectionsFromURL();
-  applySortingFromURL(); // если нужно обновлять видимые блоки
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  applySortingFromURL();
+  // window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 
@@ -254,13 +255,38 @@ function applySortingFromURL() {
     `;
     container.appendChild(card);
   });
+  
+  const children = container.querySelectorAll(':scope > *');
 
-  const children = document.querySelectorAll('#movies-container > *');
   children.forEach((child, index) => {
-    setTimeout(() => {
-      child.classList.add('visible');
-    }, index * 25);
+    if (index < 10) {
+      setTimeout(() => {
+        child.classList.add('visible');
+      }, index * 25);
+    }
   });
+
+  // Для остальных — добавляем анимацию при появлении в зоне видимости
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // чтобы не триггерилось повторно
+      }
+    });
+  }, {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1 // 10% видимости элемента
+  });
+
+  // Наблюдаем за карточками начиная с 10-й
+  children.forEach((child, index) => {
+    if (index >= 10) {
+      observer.observe(child);
+    }
+  });
+
 }
 
 
