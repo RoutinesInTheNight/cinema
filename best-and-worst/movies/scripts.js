@@ -268,44 +268,48 @@ function applySortingFromURL() {
 
   const children = container.querySelectorAll(':scope > *');
 
-  // Проверка: есть ли new-load=true
+  // Проверка наличия параметра new-load=true
   const hasNewLoad = urlParams.get('new-load') === 'true';
 
-  // Удаляем параметр из URL без перезагрузки
+  // Удалить только new-load из URL без перезагрузки
   if (hasNewLoad) {
     urlParams.delete('new-load');
     const newUrl = `${window.location.pathname}?${urlParams.toString()}`;
     window.history.replaceState({}, '', newUrl);
   }
 
-  // Первые 10 — всегда мгновенно
+  // Первые 10
   children.forEach((child, index) => {
     if (index < 10) {
-      child.classList.add('visible');
+      if (hasNewLoad) {
+        setTimeout(() => {
+          child.classList.add('visible');
+        }, index * 25);
+      } else {
+        child.classList.add('visible'); // без анимации — сразу
+      }
     }
   });
 
-  // Если включена "новая загрузка" — включаем анимации при скролле
-  if (hasNewLoad) {
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.1
-    });
-
-    children.forEach((child, index) => {
-      if (index >= 10) {
-        observer.observe(child);
+  // Остальные — всегда через IntersectionObserver
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
       }
     });
-  }
+  }, {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  });
+
+  children.forEach((child, index) => {
+    if (index >= 10) {
+      observer.observe(child);
+    }
+  });
 
 
 
