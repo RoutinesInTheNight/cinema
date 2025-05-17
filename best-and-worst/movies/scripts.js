@@ -214,24 +214,7 @@ function change(sortKey, value) {
 }
 
 
-function applySortingFromURL() {
-
-  // Убираем элементы прошлой таблицы
-  const chldrn = document.querySelectorAll('#movies-container > *');
-  const visibleChildren = Array.from(chldrn).filter((child) => {
-    const rect = child.getBoundingClientRect();
-    return rect.top < window.innerHeight && rect.bottom > 0;
-  });
-  visibleChildren.forEach((child, index) => {
-    setTimeout(() => {
-      child.classList.remove('visible');
-    }, index * 25);
-  });
-
-
-
-
-
+async function applySortingFromURL() {
   if (!movieData || !movieData.movies_data || !movieData.sort) return;
 
   const urlParams = new URLSearchParams(window.location.search);
@@ -243,6 +226,26 @@ function applySortingFromURL() {
   const movieIds = movieData.sort[key];
 
   const container = document.getElementById("movies-container");
+
+
+  // Убираем старые карточки с анимацией
+  const oldChildren = Array.from(container.children);
+  const visibleChildren = oldChildren.filter((child) => {
+    const rect = child.getBoundingClientRect();
+    return rect.top < window.innerHeight && rect.bottom > 0;
+  });
+  visibleChildren.forEach((child, index) => {
+    setTimeout(() => {
+      child.classList.remove('visible');
+    }, index * 25);
+  });
+  // Ждём, пока закончится анимация исчезновения (примерно 25ms * n + запас)
+  const delay = visibleChildren.length * 25 + 100;
+  await new Promise(resolve => setTimeout(resolve, delay));
+
+
+
+  // Очищаем контейнер и добавляем новые карточки
   container.innerHTML = '';
 
   if (!movieIds || movieIds.length === 0) {
