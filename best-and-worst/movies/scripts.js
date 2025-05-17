@@ -230,14 +230,8 @@ function applySortingFromURL() {
     }, index * 5);
   });
 
-  // Переход после окончания анимации
-  const delay = visibleChildren.length * 5;
-  setTimeout(() => {
-    window.location.href = redirectUrl;
-  }, delay);
 
 
-  
 
 
   if (!movieData || !movieData.movies_data || !movieData.sort) return;
