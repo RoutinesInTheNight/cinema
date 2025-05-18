@@ -360,3 +360,43 @@ window.addEventListener("DOMContentLoaded", () => {
   loadMoviesJson(); // загружаем и применяем
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Нижнее меню сортироки убирается при активном input
+const input = document.getElementById('movie-search');
+const sorting = document.querySelector('.sorting');
+
+input.addEventListener('focus', () => {
+  sorting?.classList.add('hidden');
+});
+
+input.addEventListener('blur', () => {
+  if (document.activeElement !== input) {
+    sorting?.classList.remove('hidden');
+  }
+});
+
+
+// Фокус с input пропадает при клике вне его области
+document.addEventListener('click', (e) => {
+  const form = document.querySelector('.form');
+  const isClickInside = form.contains(e.target);
+
+  if (!isClickInside) {
+    input.blur(); // убираем фокус
+  }
+});

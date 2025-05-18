@@ -293,7 +293,6 @@ body {
   left: 0;
   width: 100%;
   background-color: #1C1C1C;
-  border-top: 0.1rem solid #3D3C3F;
   border-bottom: 0.1rem solid #3D3C3F;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
@@ -305,10 +304,10 @@ body {
 .form {
   display: flex;
   --input-text-color: #d5e1d3;
-  --input-bg-color: #2e3e2b;
-  --focus-input-bg-color: #2e3e2b;
-  --text-color: #749C6C ;
-  --active-color: #749C6C;
+  /* --input-bg-color: #2e3e2b; */
+  /* --focus-input-bg-color: #2e3e2b; */
+  --text-color: #97979D ;
+  --active-color: #ffffff;
   /* --width-of-input: 200px; */
   --inline-padding-of-input: 1.2em;
   --gap: 0.9rem;
@@ -318,24 +317,12 @@ body {
   display: flex;
   gap: 0.5rem;
   align-items: center;
-  width: 90%;
+  width: 100%;
   position: relative;
   isolation: isolate;
   margin: 0 auto 2.5vw auto;
 }
 
-/* a fancy bg for showing background and border when focus. */
-.fancy-bg {
-  position: absolute;
-  width: 100%;
-  inset: 0;
-  background: var(--input-bg-color);
-  border-radius: .5rem;
-  height: 100%;
-  z-index: -1;
-  pointer-events: none;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-}
 
 /* label styling */
 label {
@@ -355,7 +342,7 @@ label {
 /* styling search-icon */
 .search {
   fill: var(--text-color);
-  left: var(--inline-padding-of-input);
+  /* left: var(--inline-padding-of-input); */
 }
 
 /* svg -- size */
@@ -377,8 +364,8 @@ svg {
   height: 20px;
   /* border-radius: 50%; */
   background: transparent;
-  opacity: 0;
-  visibility: hidden;
+  /* opacity: 0; */
+  /* visibility: hidden; */
 }
 
 /* styling of input */
@@ -390,6 +377,7 @@ svg {
   border: none;
   font-family: 'Sf Pro Display Regular', Arial, sans-serif;
   font-size: 1rem;
+  border-bottom: 0.1rem solid #3D3C3F;
 }
 
 .input:focus {
