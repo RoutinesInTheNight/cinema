@@ -35,12 +35,13 @@ body {
 
 
 /* Появление всех элементов при загрузке страницы */
-#movies-container > * {
+#movies-container>* {
   transform: scale(0.9);
   opacity: 0;
   transition: transform 0.25s ease-out, opacity 0.25s ease-out;
 }
-#movies-container > *.visible {
+
+#movies-container>*.visible {
   transform: scale(1);
   opacity: 1;
 }
@@ -71,10 +72,11 @@ body {
   border-top: 0.1rem solid #3D3C3F;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
-  box-shadow: 0 0 1rem 0.25rem rgba(0, 0, 0, 1);  
+  box-shadow: 0 0 1rem 0.25rem rgba(0, 0, 0, 1);
   touch-action: none;
   color: #749C6C;
 }
+
 .sorting-row {
   display: flex;
   justify-content: space-around;
@@ -85,6 +87,7 @@ body {
   border-top: 1px solid #3D3C3F;
   padding-top: 0.5rem;
 }
+
 .sorting-item,
 .sorting-user {
   flex: 1;
@@ -96,10 +99,12 @@ body {
   padding: 0.25rem;
   border-radius: 0.5rem;
 }
+
 .sorting-user {
   flex: 0 0 auto;
   min-width: 25%;
 }
+
 .sorting-users-scroll {
   display: flex;
   overflow-x: auto;
@@ -111,10 +116,12 @@ body {
   gap: .5rem;
   margin-top: 2.5vw;
 }
+
 .sorting-users-scroll::-webkit-scrollbar {
   display: none;
 }
-.selected  {
+
+.selected {
   background-color: #749C6C;
   color: #d5e1d3;
   transition: background-color 0.1s, color 0.1s;
@@ -220,7 +227,7 @@ body {
   text-align: center;
   max-width: calc(100% / 3);
   /* padding: 0.25rem; */
-  
+
   /* border: 1px solid #97979D; */
 }
 
@@ -258,5 +265,164 @@ body {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#search-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #1C1C1C;
+  padding: 0 2.5vw 2.5vw 2.5vw;
+  border-bottom: 0.1rem solid #3D3C3F;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  box-shadow: 0 0 1rem 0.25rem rgba(0, 0, 0, 1);
+}
+
+/* From Uiverse.io by satyamchaudharydev */
+/* this is a recreation of twitter search in css */
+.form {
+  --input-text-color: #d5e1d3;
+  --input-bg-color: #2e3e2b;
+  --focus-input-bg-color: #2e3e2b;
+  --text-color: #749C6C ;
+  --active-color: #749C6C;
+  /* --width-of-input: 200px; */
+  --inline-padding-of-input: 1.2em;
+  --gap: 0.9rem;
+}
+
+/* form style */
+.form {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  width: var(--width-of-input);
+  position: relative;
+  isolation: isolate;
+}
+
+/* a fancy bg for showing background and border when focus. */
+.fancy-bg {
+  position: absolute;
+  width: 100%;
+  inset: 0;
+  background: var(--input-bg-color);
+  border-radius: .5rem;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+/* label styling */
+label {
+  width: 100%;
+  padding: 0.5rem;
+  /* height: 40px; */
+  padding-inline: var(--inline-padding-of-input);
+  display: flex;
+  align-items: center;
+}
+
+.search,
+.close-btn {
+  position: absolute;
+}
+
+/* styling search-icon */
+.search {
+  fill: var(--text-color);
+  left: var(--inline-padding-of-input);
+}
+
+/* svg -- size */
+svg {
+  width: 17px;
+  display: block;
+}
+
+/* styling of close button */
+.close-btn {
+  border: none;
+  right: var(--inline-padding-of-input);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 0.1em;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--active-color);
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* styling of input */
+.input {
+  color: var(--input-text-color);
+  width: 100%;
+  margin-inline: min(2em, calc(var(--inline-padding-of-input) + var(--gap)));
+  background: none;
+  border: none;
+  font-family: 'Sf Pro Display Regular', Arial, sans-serif;
+  font-size: 1rem;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--text-color)
+}
+
+/* input background change in focus */
+.input:focus~.fancy-bg {
+  border: 1px solid var(--active-color);
+  background: var(--focus-input-bg-color);
+}
+
+/* search icon color change in focus */
+.input:focus~.search {
+  fill: var(--active-color);
+}
+
+/* showing close button when typing */
+.input:valid~.close-btn {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* this is for the default background in input,when selecting autofill options -- you can remove this code if you do not want to override the browser style.  */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+  -webkit-transition-delay: 9999s;
+}
 
 
