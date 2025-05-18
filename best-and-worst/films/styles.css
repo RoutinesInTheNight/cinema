@@ -288,20 +288,22 @@ body {
 
 
 #search-wrapper {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 10;
-  background: #1C1C1C;
-  padding: 0 2.5vw 2.5vw 2.5vw;
+  left: 0;
+  width: 100%;
+  background-color: #1C1C1C;
+  border-top: 0.1rem solid #3D3C3F;
   border-bottom: 0.1rem solid #3D3C3F;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
   box-shadow: 0 0 1rem 0.25rem rgba(0, 0, 0, 1);
+  touch-action: none;
+  z-index: 10;
 }
 
-/* From Uiverse.io by satyamchaudharydev */
-/* this is a recreation of twitter search in css */
 .form {
+  display: flex;
   --input-text-color: #d5e1d3;
   --input-bg-color: #2e3e2b;
   --focus-input-bg-color: #2e3e2b;
@@ -312,14 +314,14 @@ body {
   --gap: 0.9rem;
 }
 
-/* form style */
 .form {
   display: flex;
   gap: 0.5rem;
   align-items: center;
-  width: var(--width-of-input);
+  width: 90%;
   position: relative;
   isolation: isolate;
+  margin: 0 auto 2.5vw auto;
 }
 
 /* a fancy bg for showing background and border when focus. */
@@ -338,7 +340,7 @@ body {
 /* label styling */
 label {
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.15rem;
   /* height: 40px; */
   padding-inline: var(--inline-padding-of-input);
   display: flex;
@@ -370,12 +372,11 @@ svg {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
   padding: 0.1em;
   width: 20px;
   height: 20px;
-  border-radius: 50%;
-  background: var(--active-color);
+  /* border-radius: 50%; */
+  background: transparent;
   opacity: 0;
   visibility: hidden;
 }
