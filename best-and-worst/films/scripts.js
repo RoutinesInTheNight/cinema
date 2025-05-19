@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (totalPaddingBottom === 0) {
       bottomMenu.style.paddingBottom = `2.5vw`;
     } else {
-      bottomMenu.style.paddingBottom = `0px`;
+      bottomMenu.style.paddingBottom = `${totalPaddingBottom}px`;
     }
     if (totalPaddingTop === 0) {
       topSearch.style.paddingTop = `2.5vw`;
@@ -371,7 +371,18 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 
+const bottomMenu = document.querySelector('.sorting');
+const scrollY = window.scrollY;
 
+window.addEventListener('focusin', () => {
+  bottomMenu.style.position = 'absolute';
+  bottomMenu.style.bottom = '${-scrollY}px';
+});
+
+window.addEventListener('focusout', () => {
+  bottomMenu.style.position = 'fixed';
+  bottomMenu.style.bottom = '0';
+});
 
 
 
