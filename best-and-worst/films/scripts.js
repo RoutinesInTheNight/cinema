@@ -374,6 +374,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
 // Нижнее меню сортироки убирается при активном input
 const input = document.getElementById('movie-search');
+
+
 const sorting = document.querySelector('.sorting');
 input.addEventListener('focus', () => {
   sorting?.classList.add('hidden');
@@ -385,12 +387,25 @@ input.addEventListener('blur', () => {
 });
 
 
-// Фокус с input пропадает при клике вне его области
-document.addEventListener('click', (e) => {
-  const form = document.querySelector('.form');
-  const isClickInside = form.contains(e.target);
 
-  if (!isClickInside) {
-    input.blur(); // убираем фокус
-  }
+
+
+// Фокус с input пропадает при клике вне его области
+
+const overlay = document.getElementById('overlay');
+
+// Показываем оверлей при фокусе на инпут
+input.addEventListener('focus', () => {
+  overlay.style.display = 'block';
+});
+
+// Клик по оверлею снимает фокус
+overlay.addEventListener('click', () => {
+  input.blur();
+  overlay.style.display = 'none';
+});
+
+// Если фокус теряется другим способом, тоже скрываем оверлей
+input.addEventListener('blur', () => {
+  overlay.style.display = 'none';
 });

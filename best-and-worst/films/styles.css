@@ -29,6 +29,8 @@ body {
   color: #d5e1d3;
   font-family: 'Sf Pro Display Regular', Arial, sans-serif;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -149,10 +151,10 @@ body {
   font-family: 'SF Pro Display', Arial, sans-serif;
   color: #fff;
   background-color: #1C1C1D;
-  padding: 0.75rem;
+  padding: 0.5rem;
   border-radius: 1rem;
-  margin: 1rem auto;
-  max-width: 90%;
+  margin: 2.5vw auto;
+  width: calc(95% - 1rem);
 }
 
 .movie-number {
@@ -291,11 +293,13 @@ body {
 #search-wrapper {
   position: fixed;
   top: 0;
-  left: calc(5% - 0.1rem);
+  /* left: calc(5% - 0.1rem); */
+  left: 5%;
   width: 90%;
   /* background-color: #1C1C1C; */
-  background-color: rgba(255, 255, 255, 0.5);
-  border: 0.1rem solid #3D3C3F;
+  background-color: #ff0000;
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  border: 0.1rem so?lid #3D3C3F;
   border-radius: 1rem;
   /* box-shadow: 0 0 1rem 0.25rem rgba(0, 0, 0, 1); */
   touch-action: none;
@@ -383,13 +387,19 @@ form svg {
   visibility: visible;
 }
 
-/* this is for the default background in input,when selecting autofill options -- you can remove this code if you do not want to override the browser style.  */
-/* input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-  -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
-  -webkit-transition-delay: 9999s;
-} */
 
 
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  background: transparent;
+  z-index: 5;
+  display: none;
+}
+#overlay.active {
+  display: block;
+}
