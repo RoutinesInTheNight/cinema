@@ -75,8 +75,6 @@ body {
   box-shadow: 0 0 1rem 0.25rem rgba(0, 0, 0, 1);
   touch-action: none;
   color: #749C6C;
-  will-change: transform;
-  transform: traslateY(0);
 }
 
 .sorting-row {
