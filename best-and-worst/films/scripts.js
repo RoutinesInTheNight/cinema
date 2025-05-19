@@ -116,10 +116,10 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       bottomMenu.style.paddingBottom = `${totalPaddingBottom}px`;
     }
-    if (totalPaddingBottom === 0) {
+    if (totalMarginTop === 0) {
       topSearch.style.marginTop = `2.5vw`;
     } else {
-      topSearch.style.marginTop = `${totalPaddingBottom}px`;
+      topSearch.style.marginTop = `${totalMarginTop}px`;
     }
   }
   function onContentSafeAreaChanged() {
@@ -383,7 +383,6 @@ input.addEventListener('focus', () => {
 input.addEventListener('blur', () => {
   if (document.activeElement !== input) {
     sorting?.classList.remove('hidden');
-    const currentMarginTop = parseFloat(getComputedStyle(moviesContainer).marginTop) || 0;
     moviesContainer.style.paddingTop = '0';
   }
 });
