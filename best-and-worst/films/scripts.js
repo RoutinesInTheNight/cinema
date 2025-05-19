@@ -117,9 +117,9 @@ document.addEventListener('DOMContentLoaded', () => {
       bottomMenu.style.paddingBottom = `${totalPaddingBottom}px`;
     }
     if (totalPaddingTop === 0) {
-      topSearch.style.paddingTop = `2.5vw`;
+      topSearch.style.marginTop = `2.5vw`;
     } else {
-      topSearch.style.paddingTop = `${totalPaddingTop}px`;
+      topSearch.style.marginTop = `${totalPaddingTop}px`;
     }
   }
   function onContentSafeAreaChanged() {
@@ -375,14 +375,12 @@ window.addEventListener("DOMContentLoaded", () => {
 // Нижнее меню сортироки убирается при активном input
 const input = document.getElementById('movie-search');
 const sorting = document.querySelector('.sorting');
-
 input.addEventListener('focus', () => {
-  sorting?.classList.add('hide');
+  sorting?.classList.add('hidden');
 });
-
 input.addEventListener('blur', () => {
   if (document.activeElement !== input) {
-    sorting?.classList.remove('hide');
+    sorting?.classList.remove('hidden');
   }
 });
 

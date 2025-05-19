@@ -75,15 +75,6 @@ body {
   box-shadow: 0 0 1rem 0.25rem rgba(0, 0, 0, 1);
   touch-action: none;
   color: #749C6C;
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity .25s ease, transform .25s ease;
-  will-change: opacity;
-}
-.sorting.hide {
-  opacity: 0;
-  transform: translateY(100%);
-  pointer-events: none;
 }
 
 .sorting-row {
@@ -296,50 +287,41 @@ body {
 
 
 
+
 #search-wrapper {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #1C1C1C;
-  border-bottom: 0.1rem solid #3D3C3F;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-  box-shadow: 0 0 1rem 0.25rem rgba(0, 0, 0, 1);
+  left: calc(5% - 0.1rem);
+  width: 90%;
+  /* background-color: #1C1C1C; */
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 0.1rem solid #3D3C3F;
+  border-radius: 1rem;
+  /* box-shadow: 0 0 1rem 0.25rem rgba(0, 0, 0, 1); */
   touch-action: none;
   z-index: 10;
-}
-
-
-.form {
-  display: flex;
-  --input-text-color: #d5e1d3;
-  /* --input-bg-color: #2e3e2b; */
-  /* --focus-input-bg-color: #2e3e2b; */
-  --text-color: #97979D ;
-  --active-color: #ffffff;
-  /* --width-of-input: 200px; */
-  --inline-padding-of-input: 1.2em;
-  --gap: 0.9rem;
+  backdrop-filter: blur(calc(5vw));
+  -webkit-backdrop-filter: blur(calc(5vw));
 }
 
 .form {
   display: flex;
+  width: 100%;
   gap: 0.5rem;
   align-items: center;
-  width: 100%;
   position: relative;
   isolation: isolate;
-  margin: 0 auto 2.5vw auto;
 }
+
+
 
 
 /* label styling */
 label {
-  width: 100%;
-  padding: 0.15rem;
+  /* width: 100%; */
+  padding: 0.25rem;
   /* height: 40px; */
-  padding-inline: var(--inline-padding-of-input);
+  padding-inline: 1.2em;
   display: flex;
   align-items: center;
 }
@@ -349,45 +331,34 @@ label {
   position: absolute;
 }
 
-/* styling search-icon */
-.search {
-  fill: var(--text-color);
-  /* left: var(--inline-padding-of-input); */
-}
-
-/* svg -- size */
-svg {
-  width: 17px;
+form svg {
+  width: 1rem;
   display: block;
 }
-
-/* styling of close button */
 .close-btn {
   border: none;
-  right: var(--inline-padding-of-input);
+  right: 1.2em;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0.1em;
-  width: 20px;
-  height: 20px;
+  /* width: 20px; */
+  /* height: 20px; */
   /* border-radius: 50%; */
   background: transparent;
-  /* opacity: 0; */
-  /* visibility: hidden; */
 }
 
-/* styling of input */
+
 .input {
-  color: var(--input-text-color);
+  color: #d5e1d3;
   width: 100%;
-  margin-inline: min(2em, calc(var(--inline-padding-of-input) + var(--gap)));
+  margin-inline: min(2em, calc(1.2em + 0.9rem));
   background: none;
   border: none;
   font-family: 'Sf Pro Display Regular', Arial, sans-serif;
   font-size: 1rem;
-  border-bottom: 0.1rem solid #3D3C3F;
+  /* border: 0.1rem solid #3D3C3F; */
 }
 
 .input:focus {
@@ -395,33 +366,30 @@ svg {
 }
 
 .input::placeholder {
-  color: var(--text-color)
+  color: #97979D;
 }
 
-/* input background change in focus */
-.input:focus~.fancy-bg {
-  border: 1px solid var(--active-color);
-  background: var(--focus-input-bg-color);
-}
 
-/* search icon color change in focus */
+
 .input:focus~.search {
-  fill: var(--active-color);
+  fill: white;
 }
 
-/* showing close button when typing */
+
+
+
 .input:valid~.close-btn {
   opacity: 1;
   visibility: visible;
 }
 
 /* this is for the default background in input,when selecting autofill options -- you can remove this code if you do not want to override the browser style.  */
-input:-webkit-autofill,
+/* input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
   -webkit-transition-delay: 9999s;
-}
+} */
 
 
