@@ -75,6 +75,12 @@ body {
   box-shadow: 0 0 1rem 0.25rem rgba(0, 0, 0, 1);
   touch-action: none;
   color: #749C6C;
+  transition: opacity 0.25s ease;
+  will-change: opacity;
+}
+.sorting.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .sorting-row {
@@ -298,9 +304,9 @@ body {
   border-bottom-right-radius: 1rem;
   box-shadow: 0 0 1rem 0.25rem rgba(0, 0, 0, 1);
   touch-action: none;
-  transition: opacity 0.25s ease;
   z-index: 10;
 }
+
 
 .form {
   display: flex;
