@@ -298,6 +298,7 @@ body {
   border-bottom-right-radius: 1rem;
   box-shadow: 0 0 1rem 0.25rem rgba(0, 0, 0, 1);
   touch-action: none;
+  transition: opacity 0.25s ease;
   z-index: 10;
 }
 

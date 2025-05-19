@@ -371,35 +371,20 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 
-const bottomMenu = document.querySelector('.sorting');
-const scrollY = window.scrollY;
-
-window.addEventListener('focusin', () => {
-  bottomMenu.style.position = 'absolute';
-  bottomMenu.style.bottom = '${-scrollY}px';
-});
-
-window.addEventListener('focusout', () => {
-  bottomMenu.style.position = 'fixed';
-  bottomMenu.style.bottom = '0';
-});
-
-
-
 
 // Нижнее меню сортироки убирается при активном input
-// const input = document.getElementById('movie-search');
-// const sorting = document.querySelector('.sorting');
+const input = document.getElementById('movie-search');
+const sorting = document.querySelector('.sorting');
 
-// input.addEventListener('focus', () => {
-//   sorting?.classList.add('hidden');
-// });
+input.addEventListener('focus', () => {
+  sorting?.classList.add('hidden');
+});
 
-// input.addEventListener('blur', () => {
-//   if (document.activeElement !== input) {
-//     sorting?.classList.remove('hidden');
-//   }
-// });
+input.addEventListener('blur', () => {
+  if (document.activeElement !== input) {
+    sorting?.classList.remove('hidden');
+  }
+});
 
 
 // Фокус с input пропадает при клике вне его области
