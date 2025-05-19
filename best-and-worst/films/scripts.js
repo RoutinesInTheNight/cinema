@@ -380,7 +380,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 // Нажатие на input
-const input = document.getElementById('movie-search');
+const input = document.getElementById('input');
 const moviesContainer = document.getElementById('movies-container');
 const sorting = document.querySelector('.sorting');
 input.addEventListener('focus', () => {
@@ -418,3 +418,48 @@ overlay.addEventListener('click', () => {
 input.addEventListener('blur', () => {
   overlay.style.display = 'none';
 });
+
+
+
+
+
+
+
+
+const searchCollaps = document.querySelector('.search-collaps');
+const search = document.getElementById('search');
+const close = document.querySelector('.close');
+
+searchCollaps.addEventListener('click', () => {
+  hapticFeedback('soft');
+  searchCollaps.classList.add('animate-out');
+  search.style.display = 'flex';
+  requestAnimationFrame(() => {
+    search.classList.add('visible');
+  });
+  setTimeout(() => {
+    searchCollaps.style.display = 'none';
+  }, 250);
+});
+
+close.addEventListener('click', () => {
+  hapticFeedback('soft');
+  search.classList.remove('visible');
+  setTimeout(() => {
+    search.style.display = 'none';
+    search.classList.remove('show');
+  }, 500);
+  requestAnimationFrame(() => {
+    searchCollaps.style.display = 'flex';
+    searchCollaps.style.opacity = '1';
+    searchCollaps.style.width = '35px';
+    searchCollaps.classList.remove('animate-out');
+  });
+});
+
+
+
+
+
+
+

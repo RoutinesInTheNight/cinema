@@ -143,7 +143,9 @@ body {
   margin-top: calc(var(--tg-safe-area-inset-top, 0px) + var(--tg-content-safe-area-inset-top));
   margin-bottom: 10rem;
 }
-
+#movies-container div:first-child {
+  margin-top: 0;
+}
 
 
 .movie-card {
@@ -295,178 +297,105 @@ body {
   align-items: center;
   justify-content: center;
   top: 0;
-
-
-  width: 27px;
-  height: 27px;
-
   right: 2.5%;
-  background-color: rgba(46, 62, 43, .75);
-  border: 1.5px solid #749C6C;
-  border-radius: .5rem;
-  touch-action: none;
-  backdrop-filter: blur(2vw);
-  -webkit-backdrop-filter: blur(2vw);
-  z-index: 11;
-}
-
-.search-collaps svg {
-  width: 1rem;
-}
-
-
-
-
-
-#search {
-  position: fixed;
-  display: flex;
-  top: 0;
-  left: 2.5%;
-  width: calc(95% - 3px);
-  height: 27px;
-  background-color: rgba(46, 62, 43, .75);
-  border: 1.5px solid #749C6C;
-  border-radius: .5rem;
-  /* touch-action: none; */
-  backdrop-filter: blur(2vw);
-  -webkit-backdrop-filter: blur(2vw);
-  z-index: 10;
-}
-
-#search .icon {
-  width: 15%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#search .input {
-  width: 70%;
-  display: flex;
-  align-items: center;
-}
-
-#search .close {
-  width: 15%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#search.icon,
-#search.input,
-#search.close {
-  display: flex;
-}
-
-#search svg {
-  width: 1rem;
-}
-
-#search input {
-  /* all: unset; */
-  color: #749C6C;
-  /* width: 100%; */
-  /* margin-inline: min(2em, calc(1.2em + 0.9rem)); */
-  background: none;
-  border: none;
-  font-family: 'Sf Pro Display Medium', Arial, sans-serif;
-  font-size: 1rem;
-  outline: none;
-  padding: 0;
-  width: 100%;
-}
-#search input::placeholder {
-  color: #749C6C;
-}
-
-/* #search-wrapper {
-  position: fixed;
-  top: 0;
-  left: 2.5%;
-  width: 95%;
+  width: 35px;
+  height: 35px;
   background-color: rgba(46, 62, 43, .75);
   border: 1.5px solid #749C6C;
   border-radius: 1rem;
   touch-action: none;
   backdrop-filter: blur(2vw);
   -webkit-backdrop-filter: blur(2vw);
+  cursor: pointer;
+  opacity: 1;
+  transition: width 0.25s ease, opacity 0.25s ease;
   z-index: 10;
 }
-.form {
-  display: flex;
-  width: 100%;
-  gap: 0.5rem;
-  align-items: center;
-  position: relative;
-  isolation: isolate;
-}
-label {
-  padding: 0.25rem;
-  padding-inline: 1.2em;
-  display: flex;
-  align-items: center;
-}
-.search,
-.close-btn {
-  position: absolute;
-}
-form svg {
+.search-collaps svg {
   width: 1rem;
-  display: block;
 }
-.close-btn {
-  border: none;
-  right: 1.2em;
-  box-sizing: border-box;
+.search-collaps.animate-out {
+  width: 95%;
+  opacity: 0;
+}
+
+
+
+
+#search {
+  position: fixed;
+  display: none;
+  opacity: 0;
+  top: 0;
+  left: 2.5%;
+  width: calc(95% - 3px);
+  height: 35px;
+  background-color: rgba(46, 62, 43, .75);
+  border: 1.5px solid #749C6C;
+  border-radius: 1rem;
+  touch-action: none;
+  backdrop-filter: blur(2vw);
+  -webkit-backdrop-filter: blur(2vw);
+  transition: opacity 0.5s ease;
+  z-index: 10;
+}
+#search.show {
+  display: flex;
+}
+#search.visible {
+  opacity: 1;
+}
+#search .icon {
+  width: 15%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.1em;
-  background: transparent;
 }
-.input {
+#search .input {
+  width: 70%;
+  display: flex;
+  align-items: center;
+}
+#search .close {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#search.icon,
+#search.input,
+#search.close {
+  display: flex;
+}
+#search svg {
+  width: 1rem;
+}
+#search input {
   color: #749C6C;
   width: 100%;
-  margin-inline: min(2em, calc(1.2em + 0.9rem));
   background: none;
   border: none;
-  font-family: 'Sf Pro Display Regular', Arial, sans-serif;
+  font-family: 'Sf Pro Display Medium', Arial, sans-serif;
   font-size: 1rem;
-}
-.input:focus {
   outline: none;
+  padding: 0;
 }
-.input::placeholder {
+#search input::placeholder {
   color: #749C6C;
 }
-.input:focus~.search {
-  fill: #749C6C;
-} */
-
-
-
-
-/* .input:valid~.close-btn {
-  opacity: 1;
-  visibility: visible;
-} */
-
 
 
 
 #overlay {
   position: fixed;
+  display: none;
   top: 0;
   left: 0;
   width: 100%;
   height: 100dvh;
   background: transparent;
   z-index: 5;
-  display: none;
 }
-
 #overlay.active {
   display: block;
 }
