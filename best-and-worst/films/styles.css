@@ -94,12 +94,12 @@ body {
 .sorting-user {
   flex: 1;
   text-align: center;
-  font-size: .75rem;
+  font-size: 1rem;
   font-family: 'Sf Pro Display Medium', Arial, sans-serif;
   cursor: pointer;
   background-color: #2e3e2b;
-  padding: 0.15rem;
-  border-radius: 0.25rem;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
 }
 
 .sorting-user {
@@ -303,6 +303,7 @@ body {
   /* box-shadow: 0 0 1rem 0.25rem rgba(0, 0, 0, 1); */
   touch-action: none;
   z-index: 10;
+  box-shadow: 0 0 1rem 0.25rem rgba(0, 0, 0, 1);
   backdrop-filter: blur(1.5 vw);
   -webkit-backdrop-filter: blur(1.5vw);
 }
