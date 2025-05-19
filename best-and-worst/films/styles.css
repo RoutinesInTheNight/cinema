@@ -77,7 +77,7 @@ body {
   color: #749C6C;
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 1s ease, transform 1s ease;
+  transition: opacity .25s ease, transform .25s ease;
   will-change: opacity;
 }
 .sorting.hide {
