@@ -110,16 +110,16 @@ document.addEventListener('DOMContentLoaded', () => {
   topSearch.style.paddingTop = '0px';
   function updatePadding() {
     const totalPaddingBottom = safeAreaBottom + contentSafeAreaBottom;
-    const totalPaddingTop = safeAreaTop + contentSafeAreaTop;
+    const totalMarginTop = safeAreaTop + contentSafeAreaTop;
     if (totalPaddingBottom === 0) {
       bottomMenu.style.paddingBottom = `2.5vw`;
     } else {
       bottomMenu.style.paddingBottom = `${totalPaddingBottom}px`;
     }
-    if (totalPaddingTop === 0) {
+    if (totalPaddingBottom === 0) {
       topSearch.style.marginTop = `2.5vw`;
     } else {
-      topSearch.style.marginTop = `${totalPaddingTop}px`;
+      topSearch.style.marginTop = `${totalPaddingBottom}px`;
     }
   }
   function onContentSafeAreaChanged() {
@@ -372,19 +372,22 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 
-// Нижнее меню сортироки убирается при активном input
+// Нажатие на input
 const input = document.getElementById('movie-search');
-
-
+const moviesContainer = document.getElementById('movies-container');
 const sorting = document.querySelector('.sorting');
 input.addEventListener('focus', () => {
   sorting?.classList.add('hidden');
+  moviesContainer.style.paddingTop = '12vw';
 });
 input.addEventListener('blur', () => {
   if (document.activeElement !== input) {
     sorting?.classList.remove('hidden');
+    const currentMarginTop = parseFloat(getComputedStyle(moviesContainer).marginTop) || 0;
+    moviesContainer.style.paddingTop = '0';
   }
 });
+
 
 
 

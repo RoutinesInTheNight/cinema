@@ -138,8 +138,8 @@ body {
 
 
 #movies-container {
-  padding-top: calc(var(--tg-safe-area-inset-top, 0px) + var(--tg-content-safe-area-inset-top));
-  padding-bottom: 10rem;
+  margin-top: calc(var(--tg-safe-area-inset-top, 0px) + var(--tg-content-safe-area-inset-top));
+  margin-bottom: 10rem;
 }
 
 
@@ -289,7 +289,6 @@ body {
 
 
 
-
 #search-wrapper {
   position: fixed;
   top: 0;
@@ -297,9 +296,9 @@ body {
   left: 5%;
   width: 90%;
   /* background-color: #1C1C1C; */
-  background-color: #ff0000;
+  background-color: #2e3e2b;
   /* background-color: rgba(255, 255, 255, 0.5); */
-  border: 0.1rem so?lid #3D3C3F;
+  border: 0.1rem solid #749C6C;
   border-radius: 1rem;
   /* box-shadow: 0 0 1rem 0.25rem rgba(0, 0, 0, 1); */
   touch-action: none;
@@ -355,7 +354,7 @@ form svg {
 
 
 .input {
-  color: #d5e1d3;
+  color: #749C6C;
   width: 100%;
   margin-inline: min(2em, calc(1.2em + 0.9rem));
   background: none;
@@ -370,14 +369,14 @@ form svg {
 }
 
 .input::placeholder {
-  color: #97979D;
+  color: #749C6C;
 }
 
 
 
-.input:focus~.search {
-  fill: white;
-}
+/* .input:focus~.search {
+  fill: #749C6C;
+} */
 
 
 
