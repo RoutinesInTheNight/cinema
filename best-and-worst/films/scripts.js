@@ -111,22 +111,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   bottomMenu.style.paddingBottom = '0px';
   topSearch.style.marginTop = '0px';
-  searchCollaps.style.bottom = '0px';
+  searchCollaps.style.top = '0px';
 
   function updatePaddingMargin() {
     const totalSafeAreaBottom = safeAreaBottom + contentSafeAreaBottom;
     const totalSafeAreaTop = safeAreaTop + contentSafeAreaTop;
     if (totalSafeAreaBottom === 0) {
       bottomMenu.style.paddingBottom = `0.5rem`;
-      searchCollaps.style.bottom = '147px';
     } else {
       bottomMenu.style.paddingBottom = `${totalSafeAreaBottom}px`;
-      searchCollaps.style.bottom = `${totalSafeAreaBottom + 139}px`;
     }
     if (totalSafeAreaTop === 0) {
-      topSearch.style.marginTop = `2.5vw`;
+      topSearch.style.marginTop = `0.5rem`;
+      searchCollaps.style.top = `0.5rem`;
     } else {
       topSearch.style.marginTop = `${totalSafeAreaTop}px`;
+      searchCollaps.style.top = `${totalSafeAreaTop}px`;
     }
   }
   function onContentSafeAreaChanged() {
