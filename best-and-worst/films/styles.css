@@ -78,7 +78,7 @@ body {
   transition: opacity 0.25s ease;
   will-change: opacity;
 }
-.sorting.hidden {
+.sorting.hide {
   opacity: 0;
   pointer-events: none;
 }

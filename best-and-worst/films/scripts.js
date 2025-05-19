@@ -377,12 +377,12 @@ const input = document.getElementById('movie-search');
 const sorting = document.querySelector('.sorting');
 
 input.addEventListener('focus', () => {
-  sorting?.classList.add('hidden');
+  sorting?.classList.add('hide');
 });
 
 input.addEventListener('blur', () => {
   if (document.activeElement !== input) {
-    sorting?.classList.remove('hidden');
+    sorting?.classList.remove('hide');
   }
 });
 
