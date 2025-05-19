@@ -102,37 +102,43 @@ function hapticFeedback(type, redirectUrl) {
 document.addEventListener('DOMContentLoaded', () => {
   const bottomMenu = document.querySelector('.sorting');
   const topSearch = document.querySelector('#search-wrapper');
+  const searchCollaps = document.querySelector('.search-collaps');
+
   let safeAreaBottom = 0;
   let safeAreaTop = 0;
   let contentSafeAreaBottom = 0;
   let contentSafeAreaTop = 0;
+
   bottomMenu.style.paddingBottom = '0px';
-  topSearch.style.paddingTop = '0px';
-  function updatePadding() {
-    const totalPaddingBottom = safeAreaBottom + contentSafeAreaBottom;
-    const totalMarginTop = safeAreaTop + contentSafeAreaTop;
-    if (totalPaddingBottom === 0) {
-      bottomMenu.style.paddingBottom = `2.5vw`;
+  topSearch.style.marginTop = '0px';
+  searchCollaps.style.marginBottom = '0px';
+
+  function updatePaddingMargin() {
+    const totalSafeAreaBottom = safeAreaBottom + contentSafeAreaBottom;
+    const totalSafeAreaTop = safeAreaTop + contentSafeAreaTop;
+    if (totalSafeAreaBottom === 0) {
+      bottomMenu.style.paddingBottom = `0.5rem`;
     } else {
-      bottomMenu.style.paddingBottom = `${totalPaddingBottom}px`;
+      bottomMenu.style.paddingBottom = `${totalSafeAreaBottom}px`;
+      searchCollaps.style.marginBottom = `${totalSafeAreaBottom}px`;
     }
-    if (totalMarginTop === 0) {
+    if (totalSafeAreaTop === 0) {
       topSearch.style.marginTop = `2.5vw`;
     } else {
-      topSearch.style.marginTop = `${totalMarginTop}px`;
+      topSearch.style.marginTop = `${totalSafeAreaTop}px`;
     }
   }
   function onContentSafeAreaChanged() {
     const contentSafeArea = telegram.contentSafeAreaInset || {};
     contentSafeAreaBottom = contentSafeArea.bottom || 0;
     contentSafeAreaTop = contentSafeArea.top || 0;
-    updatePadding();
+    updatePaddingMargin();
   }
   function onSafeAreaChanged() {
     const safeArea = telegram.safeAreaInset || {};
     safeAreaBottom = safeArea.bottom || 0;
     safeAreaTop = safeArea.top || 0;
-    updatePadding();
+    updatePaddingMargin();
   }
   telegram.onEvent('contentSafeAreaChanged', onContentSafeAreaChanged);
   telegram.onEvent('safeAreaChanged', onSafeAreaChanged);

@@ -57,26 +57,37 @@ body {
 
 
 
-
-
+.back,
+.sorting-collaps,
 .search-collaps {
-  /* position: relative; */
-  /* position: absolute; */
-  background-color: aqua;
   position: fixed;
-  bottom: 150px;
-  left: 0;
-  width: 100px;
-  height: 100px;
-  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: calc(123px + 8px - 8px - 27px);
+  right: 2.75vw;
+  width: 27px;
+  height: 27px;
+  background-color: #3D3C3F;
+  /* border: 1px solid #749C6C; */
+  border-radius: .5rem;
+  z-index: 10;
 }
+.back svg,
+.sorting-collaps svg,
 .search-collaps svg {
-
-  width: 100px;
-  height: 100px;
-
+  display: block;
+  width: 15px;
+  height: 15px;
+  margin: 0 auto;
 }
 
+.sorting-collaps {
+  bottom: calc(123px + 8px - 8px - 27px - 17px - 27px);
+}
+.back {
+  bottom: 8px;
+}
 
 
 
@@ -105,7 +116,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 90%;
+  width: 75%;
   gap: .5rem;
   margin: 0.5rem auto 0 auto;
   border-top: 1px solid #3D3C3F;
@@ -133,12 +144,12 @@ body {
   display: flex;
   overflow-x: auto;
   overflow-y: hidden;
-  max-width: 90vw;
-  margin-left: 5%;
+  max-width: 75%;
+  margin-left: 12.5%;
   scrollbar-width: none;
   -ms-overflow-style: none;
   gap: .5rem;
-  margin-top: 2.5vw;
+  margin-top: .5rem;
 }
 
 .sorting-users-scroll::-webkit-scrollbar {
@@ -360,6 +371,7 @@ form svg {
   width: 1rem;
   display: block;
 }
+
 .close-btn {
   border: none;
   right: 1.2em;
@@ -421,6 +433,7 @@ form svg {
   z-index: 5;
   display: none;
 }
+
 #overlay.active {
   display: block;
 }
