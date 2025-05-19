@@ -101,7 +101,7 @@ function hapticFeedback(type, redirectUrl) {
 // Нижний паддинг в нижнем меню с учётом безопасной зоны
 document.addEventListener('DOMContentLoaded', () => {
   const bottomMenu = document.querySelector('.sorting');
-  const topSearch = document.querySelector('#search-wrapper');
+  const topSearch = document.querySelector('#search');
   const searchCollaps = document.querySelector('.search-collaps');
 
   let safeAreaBottom = 0;
