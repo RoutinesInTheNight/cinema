@@ -99,46 +99,46 @@ function hapticFeedback(type, redirectUrl) {
 
 
 // Нижний паддинг в нижнем меню с учётом безопасной зоны
-// document.addEventListener('DOMContentLoaded', () => {
-//   const bottomMenu = document.querySelector('.sorting');
-//   const topSearch = document.querySelector('#search-wrapper');
-//   let safeAreaBottom = 0;
-//   let safeAreaTop = 0;
-//   let contentSafeAreaBottom = 0;
-//   let contentSafeAreaTop = 0;
-//   bottomMenu.style.paddingBottom = '0px';
-//   topSearch.style.paddingTop = '0px';
-//   function updatePadding() {
-//     const totalPaddingBottom = safeAreaBottom + contentSafeAreaBottom;
-//     const totalPaddingTop = safeAreaTop + contentSafeAreaTop;
-//     if (totalPaddingBottom === 0) {
-//       bottomMenu.style.paddingBottom = `2.5vw`;
-//     } else {
-//       bottomMenu.style.paddingBottom = `${totalPaddingBottom}px`;
-//     }
-//     if (totalPaddingTop === 0) {
-//       topSearch.style.paddingTop = `2.5vw`;
-//     } else {
-//       topSearch.style.paddingTop = `${totalPaddingTop}px`;
-//     }
-//   }
-//   function onContentSafeAreaChanged() {
-//     const contentSafeArea = telegram.contentSafeAreaInset || {};
-//     contentSafeAreaBottom = contentSafeArea.bottom || 0;
-//     contentSafeAreaTop = contentSafeArea.top || 0;
-//     updatePadding();
-//   }
-//   function onSafeAreaChanged() {
-//     const safeArea = telegram.safeAreaInset || {};
-//     safeAreaBottom = safeArea.bottom || 0;
-//     safeAreaTop = safeArea.top || 0;
-//     updatePadding();
-//   }
-//   telegram.onEvent('contentSafeAreaChanged', onContentSafeAreaChanged);
-//   telegram.onEvent('safeAreaChanged', onSafeAreaChanged);
-//   onContentSafeAreaChanged();
-//   onSafeAreaChanged();
-// });
+document.addEventListener('DOMContentLoaded', () => {
+  const bottomMenu = document.querySelector('.sorting');
+  const topSearch = document.querySelector('#search-wrapper');
+  let safeAreaBottom = 0;
+  let safeAreaTop = 0;
+  let contentSafeAreaBottom = 0;
+  let contentSafeAreaTop = 0;
+  bottomMenu.style.paddingBottom = '0px';
+  topSearch.style.paddingTop = '0px';
+  function updatePadding() {
+    const totalPaddingBottom = safeAreaBottom + contentSafeAreaBottom;
+    const totalPaddingTop = safeAreaTop + contentSafeAreaTop;
+    if (totalPaddingBottom === 0) {
+      bottomMenu.style.paddingBottom = `2.5vw`;
+    } else {
+      bottomMenu.style.paddingBottom = `0px`;
+    }
+    if (totalPaddingTop === 0) {
+      topSearch.style.paddingTop = `2.5vw`;
+    } else {
+      topSearch.style.paddingTop = `${totalPaddingTop}px`;
+    }
+  }
+  function onContentSafeAreaChanged() {
+    const contentSafeArea = telegram.contentSafeAreaInset || {};
+    contentSafeAreaBottom = contentSafeArea.bottom || 0;
+    contentSafeAreaTop = contentSafeArea.top || 0;
+    updatePadding();
+  }
+  function onSafeAreaChanged() {
+    const safeArea = telegram.safeAreaInset || {};
+    safeAreaBottom = safeArea.bottom || 0;
+    safeAreaTop = safeArea.top || 0;
+    updatePadding();
+  }
+  telegram.onEvent('contentSafeAreaChanged', onContentSafeAreaChanged);
+  telegram.onEvent('safeAreaChanged', onSafeAreaChanged);
+  onContentSafeAreaChanged();
+  onSafeAreaChanged();
+});
 
 
 
