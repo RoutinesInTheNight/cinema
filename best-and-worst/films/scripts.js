@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   bottomMenu.style.paddingBottom = '0px';
   topSearch.style.marginTop = '0px';
-  searchCollaps.style.top = '0px';
+  searchCollaps.style.marginTop = '0px';
 
   function updatePaddingMargin() {
     const totalSafeAreaBottom = safeAreaBottom + contentSafeAreaBottom;
@@ -123,10 +123,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (totalSafeAreaTop === 0) {
       topSearch.style.marginTop = `0.5rem`;
-      searchCollaps.style.top = `0.5rem`;
+      searchCollaps.style.marginTop = `0.5rem`;
     } else {
       topSearch.style.marginTop = `${totalSafeAreaTop}px`;
-      searchCollaps.style.top = `${totalSafeAreaTop}px`;
+      searchCollaps.style.marginTop = `${totalSafeAreaTop}px`;
     }
   }
   function onContentSafeAreaChanged() {
@@ -427,34 +427,42 @@ input.addEventListener('blur', () => {
 
 
 const searchCollaps = document.querySelector('.search-collaps');
+const searchCollapsSvg = document.querySelector('.search-collaps-svg');
 const search = document.getElementById('search');
 const close = document.querySelector('.close');
 
 searchCollaps.addEventListener('click', () => {
   hapticFeedback('soft');
-  searchCollaps.classList.add('animate-out');
+  searchCollaps.classList.add('animate');
+  searchCollapsSvg.style.opacity = '0';
   search.style.display = 'flex';
   requestAnimationFrame(() => {
     search.classList.add('visible');
   });
   setTimeout(() => {
-    searchCollaps.style.display = 'none';
-  }, 250);
+    searchCollaps.style.transition = 'width 0.5s ease';
+  }, 100);
+  setTimeout(() => {
+    search.style.transition = 'opacity 0.05s ease';
+  }, 500);
 });
 
 close.addEventListener('click', () => {
   hapticFeedback('soft');
   search.classList.remove('visible');
-  setTimeout(() => {
-    search.style.display = 'none';
-    search.classList.remove('show');
-  }, 500);
   requestAnimationFrame(() => {
     searchCollaps.style.display = 'flex';
-    searchCollaps.style.opacity = '1';
-    searchCollaps.style.width = '35px';
-    searchCollaps.classList.remove('animate-out');
+    searchCollaps.classList.remove('animate');
   });
+  setTimeout(() => {
+    search.style.display = 'none';
+    search.style.transition = 'opacity 0.5s ease';
+    searchCollaps.style.transition = 'width 0.1s ease';
+  }, 100);
+  setTimeout(() => {
+    searchCollapsSvg.style.opacity = '1';
+  }, 250);
+  
 });
 
 
