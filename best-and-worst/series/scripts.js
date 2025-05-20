@@ -419,10 +419,12 @@ input.addEventListener('focus', () => {
   overlay.style.display = 'block';
 });
 overlay.addEventListener('click', () => {
+  hapticFeedback('medium');
   input.blur();
   overlay.style.display = 'none';
 });
 input.addEventListener('blur', () => {
+  hapticFeedback('medium');
   overlay.style.display = 'none';
 });
 
