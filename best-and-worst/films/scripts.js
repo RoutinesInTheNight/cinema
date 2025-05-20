@@ -98,53 +98,69 @@ function hapticFeedback(type, redirectUrl) {
 
 
 
-// Нижний паддинг в нижнем меню с учётом безопасной зоны
+// SafeAreaManager.js (или просто выше в коде)
+const SafeAreaManager = (() => {
+  let safeAreaTop = 0;
+  let safeAreaBottom = 0;
+  let contentSafeAreaTop = 0;
+  let contentSafeAreaBottom = 0;
+
+  function getTotalSafeAreas() {
+    return {
+      top: safeAreaTop + contentSafeAreaTop,
+      bottom: safeAreaBottom + contentSafeAreaBottom
+    };
+  }
+
+  function updateFromTelegram() {
+    const content = telegram.contentSafeAreaInset || {};
+    const system = telegram.safeAreaInset || {};
+
+    contentSafeAreaTop = content.top || 0;
+    contentSafeAreaBottom = content.bottom || 0;
+    safeAreaTop = system.top || 0;
+    safeAreaBottom = system.bottom || 0;
+  }
+
+  function init() {
+    const updateAndNotify = () => {
+      updateFromTelegram();
+      if (typeof SafeAreaManager.onChange === 'function') {
+        SafeAreaManager.onChange(getTotalSafeAreas());
+      }
+    };
+
+    telegram.onEvent('safeAreaChanged', updateAndNotify);
+    telegram.onEvent('contentSafeAreaChanged', updateAndNotify);
+    updateAndNotify();
+  }
+
+  return {
+    init,
+    getTotalSafeAreas,
+    onChange: null // Можно назначить слушатель изменений
+  };
+})();
+
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const bottomMenu = document.querySelector('.sorting');
   const topSearch = document.querySelector('#search');
   const searchCollaps = document.querySelector('.search-collaps');
+  const moviesContainer = document.getElementById('movies-container');
 
-  let safeAreaBottom = 0;
-  let safeAreaTop = 0;
-  let contentSafeAreaBottom = 0;
-  let contentSafeAreaTop = 0;
-
-  bottomMenu.style.paddingBottom = '0px';
-  topSearch.style.marginTop = '0px';
-  searchCollaps.style.marginTop = '0px';
-
-  function updatePaddingMargin() {
-    const totalSafeAreaBottom = safeAreaBottom + contentSafeAreaBottom;
-    const totalSafeAreaTop = safeAreaTop + contentSafeAreaTop;
-    if (totalSafeAreaBottom === 0) {
-      bottomMenu.style.paddingBottom = `0.5rem`;
-    } else {
-      bottomMenu.style.paddingBottom = `${totalSafeAreaBottom}px`;
-    }
-    if (totalSafeAreaTop === 0) {
-      topSearch.style.marginTop = `0.5rem`;
-      searchCollaps.style.marginTop = `0.5rem`;
-    } else {
-      topSearch.style.marginTop = `${totalSafeAreaTop}px`;
-      searchCollaps.style.marginTop = `${totalSafeAreaTop}px`;
-    }
-  }
-  function onContentSafeAreaChanged() {
-    const contentSafeArea = telegram.contentSafeAreaInset || {};
-    contentSafeAreaBottom = contentSafeArea.bottom || 0;
-    contentSafeAreaTop = contentSafeArea.top || 0;
-    updatePaddingMargin();
-  }
-  function onSafeAreaChanged() {
-    const safeArea = telegram.safeAreaInset || {};
-    safeAreaBottom = safeArea.bottom || 0;
-    safeAreaTop = safeArea.top || 0;
-    updatePaddingMargin();
-  }
-  telegram.onEvent('contentSafeAreaChanged', onContentSafeAreaChanged);
-  telegram.onEvent('safeAreaChanged', onSafeAreaChanged);
-  onContentSafeAreaChanged();
-  onSafeAreaChanged();
+  SafeAreaManager.onChange = ({ top, bottom }) => {
+    bottomMenu.style.paddingBottom = bottom === 0 ? '0.5rem' : `${bottom}px`;
+    const topValue = top === 0 ? '2.5vw' : `${top}px`;
+    topSearch.style.marginTop = topValue;
+    searchCollaps.style.marginTop = topValue;
+    moviesContainer.style.marginTop = topValue;
+  };
+  SafeAreaManager.init();
 });
 
 
@@ -379,46 +395,36 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 
-// Нажатие на input
+// Нижнее меню сортировки убирается при поиске на телефонах
 const input = document.getElementById('input');
-const moviesContainer = document.getElementById('movies-container');
 const sorting = document.querySelector('.sorting');
 input.addEventListener('focus', () => {
-  sorting?.classList.add('hidden');
-  moviesContainer.style.paddingTop = '12vw';
+  if (DEVICE_TYPE === 'android' || DEVICE_TYPE === 'ios') {
+    sorting?.classList.add('hidden');
+  }
 });
 input.addEventListener('blur', () => {
   if (document.activeElement !== input) {
-    sorting?.classList.remove('hidden');
-    moviesContainer.style.paddingTop = '0';
+    if (DEVICE_TYPE === 'android' || DEVICE_TYPE === 'ios') {
+      sorting?.classList.remove('hidden');
+    }
   }
 });
 
 
 
-
-
-
 // Фокус с input пропадает при клике вне его области
-
 const overlay = document.getElementById('overlay');
-
-// Показываем оверлей при фокусе на инпут
 input.addEventListener('focus', () => {
   overlay.style.display = 'block';
 });
-
-// Клик по оверлею снимает фокус
 overlay.addEventListener('click', () => {
   input.blur();
   overlay.style.display = 'none';
 });
-
-// Если фокус теряется другим способом, тоже скрываем оверлей
 input.addEventListener('blur', () => {
   overlay.style.display = 'none';
 });
-
 
 
 
@@ -430,38 +436,80 @@ const searchCollaps = document.querySelector('.search-collaps');
 const searchCollapsSvg = document.querySelector('.search-collaps-svg');
 const search = document.getElementById('search');
 const close = document.querySelector('.close');
+const moviesContainer = document.getElementById('movies-container');
 
 searchCollaps.addEventListener('click', () => {
-  hapticFeedback('success');
-  searchCollaps.classList.add('animate');
-  searchCollapsSvg.classList.add('animate');
+  hapticFeedback('medium');
+
+  searchCollaps.classList.add('expanded');
+  searchCollapsSvg.classList.add('faded');
+
   search.style.display = 'flex';
   requestAnimationFrame(() => {
     search.classList.add('visible');
+    const input = search.querySelector('input');
+    if (input) input.focus();
   });
-  setTimeout(() => {
-    searchCollaps.style.transition = 'width 0.5s ease';
-    searchCollapsSvg.style.transition = 'opacity 0.25s ease';
-  }, 100);
-  setTimeout(() => {
-    search.style.transition = 'opacity 0.25s ease';
-  }, 500);
+
+  moviesContainer.style.transition = 'margin-top 0.5s ease';
+  SafeAreaManager.onChange = ({ top, bottom }) => {
+    moviesContainer.style.marginTop = top === 0 ? 'calc(5vw + 38px)' : `calc(${top}px + 2.5vw + 38px)`;    // const topValue = top === 0 ? '0.5rem' : `${top}px`;    // searchCollaps.style.marginTop = topValue;
+  };
+  SafeAreaManager.init();
 });
+
+
+// close.addEventListener('click', () => {
+//   hapticFeedback('medium');
+
+//   search.classList.remove('visible');
+
+//   requestAnimationFrame(() => {
+//     searchCollaps.classList.remove('expanded');
+//     searchCollapsSvg.classList.remove('faded');
+//   });
+
+//   setTimeout(() => {
+//     search.style.display = 'none';
+//   }, 250);
+
+//   SafeAreaManager.onChange = ({ top, bottom }) => {
+//     moviesContainer.style.marginTop = top === 0 ? '2.5vw' : `${top}px`;
+//   };
+//   SafeAreaManager.init();
+
+// });
+
+
 
 close.addEventListener('click', () => {
-  hapticFeedback('warning');
+  hapticFeedback('medium');
+
+  // Скрываем строку поиска
   search.classList.remove('visible');
+
   requestAnimationFrame(() => {
-    searchCollaps.style.display = 'flex';
-    searchCollaps.classList.remove('animate');
-    searchCollapsSvg.classList.remove('animate');
+    searchCollaps.classList.remove('expanded');
+    searchCollapsSvg.classList.remove('faded');
   });
+
   setTimeout(() => {
     search.style.display = 'none';
-    search.style.transition = 'opacity 0.5s ease';
-    searchCollaps.style.transition = 'width 0.25s ease';
-    searchCollapsSvg.style.transition = 'opacity 0.05s ease';
-  }, 100);  
+  }, 250);
+
+  // Сброс поиска
+  const searchInput = document.querySelector('#input');
+  searchInput.value = '';
+
+  document.querySelectorAll('.movie-card').forEach(card => {
+    card.classList.remove('hidden');
+  });
+
+  // Обновляем safe area
+  SafeAreaManager.onChange = ({ top, bottom }) => {
+    moviesContainer.style.marginTop = top === 0 ? '2.5vw' : `${top}px`;
+  };
+  SafeAreaManager.init();
 });
 
 
@@ -469,4 +517,26 @@ close.addEventListener('click', () => {
 
 
 
+
+
+
+
+
+const searchInput = document.querySelector('#input');
+
+searchInput.addEventListener('input', () => {
+  const query = searchInput.value.trim().toLowerCase();
+  const cards = document.querySelectorAll('.movie-card');
+
+  cards.forEach(card => {
+    const title = card.querySelector('.movie-title')?.textContent.toLowerCase() || '';
+    const meta = card.querySelector('.movie-meta')?.textContent.toLowerCase() || '';
+    
+    if (query && !(title.includes(query) || meta.includes(query))) {
+      card.classList.add('hidden');
+    } else {
+      card.classList.remove('hidden');
+    }
+  });
+});
 
