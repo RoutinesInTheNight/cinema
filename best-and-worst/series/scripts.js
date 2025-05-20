@@ -98,34 +98,69 @@ function hapticFeedback(type, redirectUrl) {
 
 
 
-// Нижний паддинг в нижнем меню с учётом безопасной зоны
+// SafeAreaManager.js (или просто выше в коде)
+const SafeAreaManager = (() => {
+  let safeAreaTop = 0;
+  let safeAreaBottom = 0;
+  let contentSafeAreaTop = 0;
+  let contentSafeAreaBottom = 0;
+
+  function getTotalSafeAreas() {
+    return {
+      top: safeAreaTop + contentSafeAreaTop,
+      bottom: safeAreaBottom + contentSafeAreaBottom
+    };
+  }
+
+  function updateFromTelegram() {
+    const content = telegram.contentSafeAreaInset || {};
+    const system = telegram.safeAreaInset || {};
+
+    contentSafeAreaTop = content.top || 0;
+    contentSafeAreaBottom = content.bottom || 0;
+    safeAreaTop = system.top || 0;
+    safeAreaBottom = system.bottom || 0;
+  }
+
+  function init() {
+    const updateAndNotify = () => {
+      updateFromTelegram();
+      if (typeof SafeAreaManager.onChange === 'function') {
+        SafeAreaManager.onChange(getTotalSafeAreas());
+      }
+    };
+
+    telegram.onEvent('safeAreaChanged', updateAndNotify);
+    telegram.onEvent('contentSafeAreaChanged', updateAndNotify);
+    updateAndNotify();
+  }
+
+  return {
+    init,
+    getTotalSafeAreas,
+    onChange: null // Можно назначить слушатель изменений
+  };
+})();
+
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const bottomMenu = document.querySelector('.sorting');
-  let safeAreaBottom = 0;
-  let contentSafeAreaBottom = 0;
-  bottomMenu.style.paddingBottom = '0px';
-  function updatePadding() {
-    const totalPadding = safeAreaBottom + contentSafeAreaBottom;
-    if (totalPadding === 0) {
-      bottomMenu.style.paddingBottom = `2.5vw`;
-    } else {
-      bottomMenu.style.paddingBottom = `${totalPadding}px`;
-    }
-  }
-  function onContentSafeAreaChanged() {
-    const contentSafeArea = telegram.contentSafeAreaInset || {};
-    contentSafeAreaBottom = contentSafeArea.bottom || 0;
-    updatePadding();
-  }
-  function onSafeAreaChanged() {
-    const safeArea = telegram.safeAreaInset || {};
-    safeAreaBottom = safeArea.bottom || 0;
-    updatePadding();
-  }
-  telegram.onEvent('contentSafeAreaChanged', onContentSafeAreaChanged);
-  telegram.onEvent('safeAreaChanged', onSafeAreaChanged);
-  onContentSafeAreaChanged();
-  onSafeAreaChanged();
+  const topSearch = document.querySelector('#search');
+  const searchCollaps = document.querySelector('.search-collaps');
+  const moviesContainer = document.getElementById('movies-container');
+
+  SafeAreaManager.onChange = ({ top, bottom }) => {
+    bottomMenu.style.paddingBottom = bottom === 0 ? '0.5rem' : `${bottom}px`;
+    const topValue = top === 0 ? '2.5vw' : `${top}px`;
+    topSearch.style.marginTop = topValue;
+    searchCollaps.style.marginTop = topValue;
+    moviesContainer.style.marginTop = topValue;
+  };
+  SafeAreaManager.init();
 });
 
 
@@ -346,5 +381,162 @@ async function loadMoviesJson() {
 window.addEventListener("DOMContentLoaded", () => {
   updateSelectionsFromURL();
   loadMoviesJson(); // загружаем и применяем
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Нижнее меню сортировки убирается при поиске на телефонах
+const input = document.getElementById('input');
+const sorting = document.querySelector('.sorting');
+input.addEventListener('focus', () => {
+  if (DEVICE_TYPE === 'android' || DEVICE_TYPE === 'ios') {
+    sorting?.classList.add('hidden');
+  }
+});
+input.addEventListener('blur', () => {
+  if (document.activeElement !== input) {
+    if (DEVICE_TYPE === 'android' || DEVICE_TYPE === 'ios') {
+      sorting?.classList.remove('hidden');
+    }
+  }
+});
+
+
+
+// Фокус с input пропадает при клике вне его области
+const overlay = document.getElementById('overlay');
+input.addEventListener('focus', () => {
+  overlay.style.display = 'block';
+});
+overlay.addEventListener('click', () => {
+  input.blur();
+  overlay.style.display = 'none';
+});
+input.addEventListener('blur', () => {
+  overlay.style.display = 'none';
+});
+
+
+
+
+
+
+
+const searchCollaps = document.querySelector('.search-collaps');
+const searchCollapsSvg = document.querySelector('.search-collaps-svg');
+const search = document.getElementById('search');
+const close = document.querySelector('.close');
+const moviesContainer = document.getElementById('movies-container');
+
+searchCollaps.addEventListener('click', () => {
+  hapticFeedback('medium');
+
+  searchCollaps.classList.add('expanded');
+  searchCollapsSvg.classList.add('faded');
+
+  search.style.display = 'flex';
+  requestAnimationFrame(() => {
+    search.classList.add('visible');
+    const input = search.querySelector('input');
+    if (input) input.focus();
+  });
+
+  moviesContainer.style.transition = 'margin-top 0.5s ease';
+  SafeAreaManager.onChange = ({ top, bottom }) => {
+    moviesContainer.style.marginTop = top === 0 ? 'calc(5vw + 38px)' : `calc(${top}px + 2.5vw + 38px)`;    // const topValue = top === 0 ? '0.5rem' : `${top}px`;    // searchCollaps.style.marginTop = topValue;
+  };
+  SafeAreaManager.init();
+});
+
+
+// close.addEventListener('click', () => {
+//   hapticFeedback('medium');
+
+//   search.classList.remove('visible');
+
+//   requestAnimationFrame(() => {
+//     searchCollaps.classList.remove('expanded');
+//     searchCollapsSvg.classList.remove('faded');
+//   });
+
+//   setTimeout(() => {
+//     search.style.display = 'none';
+//   }, 250);
+
+//   SafeAreaManager.onChange = ({ top, bottom }) => {
+//     moviesContainer.style.marginTop = top === 0 ? '2.5vw' : `${top}px`;
+//   };
+//   SafeAreaManager.init();
+
+// });
+
+
+
+close.addEventListener('click', () => {
+  hapticFeedback('medium');
+
+  // Скрываем строку поиска
+  search.classList.remove('visible');
+
+  requestAnimationFrame(() => {
+    searchCollaps.classList.remove('expanded');
+    searchCollapsSvg.classList.remove('faded');
+  });
+
+  setTimeout(() => {
+    search.style.display = 'none';
+  }, 250);
+
+  // Сброс поиска
+  const searchInput = document.querySelector('#input');
+  searchInput.value = '';
+
+  document.querySelectorAll('.movie-card').forEach(card => {
+    card.classList.remove('hidden');
+  });
+
+  // Обновляем safe area
+  SafeAreaManager.onChange = ({ top, bottom }) => {
+    moviesContainer.style.marginTop = top === 0 ? '2.5vw' : `${top}px`;
+  };
+  SafeAreaManager.init();
+});
+
+
+
+
+
+
+
+
+
+
+
+const searchInput = document.querySelector('#input');
+
+searchInput.addEventListener('input', () => {
+  const query = searchInput.value.trim().toLowerCase();
+  const cards = document.querySelectorAll('.movie-card');
+
+  cards.forEach(card => {
+    const title = card.querySelector('.movie-title')?.textContent.toLowerCase() || '';
+    const meta = card.querySelector('.movie-meta')?.textContent.toLowerCase() || '';
+    
+    if (query && !(title.includes(query) || meta.includes(query))) {
+      card.classList.add('hidden');
+    } else {
+      card.classList.remove('hidden');
+    }
+  });
 });
 
