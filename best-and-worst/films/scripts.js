@@ -424,7 +424,6 @@ overlay.addEventListener('click', () => {
   overlay.style.display = 'none';
 });
 input.addEventListener('blur', () => {
-  hapticFeedback('medium');
   overlay.style.display = 'none';
 });
 
