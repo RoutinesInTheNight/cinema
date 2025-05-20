@@ -432,37 +432,36 @@ const search = document.getElementById('search');
 const close = document.querySelector('.close');
 
 searchCollaps.addEventListener('click', () => {
-  hapticFeedback('soft');
+  hapticFeedback('success');
   searchCollaps.classList.add('animate');
-  searchCollapsSvg.style.opacity = '0';
+  searchCollapsSvg.classList.add('animate');
   search.style.display = 'flex';
   requestAnimationFrame(() => {
     search.classList.add('visible');
   });
   setTimeout(() => {
     searchCollaps.style.transition = 'width 0.5s ease';
+    searchCollapsSvg.style.transition = 'opacity 0.25s ease';
   }, 100);
   setTimeout(() => {
-    search.style.transition = 'opacity 0.05s ease';
+    search.style.transition = 'opacity 0.25s ease';
   }, 500);
 });
 
 close.addEventListener('click', () => {
-  hapticFeedback('soft');
+  hapticFeedback('warning');
   search.classList.remove('visible');
   requestAnimationFrame(() => {
     searchCollaps.style.display = 'flex';
     searchCollaps.classList.remove('animate');
+    searchCollapsSvg.classList.remove('animate');
   });
   setTimeout(() => {
     search.style.display = 'none';
     search.style.transition = 'opacity 0.5s ease';
-    searchCollaps.style.transition = 'width 0.1s ease';
-  }, 100);
-  setTimeout(() => {
-    searchCollapsSvg.style.opacity = '1';
-  }, 250);
-  
+    searchCollaps.style.transition = 'width 0.25s ease';
+    searchCollapsSvg.style.transition = 'opacity 0.05s ease';
+  }, 100);  
 });
 
 
