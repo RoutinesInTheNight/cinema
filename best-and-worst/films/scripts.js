@@ -439,6 +439,7 @@ const search = document.getElementById('search');
 const close = document.querySelector('.close');
 
 
+// При нажатии на свёрнутую иконку поиска открывается клавиатура
 searchCollaps.addEventListener('click', () => {
   hapticFeedback('medium');
 
@@ -450,7 +451,6 @@ searchCollaps.addEventListener('click', () => {
   const input = search.querySelector('input');
   if (input) input.focus();
 
-  // Только после фокуса добавляем видимость
   requestAnimationFrame(() => {
     search.classList.add('visible');
   });
@@ -499,7 +499,7 @@ close.addEventListener('click', () => {
 
 
 
-
+// ПОИСК
 const searchInput = document.querySelector('#input');
 
 searchInput.addEventListener('input', () => {
@@ -508,8 +508,9 @@ searchInput.addEventListener('input', () => {
 
   cards.forEach(card => {
     const title = card.querySelector('.movie-title')?.textContent.toLowerCase() || '';
-    const meta = card.querySelector('.movie-meta')?.textContent.toLowerCase() || '';
-    
+    const metaRaw = card.querySelector('.movie-meta')?.textContent.toLowerCase() || '';
+    const meta = metaRaw.split(' • ')[0]; // Только первая часть до " • "
+
     if (query && !(title.includes(query) || meta.includes(query))) {
       card.classList.add('hidden');
     } else {
@@ -517,4 +518,5 @@ searchInput.addEventListener('input', () => {
     }
   });
 });
+
 

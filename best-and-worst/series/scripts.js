@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const topValue = top === 0 ? '2.5vw' : `${top}px`;
     topSearch.style.marginTop = topValue;
     searchCollaps.style.marginTop = topValue;
-    moviesContainer.style.marginTop = topValue;
+    moviesContainer.style.marginTop = top === 0 ? 'calc(5vw + 38px)' : `calc(${top}px + 2.5vw + 38px)`;
   };
   SafeAreaManager.init();
 });
@@ -424,7 +424,6 @@ overlay.addEventListener('click', () => {
   overlay.style.display = 'none';
 });
 input.addEventListener('blur', () => {
-  hapticFeedback('medium');
   overlay.style.display = 'none';
 });
 
@@ -438,8 +437,9 @@ const searchCollaps = document.querySelector('.search-collaps');
 const searchCollapsSvg = document.querySelector('.search-collaps-svg');
 const search = document.getElementById('search');
 const close = document.querySelector('.close');
-const moviesContainer = document.getElementById('movies-container');
 
+
+// При нажатии на свёрнутую иконку поиска открывается клавиатура
 searchCollaps.addEventListener('click', () => {
   hapticFeedback('medium');
 
@@ -447,40 +447,16 @@ searchCollaps.addEventListener('click', () => {
   searchCollapsSvg.classList.add('faded');
 
   search.style.display = 'flex';
+
+  const input = search.querySelector('input');
+  if (input) input.focus();
+
   requestAnimationFrame(() => {
     search.classList.add('visible');
-    const input = search.querySelector('input');
-    if (input) input.focus();
   });
-
-  moviesContainer.style.transition = 'margin-top 0.5s ease';
-  SafeAreaManager.onChange = ({ top, bottom }) => {
-    moviesContainer.style.marginTop = top === 0 ? 'calc(5vw + 38px)' : `calc(${top}px + 2.5vw + 38px)`;    // const topValue = top === 0 ? '0.5rem' : `${top}px`;    // searchCollaps.style.marginTop = topValue;
-  };
-  SafeAreaManager.init();
 });
 
 
-// close.addEventListener('click', () => {
-//   hapticFeedback('medium');
-
-//   search.classList.remove('visible');
-
-//   requestAnimationFrame(() => {
-//     searchCollaps.classList.remove('expanded');
-//     searchCollapsSvg.classList.remove('faded');
-//   });
-
-//   setTimeout(() => {
-//     search.style.display = 'none';
-//   }, 250);
-
-//   SafeAreaManager.onChange = ({ top, bottom }) => {
-//     moviesContainer.style.marginTop = top === 0 ? '2.5vw' : `${top}px`;
-//   };
-//   SafeAreaManager.init();
-
-// });
 
 
 
@@ -523,7 +499,7 @@ close.addEventListener('click', () => {
 
 
 
-
+// ПОИСК
 const searchInput = document.querySelector('#input');
 
 searchInput.addEventListener('input', () => {
@@ -532,8 +508,9 @@ searchInput.addEventListener('input', () => {
 
   cards.forEach(card => {
     const title = card.querySelector('.movie-title')?.textContent.toLowerCase() || '';
-    const meta = card.querySelector('.movie-meta')?.textContent.toLowerCase() || '';
-    
+    const metaRaw = card.querySelector('.movie-meta')?.textContent.toLowerCase() || '';
+    const meta = metaRaw.split(' • ')[0]; // Только первая часть до " • "
+
     if (query && !(title.includes(query) || meta.includes(query))) {
       card.classList.add('hidden');
     } else {
@@ -541,4 +518,5 @@ searchInput.addEventListener('input', () => {
     }
   });
 });
+
 
