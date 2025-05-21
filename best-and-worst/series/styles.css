@@ -140,10 +140,6 @@ body {
 
 
 
-#movies-container {
-  margin-top: calc(var(--tg-safe-area-inset-top, 0px) + var(--tg-content-safe-area-inset-top));
-  margin-bottom: 10rem;
-}
 #movies-container div:first-child {
   margin-top: 0;
 }

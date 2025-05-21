@@ -154,11 +154,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const moviesContainer = document.getElementById('movies-container');
 
   SafeAreaManager.onChange = ({ top, bottom }) => {
-    bottomMenu.style.paddingBottom = bottom === 0 ? '0.5rem' : `${bottom}px`;
+    const bottomValue = bottom === 0 ? '0.5rem' : `${bottom}px`;
     const topValue = top === 0 ? '2.5vw' : `${top}px`;
+    bottomMenu.style.paddingBottom = bottomValue;
     topSearch.style.marginTop = topValue;
     searchCollaps.style.marginTop = topValue;
     moviesContainer.style.marginTop = top === 0 ? 'calc(5vw + 38px)' : `calc(${top}px + 2.5vw + 38px)`;
+    moviesContainer.style.marginBottom = bottom === 0 ? 'calc(0.5rem + 124.5px + 2.5vw)' : `calc(${bottom}px + 124.5px + 2.5vw)`
   };
   SafeAreaManager.init();
 });
