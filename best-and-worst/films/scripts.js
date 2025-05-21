@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const topValue = top === 0 ? '2.5vw' : `${top}px`;
     topSearch.style.marginTop = topValue;
     searchCollaps.style.marginTop = topValue;
-    moviesContainer.style.marginTop = topValue;
+    moviesContainer.style.marginTop = top === 0 ? 'calc(5vw + 38px)' : `calc(${top}px + 2.5vw + 38px)`;
   };
   SafeAreaManager.init();
 });
@@ -437,7 +437,6 @@ const searchCollaps = document.querySelector('.search-collaps');
 const searchCollapsSvg = document.querySelector('.search-collaps-svg');
 const search = document.getElementById('search');
 const close = document.querySelector('.close');
-const moviesContainer = document.getElementById('movies-container');
 
 searchCollaps.addEventListener('click', () => {
   hapticFeedback('medium');
@@ -451,35 +450,7 @@ searchCollaps.addEventListener('click', () => {
     const input = search.querySelector('input');
     if (input) input.focus();
   });
-
-  moviesContainer.style.transition = 'margin-top 0.5s ease';
-  SafeAreaManager.onChange = ({ top, bottom }) => {
-    moviesContainer.style.marginTop = top === 0 ? 'calc(5vw + 38px)' : `calc(${top}px + 2.5vw + 38px)`;    // const topValue = top === 0 ? '0.5rem' : `${top}px`;    // searchCollaps.style.marginTop = topValue;
-  };
-  SafeAreaManager.init();
 });
-
-
-// close.addEventListener('click', () => {
-//   hapticFeedback('medium');
-
-//   search.classList.remove('visible');
-
-//   requestAnimationFrame(() => {
-//     searchCollaps.classList.remove('expanded');
-//     searchCollapsSvg.classList.remove('faded');
-//   });
-
-//   setTimeout(() => {
-//     search.style.display = 'none';
-//   }, 250);
-
-//   SafeAreaManager.onChange = ({ top, bottom }) => {
-//     moviesContainer.style.marginTop = top === 0 ? '2.5vw' : `${top}px`;
-//   };
-//   SafeAreaManager.init();
-
-// });
 
 
 
