@@ -438,6 +438,7 @@ const searchCollapsSvg = document.querySelector('.search-collaps-svg');
 const search = document.getElementById('search');
 const close = document.querySelector('.close');
 
+
 searchCollaps.addEventListener('click', () => {
   hapticFeedback('medium');
 
@@ -445,12 +446,17 @@ searchCollaps.addEventListener('click', () => {
   searchCollapsSvg.classList.add('faded');
 
   search.style.display = 'flex';
+
+  const input = search.querySelector('input');
+  if (input) input.focus();
+
+  // Только после фокуса добавляем видимость
   requestAnimationFrame(() => {
     search.classList.add('visible');
-    const input = search.querySelector('input');
-    if (input) input.focus();
   });
 });
+
+
 
 
 
