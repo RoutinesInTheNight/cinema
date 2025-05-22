@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // Выделение нужных кнопок сортировки
-function updateSelectionsFromURL() {
+function updateSortButtonsFromURL() {
   const params = new URLSearchParams(window.location.search);
 
   // === STEP 2: sort2 – таблица по ID ===
@@ -228,7 +228,7 @@ function change(sortKey, value) {
   url.searchParams.set(sortKey, value);
   window.history.replaceState({}, '', url);
 
-  updateSelectionsFromURL();
+  updateSortButtonsFromURL();
   applySortingFromURL();
   window.scrollTo({ top: 0, behavior: 'auto' });
   // window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -340,17 +340,10 @@ function applySortingFromURL() {
       observer.observe(child);
     }
   });
-
-  updateSelectionsFromURL();
 }
 
 
 
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  applySortingFromURL();
-});
 
 
 
@@ -400,6 +393,7 @@ function populateUserSorting(userList) {
 
 window.addEventListener("DOMContentLoaded", () => {
   loadMoviesJson(); // загружаем данные и всё запускаем
+  updateSortButtonsFromURL();
 });
 
 
