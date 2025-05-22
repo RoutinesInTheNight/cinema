@@ -257,6 +257,20 @@ function applySortingFromURL() {
   const sort2 = urlParams.get("sort2");
   const sort3 = urlParams.get("sort3");
 
+  // === ДОБАВЛЯЕМ: выделение пользователя ===
+  if (sort1) {
+    const userItems = document.querySelectorAll("#sort1 .sorting-user");
+    userItems.forEach((item) => {
+      const name = item.textContent.trim();
+      if (name === sort1) {
+        item.classList.add("selected");
+        item.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+      } else {
+        item.classList.remove("selected");
+      }
+    });
+  }
+
   const key = `${sort1}/${sort2}/${sort3}`;
   const movieIds = movieData.sort[key];
 
@@ -301,21 +315,15 @@ function applySortingFromURL() {
     container.appendChild(card);
   });
 
-
-
   const children = container.querySelectorAll(':scope > *');
-
-  // Проверка наличия параметра new-load=true
   const hasNewLoad = urlParams.get('new-load') === 'true';
 
-  // Удалить только new-load из URL без перезагрузки
   if (hasNewLoad) {
     urlParams.delete('new-load');
     const newUrl = `${window.location.pathname}?${urlParams.toString()}`;
     window.history.replaceState({}, '', newUrl);
   }
 
-  // Первые 10
   children.forEach((child, index) => {
     if (index < 10) {
       if (hasNewLoad) {
@@ -323,12 +331,11 @@ function applySortingFromURL() {
           child.classList.add('visible');
         }, index * 25);
       } else {
-        child.classList.add('visible'); // без анимации — сразу
+        child.classList.add('visible');
       }
     }
   });
 
-  // Остальные — всегда через IntersectionObserver
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -347,10 +354,8 @@ function applySortingFromURL() {
       observer.observe(child);
     }
   });
-
-
-
 }
+
 
 
 
@@ -372,30 +377,48 @@ let movieData = null;
 
 async function loadMoviesJson() {
   try {
-    const response = await fetch('data.json');
+    const response = await fetch('data.json'); // путь к JSON
     movieData = await response.json();
-
-    // Добавить имена в сортировку
-    const sort1Container = document.getElementById('sort1');
-    if (movieData.users && Array.isArray(movieData.users)) {
-      movieData.users.forEach(user => {
-        const div = document.createElement('div');
-        div.className = 'sorting-user';
-        div.setAttribute('onclick', `change('sort1', '${user}')`);
-
-        const span = document.createElement('span');
-        span.textContent = user;
-
-        div.appendChild(span);
-        sort1Container.appendChild(div);
-      });
-    }
-
-    applySortingFromURL();
+    populateUserSorting(movieData.users);      // вставляем пользователей в DOM
+    applySortingFromURL();                     // применяем сортировку и выделение
   } catch (e) {
     console.error('Ошибка при загрузке JSON:', e);
   }
 }
+
+
+// Добавление элементов сортировки пользователей
+function populateUserSorting(userList) {
+  const container = document.getElementById("sort1");
+  container.innerHTML = ''; // на всякий случай очищаем
+
+  // Вставляем "Все"
+  const allDiv = document.createElement("div");
+  allDiv.className = "sorting-user";
+  allDiv.setAttribute("onclick", `change('sort1', 'Все')`);
+  allDiv.innerHTML = `<span>Все</span>`;
+  container.appendChild(allDiv);
+
+  // Вставляем остальных из JSON
+  userList.forEach(user => {
+    const userDiv = document.createElement("div");
+    userDiv.className = "sorting-user";
+    userDiv.setAttribute("onclick", `change('sort1', '${user}')`);
+    userDiv.innerHTML = `<span>${user}</span>`;
+    container.appendChild(userDiv);
+  });
+}
+
+
+window.addEventListener("DOMContentLoaded", () => {
+  loadMoviesJson(); // загружаем данные и всё запускаем
+});
+
+
+
+
+
+
 
 
 
