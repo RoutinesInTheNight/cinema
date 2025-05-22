@@ -177,24 +177,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
+// Выделение нужных кнопок сортировки
 function updateSelectionsFromURL() {
   const params = new URLSearchParams(window.location.search);
-
-  // === STEP 1: sort1 – имя пользователя ===
-  const user = params.get("sort1");
-  if (user) {
-    const userItems = document.querySelectorAll("#sort1 .sorting-user");
-    userItems.forEach((item) => {
-      const name = item.textContent.trim();
-      if (name === user) {
-        item.classList.add("selected");
-        item.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
-      } else {
-        item.classList.remove("selected");
-      }
-    });
-  }
 
   // === STEP 2: sort2 – таблица по ID ===
   const sort2 = params.get("sort2");
@@ -218,6 +203,7 @@ function updateSelectionsFromURL() {
     }
   }
 }
+
 
 
 
@@ -354,6 +340,8 @@ function applySortingFromURL() {
       observer.observe(child);
     }
   });
+
+  updateSelectionsFromURL();
 }
 
 
