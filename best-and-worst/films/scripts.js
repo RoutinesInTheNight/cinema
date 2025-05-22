@@ -372,18 +372,31 @@ let movieData = null;
 
 async function loadMoviesJson() {
   try {
-    const response = await fetch('data.json'); // укажи правильный путь
+    const response = await fetch('data.json');
     movieData = await response.json();
-    applySortingFromURL(); // отрисовать после загрузки данных
+
+    // Добавить имена в сортировку
+    const sort1Container = document.getElementById('sort1');
+    if (movieData.users && Array.isArray(movieData.users)) {
+      movieData.users.forEach(user => {
+        const div = document.createElement('div');
+        div.className = 'sorting-user';
+        div.setAttribute('onclick', `change('sort1', '${user}')`);
+
+        const span = document.createElement('span');
+        span.textContent = user;
+
+        div.appendChild(span);
+        sort1Container.appendChild(div);
+      });
+    }
+
+    applySortingFromURL();
   } catch (e) {
     console.error('Ошибка при загрузке JSON:', e);
   }
 }
 
-window.addEventListener("DOMContentLoaded", () => {
-  updateSelectionsFromURL();
-  loadMoviesJson(); // загружаем и применяем
-});
 
 
 
