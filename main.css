@@ -22,7 +22,9 @@
   text-decoration: none;
 }
 
-
+.charts-css{
+  --data-axes-color: #2a2a2a;
+}
 
 body {
   background-color: black;
