@@ -21,17 +21,24 @@
   -webkit-tap-highlight-color: transparent;
   text-decoration: none;
 }
-/* 
-.charts-css{
-  --data-axes-color: #2a2a2a;
-} */
+
 
 body {
   background-color: black;
   color: #d5e1d3;
   font-family: 'Sf Pro Display Regular', Arial, sans-serif;
   overflow-x: hidden;
+  overscroll-behavior: none;
 }
+html {
+  overflow-x: hidden;
+  overflow: hidden;
+}
+
+
+
+
+
 
 /* Появление всех элементов при загрузке страницы */
 body > * {
