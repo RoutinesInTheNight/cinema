@@ -58,6 +58,9 @@ body > *.visible {
   --aspect-ratio: 2 / 1;
 }
 
+table.charts-css {
+  height: auto;
+}
 .charts-css.show-heading caption {
   font-size: 1.25rem;
   padding: 4rem 0 0.5rem 0;
