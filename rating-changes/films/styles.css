@@ -50,6 +50,16 @@ body > *.visible {
 
 
 
+html, body {
+  overscroll-behavior: none;
+}
+html {
+  overflow-x: hidden;
+  overflow: hidden;
+}
+
+
+
 
 .hidden {
   display: none !important;
