@@ -29,6 +29,7 @@ body {
   font-family: 'Sf Pro Display Regular', Arial, sans-serif;
   overflow-x: hidden;
   overscroll-behavior: none;
+  height: 100vh;
 }
 html {
   overflow-x: hidden;
