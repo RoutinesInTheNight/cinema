@@ -176,12 +176,16 @@ body {
   font-family: 'Sf Pro Display Bold', Arial, sans-serif;
 }
 
+.movie-title-en,
 .movie-meta {
   display: block;
   font-size: 1rem;
   font-family: 'Sf Pro Display Medium', Arial, sans-serif;
   margin-top: 0.25rem;
   color: #97979D;
+}
+.movie-meta {
+  font-family: 'Sf Pro Display Redular', Arial, sans-serif;
 }
 
 
