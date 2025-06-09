@@ -1,12 +1,12 @@
 const telegram = window.Telegram.WebApp;
 const DEVICE_TYPE = telegram.platform;
-const currentUrl = window.location.href;
 
 telegram.expand();
 if (telegram.isVersionAtLeast("6.1")) {
   telegram.BackButton.show()
+  const currentUrl = window.location.href;
   let targetBackLink = '../../';
-  if (url.includes('series')) {
+  if (currentUrl.includes('series')) {
     targetBackLink = '../../series';
   }
   telegram.BackButton.onClick(() => hapticFeedback('soft', targetBackLink));
