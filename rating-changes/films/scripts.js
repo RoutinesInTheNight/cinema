@@ -181,7 +181,7 @@ function applySortingFromURL() {
   }
 
   const key = `${sort1}/${sort2}`;
-  const movieIds = ratingsData.sort[key];
+  const movies = ratingsData.sort[key];
 
   const ratingsContainer = document.getElementById("ratings-container");
   const titlesContainer = document.getElementById("titles-container");
@@ -190,9 +190,7 @@ function applySortingFromURL() {
 
   if (!movieIds || movieIds.length === 0) return;
 
-  movieIds.forEach((id) => {
-    const movie = ratingsData.sort[key][id];
-    if (!movie) return;
+  Object.values(movies).forEach((movie) => {
     const column = document.createElement("tr");
     const title = document.createElement("div");
     column.innerHTML = `<td style="--start: ${movie["start_size"]}; --end: ${movie["end_size"]}; --color: ${movie["color"]};">${movie["end"]}</td>`
