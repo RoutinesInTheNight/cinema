@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta
+        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height"
+        name="viewport" />
+    <title>Банда «Псы»: Лучшие и худшие сериалы</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link href="styles.css" rel="stylesheet" />
+    <link href="../../img/favicon.png" rel="icon" type="image/png" />
+</head>
+
+<body>
+
+
+    <svg style="display: none;">
+        <symbol id="icon-star" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#FFD43B"
+                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z" />
+    </svg>
+
+
+    <div class="search-collaps">
+        <svg class="search-collaps-svg" viewBox="0 0 512 512" fill="#749C6C">
+            <path
+                d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6 .1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
+        </svg>
+    </div>
+
+    <div id="search">
+        <div class="icon">
+            <svg viewBox="0 0 512 512" fill="#749C6C">
+                <path
+                    d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6 .1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
+            </svg>
+        </div>
+        <div class="input">
+            <input id="input" type="text" placeholder="Поиск..." />
+        </div>
+        <div class="close">
+            <svg viewBox="0 0 512 512" fill="#749C6C">
+                <path
+                    d="M242.7 256l100.1-100.1c12.3-12.3 12.3-32.2 0-44.5l-22.2-22.2c-12.3-12.3-32.2-12.3-44.5 0L176 189.3 75.9 89.2c-12.3-12.3-32.2-12.3-44.5 0L9.2 111.5c-12.3 12.3-12.3 32.2 0 44.5L109.3 256 9.2 356.1c-12.3 12.3-12.3 32.2 0 44.5l22.2 22.2c12.3 12.3 32.2 12.3 44.5 0L176 322.7l100.1 100.1c12.3 12.3 32.2 12.3 44.5 0l22.2-22.2c12.3-12.3 12.3-32.2 0-44.5L242.7 256z" />
+            </svg>
+        </div>
+    </div>
+
+    <div id="overlay"></div>
+
+
+
+
+    <div id="movies-container"></div>
+
+
+
+
+
+
+
+    <div class="sorting">
+        <div class="sorting-users-scroll" id="sort1"></div>
+
+        <div class="sorting-row" id="sort2">
+            <div class="sorting-item" id="all" onclick="change('sort2', 'all')">
+                <span>По всем</span>
+            </div>
+            <div class="sorting-item" id="imdb" onclick="change('sort2', 'imdb')">
+                <span>По IMDb</span>
+            </div>
+            <div class="sorting-item" id="kp" onclick="change('sort2', 'kp')">
+                <span>По КП</span>
+            </div>
+        </div>
+
+        <div class="sorting-row" id="sort3">
+            <div class="sorting-item" id="best" onclick="change('sort3', 'best')">
+                <span>Лучшие фильмы</span>
+            </div>
+            <div class="sorting-item" id="worst" onclick="change('sort3', 'worst')">
+                <span>Худшие фильмы</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>

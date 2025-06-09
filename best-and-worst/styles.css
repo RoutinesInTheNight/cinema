@@ -1,0 +1,396 @@
+@font-face {
+  font-family: 'Sf Pro Display Regular';
+  src: url('../../fonts/SFPRODISPLAYREGULAR.OTF') format('truetype')
+}
+
+@font-face {
+  font-family: 'Sf Pro Display Medium';
+  src: url('../../fonts/SFPRODISPLAYMEDIUM.OTF') format('truetype')
+}
+
+@font-face {
+  font-family: 'Sf Pro Display Bold';
+  src: url('../../fonts/SFPRODISPLAYBOLD.OTF') format('truetype')
+}
+
+/* Откл выделения */
+* {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+}
+
+
+
+body {
+  background-color: black;
+  color: #d5e1d3;
+  font-family: 'Sf Pro Display Regular', Arial, sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  /* max-width: 500px; */
+}
+
+
+
+
+/* Появление всех элементов при загрузке страницы */
+#movies-container>* {
+  transform: scale(0.9);
+  opacity: 0;
+  transition: transform 0.25s ease-out, opacity 0.25s ease-out;
+}
+
+#movies-container>*.visible {
+  transform: scale(1);
+  opacity: 1;
+}
+
+
+.hidden {
+  display: none !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sorting {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1C1C1C;
+  border-top: 0.1rem solid #3D3C3F;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  box-shadow: 0 0 1rem 0.25rem rgba(0, 0, 0, 1);
+  touch-action: none;
+  color: #749C6C;
+}
+
+.sorting-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  gap: .5rem;
+  margin: 0.5rem auto 0 auto;
+  border-top: 1px solid #3D3C3F;
+  padding-top: 0.5rem;
+}
+
+.sorting-item,
+.sorting-user {
+  flex: 1;
+  text-align: center;
+  font-size: 1rem;
+  font-family: 'Sf Pro Display Medium', Arial, sans-serif;
+  cursor: pointer;
+  background-color: #2e3e2b;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+}
+
+.sorting-user {
+  flex: 0 0 auto;
+  min-width: 25%;
+}
+
+.sorting-users-scroll {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 90%;
+  margin-left: 5%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  gap: .5rem;
+  margin-top: .5rem;
+}
+
+.sorting-users-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.selected {
+  background-color: #749C6C;
+  color: #d5e1d3;
+  transition: background-color 0.1s, color 0.1s;
+}
+
+
+
+
+
+
+
+
+
+#movies-container div:first-child {
+  margin-top: 0;
+}
+
+
+.movie-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-family: 'SF Pro Display', Arial, sans-serif;
+  color: #fff;
+  background-color: #1C1C1D;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  margin: 2.5vw auto;
+  width: calc(95% - 1rem);
+}
+
+.movie-number {
+  text-align: center;
+  min-width: 3rem;
+  font-size: 1.25rem;
+  font-family: 'Sf Pro Display Bold', Arial, sans-serif;
+  color: #97979D;
+}
+
+.movie-info {
+  flex: 1;
+}
+
+.movie-title {
+  display: inline-block;
+  font-size: 1.25rem;
+  font-family: 'Sf Pro Display Bold', Arial, sans-serif;
+}
+
+.movie-meta {
+  display: block;
+  font-size: 1rem;
+  font-family: 'Sf Pro Display Medium', Arial, sans-serif;
+  margin-top: 0.25rem;
+  color: #97979D;
+}
+
+
+
+.movie-rating-row {
+
+  display: flex;
+  align-items: flex-start;
+  align-items: center;
+  /* gap: 0.5rem; */
+  margin-top: 0.25rem;
+  width: 100%;
+  opacity: .75;
+}
+
+.movie-score {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  color: #FFD43B;
+  font-family: 'Sf Pro Display Medium', Arial, sans-serif;
+}
+
+.score-icon {
+  height: 1.3rem;
+  width: 1.3rem;
+}
+
+
+
+.movie-ratings {
+  font-size: .75rem;
+  border-left: 1px solid #C6A635;
+  color: #C6A635;
+  font-family: 'Sf Pro Display Bold', Arial, sans-serif;
+  /* white-space: pre-wrap; */
+}
+
+.movie-ratings span {
+  display: block;
+}
+
+.movie-rating-row div {
+  flex: 1;
+  text-align: center;
+  max-width: calc(100% / 3);
+  /* padding: 0.25rem; */
+
+  /* border: 1px solid #97979D; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.movie-tags {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  width: 100%;
+  font-size: .75rem;
+  font-family: 'Sf Pro Display Medium', Arial, sans-serif;
+  color: #78787D;
+}
+
+.movie-tags span {
+  flex: 1;
+  text-align: center;
+  max-width: calc((100% / 3) - 1rem);
+  padding: 0.25rem;
+  border-radius: .5rem;
+  border: 1px solid #78787D;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.search-collaps {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 2.5%;
+  width: 35px;
+  height: 35px;
+  background-color: rgba(46, 62, 43, 0.75);
+  border: 1.5px solid #749C6C;
+  border-radius: 1rem;
+  backdrop-filter: blur(2vw);
+  -webkit-backdrop-filter: blur(2vw);
+  cursor: pointer;
+  transition: width 0.25s ease;
+  z-index: 10;
+}
+
+.search-collaps.expanded {
+  width: calc(95% - 3px);
+}
+
+.search-collaps-svg {
+  width: 1rem;
+  opacity: 1;
+  transition: opacity 0.25s ease;
+}
+
+.search-collaps-svg.faded {
+  opacity: 0;
+}
+
+
+
+
+#search {
+  position: fixed;
+  display: none;
+  opacity: 0;
+  top: 0;
+  left: 2.5%;
+  width: calc(95% - 3px);
+  height: 35px;
+  touch-action: none;
+  transition: opacity 0.25s ease;
+  z-index: 10;
+}
+
+#search.visible {
+  opacity: 1;
+}
+#search .icon {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#search .input {
+  width: 70%;
+  display: flex;
+  align-items: center;
+}
+#search .close {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+#search.icon,
+#search.input,
+#search.close {
+  display: flex;
+}
+#search svg {
+  width: 1rem;
+}
+#search input {
+  color: #749C6C;
+  width: 100%;
+  background: none;
+  border: none;
+  font-family: 'Sf Pro Display Medium', Arial, sans-serif;
+  font-size: 1rem;
+  outline: none;
+  padding: 0;
+}
+#search input::placeholder {
+  color: #749C6C;
+}
+
+
+
+#overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  background: transparent;
+  z-index: 5;
+}
+#overlay.active {
+  display: block;
+}
