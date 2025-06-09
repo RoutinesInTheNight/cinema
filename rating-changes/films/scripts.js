@@ -14,12 +14,12 @@ if (telegram.isVersionAtLeast("8.0")) {
 
 
 
-// const children = document.querySelectorAll('body > *');
-// children.forEach((child, index) => {
-//   setTimeout(() => {
-//     child.classList.add('visible');
-//   }, index * 25);
-// });
+const children = document.querySelectorAll('body > *');
+children.forEach((child, index) => {
+  setTimeout(() => {
+    child.classList.add('visible');
+  }, index * 25);
+});
 
 
 
@@ -215,13 +215,17 @@ function applySortingFromURL() {
     urlParams.delete('new-load');
     const newUrl = `${window.location.pathname}?${urlParams.toString()}`;
     window.history.replaceState({}, '', newUrl);
-    const children = document.querySelectorAll('body > *');
-    children.forEach((child, index) => {
-      setTimeout(() => {
-        child.classList.add('visible');
-      }, index * 25);
-    });
+    // children.forEach((child, index) => {
+    //   setTimeout(() => {
+    //     child.classList.add('visible');
+    //   }, index * 25);
+    // });
   }
+  children.forEach((child, index) => {
+    setTimeout(() => {
+      child.classList.add('visible');
+    }, index * 25);
+  });
 
 }
 

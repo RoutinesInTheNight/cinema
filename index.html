@@ -8,7 +8,7 @@
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <link href="charts.css" rel="stylesheet"/>
 <link href="main.css" rel="stylesheet"/>
-<link href="favicon.png" rel="icon" type="image/png"/>
+<link href="img/favicon.png" rel="icon" type="image/png"/>
 </head>
 <body>
 <span class="last-update">Последнее обновление:<br/>18.05.2025 00:09</span>
@@ -152,7 +152,7 @@
 <div class="notice">
 <span>Нажми на рейтинг участника, чтобы увидеть его самые лучшие и худшие фильмы</span>
 </div>
-<div class="single-button" onclick="hapticFeedback('soft', 'rating-changes/films?sort1=Артур&amp;sort2=all&amp;new-load=true')">
+<div class="single-button" id="rating-changes" onclick="hapticFeedback('soft', 'rating-changes/films?sort1=Денис&amp;sort2=all&amp;new-load=true')">
 <span>Как менялся рейтинг участников</span>
 <svg fill="#749C6C" viewbox="0 0 512 512">
 <path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z">
@@ -182,11 +182,11 @@
 <table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2 hidden" id="group-1-table-3">
 <caption>Потрачено времени</caption>
 <tbody><tr><th>Денис</th><td style="--size: calc(1);">0.543%</td></tr>
-<tr><th>Артур</th><td style="--size: calc(1 / 0.5429995799597419 * 0.5424746118747291);">0.542%</td></tr>
-<tr><th>Никита</th><td style="--size: calc(1 / 0.5429995799597419 * 0.37765170113331903);">0.378%</td></tr>
-<tr><th>Ваня</th><td style="--size: calc(1 / 0.5429995799597419 * 0.2390570019276219);">0.239%</td></tr>
-<tr><th>Федя</th><td style="--size: calc(1 / 0.5429995799597419 * 0.21202130758878227);">0.212%</td></tr>
-<tr><th>Вика</th><td style="--size: calc(1 / 0.5429995799597419 * 0.15718008514787996);">0.157%</td></tr>
+<tr><th>Артур</th><td style="--size: calc(1 / 0.5429897167168567 * 0.5424649552170988);">0.542%</td></tr>
+<tr><th>Никита</th><td style="--size: calc(1 / 0.5429897167168567 * 0.3776437626755477);">0.378%</td></tr>
+<tr><th>Ваня</th><td style="--size: calc(1 / 0.5429897167168567 * 0.23905275693070696);">0.239%</td></tr>
+<tr><th>Федя</th><td style="--size: calc(1 / 0.5429897167168567 * 0.21201706134815873);">0.212%</td></tr>
+<tr><th>Вика</th><td style="--size: calc(1 / 0.5429897167168567 * 0.1571772772567858);">0.157%</td></tr>
 </tbody>
 </table>
 <div class="button-group" id="group-1">
@@ -1558,7 +1558,7 @@
                 window.location.href = row.dataset.href;
             });
         });
-        
+
         // Скролл вертильных таблиц в конец
         window.addEventListener("DOMContentLoaded", () => {
             const containers = document.querySelectorAll('.scroll-container');

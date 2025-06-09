@@ -8,7 +8,7 @@
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <link href="charts.css" rel="stylesheet"/>
 <link href="main.css" rel="stylesheet"/>
-<link href="favicon.png" rel="icon" type="image/png"/>
+<link href="img/favicon.png" rel="icon" type="image/png"/>
 </head>
 <body>
 <div class="logo-container">
@@ -133,6 +133,13 @@
 <button class="toggle-btn active" onclick="tableGroup2('all')">Общий</button>
 <button class="toggle-btn" onclick="tableGroup2('imdb')">IMDb</button>
 <button class="toggle-btn" onclick="tableGroup2('kp')">КП</button>
+</div>
+<div class="single-button" id="rating-changes" onclick="hapticFeedback('soft', 'rating-changes/series?sort1=Артур&amp;sort2=all&amp;new-load=true')">
+<span>Как менялся рейтинг участников</span>
+<svg fill="#749C6C" viewbox="0 0 512 512">
+<path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z">
+</path>
+</svg>
 </div>
 <table class="movie-chart charts-css bar data-end show-heading show-labels data-spacing-2" id="group-3-table-1">
 <caption>Среднее кол-во оценок сериала</caption>
