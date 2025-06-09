@@ -6,7 +6,7 @@ telegram.expand();
 if (telegram.isVersionAtLeast("6.1")) {
   telegram.BackButton.show()
   let targetBackLink = '../../';
-  if (currentUrl.includes('series')) {
+  if (url.includes('series')) {
     targetBackLink = '../../series';
   }
   telegram.BackButton.onClick(() => hapticFeedback('soft', targetBackLink));
@@ -312,11 +312,7 @@ function updateSortButtonsFromURL() {
 let movieData = null;
 async function loadMoviesJson() {
   try {
-    let jsonPath = 'films/data.json'
-    if (currentUrl.includes('series')) {
-      jsonPath = 'series/data.json';
-    }
-    const response = await fetch(jsonPath);
+    const response = await fetch('data.json');
     movieData = await response.json();
     populateUserSorting(movieData.users);
     applySortingFromURL();
