@@ -14,16 +14,12 @@ if (telegram.isVersionAtLeast("8.0")) {
 
 
 
-
-
 const children = document.querySelectorAll('body > *');
 children.forEach((child, index) => {
   setTimeout(() => {
     child.classList.add('visible');
   }, index * 25);
 });
-
-
 
 
 
@@ -62,31 +58,22 @@ function hapticFeedback(type, redirectUrl) {
     }
   }
   if (redirectUrl && redirectUrl !== '#') {
-    const externalPrefixes = ['http://hdrezka', 'https://www.imdb', 'https://www.kinopoisk'];
-    const isExternal = externalPrefixes.some(prefix => redirectUrl.startsWith(prefix));
-    // Открытие ссылки вне телеграм / Переход на другую страницу с анимацией исчезновения
-    if (isExternal) {
-      telegram.openLink(redirectUrl);
-    } else {
-      const children = document.querySelectorAll('#movies-container > *');
-      const visibleChildren = Array.from(children).filter((child) => {
-        const rect = child.getBoundingClientRect();
-        return rect.top < window.innerHeight && rect.bottom > 0;
-      });
-      visibleChildren.forEach((child, index) => {
-        setTimeout(() => {
-          child.classList.remove('visible');
-        }, index * 25);
-      });
-      const delay = visibleChildren.length * 25;
+    const children = document.querySelectorAll('body > *');
+    const visibleChildren = Array.from(children).filter((child) => {
+      const rect = child.getBoundingClientRect();
+      return rect.top < window.innerHeight && rect.bottom > 0;
+    });
+    visibleChildren.forEach((child, index) => {
       setTimeout(() => {
-        window.location.href = redirectUrl;
-      }, delay);
-    }
+        child.classList.remove('visible');
+      }, index * 25);
+    });
+    const delay = visibleChildren.length * 25;
+    setTimeout(() => {
+      window.location.href = redirectUrl;
+    }, delay);
   }
 }
-
-
 
 
 
@@ -132,7 +119,7 @@ const SafeAreaManager = (() => {
 
 
 
-
+// Выставление пддингов и маргинов в зависимости от безопасной зоны
 document.addEventListener('DOMContentLoaded', () => {
   const bottomMenu = document.querySelector('.sorting');
   const ratingsContainer = document.querySelector('#ratings-container');
@@ -148,4 +135,130 @@ document.addEventListener('DOMContentLoaded', () => {
     
   };
   SafeAreaManager.init();
+});
+
+
+
+
+
+
+
+
+// Добавление кнопок с именами из json
+function populateUserSorting(userList) {
+  const container = document.getElementById("sort1");
+  container.innerHTML = ''; // на всякий случай очищаем
+  userList.forEach(user => {
+    const userDiv = document.createElement("div");
+    userDiv.className = "sorting-user";
+    userDiv.setAttribute("onclick", `change('sort1', '${user}')`);
+    userDiv.innerHTML = `<span>${user}</span>`;
+    container.appendChild(userDiv);
+  });
+}
+
+
+// Выделение кнопки с именем и добавление фильмов / сериалов из json
+function applySortingFromURL() {
+  if (!ratingsData || !ratingsData.movies_data) return;
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const sort1 = urlParams.get("sort1");
+  const sort2 = urlParams.get("sort2");
+
+  // === ДОБАВЛЯЕМ: выделение пользователя ===
+  if (sort1) {
+    const userItems = document.querySelectorAll("#sort1 .sorting-user");
+    userItems.forEach((item) => {
+      const name = item.textContent.trim();
+      if (name === sort1) {
+        item.classList.add("selected");
+        item.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+      } else {
+        item.classList.remove("selected");
+      }
+    });
+  }
+
+  const key = `${sort1}/${sort2}`;
+  const movieIds = ratingsData.sort[key];
+
+  const ratingsContainer = document.getElementById("ratings-container");
+  const titlesContainer = document.getElementById("titles-container");
+  ratingsContainer.innerHTML = '';
+  titlesContainer.innerHTML = '';
+
+  if (!movieIds || movieIds.length === 0) return;
+
+  movieIds.forEach((id, index) => {
+    const movie = ratingsData.movies_data[id];
+    if (!movie) return;
+    const column = document.createElement("tr");
+    const title = document.createElement("div");
+    column.innerHTML = `<td style="--start: ${movie["start_size"]}; --end: ${movie["end_size"]}; --color: ${movie["color"]};">${movie["end"]}</td>`
+    title.innerHTML = `
+      <span>${movie["title"]}</span>
+      <div class="movie-rating">
+        <svg class="score-icon">
+          <use href="#icon-star"/>
+        </svg>
+        <span>${movie["rating"]}</span>
+      </div>
+    `
+    ratingsContainer.appendChild(column);
+    titlesContainer.appendChild(title);
+  });
+
+  // const hasNewLoad = urlParams.get('new-load') === 'true';
+  // if (hasNewLoad) {
+  //   urlParams.delete('new-load');
+  //   const newUrl = `${window.location.pathname}?${urlParams.toString()}`;
+  //   window.history.replaceState({}, '', newUrl);
+  // }
+}
+
+
+// Выделение кнопки 2-й сортировки
+function updateSortButtonsFromURL() {
+  const params = new URLSearchParams(window.location.search);
+  const sort2 = params.get("sort2");
+  if (sort2) {
+    const sort2Container = document.getElementById("sort2");
+    if (sort2Container) {
+      sort2Container.querySelectorAll("div").forEach((div) => {
+        div.classList.toggle("selected", div.id === sort2);
+      });
+    }
+  }
+}
+
+
+// Загрузка json
+let ratingsData = null;
+async function loadMoviesJson() {
+  try {
+    const response = await fetch('data.json');
+    ratingsData = await response.json();
+    populateUserSorting(ratingsData.users);
+    applySortingFromURL();
+  } catch (e) {
+    console.error('Ошибка при загрузке JSON:', e);
+  }
+}
+
+
+function change(sortKey, value) {
+  hapticFeedback('change')
+  const url = new URL(window.location);
+  url.searchParams.set(sortKey, value);
+  window.history.replaceState({}, '', url);
+  updateSortButtonsFromURL();
+  applySortingFromURL();
+  window.scrollTo({ top: 0, behavior: 'auto' });
+}
+
+
+window.addEventListener("DOMContentLoaded", () => {
+  loadMoviesJson();
+  updateSortButtonsFromURL();
 });
