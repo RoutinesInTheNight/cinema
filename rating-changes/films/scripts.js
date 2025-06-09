@@ -188,7 +188,7 @@ function applySortingFromURL() {
   ratingsContainer.innerHTML = '';
   titlesContainer.innerHTML = '';
 
-  if (!movieIds || movieIds.length === 0) return;
+  if (!movies || Object.keys(movies).length === 0) return;
 
   Object.values(movies).forEach((movie) => {
     const column = document.createElement("tr");
