@@ -14,12 +14,12 @@ if (telegram.isVersionAtLeast("8.0")) {
 
 
 
-const children = document.querySelectorAll('body > *');
-children.forEach((child, index) => {
-  setTimeout(() => {
-    child.classList.add('visible');
-  }, index * 25);
-});
+// const children = document.querySelectorAll('body > *');
+// children.forEach((child, index) => {
+//   setTimeout(() => {
+//     child.classList.add('visible');
+//   }, index * 25);
+// });
 
 
 
@@ -207,12 +207,21 @@ function applySortingFromURL() {
     titlesContainer.appendChild(title);
   });
 
-  // const hasNewLoad = urlParams.get('new-load') === 'true';
-  // if (hasNewLoad) {
-  //   urlParams.delete('new-load');
-  //   const newUrl = `${window.location.pathname}?${urlParams.toString()}`;
-  //   window.history.replaceState({}, '', newUrl);
-  // }
+  const scrollContainer = document.querySelector('.scroll-container');
+  if (scrollContainer) scrollContainer.scrollLeft = scrollContainer.scrollWidth;
+
+  const hasNewLoad = urlParams.get('new-load') === 'true';
+  if (hasNewLoad) {
+    urlParams.delete('new-load');
+    const newUrl = `${window.location.pathname}?${urlParams.toString()}`;
+    window.history.replaceState({}, '', newUrl);
+    children.forEach((child, index) => {
+      setTimeout(() => {
+        child.classList.add('visible');
+      }, index * 25);
+    });
+  }
+
 }
 
 
@@ -252,16 +261,11 @@ function change(sortKey, value) {
   window.history.replaceState({}, '', url);
   updateSortButtonsFromURL();
   applySortingFromURL();
-  window.scrollTo({ top: 0, behavior: 'auto' });
-  const scrollContainer = document.querySelector('.scroll-container');
-  if (scrollContainer) scrollContainer.scrollLeft = scrollContainer.scrollWidth;
 }
 
 
 window.addEventListener("DOMContentLoaded", () => {
   loadMoviesJson();
   updateSortButtonsFromURL();
-  const scrollContainer = document.querySelector('.scroll-container');
-  if (scrollContainer) scrollContainer.scrollLeft = scrollContainer.scrollWidth;
 });
 
