@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       ratingsContainer.style.marginTop = `${top}px`;
     }
-    
+
   };
   SafeAreaManager.init();
 });
@@ -253,10 +253,15 @@ function change(sortKey, value) {
   updateSortButtonsFromURL();
   applySortingFromURL();
   window.scrollTo({ top: 0, behavior: 'auto' });
+  const scrollContainer = document.querySelector('.scroll-container');
+  if (scrollContainer) scrollContainer.scrollLeft = scrollContainer.scrollWidth;
 }
 
 
 window.addEventListener("DOMContentLoaded", () => {
   loadMoviesJson();
   updateSortButtonsFromURL();
+  const scrollContainer = document.querySelector('.scroll-container');
+  if (scrollContainer) scrollContainer.scrollLeft = scrollContainer.scrollWidth;
 });
+
