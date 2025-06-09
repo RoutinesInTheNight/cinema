@@ -190,8 +190,8 @@ function applySortingFromURL() {
 
   if (!movieIds || movieIds.length === 0) return;
 
-  movieIds.forEach((id, index) => {
-    const movie = ratingsData.sort[id];
+  movieIds.forEach((id) => {
+    const movie = ratingsData.sort[key][id];
     if (!movie) return;
     const column = document.createElement("tr");
     const title = document.createElement("div");
