@@ -160,7 +160,7 @@ function populateUserSorting(userList) {
 
 // Выделение кнопки с именем и добавление фильмов / сериалов из json
 function applySortingFromURL() {
-  if (!ratingsData || !ratingsData.movies_data) return;
+  if (!ratingsData || !ratingsData.sort) return;
 
   const urlParams = new URLSearchParams(window.location.search);
   const sort1 = urlParams.get("sort1");
@@ -191,7 +191,7 @@ function applySortingFromURL() {
   if (!movieIds || movieIds.length === 0) return;
 
   movieIds.forEach((id, index) => {
-    const movie = ratingsData.movies_data[id];
+    const movie = ratingsData.sort[id];
     if (!movie) return;
     const column = document.createElement("tr");
     const title = document.createElement("div");
