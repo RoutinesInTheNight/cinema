@@ -135,11 +135,17 @@ const SafeAreaManager = (() => {
 
 document.addEventListener('DOMContentLoaded', () => {
   const bottomMenu = document.querySelector('.sorting');
+  const ratingsContainer = document.querySelector('#ratings-container');
 
   SafeAreaManager.onChange = ({ top, bottom }) => {
     const bottomValue = bottom === 0 ? '0.5rem' : `${bottom}px`;
-    const topValue = top === 0 ? '2.5vw' : `${top}px`;
     bottomMenu.style.paddingBottom = bottomValue;
+    if (top === 0) {
+      document.body.style.height = '100vh';
+    } else {
+      ratingsContainer.style.marginTop = `${top}px`;
+    }
+    
   };
   SafeAreaManager.init();
 });

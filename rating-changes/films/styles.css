@@ -34,31 +34,31 @@ body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
-  height: 100vh;
 }
 
 /* Появление всех элементов при загрузке страницы */
-body > * {
+body>* {
   transform: scale(0.9);
   opacity: 0;
   transition: transform 0.25s ease-out, opacity 0.25s ease-out;
 }
-body > *.visible {
+
+body>*.visible {
   transform: scale(1);
   opacity: 1;
 }
 
 
 
-html, body {
+html,
+body {
   overscroll-behavior: none;
 }
+
 html {
   overflow-x: hidden;
   overflow: hidden;
 }
-
-
 
 
 .hidden {
@@ -79,22 +79,9 @@ html {
 
 .movie-chart {
   --color: #749C6C;
-  --aspect-ratio: 2 / 1;
+  --aspect-ratio: .75 / 1;
 }
 
-
-
-.charts-css.show-heading caption {
-  font-size: 1.25rem;
-  padding: 4rem 0 0.5rem 0;
-  /* color: #90b089; */
-  font-family: 'Sf Pro Display Bold', Arial, sans-serif;
-}
-
-/* Уменьшить ширину места для имён */
-.charts-css.bar {
-  --labels-size: 3.75rem;
-}
 
 table.charts-css {
   --data-axes-color: #2a2a2a;
@@ -102,11 +89,31 @@ table.charts-css {
 
 
 
+#ratings-container {
+  margin-bottom: 100px;
+}
+
+
+.scroll-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100vw;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+
 
 
 .titles {
   display: flex;
   padding-top: 0.5rem;
+  /* padding-bottom: 50.5rem; */
+  font-size: 1rem;
+  font-family: 'Sf Pro Display Medium', Arial, sans-serif;
 }
 
 .titles div {
@@ -115,7 +122,26 @@ table.charts-css {
   text-align: center;
 }
 
+.titles span {
+  display: block;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
 
+.movie-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  padding-top: 0.25rem;
+  color: #FFD43B;
+}
+
+.score-icon {
+  height: 1rem;
+  width: 1rem;
+}
 
 
 
@@ -189,8 +215,3 @@ table.charts-css {
   color: #d5e1d3;
   transition: background-color 0.1s, color 0.1s;
 }
-
-
-
-
-
