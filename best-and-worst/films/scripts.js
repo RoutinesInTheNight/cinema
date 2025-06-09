@@ -96,9 +96,6 @@ function hapticFeedback(type, redirectUrl) {
 
 
 
-
-
-// SafeAreaManager.js (или просто выше в коде)
 const SafeAreaManager = (() => {
   let safeAreaTop = 0;
   let safeAreaBottom = 0;
@@ -170,71 +167,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-
-
-
-
-
-
-// Выделение нужных кнопок сортировки
-function updateSortButtonsFromURL() {
-  const params = new URLSearchParams(window.location.search);
-
-  // === STEP 2: sort2 – таблица по ID ===
-  const sort2 = params.get("sort2");
-  if (sort2) {
-    const sort2Container = document.getElementById("sort2");
-    if (sort2Container) {
-      sort2Container.querySelectorAll("div").forEach((div) => {
-        div.classList.toggle("selected", div.id === sort2);
-      });
-    }
-  }
-
-  // === STEP 3: sort3 – аналогично sort2 ===
-  const sort3 = params.get("sort3");
-  if (sort3) {
-    const sort3Container = document.getElementById("sort3");
-    if (sort3Container) {
-      sort3Container.querySelectorAll("div").forEach((div) => {
-        div.classList.toggle("selected", div.id === sort3);
-      });
-    }
-  }
+// Добавление кнопок с именами
+function populateUserSorting(userList) {
+  const container = document.getElementById("sort1");
+  container.innerHTML = ''; // на всякий случай очищаем
+  // Вставляем кнопку "Все"
+  const allDiv = document.createElement("div");
+  allDiv.className = "sorting-user";
+  allDiv.setAttribute("onclick", `change('sort1', 'Все')`);
+  allDiv.innerHTML = `<span>Все</span>`;
+  container.appendChild(allDiv);
+  // Вставляем имена из JSON
+  userList.forEach(user => {
+    const userDiv = document.createElement("div");
+    userDiv.className = "sorting-user";
+    userDiv.setAttribute("onclick", `change('sort1', '${user}')`);
+    userDiv.innerHTML = `<span>${user}</span>`;
+    container.appendChild(userDiv);
+  });
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function change(sortKey, value) {
-  hapticFeedback('change')
-  const url = new URL(window.location);
-  url.searchParams.set(sortKey, value);
-  window.history.replaceState({}, '', url);
-
-  updateSortButtonsFromURL();
-  applySortingFromURL();
-  window.scrollTo({ top: 0, behavior: 'auto' });
-  // window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-
+// Выделение кнопки с именем и добавление фильмов / сериалов из json
 function applySortingFromURL() {
   if (!movieData || !movieData.movies_data || !movieData.sort) return;
 
@@ -342,59 +295,75 @@ function applySortingFromURL() {
   });
 }
 
+// Выделение кнопок 2-й и 3-й сортировок
+function updateSortButtonsFromURL() {
+  const params = new URLSearchParams(window.location.search);
 
+  // === STEP 2: sort2 – таблица по ID ===
+  const sort2 = params.get("sort2");
+  if (sort2) {
+    const sort2Container = document.getElementById("sort2");
+    if (sort2Container) {
+      sort2Container.querySelectorAll("div").forEach((div) => {
+        div.classList.toggle("selected", div.id === sort2);
+      });
+    }
+  }
 
+  // === STEP 3: sort3 – аналогично sort2 ===
+  const sort3 = params.get("sort3");
+  if (sort3) {
+    const sort3Container = document.getElementById("sort3");
+    if (sort3Container) {
+      sort3Container.querySelectorAll("div").forEach((div) => {
+        div.classList.toggle("selected", div.id === sort3);
+      });
+    }
+  }
+}
 
-
-
-
-
-
-
-
-
-
+// Загрузка json
 let movieData = null;
-
 async function loadMoviesJson() {
   try {
-    const response = await fetch('data.json'); // путь к JSON
+    const response = await fetch('data.json');
     movieData = await response.json();
-    populateUserSorting(movieData.users);      // вставляем пользователей в DOM
-    applySortingFromURL();                     // применяем сортировку и выделение
+    populateUserSorting(movieData.users);
+    applySortingFromURL();
   } catch (e) {
     console.error('Ошибка при загрузке JSON:', e);
   }
 }
 
+function change(sortKey, value) {
+  hapticFeedback('change')
+  const url = new URL(window.location);
+  url.searchParams.set(sortKey, value);
+  window.history.replaceState({}, '', url);
 
-// Добавление элементов сортировки пользователей
-function populateUserSorting(userList) {
-  const container = document.getElementById("sort1");
-  container.innerHTML = ''; // на всякий случай очищаем
-
-  // Вставляем "Все"
-  const allDiv = document.createElement("div");
-  allDiv.className = "sorting-user";
-  allDiv.setAttribute("onclick", `change('sort1', 'Все')`);
-  allDiv.innerHTML = `<span>Все</span>`;
-  container.appendChild(allDiv);
-
-  // Вставляем остальных из JSON
-  userList.forEach(user => {
-    const userDiv = document.createElement("div");
-    userDiv.className = "sorting-user";
-    userDiv.setAttribute("onclick", `change('sort1', '${user}')`);
-    userDiv.innerHTML = `<span>${user}</span>`;
-    container.appendChild(userDiv);
-  });
+  updateSortButtonsFromURL();
+  applySortingFromURL();
+  window.scrollTo({ top: 0, behavior: 'auto' });
+  // window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 
+// 1) Последний элемент конструкции DOMContentLoaded запускает loadMoviesJson и updateSortButtonsFromURL
+// --- 1) loadMoviesJson загружает json и запускает populateUserSorting с applySortingFromURL
+// --- --- 1) populateUserSorting в нижнее меню с сортировкой добавляет кнопки с именами
+// --- --- 2) applySortingFromURL выделяет нужную кнопку с именем и перестрраивает html фильмов / сериалов из json
+// --- 2) updateSortButtonsFromURL выделяет нужные кнопки 2-й и 3-й сортировки
+// Функция change запускат updateSortButtonsFromURL и applySortingFromURL
+
 window.addEventListener("DOMContentLoaded", () => {
-  loadMoviesJson(); // загружаем данные и всё запускаем
+  loadMoviesJson();
   updateSortButtonsFromURL();
 });
+
+
+
+
+
 
 
 
