@@ -14,12 +14,12 @@ if (telegram.isVersionAtLeast("8.0")) {
 
 
 
-const children = document.querySelectorAll('body > *');
-children.forEach((child, index) => {
-  setTimeout(() => {
-    child.classList.add('visible');
-  }, index * 25);
-});
+// const children = document.querySelectorAll('body > *');
+// children.forEach((child, index) => {
+//   setTimeout(() => {
+//     child.classList.add('visible');
+//   }, index * 25);
+// });
 
 
 
@@ -221,6 +221,8 @@ function applySortingFromURL() {
     //   }, index * 25);
     // });
   }
+
+  const children = document.querySelectorAll('body > *');
   children.forEach((child, index) => {
     setTimeout(() => {
       child.classList.add('visible');
