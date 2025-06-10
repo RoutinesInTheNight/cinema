@@ -404,3 +404,87 @@ body {
 #overlay.active {
   display: block;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.keyboards {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1C1C1C;
+  border-top: 0.1rem solid #3D3C3F;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  box-shadow: 0 0 1rem 0.25rem rgba(0, 0, 0, 1);
+  touch-action: none;
+  color: #749C6C;
+  padding-top: .5rem;
+}
+
+.keyboard {
+  /* display: block;
+  justify-content: space-around;
+  align-items: center; */
+  width: 97.5%;
+  /* gap: .5rem; */
+  margin: 0.5rem auto 0 auto;
+  /* border-top: 1px solid #3D3C3F; */
+  /* padding-top: 0.005rem; */
+  /* gap: 0.5rem; */
+}
+
+.keyboard div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .25rem;
+  margin-top: 0.5rem;
+}
+
+.keyboard span {
+  flex: 1;
+  text-align: center;
+  /* flex: 1; */
+  background-color: #2e3e2b;
+  font-size: 1.25rem;
+  font-family: 'Sf Pro Display Medium', Arial, sans-serif;
+  /* padding: 0.5rem; */
+  border-radius: 0.25rem;
+  width: 8.125%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  /* height: 2.5rem; */
+
+
+}
+
+/* .sorting-item,
+.sorting-user {
+  flex: 1;
+  text-align: center;
+  font-size: 1rem;
+  font-family: 'Sf Pro Display Medium', Arial, sans-serif;
+  cursor: pointer;
+  background-color: #2e3e2b;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+} */

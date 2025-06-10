@@ -138,11 +138,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const topSearch = document.querySelector('#search');
   const searchCollaps = document.querySelector('.search-collaps');
   const moviesContainer = document.getElementById('movies-container');
+  const keyboards = document.querySelector('.keyboards');
 
   SafeAreaManager.onChange = ({ top, bottom }) => {
     const bottomValue = bottom === 0 ? '0.5rem' : `${bottom}px`;
     const topValue = top === 0 ? '2.5vw' : `${top}px`;
     bottomMenu.style.paddingBottom = bottomValue;
+    keyboards.style.paddingBottom = bottomValue;
     topSearch.style.marginTop = topValue;
     searchCollaps.style.marginTop = topValue;
     moviesContainer.style.marginTop = top === 0 ? 'calc(5vw + 38px)' : `calc(${top}px + 2.5vw + 38px)`;
@@ -415,13 +417,13 @@ input.addEventListener('blur', () => {
 
 
 
-
+const sorting = document.querySelector('.sorting');
 
 const searchCollaps = document.querySelector('.search-collaps');
 const searchCollapsSvg = document.querySelector('.search-collaps-svg');
 const search = document.getElementById('search');
 const close = document.querySelector('.close');
-
+const keyboards = document.querySelector(".keyboards");
 
 // Открытие поиска
 searchCollaps.addEventListener('click', () => {
@@ -430,8 +432,11 @@ searchCollaps.addEventListener('click', () => {
   searchCollaps.style.display = 'none';
   search.style.display = 'flex';
 
-  const input = search.querySelector('input');
-  if (input) input.focus();
+  // const input = search.querySelector('input');
+  // if (input) input.focus();
+  keyboards.classList.remove("hidden");
+  sorting.classList.add("hidden");
+
 });
 
 
@@ -451,6 +456,9 @@ close.addEventListener('click', () => {
   document.querySelectorAll('.movie-card').forEach(card => {
     card.classList.remove('hidden');
   });
+
+  keyboards.classList.add("hidden");
+  sorting.classList.remove("hidden");
 
   // Обновляем safe area
   // SafeAreaManager.onChange = ({ top, bottom }) => {
@@ -488,3 +496,24 @@ searchInput.addEventListener('input', () => {
 });
 
 
+
+
+
+
+
+
+
+
+// Переключение языков клавиатуры
+function changeLang(lang) {
+  hapticFeedback("change");
+  const keyboard_ru = document.getElementById("keyboard-ru");
+  const keyboard_en = document.getElementById("keyboard-en");
+  if (lang === 'ru') {
+    keyboard_ru.classList.remove("hidden");
+    keyboard_en.classList.add("hidden");
+  } else {
+    keyboard_ru.classList.add("hidden");
+    keyboard_en.classList.remove("hidden");
+  }
+}
