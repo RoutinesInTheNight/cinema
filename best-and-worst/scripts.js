@@ -518,3 +518,24 @@ function changeLang(lang) {
     keyboard_en.classList.remove("hidden");
   }
 }
+
+
+function showHideNumbers() {
+  hapticFeedback("change");
+  const numberDivs = document.querySelectorAll('.keyboard-numbers');
+  const actionButtons = document.querySelectorAll('.keyboard-show-hide-numbers');
+  if (numberDivs) {
+    numberDivs.forEach((numberDiv) => {
+      numberDiv.classList.toggle('hidden');
+    });
+  }
+  if (actionButtons) {
+    actionButtons.forEach((actionButton) => {
+      actionButton.classList.toggle('active-show-hide-numbers');
+    });
+  }
+
+}
+
+
+

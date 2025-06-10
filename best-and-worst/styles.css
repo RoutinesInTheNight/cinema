@@ -423,52 +423,97 @@ body {
 
 
 
-
-
 .keyboards {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #1C1C1C;
-  border-top: 0.1rem solid #3D3C3F;
-  /* border-top-left-radius: 1rem; */
-  /* border-top-right-radius: 1rem; */
+  background-color: #2B2B2B;
   box-shadow: 0 0 1rem 0.25rem rgba(0, 0, 0, 1);
   touch-action: none;
-  color: #749C6C;
+  color: white;
   /* padding-top: .5rem; */
 }
 
 .keyboard {
-  width: 95%;
+  width: calc(100 / 1284 * 1260vw);
   margin: .5rem auto 0 auto;
 }
 
 .keyboard div {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: .35rem;
-  margin-top: 0.5rem;
+  gap: calc(100 / 1284 * 18vw);
+  margin-top: calc(100 / 1284 * 33vw);
 }
 
-.keyboard span {
-  flex: 1;
+.keyboard span,
+.keyboard-delete,
+.keyboard-language {
   text-align: center;
-  /* flex: 1; */
-  background-color: #2e3e2b;
+  width: calc((calc(100 / 1284 * 1260vw) - calc(100 / 1284 * 11 * 18vw)) / 12);
+  background-color: #6B6B6B;
   font-size: 1.25rem;
   font-family: 'Sf Pro Display Regular', Arial, sans-serif;
-  /* padding: 0.5rem; */
-  border-radius: 0.25rem;
-  /* width: 8%; */
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  /* height: 2.5rem; */
-
-
+  border-radius: calc(100 / 1284 * 18vw);
+  height: calc(100 / 1284 * 134vw);
+  line-height: calc(100 / 1284 * 134vw);
+  border-bottom: calc(100 / 1284 * 5vw) solid #1A1A1A;
 }
+/* Ширина у клавиш англ клавиатуры немного больше */
+#keyboard-en span {
+  width: calc((calc(100 / 1284 * 1260vw) - calc(100 / 1284 * 9 * 18vw)) / 10);
+}
+
+
+
+
+
+
+.keyboard-delete,
+.keyboard-language {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.keyboard-delete svg,
+.keyboard-language svg {
+  width: calc(100 / 1284 * 85vw);
+}
+
+.keyboard .keyboard-show-hide-numbers,
+.keyboard .keyboard-delete {
+  width: calc((calc(100 / 1284 * 1260vw) - (calc(100 / 1284 * 10 * 18vw) + calc((calc(100 / 1284 * 1260vw) - calc(100 / 1284 * 11 * 18vw)) / 12 * 9))) / 2);
+  background-color: #464646;
+  font-size: 1rem;
+}
+/* На англ клавиатуре эти клавиши квадратные */
+#keyboard-en .keyboard-show-hide-numbers,
+#keyboard-en .keyboard-delete {
+  width: calc(100 / 1284 * 134vw);
+}
+#keyboard-en .keyboard-show-hide-numbers {
+  margin-right: calc(100 / 1284 * 39.711vw);
+}
+
+
+.keyboard .active-show-hide-numbers {
+  font-family: 'Sf Pro Display Medium', Arial, sans-serif;
+  background-color: #D4D4D4;
+  color: black;
+}
+
+
+.keyboard-numbers span {
+  width: calc((calc(100 / 1284 * 1260vw) - calc(100 / 1284 * 9 * 18vw)) / 10);
+  background-color: #464646;
+}
+
+
+
+/* .key-ru-1,
+.key-ru-2 {
+  width: calc((calc(100 / 1284 * 1260vw) - calc(100 / 1284 * 10 * 18vw)) / 11)
+} */
 
 /* .sorting-item,
 .sorting-user {
