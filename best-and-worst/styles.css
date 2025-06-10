@@ -428,8 +428,11 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #2B2B2B;
-  box-shadow: 0 0 1rem 0.25rem rgba(0, 0, 0, 1);
+  background-color: rgba(57, 57, 57, 0.75);
+  backdrop-filter: blur(2vw);
+  -webkit-backdrop-filter: blur(2vw);
+  /* background-color: #2B2B2B; */
+  /* box-shadow: 0 0 1rem 0.25rem rgba(0, 0, 0, 1); */
   touch-action: none;
   color: white;
   /* padding-top: .5rem; */
@@ -477,7 +480,7 @@ body {
 }
 .keyboard-delete svg,
 .keyboard-language svg {
-  width: calc(100 / 1284 * 85vw);
+  width: calc(100 / 1284 * 70vw);
 }
 
 .keyboard .keyboard-show-hide-numbers,
