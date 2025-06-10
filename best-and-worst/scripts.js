@@ -142,9 +142,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   SafeAreaManager.onChange = ({ top, bottom }) => {
     const bottomValue = bottom === 0 ? '0.5rem' : `${bottom}px`;
+    const bottomValueX2 = bottom === 0 ? '0.5rem' : `${bottom * 2}px`;
     const topValue = top === 0 ? '2.5vw' : `${top}px`;
     bottomMenu.style.paddingBottom = bottomValue;
-    keyboards.style.paddingBottom = bottomValue;
+    keyboards.style.paddingBottom = bottomValueX2;
     topSearch.style.marginTop = topValue;
     searchCollaps.style.marginTop = topValue;
     moviesContainer.style.marginTop = top === 0 ? 'calc(5vw + 38px)' : `calc(${top}px + 2.5vw + 38px)`;
