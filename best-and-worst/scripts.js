@@ -380,20 +380,20 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 // Нижнее меню сортировки убирается при поиске на телефонах
-const input = document.getElementById('input');
-const sorting = document.querySelector('.sorting');
-input.addEventListener('focus', () => {
-  if (DEVICE_TYPE === 'android' || DEVICE_TYPE === 'ios') {
-    sorting?.classList.add('hidden');
-  }
-});
-input.addEventListener('blur', () => {
-  if (document.activeElement !== input) {
-    if (DEVICE_TYPE === 'android' || DEVICE_TYPE === 'ios') {
-      sorting?.classList.remove('hidden');
-    }
-  }
-});
+// const input = document.getElementById('input');
+// const sorting = document.querySelector('.sorting');
+// input.addEventListener('focus', () => {
+//   if (DEVICE_TYPE === 'android' || DEVICE_TYPE === 'ios') {
+//     sorting?.classList.add('hidden');
+//   }
+// });
+// input.addEventListener('blur', () => {
+//   if (document.activeElement !== input) {
+//     if (DEVICE_TYPE === 'android' || DEVICE_TYPE === 'ios') {
+//       sorting?.classList.remove('hidden');
+//     }
+//   }
+// });
 
 
 
@@ -423,21 +423,15 @@ const search = document.getElementById('search');
 const close = document.querySelector('.close');
 
 
-// При нажатии на свёрнутую иконку поиска открывается клавиатура
+// Открытие поиска
 searchCollaps.addEventListener('click', () => {
   hapticFeedback('medium');
 
-  searchCollaps.classList.add('expanded');
-  searchCollapsSvg.classList.add('faded');
-
+  searchCollaps.style.display = 'none';
   search.style.display = 'flex';
 
   const input = search.querySelector('input');
   if (input) input.focus();
-
-  requestAnimationFrame(() => {
-    search.classList.add('visible');
-  });
 });
 
 
@@ -447,17 +441,8 @@ searchCollaps.addEventListener('click', () => {
 close.addEventListener('click', () => {
   hapticFeedback('medium');
 
-  // Скрываем строку поиска
-  search.classList.remove('visible');
-
-  requestAnimationFrame(() => {
-    searchCollaps.classList.remove('expanded');
-    searchCollapsSvg.classList.remove('faded');
-  });
-
-  setTimeout(() => {
-    search.style.display = 'none';
-  }, 250);
+  searchCollaps.style.display = 'flex';
+  search.style.display = 'none';
 
   // Сброс поиска
   const searchInput = document.querySelector('#input');
@@ -468,10 +453,10 @@ close.addEventListener('click', () => {
   });
 
   // Обновляем safe area
-  SafeAreaManager.onChange = ({ top, bottom }) => {
-    moviesContainer.style.marginTop = top === 0 ? '2.5vw' : `${top}px`;
-  };
-  SafeAreaManager.init();
+  // SafeAreaManager.onChange = ({ top, bottom }) => {
+  //   moviesContainer.style.marginTop = top === 0 ? '2.5vw' : `${top}px`;
+  // };
+  // SafeAreaManager.init();
 });
 
 
@@ -492,10 +477,9 @@ searchInput.addEventListener('input', () => {
 
   cards.forEach(card => {
     const title = card.querySelector('.movie-title')?.textContent.toLowerCase() || '';
-    const metaRaw = card.querySelector('.movie-meta')?.textContent.toLowerCase() || '';
-    const meta = metaRaw.split(' • ')[0]; // Только первая часть до " • "
+    const titleEn = card.querySelector('.movie-title-en')?.textContent.toLowerCase() || '';
 
-    if (query && !(title.includes(query) || meta.includes(query))) {
+    if (query && !(title.includes(query) || titleEn.includes(query))) {
       card.classList.add('hidden');
     } else {
       card.classList.remove('hidden');
