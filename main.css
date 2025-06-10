@@ -30,6 +30,12 @@ body {
   overflow-x: hidden;
   overscroll-behavior: none;
   height: 100vh;
+  margin: 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 html {
   overflow-x: hidden;
@@ -64,19 +70,22 @@ table.charts-css {
 .charts-css.show-heading caption {
   font-size: 1.25rem;
   padding: 4rem 0 0.5rem 0;
-  /* color: #90b089; */
   font-family: 'Sf Pro Display Bold', Arial, sans-serif;
 }
 
 /* Уменьшить ширину места для имён */
 .charts-css.bar {
-  --labels-size: 3.75rem;
+  --labels-size: 4rem;
 }
 
 table.charts-css td {
   padding: 0.25rem;
   /* font-size: 0.85rem; */
   border-radius: 0.35rem;
+}
+
+table.charts-css th {
+  padding-left: 0.25rem;
 }
 
 

@@ -189,14 +189,14 @@ function applySortingFromURL() {
   Object.values(movies).forEach((movie) => {
     const column = document.createElement("tr");
     const title = document.createElement("div");
-    column.innerHTML = `<td style="--start: ${movie["start_size"]}; --end: ${movie["end_size"]}; --color: ${movie["color"]};">${movie["end"]}</td>`
+    column.innerHTML = `<td style="--start: ${movie["4"]}; --end: ${movie["5"]}; --color: ${movie["6"]};">${movie["3"]}</td>`
     title.innerHTML = `
-      <span>${movie["title"]}</span>
+      <span>${movie["1"]}</span>
       <div class="movie-rating">
         <svg class="score-icon">
           <use href="#icon-star"/>
         </svg>
-        <span>${movie["rating"]}</span>
+        <span>${movie["2"]}</span>
       </div>
     `
     ratingsContainer.appendChild(column);
