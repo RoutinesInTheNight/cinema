@@ -184,6 +184,10 @@ body {
   margin-top: 0.25rem;
   color: #97979D;
 }
+.movie-title-en {
+  font-family: 'Sf Pro Display Medium', Arial, sans-serif;
+}
+
 .movie-meta {
   font-family: 'Sf Pro Display Redular', Arial, sans-serif;
 }
