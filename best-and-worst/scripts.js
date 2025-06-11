@@ -19,7 +19,10 @@ if (telegram.isVersionAtLeast("8.0")) {
 
 
 
-
+function capitalizeFirstLetter(str) {
+  if (!str) return '';
+  return str[0].toUpperCase() + str.slice(1);
+}
 
 
 
@@ -136,6 +139,7 @@ const SafeAreaManager = (() => {
 document.addEventListener('DOMContentLoaded', () => {
   const bottomMenu = document.querySelector('.sorting');
   const searchCollaps = document.querySelector('.search-collaps');
+  const searchTopCollaps = document.querySelector('.search-top-collaps');
   const moviesContainer = document.getElementById('movies-container');
   const keyboards = document.querySelector('.keyboards');
 
@@ -146,6 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
     keyboards.style.paddingBottom = bottom === 0 ? '0.5rem' : `${bottom * 2}px`;
 
     searchCollaps.style.marginBottom = `calc(${bottom + 97 + 37}px + 0.5rem)`;
+    searchTopCollaps.style.marginTop = topValue;
 
     moviesContainer.style.marginTop = topValue;
     moviesContainer.style.marginBottom = bottom === 0 ? 'calc(0.5rem + 124.5px + 2.5vw)' : `calc(${bottom}px + 124.5px + 2.5vw)`
@@ -440,23 +445,23 @@ const searchCollapsSvg = document.querySelector('.search-collaps-svg');
 
 
 // ПОИСК
-const searchInput = document.querySelector('#input');
+// const searchInput = document.querySelector('#input');
 
-searchInput.addEventListener('input', () => {
-  const query = searchInput.value.trim().toLowerCase();
-  const cards = document.querySelectorAll('.movie-card');
+// searchInput.addEventListener('input', () => {
+//   const query = searchInput.value.trim().toLowerCase();
+//   const cards = document.querySelectorAll('.movie-card');
 
-  cards.forEach(card => {
-    const title = card.querySelector('.movie-title')?.textContent.toLowerCase() || '';
-    const titleEn = card.querySelector('.movie-title-en')?.textContent.toLowerCase() || '';
+//   cards.forEach(card => {
+//     const title = card.querySelector('.movie-title')?.textContent.toLowerCase() || '';
+//     const titleEn = card.querySelector('.movie-title-en')?.textContent.toLowerCase() || '';
 
-    if (query && !(title.includes(query) || titleEn.includes(query))) {
-      card.classList.add('hidden');
-    } else {
-      card.classList.remove('hidden');
-    }
-  });
-});
+//     if (query && !(title.includes(query) || titleEn.includes(query))) {
+//       card.classList.add('hidden');
+//     } else {
+//       card.classList.remove('hidden');
+//     }
+//   });
+// });
 
 
 
@@ -465,7 +470,28 @@ searchInput.addEventListener('input', () => {
 function showKeyboard() {
   hapticFeedback("medium");
   const keyboards = document.querySelector('.keyboards');
+  const overlay = document.querySelector('#overlay');
   keyboards.classList.add('active');
+  overlay.classList.add('active');
+  const url = new URL(window.location);
+  const search = url.searchParams.get("search");
+  if (search !== null) {
+    url.searchParams.delete('search');
+    window.history.replaceState({}, '', url)
+  }
+}
+
+// Повторное открытие клавиатуры из верхнего поиска
+function showKeyboardAgain() {
+  hapticFeedback("medium");
+  const keyboards = document.querySelector('.keyboards');
+  const searchTopCollaps = document.querySelector('.search-top-collaps');
+  const searchCollaps = document.querySelector('.search-collaps');
+  const overlay = document.querySelector('#overlay');
+  searchTopCollaps.classList.remove('active');
+  keyboards.classList.add('active');
+  searchCollaps.classList.add('active');
+  overlay.classList.add('active');
 }
 
 // Закрытие клавиатуры
@@ -473,7 +499,47 @@ function closeKeyboard() {
   hapticFeedback("medium");
   const keyboards = document.querySelector('.keyboards');
   keyboards.classList.remove('active');
+  const url = new URL(window.location);
+  url.searchParams.delete('search');
+  window.history.replaceState({}, '', url)
+  overlay.classList.remove('active');
+  const input = document.querySelector('.keyboards .input span');
+  input.textContent = 'Поиск...';
 }
+
+function keyboardCollapseClose() {
+  hapticFeedback("medium");
+  const searchTopCollaps = document.querySelector('.search-top-collaps');
+  const searchCollaps = document.querySelector('.search-collaps');
+  searchTopCollaps.classList.remove('active');
+  searchCollaps.classList.remove('hide');
+  const url = new URL(window.location);
+  url.searchParams.delete('search');
+  window.history.replaceState({}, '', url)
+  const input = document.querySelector('.keyboards .input span');
+  input.textContent = 'Поиск...';
+}
+
+
+// Сворачивание клавиатуры (если поиск пустой - клавиатура и поиск закрываются)
+function keyboardCollapse() {
+  hapticFeedback("medium");
+  const searchCollaps = document.querySelector('.search-collaps');
+  const keyboards = document.querySelector('.keyboards');
+  const searchTopCollaps = document.querySelector('.search-top-collaps');
+  const overlay = document.querySelector('#overlay');
+  const url = new URL(window.location);
+  const search = url.searchParams.get("search");
+  if (search == null) {
+    keyboards.classList.remove('active');
+  } else {
+    searchCollaps.classList.add('hide');
+    keyboards.classList.remove('active');
+    searchTopCollaps.classList.add('active');
+  }
+  overlay.classList.remove('active');
+}
+
 
 
 
@@ -495,7 +561,7 @@ function keyboardChangeLang() {
   }
 }
 
-
+// Открытие / закрытие ряда с цифрами
 function showHideNumbers() {
   hapticFeedback("light");
   const numbers = document.querySelector('.keyboard .numbers');
@@ -506,8 +572,44 @@ function showHideNumbers() {
       actionButton.classList.toggle('active');
     });
   }
-
 }
 
+
+
+
+
+function searchAdd(char) {
+  hapticFeedback("light");
+  const url = new URL(window.location);
+  const search = url.searchParams.get("search");
+  if (search !== null) {
+    if (search.length === 0 && char === ' ') return;
+    url.searchParams.set("search", search + char);
+  } else {
+    if (char !== ' ') url.searchParams.set("search", char);
+    else return;
+  }
+  window.history.replaceState({}, '', url)
+  const input = document.querySelector('.keyboards .input span');
+  input.textContent = capitalizeFirstLetter(url.searchParams.get("search"));
+}
+
+function searchDelete() {
+  hapticFeedback("light");
+  const url = new URL(window.location);
+  const search = url.searchParams.get("search");
+  const input = document.querySelector('.keyboards .input span');
+  if (search !== null) {
+    if (search.length <= 1) {
+      url.searchParams.delete('search');
+      input.textContent = 'Поиск...';
+    } else {
+      const newSearch = search.slice(0, -1);
+      url.searchParams.set("search", newSearch);
+      input.textContent = capitalizeFirstLetter(newSearch);
+    }
+  } else return;
+  window.history.replaceState({}, '', url)
+}
 
 
