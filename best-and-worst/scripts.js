@@ -135,23 +135,20 @@ const SafeAreaManager = (() => {
 // Выставление пддингов и маргинов в зависимости от безопасной зоны
 document.addEventListener('DOMContentLoaded', () => {
   const bottomMenu = document.querySelector('.sorting');
-  const topSearch = document.querySelector('#search');
   const searchCollaps = document.querySelector('.search-collaps');
   const moviesContainer = document.getElementById('movies-container');
   const keyboards = document.querySelector('.keyboards');
 
   SafeAreaManager.onChange = ({ top, bottom }) => {
     const bottomValue = bottom === 0 ? '0.5rem' : `${bottom}px`;
-    const bottomValueMoviesContainer = bottom === 0 ? '0.5rem' : `${bottom * 2}px`;
     const topValue = top === 0 ? '2.5vw' : `${top}px`;
     bottomMenu.style.paddingBottom = bottomValue;
     keyboards.style.paddingBottom = bottom === 0 ? '0.5rem' : `${bottom * 2}px`;
-    topSearch.style.marginTop = topValue;
 
     searchCollaps.style.marginBottom = `calc(${bottom + 97 + 37}px + 0.5rem)`;
 
     moviesContainer.style.marginTop = topValue;
-    moviesContainer.style.marginBottom = `calc(${bottomValue} + calc(100 / 1284 * (134 * 5 + 33 * 5 + 140) * 1vw))`;
+    moviesContainer.style.marginBottom = bottom === 0 ? 'calc(0.5rem + 124.5px + 2.5vw)' : `calc(${bottom}px + 124.5px + 2.5vw)`
   };
   SafeAreaManager.init();
 });
@@ -403,18 +400,18 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 // Фокус с input пропадает при клике вне его области
-const overlay = document.getElementById('overlay');
-input.addEventListener('focus', () => {
-  overlay.style.display = 'block';
-});
-overlay.addEventListener('click', () => {
-  hapticFeedback('medium');
-  input.blur();
-  overlay.style.display = 'none';
-});
-input.addEventListener('blur', () => {
-  overlay.style.display = 'none';
-});
+// const overlay = document.getElementById('overlay');
+// input.addEventListener('focus', () => {
+//   overlay.style.display = 'block';
+// });
+// overlay.addEventListener('click', () => {
+//   hapticFeedback('medium');
+//   input.blur();
+//   overlay.style.display = 'none';
+// });
+// input.addEventListener('blur', () => {
+//   overlay.style.display = 'none';
+// });
 
 
 
@@ -424,51 +421,14 @@ const sorting = document.querySelector('.sorting');
 
 const searchCollaps = document.querySelector('.search-collaps');
 const searchCollapsSvg = document.querySelector('.search-collaps-svg');
-const search = document.getElementById('search');
-const close = document.querySelector('.close');
-const keyboards = document.querySelector(".keyboards");
-
-// Открытие поиска
-searchCollaps.addEventListener('click', () => {
-  hapticFeedback('medium');
-
-  searchCollaps.style.display = 'none';
-  search.style.display = 'flex';
-
-  // const input = search.querySelector('input');
-  // if (input) input.focus();
-  keyboards.classList.remove("hidden");
-  sorting.classList.add("hidden");
-
-});
 
 
 
 
 
-close.addEventListener('click', () => {
-  hapticFeedback('medium');
 
-  searchCollaps.style.display = 'flex';
-  search.style.display = 'none';
 
-  // Сброс поиска
-  const searchInput = document.querySelector('#input');
-  searchInput.value = '';
 
-  document.querySelectorAll('.movie-card').forEach(card => {
-    card.classList.remove('hidden');
-  });
-
-  keyboards.classList.add("hidden");
-  sorting.classList.remove("hidden");
-
-  // Обновляем safe area
-  // SafeAreaManager.onChange = ({ top, bottom }) => {
-  //   moviesContainer.style.marginTop = top === 0 ? '2.5vw' : `${top}px`;
-  // };
-  // SafeAreaManager.init();
-});
 
 
 
@@ -501,14 +461,25 @@ searchInput.addEventListener('input', () => {
 
 
 
+// Открытие клавиатуры
+function showKeyboard() {
+  hapticFeedback("medium");
+  const keyboards = document.querySelector('.keyboards');
+  keyboards.classList.add('active');
+}
 
-
+// Закрытие клавиатуры
+function closeKeyboard() {
+  hapticFeedback("medium");
+  const keyboards = document.querySelector('.keyboards');
+  keyboards.classList.remove('active');
+}
 
 
 
 
 // Переключение языков клавиатуры
-function changeLang() {
+function keyboardChangeLang() {
   hapticFeedback("light");
   const keyboardRowsRu = document.querySelectorAll('.keyboard .ru');
   const keyboardRowsEn = document.querySelectorAll('.keyboard .en');
