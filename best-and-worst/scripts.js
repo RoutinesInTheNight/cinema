@@ -142,6 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   SafeAreaManager.onChange = ({ top, bottom }) => {
     const bottomValue = bottom === 0 ? '0.5rem' : `${bottom}px`;
+    const bottomValueMoviesContainer = bottom === 0 ? '0.5rem' : `${bottom * 2}px`;
     const topValue = top === 0 ? '2.5vw' : `${top}px`;
     bottomMenu.style.paddingBottom = bottomValue;
     keyboards.style.paddingBottom = bottom === 0 ? '0.5rem' : `${bottom * 2}px`;
@@ -149,8 +150,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     searchCollaps.style.marginBottom = `calc(${bottom + 97 + 37}px + 0.5rem)`;
 
-    moviesContainer.style.marginTop = top === 0 ? 'calc(5vw + 38px)' : `calc(${top}px + 2.5vw + 38px)`;
-    moviesContainer.style.marginBottom = bottom === 0 ? 'calc(0.5rem + 124.5px + 2.5vw)' : `calc(${bottom}px + 124.5px + 2.5vw)`
+    moviesContainer.style.marginTop = topValue;
+    moviesContainer.style.marginBottom = `calc(${bottomValue} + calc(100 / 1284 * (134 * 5 + 33 * 5 + 140) * 1vw))`;
   };
   SafeAreaManager.init();
 });
