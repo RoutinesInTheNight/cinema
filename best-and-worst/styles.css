@@ -433,11 +433,11 @@ body {
   touch-action: none;
   color: white;
 
-    /* border-top: 0.1rem solid #3D3C3F;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
+    /* border-top: 0.1rem solid #3D3C3F; */
+  border-top-left-radius: calc(100 / 1284 * 51.5vw);
+  border-top-right-radius: calc(100 / 1284 * 51.5vw);
 
-  padding-top: .5rem; */
+  /* padding-top: .5rem; */
 }
 
 
@@ -446,8 +446,10 @@ body {
   align-items: center;
   width: 100%;
   height: calc(100 / 1284 * 140vw);
-  background-color: #151515;
+  background-color: #1C1C1D;
   border-top: calc(100 / 1284 * 5vw) solid #2E2E31;
+  border-top-left-radius: calc(100 / 1284 * 51.5vw);
+  border-top-right-radius: calc(100 / 1284 * 51.5vw);
 }
 .words .icon {
   width: calc(100 / 1284 * 126vw);
@@ -457,7 +459,7 @@ body {
 }
 
 .words .input {
-  background-color: #080707;
+  background-color: #2B2B2B;
   width: calc(100% - calc(100 / 1284 * 126vw * 2));
   height: calc(100 / 1284 * 103vw);
   display: flex;
@@ -467,8 +469,8 @@ body {
 }
 .words .input span {
   font-size: calc(100 / 1284 * 50vw);
-  font-family: 'Sf Pro Display Regular', Arial, sans-serif;
-  color: #686868;
+  font-family: 'Sf Pro Display Medium', Arial, sans-serif;
+  color: #6B6B6B;
   margin: 0 calc(100 / 1284 * 43vw) 0 calc(100 / 1284 * 43vw);
 }
 
