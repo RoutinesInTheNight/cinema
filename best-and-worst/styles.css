@@ -305,11 +305,11 @@ body {
   right: 2.5%;
   width: 35px;
   height: 35px;
-  background-color: rgba(46, 62, 43, 0.75);
-  border: 1.5px solid #749C6C;
+  background-color: #2B2B2B;
+  border: 0.1rem solid #6B6B6B;
   border-radius: 1rem;
-  backdrop-filter: blur(2vw);
-  -webkit-backdrop-filter: blur(2vw);
+  /* backdrop-filter: blur(2vw);
+  -webkit-backdrop-filter: blur(2vw); */
   cursor: pointer;
   transition: width 0.25s ease;
   z-index: 10;
@@ -331,11 +331,11 @@ body {
   left: 2.5%;
   width: calc(95% - 3px);
   height: 35px;
-  background-color: rgba(46, 62, 43, 0.75);
-  border: 1.5px solid #749C6C;
+  background-color: #2B2B2B;
+  border: 0.1rem solid #6B6B6B;
   border-radius: 1rem;
-  backdrop-filter: blur(2vw);
-  -webkit-backdrop-filter: blur(2vw);
+  /* backdrop-filter: blur(2vw);
+  -webkit-backdrop-filter: blur(2vw); */
 
   touch-action: none;
   transition: opacity 0.25s ease;
@@ -374,7 +374,7 @@ body {
 }
 
 #search input {
-  color: #749C6C;
+  color: #6B6B6B;
   width: 100%;
   background: none;
   border: none;
@@ -385,7 +385,7 @@ body {
 }
 
 #search input::placeholder {
-  color: #749C6C;
+  color: #6B6B6B;
 }
 
 
@@ -428,15 +428,70 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(57, 57, 57, 0.75);
-  backdrop-filter: blur(2vw);
-  -webkit-backdrop-filter: blur(2vw);
-  /* background-color: #2B2B2B; */
-  /* box-shadow: 0 0 1rem 0.25rem rgba(0, 0, 0, 1); */
+  background-color: #2B2B2B;
+  box-shadow: 0 0 1rem 0.25rem rgba(0, 0, 0, 1);
   touch-action: none;
   color: white;
-  /* padding-top: .5rem; */
+
+    /* border-top: 0.1rem solid #3D3C3F;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+
+  padding-top: .5rem; */
 }
+
+
+.words {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: calc(100 / 1284 * 140vw);
+  background-color: #151515;
+  border-top: calc(100 / 1284 * 5vw) solid #2E2E31;
+}
+.words .icon {
+  width: calc(100 / 1284 * 126vw);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.words .input {
+  background-color: #080707;
+  width: calc(100% - calc(100 / 1284 * 126vw * 2));
+  height: calc(100 / 1284 * 103vw);
+  display: flex;
+  align-items: center;
+  border-radius: calc(100 / 1284 * 51.5vw);
+  border: calc(100 / 1284 * 1vw) solid #262628;
+}
+.words .input span {
+  font-size: calc(100 / 1284 * 50vw);
+  font-family: 'Sf Pro Display Regular', Arial, sans-serif;
+  color: #686868;
+  margin: 0 calc(100 / 1284 * 43vw) 0 calc(100 / 1284 * 43vw);
+}
+
+.words .close {
+  width: calc(100 / 1284 * 126vw);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.words.icon,
+.words.input,
+.words.close {
+  display: flex;
+}
+
+.words svg {
+  width: calc(100 / 1284 * 50vw);
+}
+
+
+
 
 .keyboard {
   width: calc(100 / 1284 * 1260vw);
@@ -455,7 +510,7 @@ body {
   text-align: center;
   width: calc((calc(100 / 1284 * 1260vw) - calc(100 / 1284 * 11 * 18vw)) / 12);
   background-color: #6B6B6B;
-  font-size: 1.25rem;
+  font-size: calc(100 / 1284 * 65vw);
   font-family: 'Sf Pro Display Regular', Arial, sans-serif;
   border-radius: calc(100 / 1284 * 18vw);
   height: calc(100 / 1284 * 134vw);
@@ -487,7 +542,7 @@ body {
 .keyboard .keyboard-delete {
   width: calc((calc(100 / 1284 * 1260vw) - (calc(100 / 1284 * 10 * 18vw) + calc((calc(100 / 1284 * 1260vw) - calc(100 / 1284 * 11 * 18vw)) / 12 * 9))) / 2);
   background-color: #464646;
-  font-size: 1rem;
+  font-size: calc(100 / 1284 * 50vw);
 }
 /* На англ клавиатуре эти клавиши квадратные */
 #keyboard-en .keyboard-show-hide-numbers,
