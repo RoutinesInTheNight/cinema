@@ -500,15 +500,18 @@ body {
   margin: .5rem auto 0 auto;
 }
 
-.keyboard div {
+.keyboard .ru,
+.keyboard .en,
+.keyboard .numbers,
+.keyboard .bottom-row {
   display: flex;
   gap: calc(100 / 1284 * 18vw);
   margin-top: calc(100 / 1284 * 33vw);
 }
 
 .keyboard span,
-.keyboard-delete,
-.keyboard-language {
+.keyboard .delete,
+.keyboard .change-lang {
   text-align: center;
   width: calc((calc(100 / 1284 * 1260vw) - calc(100 / 1284 * 11 * 18vw)) / 12);
   background-color: #6B6B6B;
@@ -518,71 +521,50 @@ body {
   height: calc(100 / 1284 * 134vw);
   line-height: calc(100 / 1284 * 134vw);
   border-bottom: calc(100 / 1284 * 5vw) solid #1A1A1A;
+  cursor: pointer;
 }
+
 /* Ширина у клавиш англ клавиатуры немного больше */
-#keyboard-en span {
+.keyboard .en span {
   width: calc((calc(100 / 1284 * 1260vw) - calc(100 / 1284 * 9 * 18vw)) / 10);
 }
 
-
-
-
-
-
-.keyboard-delete,
-.keyboard-language {
+.keyboard .delete,
+.keyboard .change-lang {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.keyboard-delete svg,
-.keyboard-language svg {
+
+.keyboard .delete svg,
+.keyboard .change-lang svg {
   width: calc(100 / 1284 * 70vw);
 }
 
-.keyboard .keyboard-show-hide-numbers,
-.keyboard .keyboard-delete {
+.keyboard .show-hide-numbers,
+.keyboard .delete {
   width: calc((calc(100 / 1284 * 1260vw) - (calc(100 / 1284 * 10 * 18vw) + calc((calc(100 / 1284 * 1260vw) - calc(100 / 1284 * 11 * 18vw)) / 12 * 9))) / 2);
   background-color: #464646;
   font-size: calc(100 / 1284 * 50vw);
 }
 /* На англ клавиатуре эти клавиши квадратные */
-#keyboard-en .keyboard-show-hide-numbers,
-#keyboard-en .keyboard-delete {
+.keyboard .en .show-hide-numbers,
+.keyboard .en .keyboard-delete {
   width: calc(100 / 1284 * 134vw);
 }
-#keyboard-en .keyboard-show-hide-numbers {
+.keyboard .en .show-hide-numbers {
   margin-right: calc(100 / 1284 * 39.711vw);
 }
 
 
-.keyboard .active-show-hide-numbers {
+.keyboard .show-hide-numbers.active {
   font-family: 'Sf Pro Display Medium', Arial, sans-serif;
   background-color: #D4D4D4;
   color: black;
 }
 
 
-.keyboard-numbers span {
+.keyboard .numbers span {
   width: calc((calc(100 / 1284 * 1260vw) - calc(100 / 1284 * 9 * 18vw)) / 10);
   background-color: #464646;
 }
-
-
-
-/* .key-ru-1,
-.key-ru-2 {
-  width: calc((calc(100 / 1284 * 1260vw) - calc(100 / 1284 * 10 * 18vw)) / 11)
-} */
-
-/* .sorting-item,
-.sorting-user {
-  flex: 1;
-  text-align: center;
-  font-size: 1rem;
-  font-family: 'Sf Pro Display Medium', Arial, sans-serif;
-  cursor: pointer;
-  background-color: #2e3e2b;
-  padding: 0.25rem;
-  border-radius: 0.5rem;
-} */

@@ -506,32 +506,31 @@ searchInput.addEventListener('input', () => {
 
 
 // Переключение языков клавиатуры
-function changeLang(lang) {
-  hapticFeedback("change");
-  const keyboard_ru = document.getElementById("keyboard-ru");
-  const keyboard_en = document.getElementById("keyboard-en");
-  if (lang === 'ru') {
-    keyboard_ru.classList.remove("hidden");
-    keyboard_en.classList.add("hidden");
-  } else {
-    keyboard_ru.classList.add("hidden");
-    keyboard_en.classList.remove("hidden");
+function changeLang() {
+  hapticFeedback("light");
+  const keyboardRowsRu = document.querySelectorAll('.keyboard .ru');
+  const keyboardRowsEn = document.querySelectorAll('.keyboard .en');
+  if (keyboardRowsRu) {
+    keyboardRowsRu.forEach((row) => {
+      row.classList.toggle('hidden');
+    });
+  }
+  if (keyboardRowsEn) {
+    keyboardRowsEn.forEach((row) => {
+      row.classList.toggle('hidden');
+    });
   }
 }
 
 
 function showHideNumbers() {
-  hapticFeedback("change");
-  const numberDivs = document.querySelectorAll('.keyboard-numbers');
-  const actionButtons = document.querySelectorAll('.keyboard-show-hide-numbers');
-  if (numberDivs) {
-    numberDivs.forEach((numberDiv) => {
-      numberDiv.classList.toggle('hidden');
-    });
-  }
+  hapticFeedback("light");
+  const numbers = document.querySelector('.keyboard .numbers');
+  const actionButtons = document.querySelectorAll('.show-hide-numbers');
+  if (numbers) numbers.classList.toggle('hidden');
   if (actionButtons) {
     actionButtons.forEach((actionButton) => {
-      actionButton.classList.toggle('active-show-hide-numbers');
+      actionButton.classList.toggle('active');
     });
   }
 
