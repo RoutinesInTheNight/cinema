@@ -46,7 +46,12 @@
 
 
     <div class="sorting">
-        <div class="sorting-users-scroll" id="sort1"></div>
+        <div class="sorting-users-scroll" id="sort1">
+            <div class="sorting-user"><span style="color: #2e3e2b;">-</span></div>
+            <div class="sorting-user"><span style="color: #2e3e2b;">-</span></div>
+            <div class="sorting-user"><span style="color: #2e3e2b;">-</span></div>
+            <div class="sorting-user"><span style="color: #2e3e2b;">-</span></div>
+        </div>
 
         <div class="sorting-row" id="sort2">
             <div class="sorting-item" id="all" onclick="change('sort2', 'all')">
@@ -200,7 +205,7 @@
                     </svg>
                 </div>
                 <span onclick="searchAdd(' ')" style="width: calc(100 / 1284 * 1260vw - 100 / 1284 * 614vw - 100 / 1284 * 36vw); font-size: 1rem;">Пробел</span>
-                <span onclick="closeKeyboard()" style="width: calc(100 / 1284 * 307vw); font-size: calc(100 / 1284 * 50vw); background-color: #464646;">Закрыть</span>
+                <span class="close-keyboard" onclick="closeKeyboard()">Закрыть</span>
             </div>
         </div>
 

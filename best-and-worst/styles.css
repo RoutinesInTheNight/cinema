@@ -302,18 +302,18 @@ body {
   align-items: center;
   justify-content: center;
   bottom: 0;
-  right: 2.5%;
-  width: 35px;
-  height: 35px;
+  left: 2.5%;
+  width: calc(100 / 1284 * 140vw);
+  height: calc(100 / 1284 * 140vw);
   background-color: #2B2B2B;
-  border: 0.1rem solid #6B6B6B;
-  border-radius: 1rem;
+  border: calc(100 / 1284 * 5vw) solid #6B6B6B;
+  border-radius: calc(100 / 1284 * 51.5vw);
   cursor: pointer;
   z-index: 10;
 }
 
 .search-collaps-svg {
-  width: 1rem;
+  width: calc(100 / 1284 * 70vw);
   opacity: 1;
 }
 
@@ -369,7 +369,7 @@ body {
   border-top-left-radius: calc(100 / 1284 * 51.5vw);
   border-top-right-radius: calc(100 / 1284 * 51.5vw);
   z-index: 15;
-  transition: transform 0.25s ease-in-out;
+  transition: transform 0.15s ease-in-out;
   transform: translateY(100%);
 }
 .keyboards.active {
@@ -503,4 +503,17 @@ body {
 .keyboard .numbers span {
   width: calc((calc(100 / 1284 * 1260vw) - calc(100 / 1284 * 9 * 18vw)) / 10);
   background-color: #464646;
+}
+
+
+
+
+.keyboard .close-keyboard {
+  width: calc(100 / 1284 * 307vw);
+  font-size: calc(100 / 1284 * 50vw);
+  background-color: #464646;
+  transition: background-color 0.3sec ease;
+}
+.keyboard .close-keyboard:active {
+  background-color: rgb(70, 35, 35);
 }
