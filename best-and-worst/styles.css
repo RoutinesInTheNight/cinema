@@ -31,7 +31,7 @@ body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
-  /* max-width: 500px; */
+  max-width: 500px;
 }
 
 
@@ -374,7 +374,7 @@ body {
   border-top-right-radius: calc(100 / 1284 * 51.5vw);
   z-index: 15;
   transition: transform 0.15s ease-in-out;
-  transform: translateY(100%);
+  transform: translateY(150%);
 }
 .keyboards.active {
   transform: translateY(0%);
@@ -397,7 +397,7 @@ body {
   top: 0;
   box-shadow: 0 0 1rem 0.25rem rgba(0, 0, 0, 1);
   transition: transform 0.15s ease-in-out;
-  transform: translateY(-150%);
+  transform: translateY(-300%);
   z-index: 10;
 }
 .search-top-collaps.active {

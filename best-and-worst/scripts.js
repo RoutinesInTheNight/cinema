@@ -504,7 +504,9 @@ function closeKeyboard() {
   window.history.replaceState({}, '', url)
   overlay.classList.remove('active');
   const input = document.querySelector('.keyboards .input span');
+  const inputTop = document.querySelector('.search-top-collaps .input span');
   input.textContent = 'Поиск...';
+  inputTop.textContent = 'Поиск...';
 }
 
 function keyboardCollapseClose() {
@@ -517,7 +519,9 @@ function keyboardCollapseClose() {
   url.searchParams.delete('search');
   window.history.replaceState({}, '', url)
   const input = document.querySelector('.keyboards .input span');
+  const inputTop = document.querySelector('.search-top-collaps .input span');
   input.textContent = 'Поиск...';
+  inputTop.textContent = 'Поиск...';
 }
 
 
@@ -591,7 +595,9 @@ function searchAdd(char) {
   }
   window.history.replaceState({}, '', url)
   const input = document.querySelector('.keyboards .input span');
+  const inputTop = document.querySelector('.search-top-collaps .input span');
   input.textContent = capitalizeFirstLetter(url.searchParams.get("search"));
+  inputTop.textContent = capitalizeFirstLetter(url.searchParams.get("search"));
 }
 
 function searchDelete() {
@@ -599,17 +605,22 @@ function searchDelete() {
   const url = new URL(window.location);
   const search = url.searchParams.get("search");
   const input = document.querySelector('.keyboards .input span');
+  const inputTop = document.querySelector('.search-top-collaps .input span');
   if (search !== null) {
     if (search.length <= 1) {
       url.searchParams.delete('search');
       input.textContent = 'Поиск...';
+      inputTop.textContent = 'Поиск...';
     } else {
       const newSearch = search.slice(0, -1);
       url.searchParams.set("search", newSearch);
       input.textContent = capitalizeFirstLetter(newSearch);
+      inputTop.textContent = capitalizeFirstLetter(newSearch);
     }
   } else return;
   window.history.replaceState({}, '', url)
 }
+
+
 
 
