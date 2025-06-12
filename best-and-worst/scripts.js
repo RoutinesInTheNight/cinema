@@ -717,3 +717,19 @@ function searchClear() {
 
 
 
+// function search(action, char) {
+//   hapticFeedback("light");
+
+
+//   const url = new URL(window.location);
+//   const input = document.querySelector('.keyboards .input span');
+//   const inputTop = document.querySelector('.search-top-collaps .input span');
+
+  
+//   url.searchParams.delete('search');
+//   window.history.replaceState({}, '', url);
+//   input.textContent = 'Поиск...';
+//   inputTop.textContent = 'Поиск...';
+//   const clear = document.querySelector('.keyboard-clear');
+//   clear.classList.remove('active');
+// }
