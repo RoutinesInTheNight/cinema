@@ -507,6 +507,10 @@ function closeKeyboard() {
   const inputTop = document.querySelector('.search-top-collaps .input span');
   input.textContent = 'Поиск...';
   inputTop.textContent = 'Поиск...';
+  const clear = document.querySelector('.keyboard-clear');
+  clear.classList.remove('active');
+  const searchCollaps = document.querySelector('.search-collaps');
+  searchCollaps.classList.remove('hide');
 }
 
 function keyboardCollapseClose() {
@@ -522,6 +526,8 @@ function keyboardCollapseClose() {
   const inputTop = document.querySelector('.search-top-collaps .input span');
   input.textContent = 'Поиск...';
   inputTop.textContent = 'Поиск...';
+  const clear = document.querySelector('.keyboard-clear');
+  clear.classList.remove('active');
 }
 
 
@@ -582,7 +588,7 @@ function showHideNumbers() {
 
 
 
-function searchAdd(char) {
+function searchAdd(char, element) {
   hapticFeedback("light");
   const url = new URL(window.location);
   const search = url.searchParams.get("search");
@@ -590,15 +596,87 @@ function searchAdd(char) {
     if (search.length === 0 && char === ' ') return;
     url.searchParams.set("search", search + char);
   } else {
-    if (char !== ' ') url.searchParams.set("search", char);
-    else return;
+    if (char !== ' ') {
+      url.searchParams.set("search", char);
+      const clear = document.querySelector('.keyboard-clear');
+      clear.classList.add('active');
+    } else return;
   }
   window.history.replaceState({}, '', url)
   const input = document.querySelector('.keyboards .input span');
   const inputTop = document.querySelector('.search-top-collaps .input span');
   input.textContent = capitalizeFirstLetter(url.searchParams.get("search"));
   inputTop.textContent = capitalizeFirstLetter(url.searchParams.get("search"));
+
+
+
+
+  // const rect = element.getBoundingClientRect();
+  // const centerX = rect.left + rect.width / 2;
+  // const centerY = rect.top + rect.height / 2;
+  // console.log(`Буква: ${char}, центр: x=${centerX}, y=${centerY}`)
+
+  // const zoom = document.querySelector('.keyboard-button-zoom');
+  // zoom.style.left = (centerX - 25) + 'px';
+  // zoom.style.top = (centerY - 25) + 'px';
+  // zoom.style.display = 'block';
+
+  // function hideOrRelease() {
+  //   zoom.style.display = 'block';
+  // }
+  // const targer = document.getElementById  
+
+  // function removeSquare() {
+  //   square.remove();
+  //   document.removeEventListener('mouseup', removeSquare);
+  //   document.removeEventListener('touchend', removeSquare);
+  // }
+
+  // document.addEventListener('mouseup', removeSquare);
+  // document.addEventListener('touchend', removeSquare);
+
+  
+
+
+
 }
+
+const zoomEl = document.querySelector('.keyboard-button-zoom');
+
+// Показываем, пока палец/мышь нажаты
+function handleStart(e) {
+  const span = e.currentTarget;
+  const rect = span.getBoundingClientRect();
+  const centerX = rect.left + rect.width / 2 + window.scrollX;
+  const centerY = rect.top + rect.height / 2 + window.scrollY;
+
+  const char = span.textContent.trim(); // или data-char, если хочешь
+
+  zoomEl.textContent = char;
+  zoomEl.style.left = (centerX - 25) + 'px';
+  zoomEl.style.top = (centerY - 60) + 'px';
+  zoomEl.style.display = 'block';
+}
+
+function handleEnd() {
+  zoomEl.style.display = 'none';
+}
+
+// Вешаем на все буквы с searchAdd
+document.querySelectorAll('span[onclick^="searchAdd"]').forEach(span => {
+  span.addEventListener('mousedown', handleStart);
+  span.addEventListener('touchstart', handleStart);
+
+  // mouseup и touchend не надо вешать на спан — они идут на документ
+});
+
+document.addEventListener('mouseup', handleEnd);
+document.addEventListener('touchend', handleEnd);
+
+
+
+
+
 
 function searchDelete() {
   hapticFeedback("light");
@@ -611,6 +689,8 @@ function searchDelete() {
       url.searchParams.delete('search');
       input.textContent = 'Поиск...';
       inputTop.textContent = 'Поиск...';
+      const clear = document.querySelector('.keyboard-clear');
+      clear.classList.remove('active');
     } else {
       const newSearch = search.slice(0, -1);
       url.searchParams.set("search", newSearch);
@@ -619,6 +699,19 @@ function searchDelete() {
     }
   } else return;
   window.history.replaceState({}, '', url)
+}
+
+function searchClear() {
+  hapticFeedback("light");
+  const url = new URL(window.location);
+  const input = document.querySelector('.keyboards .input span');
+  const inputTop = document.querySelector('.search-top-collaps .input span');
+  url.searchParams.delete('search');
+  window.history.replaceState({}, '', url);
+  input.textContent = 'Поиск...';
+  inputTop.textContent = 'Поиск...';
+  const clear = document.querySelector('.keyboard-clear');
+  clear.classList.remove('active');
 }
 
 
