@@ -13,6 +13,21 @@
   src: url('../fonts/SFPRODISPLAYBOLD.OTF') format('truetype')
 }
 
+:root {
+  --body-width: 100vw;
+  --vw: calc(var(--body-width) / 100);
+}
+
+@media (min-width: 500px) {
+  :root {
+    --body-width: calc(100vh * 0.5);
+  }
+
+  body {
+    width: var(--body-width);
+  }
+}
+
 /* Откл выделения */
 * {
   user-select: none;
@@ -29,9 +44,8 @@ body {
   color: #d5e1d3;
   font-family: 'Sf Pro Display Regular', Arial, sans-serif;
   overflow-x: hidden;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-  max-width: 500px;
 }
 
 
@@ -71,13 +85,13 @@ body {
 .sorting {
   position: fixed;
   bottom: 0;
-  left: 0;
-  width: 100%;
+  margin: 0 auto;
+  width: calc(100 * var(--vw));
   background-color: #1C1C1C;
-  border-top: 0.1rem solid #3D3C3F;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-  box-shadow: 0 0 1rem 0.25rem rgba(0, 0, 0, 1);
+  border-top: calc(100 / 428 * 2 * var(--vw)) solid #3D3C3F;
+  border-top-left-radius: calc(100 / 428 * 16 * var(--vw));
+  border-top-right-radius: calc(100 / 428 * 16 * var(--vw));
+  box-shadow: 0 0 calc(100 / 428 * 16 * var(--vw)) calc(100 / 428 * 4 * var(--vw)) rgba(0, 0, 0, 1);
   touch-action: none;
   color: #749C6C;
   z-index: 11;
@@ -88,22 +102,22 @@ body {
   justify-content: space-around;
   align-items: center;
   width: 90%;
-  gap: .5rem;
-  margin: 0.5rem auto 0 auto;
-  border-top: 1px solid #3D3C3F;
-  padding-top: 0.5rem;
+  gap: calc(100 / 428 * 8 * var(--vw));
+  margin: calc(100 / 428 * 8 * var(--vw)) auto 0 auto;
+  border-top: calc(100 / 428 * 1 * var(--vw)) solid #3D3C3F;
+  padding-top: calc(100 / 428 * 8 * var(--vw));
 }
 
 .sorting-item,
 .sorting-user {
   flex: 1;
   text-align: center;
-  font-size: 1rem;
+  font-size: calc(100 / 428 * 16 * var(--vw));
   font-family: 'Sf Pro Display Medium', Arial, sans-serif;
   cursor: pointer;
   background-color: #2e3e2b;
-  padding: 0.25rem;
-  border-radius: 0.5rem;
+  padding: calc(100 / 428 * 4 * var(--vw));
+  border-radius: calc(100 / 428 * 8 * var(--vw));
 }
 
 .sorting-user {
@@ -119,8 +133,8 @@ body {
   margin-left: 5%;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  gap: .5rem;
-  margin-top: .5rem;
+  gap: calc(100 / 428 * 8 * var(--vw));
+  margin-top: calc(100 / 428 * 8 * var(--vw));
 }
 
 .sorting-users-scroll::-webkit-scrollbar {
@@ -140,29 +154,27 @@ body {
 
 
 
-
 #movies-container div:first-child {
   margin-top: 0;
 }
 
-
 .movie-card {
   display: flex;
   align-items: flex-start;
-  /* gap: 0.5rem; */
+  gap: calc(100 / 428 * 8 * var(--vw));
   font-family: 'SF Pro Display', Arial, sans-serif;
   color: #fff;
   background-color: #1C1C1D;
-  padding: calc(100 / 1284 * 28vw);
-  border-radius: 1rem;
-  margin: calc(100 / 1284 * 44vw) auto;
-  width: calc(100 / 1284 * (1284 - 120 - 56) * 1vw);
+  padding: calc(100 / 428 * 8 * var(--vw));
+  border-radius: calc(100 / 428 * 16 * var(--vw));
+  margin: calc(2.5 * var(--vw)) auto;
+  width: calc(95% - calc(100 / 428 * 16 * var(--vw)));
 }
 
 .movie-number {
   text-align: center;
-  min-width: 3rem;
-  font-size: 1.25rem;
+  min-width: calc(100 / 428 * 48 * var(--vw));
+  font-size: calc(100 / 428 * 20 * var(--vw));
   font-family: 'Sf Pro Display Bold', Arial, sans-serif;
   color: #97979D;
 }
@@ -173,16 +185,16 @@ body {
 
 .movie-title {
   display: inline-block;
-  font-size: 1.25rem;
+  font-size: calc(100 / 428 * 20 * var(--vw));
   font-family: 'Sf Pro Display Bold', Arial, sans-serif;
 }
 
 .movie-title-en,
 .movie-meta {
   display: block;
-  font-size: 1rem;
+  font-size: calc(100 / 428 * 16 * var(--vw));
   font-family: 'Sf Pro Display Bold', Arial, sans-serif;
-  margin-top: 0.25rem;
+  margin-top: calc(100 / 428 * 4 * var(--vw));
   color: #97979D;
 }
 
@@ -194,15 +206,11 @@ body {
   font-family: 'Sf Pro Display Redular', Arial, sans-serif;
 }
 
-
-
 .movie-rating-row {
-
   display: flex;
   align-items: flex-start;
   align-items: center;
-  /* gap: 0.5rem; */
-  margin-top: 0.25rem;
+  margin-top: calc(100 / 428 * 4 * var(--vw));
   width: 100%;
   opacity: .75;
 }
@@ -210,25 +218,22 @@ body {
 .movie-score {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 1.5rem;
+  gap: calc(100 / 428 * 8 * var(--vw));
+  font-size: calc(100 / 428 * 24 * var(--vw));
   color: #FFD43B;
   font-family: 'Sf Pro Display Medium', Arial, sans-serif;
 }
 
 .score-icon {
-  height: 1.3rem;
-  width: 1.3rem;
+  height: calc(100 / 428 * 22 * var(--vw));
+  width: calc(100 / 428 * 22 * var(--vw));
 }
 
-
-
 .movie-ratings {
-  font-size: .75rem;
-  border-left: 1px solid #C6A635;
+  font-size: calc(100 / 428 * 12 * var(--vw));
+  border-left: calc(100 / 428 * 1 * var(--vw)) solid #C6A635;
   color: #C6A635;
   font-family: 'Sf Pro Display Bold', Arial, sans-serif;
-  /* white-space: pre-wrap; */
 }
 
 .movie-ratings span {
@@ -239,30 +244,16 @@ body {
   flex: 1;
   text-align: center;
   max-width: calc(100% / 3);
-  /* padding: 0.25rem; */
-
-  /* border: 1px solid #97979D; */
 }
-
-
-
-
-
-
-
-
-
-
-
 
 .movie-tags {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
+  gap: calc(100 / 428 * 8 * var(--vw));
+  margin-top: calc(100 / 428 * 8 * var(--vw));
   width: 100%;
-  font-size: .75rem;
+  font-size: calc(100 / 428 * 12 * var(--vw));
   font-family: 'Sf Pro Display Medium', Arial, sans-serif;
   color: #78787D;
 }
@@ -270,10 +261,10 @@ body {
 .movie-tags span {
   flex: 1;
   text-align: center;
-  max-width: calc((100% / 3) - 1rem);
-  padding: 0.25rem;
-  border-radius: .5rem;
-  border: 1px solid #78787D;
+  max-width: calc((100% / 3) - calc(100 / 428 * 16 * var(--vw)));
+  padding: calc(100 / 428 * 4 * var(--vw));
+  border-radius: calc(100 / 428 * 8 * var(--vw));
+  border: calc(100 / 428 * 1 * var(--vw)) solid #78787D;
   cursor: pointer;
 }
 
@@ -303,22 +294,24 @@ body {
   align-items: center;
   justify-content: center;
   bottom: 0;
-  right: 2.5%;
-  width: 35px;
-  height: 35px;
+  right: calc((100vw - var(--body-width)) / 2 + 2.5 * var(--vw));
+  width: calc(100 / 428 * 32 * var(--vw));
+  height: calc(100 / 428 * 32 * var(--vw));
   background-color: #2B2B2B;
-  border: 0.1rem solid #6B6B6B;
-  border-radius: 1rem;
+  border: calc(100 / 428 * 2 * var(--vw)) solid #6B6B6B;
+  border-radius: calc(100 / 428 * 12 * var(--vw));
   cursor: pointer;
   transition: transform 0.15s ease-in-out;
   transform: translateY(0%);
   z-index: 10;
 }
+
 .search-collaps.hide {
   transform: translateY(150%);
 }
+
 .search-collaps-svg {
-  width: 1rem;
+  width: calc(100 / 428 * 16 * var(--vw));
   opacity: 1;
 }
 
@@ -351,6 +344,72 @@ body {
 
 
 
+.search-top-collaps {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  top: 0;
+  left: calc((100vw - var(--body-width)) / 2 + 2.5 * var(--vw));
+  width: calc(95 * var(--vw) - (100 / 428 * 4 * var(--vw)));;
+  background-color: #2B2B2B;
+  min-height: calc(100 / 428 * 32 * var(--vw));;
+  border: calc(100 / 428 * 2 * var(--vw)) solid #6B6B6B;
+  border-radius: calc(100 / 428 * 16 * var(--vw));
+  box-shadow: 0 0 calc(100 / 428 * 16 * var(--vw)) calc(100 / 428 * 4 * var(--vw)) rgba(0, 0, 0, 1);
+  transition: transform 0.15s ease-in-out;
+  transform: translateY(-25vh);
+  cursor: pointer;
+  z-index: 10;
+
+}
+.search-top-collaps.active {
+  transform: translateY(0);
+}
+
+.search-top-collaps .input {
+  width: calc(100% - calc(100 / 1284 * 126 * 2 * var(--vw)));
+  display: flex;
+  align-items: center;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+
+.search-top-collaps .input span {
+  font-size: calc(100 / 1284 * 50 * var(--vw));
+  font-family: 'Sf Pro Display Medium', Arial, sans-serif;
+  color: #6B6B6B;
+  margin: calc(100 / 1284 * 21.5 * var(--vw)) calc(100 / 1284 * 43 * var(--vw)) calc(100 / 1284 * 21.5 * var(--vw)) calc(100 / 1284 * 43 * var(--vw));
+  display: block;
+  width: 100%;
+  line-height: 1.2;
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.keyboard-collaps-close {
+  min-height: calc(100 / 428 * 32 * var(--vw));;
+}
+.keyboard-collaps-close svg {
+  transition: fill 0.15s ease-in-out;
+  fill: #6B6B6B;
+}
+.keyboard-collaps-close:hover svg {
+  fill: rgb(150, 50, 50);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -364,68 +423,60 @@ body {
 .keyboards {
   position: fixed;
   bottom: 0;
-  left: 0;
-  width: 100%;
+  margin: 0 auto;
+  width: calc(100 * var(--vw));
   background-color: #2B2B2B;
-  box-shadow: 0 0 1rem 0.25rem rgba(0, 0, 0, 1);
+  box-shadow: 0 0 calc(100 / 428 * 16 * var(--vw)) calc(100 / 428 * 4 * var(--vw)) rgba(0, 0, 0, 1);
   touch-action: none;
   color: white;
-  border-top-left-radius: calc(100 / 1284 * 51.5vw);
-  border-top-right-radius: calc(100 / 1284 * 51.5vw);
+  border-top-left-radius: calc(100 / 1284 * 51.5 * var(--vw));
+  border-top-right-radius: calc(100 / 1284 * 51.5 * var(--vw));
   z-index: 15;
   transition: transform 0.15s ease-in-out;
   transform: translateY(150%);
 }
+
 .keyboards.active {
   transform: translateY(0%);
 }
 
-.search-top-collaps,
 .search {
   display: flex;
   align-items: center;
-  width: 100%;
+  width: calc(100 * var(--vw));
   background-color: #1C1C1D;
-  padding: calc(100 / 1284 * 18.5vw) 0 calc(100 / 1284 * 18.5vw) 0;
-  border-top: calc(100 / 1284 * 5vw) solid #2E2E31;
-  border-top-left-radius: calc(100 / 1284 * 51.5vw);
-  border-top-right-radius: calc(100 / 1284 * 51.5vw);
+  padding: calc(100 / 1284 * 18.5 * var(--vw)) 0 calc(100 / 1284 * 18.5 * var(--vw)) 0;
+  border-top: calc(100 / 1284 * 5 * var(--vw)) solid #2E2E31;
+  border-top-left-radius: calc(100 / 1284 * 51.5 * var(--vw));
+  border-top-right-radius: calc(100 / 1284 * 51.5 * var(--vw));
 }
-.search-top-collaps {
-  position: fixed;
-  border-radius: calc(100 / 1284 * 51.5vw);
-  top: 0;
-  box-shadow: 0 0 1rem 0.25rem rgba(0, 0, 0, 1);
-  transition: transform 0.15s ease-in-out;
-  transform: translateY(-300%);
-  z-index: 10;
-}
-.search-top-collaps.active {
-  transform: translateY(0%);
-}
+
 .search-icon {
-  width: calc(100 / 1284 * 126vw);
+  width: calc(100 / 1284 * 126 * var(--vw));
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.input {
+.search .input {
   background-color: #2B2B2B;
-  width: calc(100% - calc(100 / 1284 * 126vw * 2));
-  min-height: calc(100 / 1284 * 103vw);
+  width: calc(100% - calc(100 / 1284 * 126 * 2 * var(--vw)));
+  min-height: calc(100 / 1284 * 103 * var(--vw));
   display: flex;
   align-items: center;
-  border-radius: calc(100 / 1284 * 51.5vw);
-  border: calc(100 / 1284 * 1vw) solid #262628;
+  border-radius: calc(100 / 1284 * 51.5 * var(--vw));
+  border: calc(100 / 1284 * var(--vw)) solid #262628;
   overflow-wrap: break-word;
   word-break: break-word;
 }
-.input span {
-  font-size: calc(100 / 1284 * 50vw);
+
+
+
+.search .input span {
+  font-size: calc(100 / 1284 * 50 * var(--vw));
   font-family: 'Sf Pro Display Medium', Arial, sans-serif;
   color: #6B6B6B;
-  margin: calc(100 / 1284 * 21.5vw) calc(100 / 1284 * 43vw) calc(100 / 1284 * 21.5vw) calc(100 / 1284 * 43vw);
+  margin: calc(100 / 1284 * 21.5 * var(--vw)) calc(100 / 1284 * 43 * var(--vw)) calc(100 / 1284 * 21.5 * var(--vw)) calc(100 / 1284 * 43 * var(--vw));
   display: block;
   width: 100%;
   line-height: 1.2;
@@ -435,21 +486,22 @@ body {
 }
 
 .keyboard-clear {
-  width: calc(100 / 1284 * 103vw);
+  width: calc(100 / 1284 * 103 * var(--vw));
   align-items: center;
   justify-content: center;
   transition: opacity 0.15s ease-in-out;
   opacity: 0;
   cursor: pointer;
 }
+
 .keyboard-clear.active {
   opacity: 1;
 }
 
 .keyboard-collaps-close,
 .keyboard-collapse {
-  width: calc(100 / 1284 * 126vw);
-  height: calc(100 / 1284 * 103vw);
+  width: calc(100 / 1284 * 126 * var(--vw));
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -465,8 +517,9 @@ body {
 
 .search-top-collaps svg,
 .search svg {
-  width: calc(100 / 1284 * 50vw);
+  width: calc(100 / 1284 * 50 * var(--vw));
 }
+
 
 
 
@@ -474,8 +527,8 @@ body {
 
 
 .keyboard {
-  width: calc(100 / 1284 * 1260vw);
-  margin: .5rem auto 0 auto;
+  width: calc(100 / 1284 * 1260 * var(--vw));
+  margin: calc(100 / 428 * 8 * var(--vw)) auto 0 auto;
 }
 
 .keyboard .ru,
@@ -483,28 +536,28 @@ body {
 .keyboard .numbers,
 .keyboard .bottom-row {
   display: flex;
-  gap: calc(100 / 1284 * 18vw);
-  margin-top: calc(100 / 1284 * 33vw);
+  gap: calc(100 / 1284 * 18 * var(--vw));
+  margin-top: calc(100 / 1284 * 33 * var(--vw));
 }
 
 .keyboard span,
 .keyboard .delete,
 .keyboard .change-lang {
   text-align: center;
-  width: calc((calc(100 / 1284 * 1260vw) - calc(100 / 1284 * 11 * 18vw)) / 12);
+  width: calc(((100 / 1284 * 1260) - (100 / 1284 * 11 * 18)) / 12 * var(--vw));
   background-color: #6B6B6B;
-  font-size: calc(100 / 1284 * 65vw);
+  font-size: calc(100 / 1284 * 65 * var(--vw));
   font-family: 'Sf Pro Display Regular', Arial, sans-serif;
-  border-radius: calc(100 / 1284 * 18vw);
-  height: calc(100 / 1284 * 134vw);
-  line-height: calc(100 / 1284 * 134vw);
-  border-bottom: calc(100 / 1284 * 5vw) solid #1A1A1A;
+  border-radius: calc(100 / 1284 * 18 * var(--vw));
+  height: calc(100 / 1284 * 134 * var(--vw));
+  line-height: calc(100 / 1284 * 134 * var(--vw));
+  border-bottom: calc(100 / 1284 * 5 * var(--vw)) solid #1A1A1A;
   cursor: pointer;
 }
 
 /* Ширина у клавиш англ клавиатуры немного больше */
 .keyboard .en span {
-  width: calc((calc(100 / 1284 * 1260vw) - calc(100 / 1284 * 9 * 18vw)) / 10);
+  width: calc(((100 / 1284 * 1260) - (100 / 1284 * 9 * 18)) / 10 * var(--vw));
 }
 
 .keyboard .delete,
@@ -514,25 +567,44 @@ body {
   justify-content: center;
 }
 
+.keyboard .close-keyboard,
+.keyboard .change-lang {
+  margin: 0;
+  width: calc(100 / 1284 * 307 * var(--vw));
+  background-color: #464646;
+  font-size: calc(100 / 1284 * 50 * var(--vw));
+}
+
+.keyboard .space {
+  flex: 1;
+  font-size: calc(100 / 428 * 16 * var(--vw));
+}
+
 .keyboard .delete svg,
 .keyboard .change-lang svg {
-  width: calc(100 / 1284 * 70vw);
+  width: calc(100 / 1284 * 70 * var(--vw));
 }
 
 .keyboard .show-hide-numbers,
 .keyboard .delete {
-  width: calc((calc(100 / 1284 * 1260vw) - (calc(100 / 1284 * 10 * 18vw) + calc((calc(100 / 1284 * 1260vw) - calc(100 / 1284 * 11 * 18vw)) / 12 * 9))) / 2);
+  width: calc(((100 / 1284 * 1260) - ((100 / 1284 * 10 * 18) + (((100 / 1284 * 1260) - (100 / 1284 * 11 * 18)) / 12 * 9))) / 2 * var(--vw));
   background-color: #464646;
-  font-size: calc(100 / 1284 * 50vw);
+  font-size: calc(100 / 1284 * 50 * var(--vw));
 }
+
 /* На англ клавиатуре эти клавиши квадратные */
 .keyboard .en .show-hide-numbers,
 .keyboard .en .keyboard-delete {
-  width: calc(100 / 1284 * 134vw);
+  width: calc(100 / 1284 * 134 * var(--vw));
 }
+
 .keyboard .en .show-hide-numbers {
-  margin-right: calc(100 / 1284 * 39.711vw);
+  margin-right: calc(100 / 1284 * 39.711 * var(--vw));
 }
+.keyboard .en .delete {
+  margin-left: calc(100 / 1284 * 39.711 * var(--vw));
+}
+
 
 
 .keyboard .show-hide-numbers.active {
@@ -543,22 +615,13 @@ body {
 
 
 .keyboard .numbers span {
-  width: calc((calc(100 / 1284 * 1260vw) - calc(100 / 1284 * 9 * 18vw)) / 10);
+  width: calc(((100 / 1284 * 1260) - (100 / 1284 * 9 * 18)) / 10 * var(--vw));
   background-color: #464646;
 }
 
 
 
 
-.keyboard .close-keyboard {
-  width: calc(100 / 1284 * 307vw);
-  font-size: calc(100 / 1284 * 50vw);
-  background-color: #464646;
-  transition: background-color 0.3sec ease;
-}
-.keyboard .close-keyboard:active {
-  background-color: rgb(70, 35, 35);
-}
 
 
 
@@ -571,8 +634,8 @@ body {
 .keyboard-button-zoom {
   display: none;
   position: absolute;
-  width: 50px;
-  height: 50px;
+  width: calc(100 / 428 * 50 * var(--vw));
+  height: calc(100 / 428 * 50 * var(--vw));
   /* left: 0;
   top: 0; */
   background-color: red;

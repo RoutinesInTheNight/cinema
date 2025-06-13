@@ -144,13 +144,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const keyboards = document.querySelector('.keyboards');
 
   SafeAreaManager.onChange = ({ top, bottom }) => {
-    const bottomValue = bottom === 0 ? '0.5rem' : `${bottom}px`;
-    const topValue = top === 0 ? '2.5vw' : `${top}px`;
+    const bottomValue = bottom === 0 ? 'calc((100 / 428) * 8 * var(--vw))' : `${bottom}px`;
+    const topValue = top === 0 ? 'calc(2.5 * var(--vw))' : `${top}px`;
     bottomMenu.style.paddingBottom = bottomValue;
     keyboards.style.paddingBottom = bottom === 0 ? '0.5rem' : `${bottom * 2}px`;
 
-    searchCollaps.style.marginBottom = `calc(${bottom + 97 + 37}px + 0.5rem)`;
+    if (bottom === 0) {
+      // searchTopCollaps.style.transform = 'translateY(calc(((100 / 428) * (32 + 32) * var(--vw) + 2.5 * var(--vw)) * 1))';
+      searchCollaps.style.marginBottom = `calc((100 / 428) * (125 + 8 + 8) * var(--vw))`;
+    } else {
+      // searchTopCollaps.style.transform = `translateY(calc((100 / 428) * (32 + 32 + ${top}) * -1 * var(--vw)))`;
+      searchCollaps.style.marginBottom = `calc((100 / 428) * (125 + 8 + ${bottom}) * var(--vw))`;
+    }
+
     searchTopCollaps.style.marginTop = topValue;
+    
+
+
+    
 
     moviesContainer.style.marginTop = topValue;
     moviesContainer.style.marginBottom = bottom === 0 ? 'calc(0.5rem + 124.5px + 2.5vw)' : `calc(${bottom}px + 124.5px + 2.5vw)`
