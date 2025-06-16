@@ -87,7 +87,7 @@ body {
 .number {
   position: sticky;
   text-align: center;
-  top: 10px;
+  /* top: 10px; */
   padding: calc(100 / 428 * 8 * var(--vw)) 0 calc(100 / 428 * 8 * var(--vw)) 0;
   min-width: calc(100 / 428 * 48 * var(--vw));
   font-size: calc(100 / 428 * 20 * var(--vw));
@@ -113,7 +113,7 @@ body {
   display: flex;
   align-items: flex-start;
   position: sticky;
-  top: 10px;
+  /* top: 10px; */
   /* background-color: red; */
   background-color: #1C1C1D;
   font-size: calc(100 / 428 * 20 * var(--vw));

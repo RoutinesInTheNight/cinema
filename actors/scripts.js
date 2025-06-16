@@ -178,4 +178,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+function updateMovieOpacity() {
+  const movies = document.querySelectorAll('.movie');
 
+  const { top, bottom } = SafeAreaManager.getInsets
+    ? SafeAreaManager.getInsets()
+    : { top: 0, bottom: 0 };
+
+  const vw = getCustomVw();
+
+  const safeAreaTopPx = top === 0 ? 2.5 * vw : top;
+  const heightInfo = 100 / 428 * 40 * vw;
+
+  const fadeStartY = safeAreaTopPx + heightInfo;
+  const fadeEndY = safeAreaTopPx;
+
+  movies.forEach(movie => {
+    const top = movie.getBoundingClientRect().top;
+
+    if (top <= fadeStartY && top >= fadeEndY) {
+      const opacity = (top - fadeEndY) / (fadeStartY - fadeEndY);
+      movie.style.opacity = opacity;
+    } else if (top < fadeEndY) {
+      movie.style.opacity = 0;
+    } else {
+      movie.style.opacity = 1;
+    }
+  });
+}
+
+function getCustomVw() {
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+
+  if (width < 500) {
+    return width / 100;
+  } else {
+    return (height * 0.5) / 100;
+  }
+}
+
+window.addEventListener('scroll', updateMovieOpacity);
+window.addEventListener('resize', updateMovieOpacity);
+window.addEventListener('load', updateMovieOpacity);
