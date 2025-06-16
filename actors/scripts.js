@@ -181,11 +181,10 @@ document.addEventListener('DOMContentLoaded', () => {
 function updateMovieOpacity() {
   const movies = document.querySelectorAll('.movie');
 
-  const { top, bottom } = SafeAreaManager.getInsets
-    ? SafeAreaManager.getInsets()
-    : { top: 0, bottom: 0 };
+  const { top, bottom } = SafeAreaManager.getTotalSafeAreas();
 
   const vw = getCustomVw();
+  console.log(vw)
 
   const safeAreaTopPx = top === 0 ? 2.5 * vw : top;
   const heightInfo = 100 / 428 * 40 * vw;
