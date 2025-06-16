@@ -88,8 +88,8 @@
 
                 <div class="card">
                     <div class="info">
-                        <span class="name">Бред Питт</span>
-                        <span class="movies-num">28</span>
+                        <span class="name">Райан Гослинг</span>
+                        <span class="movies-num">14</span>
                         <div onclick="keyboardCollapse()" class="show-movies">
                             <svg viewBox="0 0 512 512" fill="#6B6B6B">
                                 <path
@@ -1031,24 +1031,24 @@
         });
 
 
-        document.addEventListener('scroll', () => {
-            document.querySelectorAll('.card').forEach(card => {
-                const info = card.querySelector('.info');
-                const rect = info.getBoundingClientRect();
+        // document.addEventListener('scroll', () => {
+        //     document.querySelectorAll('.card').forEach(card => {
+        //         const info = card.querySelector('.info');
+        //         const rect = info.getBoundingClientRect();
 
-                // Вычисляем, насколько info "поднялся" от своего обычного положения
-                const distanceFromTop = rect.top;
-                const minTop = 0;  // когда info прилип к верху
-                const maxTop = 60; // когда info ещё на своём месте
+        //         // Вычисляем, насколько info "поднялся" от своего обычного положения
+        //         const distanceFromTop = rect.top;
+        //         const minTop = 0;  // когда info прилип к верху
+        //         const maxTop = 60; // когда info ещё на своём месте
 
-                // Нормализуем в диапазон 0 — 1
-                const progress = Math.max(0, Math.min(1, 1 - (distanceFromTop - minTop) / (maxTop - minTop)));
+        //         // Нормализуем в диапазон 0 — 1
+        //         const progress = Math.max(0, Math.min(1, 1 - (distanceFromTop - minTop) / (maxTop - minTop)));
 
-                // Пример: увеличиваем паддинг сверху от 10px до 30px
-                const padding = 10 + progress * 20;
-                info.style.paddingTop = `${padding}px`;
-            });
-        });
+        //         // Пример: увеличиваем паддинг сверху от 10px до 30px
+        //         const padding = 10 + progress * 20;
+        //         info.style.paddingTop = `${padding}px`;
+        //     });
+        // });
     </script>
 
     <script src="../scripts.js"></script>
