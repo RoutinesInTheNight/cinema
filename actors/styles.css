@@ -154,15 +154,10 @@ body {
 
 
 .movies {
-  /* margin-left: calc(100 / 428 * 16 * var(--vw)); */
   margin-right: calc(100 / 428 * 8 * var(--vw));
-  /* margin-bottom: calc(100 / 428 * 80 * var(--vw)); */
-  max-height: 0;
+  height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease;
-}
-.movies.open {
-  max-height: 100vh;
+  transition: height 0.5s ease;
 }
 .movies .movie:last-child {
   margin-bottom: calc(100 / 428 * 32 * var(--vw));
