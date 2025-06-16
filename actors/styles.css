@@ -118,6 +118,7 @@ body {
   background-color: #1C1C1D;
   font-size: calc(100 / 428 * 20 * var(--vw));
   font-family: 'Sf Pro Display Bold', Arial, sans-serif;
+  z-index: 1;
 }
 
 .name {
