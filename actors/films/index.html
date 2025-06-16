@@ -54,16 +54,6 @@
                             </span>
                         </div>
 
-                        <div class="movie">
-                            <div class="movie-title">Побег из Шоушенка</div>
-                            <span class="movie-title-en">The Shawshank Redemption</span>
-                            <span class="movie-meta">
-                                <svg class="score-icon">
-                                    <use href="#icon-star"></use>
-                                </svg>
-                                9.194 • 1994 • 2 ч 22 мин
-                            </span>
-                        </div>
 
                         <div class="movie">
                             <div class="movie-title">Список Шиндлера</div>
@@ -1021,19 +1011,33 @@
 
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Вешаем обработчик на все элементы .show-movies
-            document.querySelectorAll('.show-movies').forEach(button => {
-                button.addEventListener('click', function () {
-                    const card = button.closest('.card');
-                    const movies = card.querySelector('.movies');
-                    movies.classList.toggle('open');
-                    button.classList.toggle('active');
-                });
+        document.querySelectorAll('.show-movies').forEach(button => {
+            button.addEventListener('click', () => {
+                const card = button.closest('.card');
+                const movies = card.querySelector('.movies');
+
+                const current = movies.style.height;
+
+                if (current && current !== '0px') {
+                    // Закрытие
+                    movies.style.height = movies.scrollHeight + 'px'; // фиксируем
+                    movies.offsetHeight; // ререндер
+                    movies.style.height = '0px';
+                } else {
+                    // Открытие
+                    movies.style.height = movies.scrollHeight + 'px';
+
+                    // Защита: оставить высоту после окончания
+                    movies.addEventListener('transitionend', function handler() {
+                        // если всё ещё открыто — сбрасываем max-height
+                        // if (movies.style.maxHeight !== '0px') {
+                        //   movies.style.maxHeight = ''; // авто
+                        // }
+                        movies.removeEventListener('transitionend', handler);
+                    });
+                }
             });
         });
-
-
         // document.addEventListener('scroll', () => {
         //     document.querySelectorAll('.card').forEach(card => {
         //         const info = card.querySelector('.info');
