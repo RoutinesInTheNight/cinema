@@ -129,14 +129,10 @@ const SafeAreaManager = (() => {
 // Выставление пддингов и маргинов в зависимости от безопасной зоны
 document.addEventListener('DOMContentLoaded', () => {
   const description = document.querySelector('.description');
+  const numbersContainer = document.querySelector('.numbers-container');
   const numberAll = document.querySelectorAll('.number');
   const infoAll = document.querySelectorAll('.info');
   const bottomMenu = document.querySelector('.sorting');
-
-  // const searchCollaps = document.querySelector('.search-collaps');
-  // const searchTopCollaps = document.querySelector('.search-top-collaps');
-  // const moviesContainer = document.getElementById('movies-container');
-  // const keyboards = document.querySelector('.keyboards');
 
   SafeAreaManager.onChange = ({ top, bottom }) => {
     const bottomValue = bottom === 0 ? 'calc((100 / 428) * 8 * var(--vw))' : `${bottom}px`;
@@ -151,20 +147,8 @@ document.addEventListener('DOMContentLoaded', () => {
       info.style.top = topValue;
     });
     bottomMenu.style.paddingBottom = bottomValue;
-    // keyboards.style.paddingBottom = bottom === 0 ? '0.5rem' : `${bottom * 2}px`;
 
-    // if (bottom === 0) {
-    //   // searchTopCollaps.style.transform = 'translateY(calc(((100 / 428) * (32 + 32) * var(--vw) + 2.5 * var(--vw)) * 1))';
-    //   searchCollaps.style.marginBottom = `calc((100 / 428) * (125 + 8 + 8) * var(--vw))`;
-    // } else {
-    //   // searchTopCollaps.style.transform = `translateY(calc((100 / 428) * (32 + 32 + ${top}) * -1 * var(--vw)))`;
-    //   searchCollaps.style.marginBottom = `calc((100 / 428) * (125 + 8 + ${bottom}) * var(--vw))`;
-    // }
-
-    // searchTopCollaps.style.marginTop = topValue;
-
-    // moviesContainer.style.marginTop = topValue;
-    // moviesContainer.style.marginBottom = bottom === 0 ? 'calc(0.5rem + 124.5px + 2.5vw)' : `calc(${bottom}px + 124.5px + 2.5vw)`
+    numbersContainer.style.marginBottom = bottom === 0 ? 'calc(((100 / 428) * (37 + 16) * var(--vw)) + 2.5 * var(--vw))' : `calc(${bottom}px + ((100 / 428) * (37 + 8) * var(--vw)) + 2.5 * var(--vw))`
   };
   SafeAreaManager.init();
 });

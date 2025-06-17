@@ -40,14 +40,20 @@
 
 
 body {
-  background-color: black;
-  color: #d5e1d3;
-  font-family: 'Sf Pro Display Regular', Arial, sans-serif;
-  overflow-x: hidden;
+  height: 100vh;
   margin: 0 auto;
-  padding: 0;
+  background-color: black;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
-
+body::-webkit-scrollbar {
+  display: none;
+}
+html {
+  overflow-x: hidden;
+  overflow: hidden;
+}
 
 
 
