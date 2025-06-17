@@ -6,9 +6,8 @@ if (telegram.isVersionAtLeast("6.1")) {
   telegram.BackButton.show()
   const currentUrl = window.location.href;
   let targetBackLink = '../../';
-  if (currentUrl.includes('series')) {
-    targetBackLink = '../../series';
-  }
+  if (currentUrl.includes('series')) targetBackLink = '../../series';
+  else if (currentUrl.includes('general')) targetBackLink = '../../general';
   telegram.BackButton.onClick(() => hapticFeedback('soft', targetBackLink));
 }
 if (telegram.isVersionAtLeast("7.7")) telegram.disableVerticalSwipes();
@@ -16,14 +15,6 @@ if (telegram.isVersionAtLeast("8.0")) {
   telegram.requestFullscreen();
   telegram.lockOrientation();
 }
-
-
-
-function capitalizeFirstLetter(str) {
-  if (!str) return '';
-  return str[0].toUpperCase() + str.slice(1);
-}
-
 
 
 
@@ -140,8 +131,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const description = document.querySelector('.description');
   const numberAll = document.querySelectorAll('.number');
   const infoAll = document.querySelectorAll('.info');
+  const bottomMenu = document.querySelector('.sorting');
 
-  // const bottomMenu = document.querySelector('.sorting');
   // const searchCollaps = document.querySelector('.search-collaps');
   // const searchTopCollaps = document.querySelector('.search-top-collaps');
   // const moviesContainer = document.getElementById('movies-container');
@@ -159,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
     infoAll.forEach(info => {
       info.style.top = topValue;
     });
-    // bottomMenu.style.paddingBottom = bottomValue;
+    bottomMenu.style.paddingBottom = bottomValue;
     // keyboards.style.paddingBottom = bottom === 0 ? '0.5rem' : `${bottom * 2}px`;
 
     // if (bottom === 0) {
@@ -224,6 +215,7 @@ window.addEventListener('load', updateMovieOpacity);
 
 document.querySelectorAll('.show-movies').forEach(button => {
   button.addEventListener('click', () => {
+    hapticFeedback('medium');
     const card = button.closest('.card');
     const movies = card.querySelector('.movies');
     const current = movies.style.height;
