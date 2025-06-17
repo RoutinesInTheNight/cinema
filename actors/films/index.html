@@ -21,7 +21,17 @@
                 d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z" />
     </svg>
 
-    <div class="fade-mask"></div>
+    <div class="description">
+        <span>Таблица учитывает только первых 10 актёров из каждого фильма по версии Кинопоиска, чтобы исключить
+            малозначимые роли.<br><br>Актёры с одинаковом кол-вом фильмов объединены в одну
+            группу.<br><br>Кол-во просмотренных фильмов с актёром отображается справа от его имени, а стрелка вниз открывает список этих фильмов.<br><br>Актёры, с которыми просмотрен лишь 1 фильм, не отображаются в таблице из-за их большого кол-ва.</span>
+    </div>
+
+    <div class="table-title">
+        <span>Топ актёров по фильмам</span>
+    </div>
+
+
 
     <div class="numbers-container">
 
@@ -1010,54 +1020,7 @@
 
 
 
-    <script>
-        document.querySelectorAll('.show-movies').forEach(button => {
-            button.addEventListener('click', () => {
-                const card = button.closest('.card');
-                const movies = card.querySelector('.movies');
 
-                const current = movies.style.height;
-
-                if (current && current !== '0px') {
-                    // Закрытие
-                    movies.style.height = movies.scrollHeight + 'px'; // фиксируем
-                    movies.offsetHeight; // ререндер
-                    movies.style.height = '0px';
-                } else {
-                    // Открытие
-                    movies.style.height = movies.scrollHeight + 'px';
-
-                    // Защита: оставить высоту после окончания
-                    movies.addEventListener('transitionend', function handler() {
-                        // если всё ещё открыто — сбрасываем max-height
-                        // if (movies.style.maxHeight !== '0px') {
-                        //   movies.style.maxHeight = ''; // авто
-                        // }
-                        movies.removeEventListener('transitionend', handler);
-                    });
-                }
-            });
-        });
-        // document.addEventListener('scroll', () => {
-        //     document.querySelectorAll('.card').forEach(card => {
-        //         const info = card.querySelector('.info');
-        //         const rect = info.getBoundingClientRect();
-
-        //         // Вычисляем, насколько info "поднялся" от своего обычного положения
-        //         const distanceFromTop = rect.top;
-        //         const minTop = 0;  // когда info прилип к верху
-        //         const maxTop = 60; // когда info ещё на своём месте
-
-        //         // Нормализуем в диапазон 0 — 1
-        //         const progress = Math.max(0, Math.min(1, 1 - (distanceFromTop - minTop) / (maxTop - minTop)));
-
-        //         // Пример: увеличиваем паддинг сверху от 10px до 30px
-        //         const padding = 10 + progress * 20;
-        //         info.style.paddingTop = `${padding}px`;
-        //     });
-        // });
-
-    </script>
 
     <script src="../scripts.js"></script>
 

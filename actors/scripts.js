@@ -137,6 +137,7 @@ const SafeAreaManager = (() => {
 
 // Выставление пддингов и маргинов в зависимости от безопасной зоны
 document.addEventListener('DOMContentLoaded', () => {
+  const description = document.querySelector('.description');
   const numberAll = document.querySelectorAll('.number');
   const infoAll = document.querySelectorAll('.info');
 
@@ -149,6 +150,8 @@ document.addEventListener('DOMContentLoaded', () => {
   SafeAreaManager.onChange = ({ top, bottom }) => {
     const bottomValue = bottom === 0 ? 'calc((100 / 428) * 8 * var(--vw))' : `${bottom}px`;
     const topValue = top === 0 ? 'calc(2.5 * var(--vw))' : `${top}px`;
+
+    description.style.marginTop = topValue;
 
     numberAll.forEach(number => {
       number.style.top = topValue;
@@ -168,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // }
 
     // searchTopCollaps.style.marginTop = topValue;
-    
+
     // moviesContainer.style.marginTop = topValue;
     // moviesContainer.style.marginBottom = bottom === 0 ? 'calc(0.5rem + 124.5px + 2.5vw)' : `calc(${bottom}px + 124.5px + 2.5vw)`
   };
@@ -177,24 +180,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
+// Скрытие .movie у нижней границы верхней безопаной зоны
 function updateMovieOpacity() {
   const movies = document.querySelectorAll('.movie');
-
   const { top, bottom } = SafeAreaManager.getTotalSafeAreas();
-
   const vw = getCustomVw();
-  console.log(vw)
-
   const safeAreaTopPx = top === 0 ? 2.5 * vw : top;
   const heightInfo = 100 / 428 * 40 * vw;
-
   const fadeStartY = safeAreaTopPx + heightInfo;
   const fadeEndY = safeAreaTopPx;
-
   movies.forEach(movie => {
     const top = movie.getBoundingClientRect().top;
-
     if (top <= fadeStartY && top >= fadeEndY) {
       const opacity = (top - fadeEndY) / (fadeStartY - fadeEndY);
       movie.style.opacity = opacity;
@@ -209,7 +205,6 @@ function updateMovieOpacity() {
 function getCustomVw() {
   const width = window.innerWidth;
   const height = window.innerHeight;
-
   if (width < 500) {
     return width / 100;
   } else {
@@ -220,3 +215,40 @@ function getCustomVw() {
 window.addEventListener('scroll', updateMovieOpacity);
 window.addEventListener('resize', updateMovieOpacity);
 window.addEventListener('load', updateMovieOpacity);
+
+
+
+
+
+
+
+document.querySelectorAll('.show-movies').forEach(button => {
+  button.addEventListener('click', () => {
+    const card = button.closest('.card');
+    const movies = card.querySelector('.movies');
+    const current = movies.style.height;
+    if (current && current !== '0px') {
+      // Закрытие
+      button.classList.remove('open');
+      movies.style.height = movies.scrollHeight + 'px';
+      movies.offsetHeight;
+      movies.style.height = '0px';
+      // Если .card выше нижней границы верхней безопасной зоны, то скроллим до тех пор, пока .card не окажется ниже
+      const { top, bottom } = SafeAreaManager.getTotalSafeAreas();
+      const vw = getCustomVw();
+      const safeAreaTop = top === 0 ? 2.5 * vw : top;
+      const rect = card.getBoundingClientRect();
+      if (rect.top < safeAreaTop || rect.top > window.innerHeight) {
+        const scrollY = window.scrollY + rect.top - safeAreaTop;
+        window.scrollTo({ top: scrollY, behavior: 'smooth' });
+      }
+    } else {
+      // Открытие
+      button.classList.add('open');
+      movies.style.height = movies.scrollHeight + 'px';
+      movies.addEventListener('transitionend', function handler() {
+        movies.removeEventListener('transitionend', handler);
+      });
+    }
+  });
+});
