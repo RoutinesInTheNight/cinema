@@ -41,7 +41,7 @@
 
 body {
   height: 100vh;
-  margin: 0 auto;
+  margin: 0 auto 0 auto;
   background-color: black;
   overflow-x: hidden;
   scrollbar-width: none;
