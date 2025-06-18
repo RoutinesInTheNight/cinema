@@ -50,10 +50,10 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
-html {
+/* html {
   overflow-x: hidden;
   overflow: hidden;
-}
+} */
 
 
 
@@ -113,7 +113,7 @@ html {
 .number {
   position: sticky;
   text-align: center;
-  padding: calc(100 / 428 * 8 * var(--vw)) 0 calc(100 / 428 * 8 * var(--vw)) 0;
+  padding: calc(100 / 428 * 10.5 * var(--vw)) 0 calc(100 / 428 * 10.5 * var(--vw)) 0;
   min-width: calc(100 / 428 * 48 * var(--vw));
   font-size: calc(100 / 428 * 20 * var(--vw));
   font-family: 'Sf Pro Display Bold', Arial, sans-serif;
@@ -137,7 +137,7 @@ html {
 
 .info {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   position: sticky;
   background-color: #1C1C1D;
   border-top: calc(100 / 428 * 1 * var(--vw)) solid rgba(151, 151, 157, 0.5);

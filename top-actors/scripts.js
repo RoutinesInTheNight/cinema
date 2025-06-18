@@ -130,8 +130,6 @@ const SafeAreaManager = (() => {
 document.addEventListener('DOMContentLoaded', () => {
   const description = document.querySelector('.description');
   const numbersContainer = document.querySelector('.numbers-container');
-  const numberAll = document.querySelectorAll('.number');
-  const infoAll = document.querySelectorAll('.info');
   const bottomMenu = document.querySelector('.sorting');
 
   SafeAreaManager.onChange = ({ top, bottom }) => {
@@ -140,12 +138,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     description.style.marginTop = topValue;
 
-    numberAll.forEach(number => {
-      number.style.top = topValue;
-    });
-    infoAll.forEach(info => {
-      info.style.top = topValue;
-    });
     bottomMenu.style.paddingBottom = bottomValue;
 
     numbersContainer.style.marginBottom = bottom === 0 ? 'calc(((100 / 428) * (37 + 16) * var(--vw)) + 2.5 * var(--vw))' : `calc(${bottom}px + ((100 / 428) * (37 + 8) * var(--vw)) + 2.5 * var(--vw))`
@@ -157,6 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Скрытие .movie у нижней границы верхней безопаной зоны
 function updateMovieOpacity() {
+  console.log(1);
   const movies = document.querySelectorAll('.movie');
   const { top, bottom } = SafeAreaManager.getTotalSafeAreas();
   const vw = getCustomVw();
@@ -197,37 +190,41 @@ window.addEventListener('load', updateMovieOpacity);
 
 
 // Открытие и закрытие списка фильмов
-document.querySelectorAll('.show-hide-movies').forEach(button => {
-  button.addEventListener('click', () => {
-    hapticFeedback('medium');
-    const card = button.closest('.card');
-    const movies = card.querySelector('.movies');
-    const current = movies.style.height;
-    if (current && current !== '0px') {
-      // Закрытие
-      button.classList.remove('open');
-      movies.style.height = movies.scrollHeight + 'px';
-      movies.offsetHeight;
-      movies.style.height = '0px';
-      // Если .card выше нижней границы верхней безопасной зоны, то скроллим до тех пор, пока .card не окажется ниже
-      const { top, bottom } = SafeAreaManager.getTotalSafeAreas();
-      const vw = getCustomVw();
-      const safeAreaTop = top === 0 ? 2.5 * vw : top;
-      const rect = card.getBoundingClientRect();
-      if (rect.top < safeAreaTop || rect.top > window.innerHeight) {
-        const scrollY = window.scrollY + rect.top - safeAreaTop;
-        window.scrollTo({ top: scrollY, behavior: 'smooth' });
-      }
-    } else {
-      // Открытие
-      button.classList.add('open');
-      movies.style.height = movies.scrollHeight + 'px';
-      movies.addEventListener('transitionend', function handler() {
-        movies.removeEventListener('transitionend', handler);
-      });
+function showHideMovies(button, a, b) {
+  hapticFeedback('medium');
+  const card = button.closest('.card');
+  const movies = card.querySelector('.movies');
+  const current = movies.style.height;
+
+  if (current && current !== '0px') {
+    // Закрытие
+    button.classList.remove('open');
+    movies.style.height = movies.scrollHeight + 'px'; // нужно для анимации
+    movies.offsetHeight; // принудительное обновление стиля
+    movies.style.height = '0px';
+
+    // Скролл вверх, если .card выше безопасной зоны
+    const { top, bottom } = SafeAreaManager.getTotalSafeAreas();
+    const vw = getCustomVw();
+    const safeAreaTop = top === 0 ? 2.5 * vw : top;
+    const rect = card.getBoundingClientRect();
+    if (rect.top < safeAreaTop || rect.top > window.innerHeight) {
+      const scrollY = window.scrollY + rect.top - safeAreaTop;
+      window.scrollTo({ top: scrollY, behavior: 'smooth' });
     }
-  });
-});
+
+  } else {
+    // Открытие
+    button.classList.add('open');
+    movies.style.height = movies.scrollHeight + 'px';
+    movies.addEventListener('transitionend', function handler() {
+      movies.removeEventListener('transitionend', handler);
+      // опционально: можно убрать height после завершения, если нужно auto
+      // movies.style.height = 'auto';
+    });
+  }
+}
+
 
 
 
@@ -299,9 +296,10 @@ function applySortingFromURL() {
   container.innerHTML = ''; // очищаем на всякий случай
 
   if (!userSort || Object.keys(userSort).length === 0) return;
-  
-  const numberKeys = Object.keys(userSort);
-  
+
+  const numberKeys = Object.keys(userSort).sort((a, b) => b - a);
+
+
   numberKeys.forEach((numberKey, index) => {
     const actorsObj = userSort[numberKey]; // Например, { '34242': [...], '973': [...] }
 
@@ -337,7 +335,7 @@ function applySortingFromURL() {
 
       const toggleDiv = document.createElement('div');
       toggleDiv.className = 'show-hide-movies';
-      // toggleDiv.setAttribute('onclick', `showHideMovies(${numberKey}, ${actorId})`);
+      toggleDiv.setAttribute('onclick', `showHideMovies(this, ${numberKey}, ${actorId})`);
       toggleDiv.innerHTML = `
         <svg viewBox="0 0 512 512" fill="#6B6B6B">
           <use href="#show-hide-movies-svg"></use>
@@ -376,6 +374,19 @@ function applySortingFromURL() {
     numberContainer.appendChild(cardsDiv);
     container.appendChild(numberContainer);
   });
+
+  const numberAll = document.querySelectorAll('.number');
+  const infoAll = document.querySelectorAll('.info');
+  SafeAreaManager.onChange = ({ top, bottom }) => {
+    const topValue = top === 0 ? 'calc(2.5 * var(--vw))' : `${top}px`;
+    numberAll.forEach(number => {
+      number.style.top = topValue;
+    });
+    infoAll.forEach(info => {
+      info.style.top = topValue;
+    });
+  };
+  SafeAreaManager.init();
 
 }
 
