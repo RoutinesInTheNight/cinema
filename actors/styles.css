@@ -162,14 +162,18 @@ body::-webkit-scrollbar {
 }
 
 .show-hide-movies {
-  padding: 0 calc(100 / 428 * 8 * var(--vw)) 0 calc(100 / 428 * 8 * var(--vw));
+  display: flex;
+  min-width: calc(100 / 428 * 48 * var(--vw));
+  align-items: center;
+  justify-content: center;
+  /* padding: 0 calc(100 / 428 * 8 * var(--vw)) 0 calc(100 / 428 * 8 * var(--vw)); */
   height: 100%;
   cursor: pointer;
 }
 
 .show-hide-movies svg {
-  width: calc(100 / 1284 * 50 * var(--vw));
-  height: calc(100 / 428 * 24 * var(--vw));
+  width: calc(100 / 428 * 16 * var(--vw));
+  height: calc(100 / 428 * 16 * var(--vw));
   transition: transform .5s ease;
 }
 
@@ -184,7 +188,7 @@ body::-webkit-scrollbar {
 
 .movies {
   height: 0;
-  width: calc(95 * var(--vw) - (100 / 428 * 48 * var(--vw)) - (100 / 428 * 32.664 * var(--vw)));
+  width: calc(95 * var(--vw) - (100 / 428 * 48 * var(--vw)) - (100 / 428 * 48 * var(--vw)));
   overflow: hidden;
   transition: height 0.5s ease;
 }
@@ -195,26 +199,30 @@ body::-webkit-scrollbar {
 
 .movie {
   display: flex;
-  margin: calc(100 / 428 * 16 * var(--vw)) 0 calc(100 / 428 * 16 * var(--vw)) 0;
-  padding-left: calc(100 / 428 * 8 * var(--vw));
-  border-left: calc(100 / 428 * 4 * var(--vw)) solid rgba(151, 151, 157, 0.5);
+  margin: calc(100 / 428 * 8 * var(--vw)) 0 calc(100 / 428 * 8 * var(--vw)) 0;
+  padding: calc(100 / 428 * 4 * var(--vw)) 0 calc(100 / 428 * 4 * var(--vw)) calc(100 / 428 * 8 * var(--vw));
+  /* border-left: calc(100 / 428 * 4 * var(--vw)) solid rgba(151, 151, 157, 0.5); */
   font-size: calc(100 / 428 * 12 * var(--vw));
   color: #97979D;
+  border: calc(100 / 428 * 1 * var(--vw)) solid rgba(151, 151, 157, 0.25);
+  border-radius: calc(100 / 428 * 16 * var(--vw));
 }
 
 .movie .content {
   width: calc(100% - calc(100 / 428 * 16 * var(--vw))); 
 }
-.movie .links {
+.movie .open-links {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: center; */
+  align-items: center;
+  /* flex-direction: column; */
+  /* justify-content: space-between; */
   /* gap: calc(100 / 428 * 4 * var(--vw)); */
 }
 
-.movie .links svg {
-  width: calc(100 / 428 * 16 * var(--vw));
-  height: calc(100 / 428 * 16 * var(--vw));
+.movie .open-links svg {
+  width: calc(100 / 428 * 24 * var(--vw));
+  height: calc(100 / 428 * 24 * var(--vw));
   /* display: block; */
 }
 
@@ -223,7 +231,8 @@ body::-webkit-scrollbar {
   gap: calc(100 / 428 * 16 * var(--vw));
   margin-top: 0;
   width: 100%;
-  border-left: none;
+  border: none;
+  border-radius: 0;
   padding-left: 0
 }
 

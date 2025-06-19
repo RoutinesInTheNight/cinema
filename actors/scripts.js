@@ -296,16 +296,17 @@ function showHideMovies(button, number, actor) {
           </span>
         </div>
         ${link1 || link2 || link3
-          ? `<div class="links">
-                ${link1 ? `<svg onclick="hapticFeedback('soft', '${link1}')"><use href="#addthis"></use></svg>` : ''}
-                ${link2 ? `<svg onclick="hapticFeedback('soft', '${link2}')"><use href="#imdb-logo"></use></svg>` : ''}
-                ${link3 ? `<svg onclick="hapticFeedback('soft', '${link3}')"><use href="#kinopoisk-logo"></use></svg>` : ''}
+          ? `<div class="open-links">
+                <svg><use href="#more"></use></svg>
               </div>`
           : ''
         }
       `;
       movies.appendChild(movieEl);
     });
+
+
+    // ${link3 ? `<svg onclick="hapticFeedback('soft', '${link3}')"><use href="#kinopoisk-logo"></use></svg>` : ''}
 
     // Установка высоты после наполнения
     movies.style.height = movies.scrollHeight + 'px';
