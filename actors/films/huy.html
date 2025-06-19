@@ -15,17 +15,54 @@
 
 <body>
 
-    <svg style="display: none;">
-        <symbol id="icon-star" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+    <svg style="display: none">
+        <symbol id="icon-star" viewBox="0 0 576 512">
             <path fill="#FFD43B"
                 d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z" />
+        </symbol>
     </svg>
 
-    <svg style="display: none;">
+    <svg style="display: none">
         <symbol id="show-hide-movies-svg" viewBox="0 0 512 512">
             <path fill="#6B6B6B"
                 d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+        </symbol>
     </svg>
+
+    <svg style="position: absolute; width: 0; height: 0" ; aria-hidden="true">
+        <defs>
+            <radialGradient id="paint0_radial_2318_12678" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                gradientTransform="rotate(33.198 1.104 10.404) scale(71.4227 66.3772)">
+                <stop offset=".496" stop-color="#F50" />
+                <stop offset=".808" stop-color="#BF0" />
+                <stop offset="1" stop-color="#0FB" />
+            </radialGradient>
+        </defs>
+        <symbol id="imdb-logo" viewBox="0 0 128 128">
+            <rect width="100%" height="100%" rx="8" fill="#f5c518" />
+            <g transform="matrix(2,0,0,2,16,46)">
+                <polygon points="0 0 0 18 5 18 5 0" />
+                <path
+                    d="M 15.672518,0 14.553483,8.4084693 13.858201,3.8350243 C 13.65661,2.3700926 13.463247,1.0917512 13.278113,0 H 7 v 18 h 4.241635 L 11.258091,6.1138068 13.043609,18 h 3.019748 L 17.758365,5.8517865 17.770708,18 H 22 V 0 Z" />
+                <path
+                    d="m24 18v-18h7.804559c1.764793 0 3.195441 1.4199441 3.195441 3.1766042v11.6467918c0 1.75439-1.428338 3.176604-3.195441 3.176604zm5.832248-14.7604764c-0.198326-0.1071901-0.577732-0.1588002-1.129596-0.1588002v11.8107626c0.728633 0 1.177022-0.13101 1.345167-0.40494 0.168146-0.26996 0.254375-1.000441 0.254375-2.199382v-6.9792681c0-0.8138509-0.03018-1.3339215-0.08623-1.5641817-0.05605-0.2302603-0.18108-0.3970005-0.383717-0.5041906z" />
+                <path
+                    d="m44.429908 4.5068582h0.31961c1.795192 0 3.250482 1.4058177 3.250482 3.1380094v7.2171234c0 1.733074-1.454818 3.138009-3.250482 3.138009h-0.31961c-1.098446 0-2.069633-0.526338-2.658038-1.331726l-0.287974 1.100504h-4.483896v-17.768778h4.784326v5.7805356c0.618172-0.7703782 1.570825-1.2736774 2.645582-1.2736774zm-1.02434 8.7773578v-4.2651379c0-0.7047386-0.04524-1.1672234-0.139493-1.3801133-0.09425-0.2128898-0.470487-0.3495732-0.734393-0.3495732s-0.670889 0.1110822-0.75006 0.2982784v7.219809c0.09048 0.205549 0.478614 0.319927 0.75006 0.319927s0.666531-0.110708 0.749473-0.319927c0.08294-0.20922 0.124413-0.719421 0.124413-1.523263z" />
+            </g>
+        </symbol>
+        <symbol id="kinopoisk-logo" viewBox="0 0 50 50">
+            <rect width="50" height="50" rx="16" fill="#000" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M49.867 36.078a15.893 15.893 0 0 1-1.826 5.6l-23.785-12.5 13.247 13.53h-7.539l-9.259-12.83v12.83h-6.122V7.292h6.122v12.851l9.26-12.851h7.538l-13.6 13.969L48.049 8.335a15.892 15.892 0 0 1 1.818 5.586l-23.199 9.306L50 21.711v6.578L26.52 26.71l23.347 9.367Z"
+                fill="url(#paint0_radial_2318_12678)" />
+        </symbol>
+
+        <symbol viewBox="0 0 50 50" id="addthis">
+            <rect width="50" height="50" x="2" y="2" fill="#696969" rx="2"></rect>
+        </symbol>
+    </svg>
+
+
 
     <div class="description">
         <span>Таблица учитывает только первых 5 актёров из каждого фильма по версии Кинопоиска, чтобы исключить
@@ -44,7 +81,7 @@
                     <div class="info" style="top: calc(2.5 * var(--vw));"><span class="name">Том Круз</span><span
                             class="movies-num">17</span>
                         <div class="show-hide-movies open" onclick="showHideMovies(this, 17, 20302)">
-                            <svg viewBox="0 0 512 512" fill="#6B6B6B">
+                            <svg>
                                 <use href="#show-hide-movies-svg"></use>
                             </svg>
                         </div>
@@ -58,27 +95,31 @@
                                     <span class="average-rating-num">Средний рейтинг: 7.333</span>
                                 </div>
                                 <div class="kp-page">
-                                    <span onclick="hapticFeedback('soft', 'https://www.kinopoisk.ru/film/{actor}/')" class="kp-page-button">Открыть на Кинопоиске</span>
+                                    <span onclick="hapticFeedback('soft', 'https://www.kinopoisk.ru/film/{actor}/')"
+                                        class="kp-page-button">Открыть на Кинопоиске</span>
                                 </div>
                             </div>
                         </div>
 
                         <div class="movie">
-                            <div class="movie-title">Топ Ган. Мэверик</div>
-                            <span class="movie-title-en">Top Gun: Maverick</span>
-                            <span class="movie-meta">
-                                <svg class="score-icon">
-                                    <use href="#icon-star"></use>
+                            <div class="content">
+                                <div class="movie-title">Топ Ган. Мэверик</div>
+                                <span class="movie-title-en">Top Gun: Maverick</span>
+                                <span class="movie-meta">
+                                    <svg class="score-icon">
+                                        <use href="#icon-star"></use>
+                                    </svg>
+                                    8.193 • 2022 • 2 ч 10 мин
+                                </span>
+                            </div>
+                            <div class="links">
+                                <svg><use href="#addthis"></use></svg>
+                                <svg>
+                                    <use href="#imdb-logo"></use>
                                 </svg>
-                                8.193 • 2022 • 2 ч 10 мин
-                            </span>
-                            <div class="movie-tags">
-                                <span
-                                    onclick="hapticFeedback('soft', 'http://hdrezka0ddqyq.org/films/action/47946-top-gan-meverik-2022.html')">HDREZKA</span>
-                                <span
-                                    onclick="hapticFeedback('soft', 'https://www.imdb.com/title/tt1745960/')">IMDb</span>
-                                <span
-                                    onclick="hapticFeedback('soft', 'https://www.kinopoisk.ru/film/572032/')">КП</span>
+                                <svg>
+                                    <use href="#kinopoisk-logo"></use>
+                                </svg>
                             </div>
                         </div>
                         <div class="movie">
