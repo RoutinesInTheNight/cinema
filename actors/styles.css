@@ -116,7 +116,7 @@ body::-webkit-scrollbar {
   position: sticky;
   text-align: center;
   padding: calc(100 / 428 * 10.5 * var(--vw)) 0 calc(100 / 428 * 10.5 * var(--vw)) 0;
-  min-width: calc(100 / 428 * 48 * var(--vw));
+  min-width: calc(100 / 428 * 42 * var(--vw));
   font-size: calc(100 / 428 * 20 * var(--vw));
   font-family: 'Sf Pro Display Bold', Arial, sans-serif;
   color: #97979D;
@@ -141,7 +141,7 @@ body::-webkit-scrollbar {
   display: flex;
   align-items: center;
   position: sticky;
-  width: calc(95 * var(--vw) - (100 / 428 * 48 * var(--vw)));
+  width: calc(95 * var(--vw) - (100 / 428 * 42 * var(--vw)));
   background-color: #1C1C1D;
   border-top: calc(100 / 428 * 1 * var(--vw)) solid rgba(151, 151, 157, 0.5);
   padding: calc(100 / 428 * 8 * var(--vw)) 0 calc(100 / 428 * 8 * var(--vw)) 0;
@@ -157,13 +157,13 @@ body::-webkit-scrollbar {
 }
 
 .movies-num {
-  text-align: center;
+  text-align: right;
   width: calc(100 / 428 * 48 * var(--vw));
 }
 
 .show-hide-movies {
   display: flex;
-  min-width: calc(100 / 428 * 48 * var(--vw));
+  min-width: calc(100 / 428 * 42 * var(--vw));
   align-items: center;
   justify-content: center;
   /* padding: 0 calc(100 / 428 * 8 * var(--vw)) 0 calc(100 / 428 * 8 * var(--vw)); */
@@ -188,7 +188,7 @@ body::-webkit-scrollbar {
 
 .movies {
   height: 0;
-  width: calc(95 * var(--vw) - (100 / 428 * 48 * var(--vw)) - (100 / 428 * 48 * var(--vw)));
+  width: calc(95 * var(--vw) - (100 / 428 * 84 * var(--vw)));
   overflow: hidden;
   transition: height 0.5s ease;
 }
@@ -199,13 +199,13 @@ body::-webkit-scrollbar {
 
 .movie {
   display: flex;
-  margin: calc(100 / 428 * 8 * var(--vw)) 0 calc(100 / 428 * 8 * var(--vw)) 0;
+  margin: calc(100 / 428 * 4 * var(--vw)) 0 calc(100 / 428 * 4 * var(--vw)) 0;
   padding: calc(100 / 428 * 4 * var(--vw)) 0 calc(100 / 428 * 4 * var(--vw)) calc(100 / 428 * 8 * var(--vw));
   /* border-left: calc(100 / 428 * 4 * var(--vw)) solid rgba(151, 151, 157, 0.5); */
   font-size: calc(100 / 428 * 12 * var(--vw));
   color: #97979D;
   border: calc(100 / 428 * 1 * var(--vw)) solid rgba(151, 151, 157, 0.25);
-  border-radius: calc(100 / 428 * 16 * var(--vw));
+  border-radius: calc(100 / 428 * 8 * var(--vw));
 }
 
 .movie .content {
@@ -298,7 +298,6 @@ body::-webkit-scrollbar {
 .movie-meta {
   display: inline-flex;
   align-items: center;
-  margin-top: calc(100 / 428 * 4 * var(--vw));;
   gap: calc(100 / 428 * 4 * var(--vw));
   font-family: 'Sf Pro Display Redular', Arial, sans-serif;
 }
