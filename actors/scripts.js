@@ -287,17 +287,19 @@ function showHideMovies(button, number, actor) {
       movieEl.className = 'movie';
 
       movieEl.innerHTML = `
-        <div class="movie-title">${title}</div>
-        <span class="movie-title-en">${titleEn}</span>
-        <span class="movie-meta">
-          <svg class="score-icon"><use href="#icon-star"></use></svg>
-          ${meta}
-        </span>
+        <div class="content">
+          <div class="movie-title">${title}</div>
+          <span class="movie-title-en">${titleEn}</span>
+          <span class="movie-meta">
+            <svg class="score-icon"><use href="#icon-star"></use></svg>
+            ${meta}
+          </span>
+        </div>
         ${link1 || link2 || link3
-          ? `<div class="movie-tags">
-                ${link1 ? `<span onclick="hapticFeedback('soft', '${link1}')">HDREZKA</span>` : ''}
-                ${link2 ? `<span onclick="hapticFeedback('soft', '${link2}')">IMDb</span>` : ''}
-                ${link3 ? `<span onclick="hapticFeedback('soft', '${link3}')">КП</span>` : ''}
+          ? `<div class="links">
+                ${link1 ? `<svg onclick="hapticFeedback('soft', '${link1}')"><use href="#addthis"></use></svg>` : ''}
+                ${link2 ? `<svg onclick="hapticFeedback('soft', '${link2}')"><use href="#imdb-logo"></use></svg>` : ''}
+                ${link3 ? `<svg onclick="hapticFeedback('soft', '${link3}')"><use href="#kinopoisk-logo"></use></svg>` : ''}
               </div>`
           : ''
         }
@@ -426,7 +428,7 @@ function applySortingFromURL() {
       toggleDiv.className = 'show-hide-movies';
       toggleDiv.setAttribute('onclick', `showHideMovies(this, ${numberKey}, ${actorId})`);
       toggleDiv.innerHTML = `
-        <svg viewBox="0 0 512 512" fill="#6B6B6B">
+        <svg>
           <use href="#show-hide-movies-svg"></use>
         </svg>`;
 
