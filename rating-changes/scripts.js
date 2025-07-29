@@ -115,7 +115,7 @@ const SafeAreaManager = (() => {
 
 
 
-// Выставление пддингов и маргинов в зависимости от безопасной зоны
+// Выставление паддингов и маргинов в зависимости от безопасной зоны
 document.addEventListener('DOMContentLoaded', () => {
   const bottomMenu = document.querySelector('.sorting');
   const ratingsContainer = document.querySelector('#ratings-container');
