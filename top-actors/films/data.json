@@ -876,7 +876,7 @@
             "3": 1979,
             "4": "8.348",
             "5": "1 ч 57 мин",
-            "6": "http://hdrezka0ddqyq.org/films/horror/1447-chuzhoy-1979.html",
+            "6": "http://hdrezka0ddqyq.org/films/horror/1447-chuzhoy-1979-latest.html",
             "7": "https://www.imdb.com/title/tt0078748/",
             "8": "https://www.kinopoisk.ru/film/386/"
         },
@@ -1580,15 +1580,35 @@
             "7": "https://www.imdb.com/title/tt1663202/",
             "8": "https://www.kinopoisk.ru/film/522941/"
         },
-        "57": {
-            "1": "Первый мститель",
-            "2": "Captain America: The First Avenger",
-            "3": 2011,
-            "4": "6.909",
-            "5": "2 ч 4 мин",
-            "6": "http://hdrezka0ddqyq.org/films/fiction/530-pervyy-mstitel-2011.html",
-            "7": "https://www.imdb.com/title/tt0458339/",
-            "8": "https://www.kinopoisk.ru/film/160946/"
+        "261": {
+            "1": "Омерзительная восьмерка",
+            "2": "The Hateful Eight",
+            "3": 2015,
+            "4": "7.900",
+            "5": "2 ч 48 мин",
+            "6": "http://hdrezka0ddqyq.org/films/thriller/11352-omerzitelnaya-vosmerka-2015-latest.html",
+            "7": "https://www.imdb.com/title/tt3460252/",
+            "8": "https://www.kinopoisk.ru/film/819101/"
+        },
+        "446": {
+            "1": "Kingsman: Секретная служба",
+            "2": "Kingsman: The Secret Service",
+            "3": 2014,
+            "4": "7.707",
+            "5": "2 ч 9 мин",
+            "6": "http://hdrezka0ddqyq.org/films/action/7787-kingsman-sekretnaya-sluzhba-2014.html",
+            "7": "https://www.imdb.com/title/tt2802144/",
+            "8": "https://www.kinopoisk.ru/film/749540/"
+        },
+        "477": {
+            "1": "Конг: Остров черепа",
+            "2": "Kong: Skull Island",
+            "3": 2017,
+            "4": "6.648",
+            "5": "1 ч 58 мин",
+            "6": "http://hdrezka0ddqyq.org/films/fiction/17778-kong-ostrov-cherepa-2017.html",
+            "7": "https://www.imdb.com/title/tt3731562/",
+            "8": "https://www.kinopoisk.ru/film/843147/"
         },
         "61": {
             "1": "Первый мститель: Другая война",
@@ -1599,6 +1619,36 @@
             "6": "http://hdrezka0ddqyq.org/films/fiction/1603-pervyy-mstitel-drugaya-voyna-2014.html",
             "7": "https://www.imdb.com/title/tt1843866/",
             "8": "https://www.kinopoisk.ru/film/676266/"
+        },
+        "73": {
+            "1": "Капитан Марвел",
+            "2": "Captain Marvel",
+            "3": 2019,
+            "4": "6.619",
+            "5": "2 ч 3 мин",
+            "6": "http://hdrezka0ddqyq.org/films/fiction/30219-kapitan-marvel-2019.html",
+            "7": "https://www.imdb.com/title/tt4154664/",
+            "8": "https://www.kinopoisk.ru/film/843859/"
+        },
+        "75": {
+            "1": "Человек-паук: Вдали от дома",
+            "2": "Spider-Man: Far from Home",
+            "3": 2019,
+            "4": "7.421",
+            "5": "2 ч 9 мин",
+            "6": "http://hdrezka0ddqyq.org/films/action/31377-chelovek-pauk-vdali-ot-doma-2019.html",
+            "7": "https://www.imdb.com/title/tt6320628/",
+            "8": "https://www.kinopoisk.ru/film/1008445/"
+        },
+        "57": {
+            "1": "Первый мститель",
+            "2": "Captain America: The First Avenger",
+            "3": 2011,
+            "4": "6.909",
+            "5": "2 ч 4 мин",
+            "6": "http://hdrezka0ddqyq.org/films/fiction/530-pervyy-mstitel-2011.html",
+            "7": "https://www.imdb.com/title/tt0458339/",
+            "8": "https://www.kinopoisk.ru/film/160946/"
         },
         "110": {
             "1": "Достать ножи",
@@ -1700,46 +1750,6 @@
             "7": "https://www.imdb.com/title/tt1596363/",
             "8": "https://www.kinopoisk.ru/film/501333/"
         },
-        "446": {
-            "1": "Kingsman: Секретная служба",
-            "2": "Kingsman: The Secret Service",
-            "3": 2014,
-            "4": "7.707",
-            "5": "2 ч 9 мин",
-            "6": "http://hdrezka0ddqyq.org/films/action/7787-kingsman-sekretnaya-sluzhba-2014.html",
-            "7": "https://www.imdb.com/title/tt2802144/",
-            "8": "https://www.kinopoisk.ru/film/749540/"
-        },
-        "477": {
-            "1": "Конг: Остров черепа",
-            "2": "Kong: Skull Island",
-            "3": 2017,
-            "4": "6.648",
-            "5": "1 ч 58 мин",
-            "6": "http://hdrezka0ddqyq.org/films/fiction/17778-kong-ostrov-cherepa-2017.html",
-            "7": "https://www.imdb.com/title/tt3731562/",
-            "8": "https://www.kinopoisk.ru/film/843147/"
-        },
-        "73": {
-            "1": "Капитан Марвел",
-            "2": "Captain Marvel",
-            "3": 2019,
-            "4": "6.619",
-            "5": "2 ч 3 мин",
-            "6": "http://hdrezka0ddqyq.org/films/fiction/30219-kapitan-marvel-2019.html",
-            "7": "https://www.imdb.com/title/tt4154664/",
-            "8": "https://www.kinopoisk.ru/film/843859/"
-        },
-        "75": {
-            "1": "Человек-паук: Вдали от дома",
-            "2": "Spider-Man: Far from Home",
-            "3": 2019,
-            "4": "7.421",
-            "5": "2 ч 9 мин",
-            "6": "http://hdrezka0ddqyq.org/films/action/31377-chelovek-pauk-vdali-ot-doma-2019.html",
-            "7": "https://www.imdb.com/title/tt6320628/",
-            "8": "https://www.kinopoisk.ru/film/1008445/"
-        },
         "56": {
             "1": "Тор",
             "2": "Thor",
@@ -1756,7 +1766,7 @@
             "3": 2013,
             "4": "6.925",
             "5": "1 ч 52 мин",
-            "6": "http://hdrezka0ddqyq.org/films/fantasy/1036-tor-2-carstvo-tmy-2013.html",
+            "6": "http://hdrezka0ddqyq.org/films/fantasy/1036-tor-2-carstvo-tmy-2013-latest.html",
             "7": "https://www.imdb.com/title/tt1981115/",
             "8": "https://www.kinopoisk.ru/film/595938/"
         },
@@ -1776,9 +1786,59 @@
             "3": 2021,
             "4": "6.504",
             "5": "2 ч 14 мин",
-            "6": "http://hdrezka0ddqyq.org/films/action/39774-chernaya-vdova-2021.html",
+            "6": "http://hdrezka0ddqyq.org/films/action/39774-chernaya-vdova-2021-latest.html",
             "7": "https://www.imdb.com/title/tt3480822/",
             "8": "https://www.kinopoisk.ru/film/823956/"
+        },
+        "352": {
+            "1": "Тёмный рыцарь",
+            "2": "The Dark Knight",
+            "3": 2008,
+            "4": "8.874",
+            "5": "2 ч 32 мин",
+            "6": "http://hdrezka0ddqyq.org/films/action/703-temnyy-rycar-2008-latest.html",
+            "7": "https://www.imdb.com/title/tt0468569/",
+            "8": "https://www.kinopoisk.ru/film/111543/"
+        },
+        "351": {
+            "1": "Бэтмен: Начало",
+            "2": "Batman Begins",
+            "3": 2005,
+            "4": "8.152",
+            "5": "2 ч 20 мин",
+            "6": "http://hdrezka0ddqyq.org/films/action/695-betmen-nachalo-2005-latest.html",
+            "7": "https://www.imdb.com/title/tt0372784/",
+            "8": "https://www.kinopoisk.ru/film/47237/"
+        },
+        "201": {
+            "1": "Ford против Ferrari",
+            "2": "Ford v Ferrari",
+            "3": 2019,
+            "4": "8.196",
+            "5": "2 ч 32 мин",
+            "6": "http://hdrezka0ddqyq.org/films/drama/32558-ford-protiv-ferrari-2019.html",
+            "7": "https://www.imdb.com/title/tt1950186/",
+            "8": "https://www.kinopoisk.ru/film/835086/"
+        },
+        "591": {
+            "1": "Престиж",
+            "2": "The Prestige",
+            "3": 2006,
+            "4": "8.507",
+            "5": "2 ч 10 мин",
+            "6": "http://hdrezka0ddqyq.org/films/drama/795-prestizh-2006.html",
+            "7": "https://www.imdb.com/title/tt0482571/",
+            "8": "https://www.kinopoisk.ru/film/195334/"
+        },
+        "109": {
+            "1": "Американский психопат",
+            "2": "American Psycho",
+            "3": 2000,
+            "4": "7.522",
+            "5": "1 ч 42 мин",
+            "6": "http://hdrezka0ddqyq.org/films/thriller/3033-amerikanskiy-psihopat-2000.html",
+            "7": "https://www.imdb.com/title/tt0144084/",
+            "8": "https://www.kinopoisk.ru/film/588/"
         },
         "610": {
             "1": "Самый пьяный округ в мире",
@@ -1910,16 +1970,6 @@
             "7": "https://www.imdb.com/title/tt0075148/",
             "8": "https://www.kinopoisk.ru/film/6462/"
         },
-        "201": {
-            "1": "Ford против Ferrari",
-            "2": "Ford v Ferrari",
-            "3": 2019,
-            "4": "8.196",
-            "5": "2 ч 32 мин",
-            "6": "http://hdrezka0ddqyq.org/films/drama/32558-ford-protiv-ferrari-2019.html",
-            "7": "https://www.imdb.com/title/tt1950186/",
-            "8": "https://www.kinopoisk.ru/film/835086/"
-        },
         "66": {
             "1": "Доктор Стрэндж",
             "2": "Doctor Strange",
@@ -1949,16 +1999,6 @@
             "6": "http://hdrezka0ddqyq.org/films/fiction/41486-chelovek-pauk-net-puti-domoy-2021.html",
             "7": "https://www.imdb.com/title/tt10872600/",
             "8": "https://www.kinopoisk.ru/film/1309570/"
-        },
-        "109": {
-            "1": "Американский психопат",
-            "2": "American Psycho",
-            "3": 2000,
-            "4": "7.522",
-            "5": "1 ч 42 мин",
-            "6": "http://hdrezka0ddqyq.org/films/thriller/3033-amerikanskiy-psihopat-2000.html",
-            "7": "https://www.imdb.com/title/tt0144084/",
-            "8": "https://www.kinopoisk.ru/film/588/"
         },
         "124": {
             "1": "Джуманджи",
@@ -2040,16 +2080,6 @@
             "7": "https://www.imdb.com/title/tt1392214/",
             "8": "https://www.kinopoisk.ru/film/455194/"
         },
-        "591": {
-            "1": "Престиж",
-            "2": "The Prestige",
-            "3": 2006,
-            "4": "8.507",
-            "5": "2 ч 10 мин",
-            "6": "http://hdrezka0ddqyq.org/films/drama/795-prestizh-2006.html",
-            "7": "https://www.imdb.com/title/tt0482571/",
-            "8": "https://www.kinopoisk.ru/film/195334/"
-        },
         "52": {
             "1": "Логан",
             "2": "Logan",
@@ -2099,6 +2129,16 @@
             "6": "http://hdrezka0ddqyq.org/films/thriller/1109-zakonoposlushnyy-grazhdanin-2009.html",
             "7": "https://www.imdb.com/title/tt1197624/",
             "8": "https://www.kinopoisk.ru/film/406408/"
+        },
+        "429": {
+            "1": "Старикам тут не место",
+            "2": "No Country for Old Men",
+            "3": 2007,
+            "4": "8.057",
+            "5": "2 ч 2 мин",
+            "6": "http://hdrezka0ddqyq.org/films/thriller/3793-starikam-tut-ne-mesto-2007.html",
+            "7": "https://www.imdb.com/title/tt0477348/",
+            "8": "https://www.kinopoisk.ru/film/195434/"
         },
         "67": {
             "1": "Стражи Галактики. Часть 2",
@@ -2199,6 +2239,36 @@
             "6": "http://hdrezka0ddqyq.org/films/adventures/32499-dzhumandzhi-novyy-uroven-2019.html",
             "7": "https://www.imdb.com/title/tt7975244/",
             "8": "https://www.kinopoisk.ru/film/1112539/"
+        },
+        "1112": {
+            "1": "Дюна: Часть вторая",
+            "2": "Dune: Part Two",
+            "3": 2024,
+            "4": "8.427",
+            "5": "2 ч 46 мин",
+            "6": "http://hdrezka0ddqyq.org/films/fiction/57233-dyuna-chast-vtoraya-2024.html",
+            "7": "https://www.imdb.com/title/tt15239678/",
+            "8": "https://www.kinopoisk.ru/film/4540126/"
+        },
+        "8": {
+            "1": "Доктор Сон",
+            "2": "Doctor Sleep",
+            "3": 2019,
+            "4": "7.302",
+            "5": "2 ч 32 мин",
+            "6": "http://hdrezka0ddqyq.org/films/drama/32355-doktor-son-2019.html",
+            "7": "https://www.imdb.com/title/tt5606664/",
+            "8": "https://www.kinopoisk.ru/film/1048255/"
+        },
+        "1143": {
+            "1": "Меню",
+            "2": "The Menu",
+            "3": 2022,
+            "4": "7.078",
+            "5": "1 ч 47 мин",
+            "6": "http://hdrezka0ddqyq.org/films/thriller/52349-menyu-2022.html",
+            "7": "https://www.imdb.com/title/tt9764362/",
+            "8": "https://www.kinopoisk.ru/film/1257264/"
         },
         "790": {
             "1": "Город воров",
@@ -2310,6 +2380,36 @@
             "7": "https://www.imdb.com/title/tt6723592/",
             "8": "https://www.kinopoisk.ru/film/1236063/"
         },
+        "454": {
+            "1": "Исчезнувшая",
+            "2": "Gone Girl",
+            "3": 2014,
+            "4": "8.039",
+            "5": "2 ч 29 мин",
+            "6": "http://hdrezka0ddqyq.org/films/thriller/2270-ischeznuvshaya-2014.html",
+            "7": "https://www.imdb.com/title/tt2267998/",
+            "8": "https://www.kinopoisk.ru/film/692861/"
+        },
+        "1126": {
+            "1": "Грешники",
+            "2": "Sinners",
+            "3": 2025,
+            "4": "7.722",
+            "5": "2 ч 17 мин",
+            "6": "http://hdrezka0ddqyq.org/films/drama/76368-greshniki-2025-latest.html",
+            "7": "https://www.imdb.com/title/tt31193180/",
+            "8": "https://www.kinopoisk.ru/film/5499518/"
+        },
+        "70": {
+            "1": "Чёрная Пантера",
+            "2": "Black Panther",
+            "3": 2018,
+            "4": "7.106",
+            "5": "2 ч 14 мин",
+            "6": "http://hdrezka0ddqyq.org/films/fiction/26605-chernaya-pantera-2018.html",
+            "7": "https://www.imdb.com/title/tt1825683/",
+            "8": "https://www.kinopoisk.ru/film/623250/"
+        },
         "843": {
             "1": "Кровавый спорт",
             "2": "Bloodsport",
@@ -2400,16 +2500,6 @@
             "7": "https://www.imdb.com/title/tt1242432/",
             "8": "https://www.kinopoisk.ru/film/417892/"
         },
-        "70": {
-            "1": "Чёрная Пантера",
-            "2": "Black Panther",
-            "3": 2018,
-            "4": "7.106",
-            "5": "2 ч 14 мин",
-            "6": "http://hdrezka0ddqyq.org/films/fiction/26605-chernaya-pantera-2018.html",
-            "7": "https://www.imdb.com/title/tt1825683/",
-            "8": "https://www.kinopoisk.ru/film/623250/"
-        },
         "118": {
             "1": "Сияние",
             "2": "The Shining",
@@ -2419,16 +2509,6 @@
             "6": "http://hdrezka0ddqyq.org/films/thriller/2346-siyanie-1980.html",
             "7": "https://www.imdb.com/title/tt0081505/",
             "8": "https://www.kinopoisk.ru/film/409/"
-        },
-        "8": {
-            "1": "Доктор Сон",
-            "2": "Doctor Sleep",
-            "3": 2019,
-            "4": "7.302",
-            "5": "2 ч 32 мин",
-            "6": "http://hdrezka0ddqyq.org/films/drama/32355-doktor-son-2019.html",
-            "7": "https://www.imdb.com/title/tt5606664/",
-            "8": "https://www.kinopoisk.ru/film/1048255/"
         },
         "64": {
             "1": "Человек-муравей",
@@ -2456,7 +2536,7 @@
             "3": 2024,
             "4": "6.509",
             "5": "2 ч 21 мин",
-            "6": "http://hdrezka0ddqyq.org/films/drama/71217-substanciya-2024.html",
+            "6": "http://hdrezka0ddqyq.org/films/drama/71217-substanciya-2024-latest.html",
             "7": "https://www.imdb.com/title/tt17526714/",
             "8": "https://www.kinopoisk.ru/film/4860213/"
         },
@@ -2529,6 +2609,46 @@
             "6": "http://hdrezka0ddqyq.org/films/action/32496-miduey-2019.html",
             "7": "https://www.imdb.com/title/tt6924650/",
             "8": "https://www.kinopoisk.ru/film/1045457/"
+        },
+        "1037": {
+            "1": "Пипец 2",
+            "2": "Kick-Ass 2",
+            "3": 2013,
+            "4": "6.470",
+            "5": "1 ч 43 мин",
+            "6": "http://hdrezka0ddqyq.org/films/action/611-pipec-2-2013.html",
+            "7": "https://www.imdb.com/title/tt1650554/",
+            "8": "https://www.kinopoisk.ru/film/520648/"
+        },
+        "611": {
+            "1": "Пингвины мистера Поппера",
+            "2": "Mr. Popper's Penguins",
+            "3": 2011,
+            "4": "6.487",
+            "5": "1 ч 34 мин",
+            "6": "http://hdrezka0ddqyq.org/films/comedy/443-pingviny-mistera-poppera-2011.html",
+            "7": "https://www.imdb.com/title/tt1396218/",
+            "8": "https://www.kinopoisk.ru/film/463577/"
+        },
+        "612": {
+            "1": "Эйс Вентура: Розыск домашних животных",
+            "2": "Ace Ventura: Pet Detective",
+            "3": 1994,
+            "4": "7.283",
+            "5": "1 ч 26 мин",
+            "6": "http://hdrezka0ddqyq.org/films/comedy/7278-eys-ventura-rozysk-domashnih-zhivotnyh-1993.html",
+            "7": "https://www.imdb.com/title/tt0109040/",
+            "8": "https://www.kinopoisk.ru/film/2868/"
+        },
+        "517": {
+            "1": "Всегда говори «ДА»",
+            "2": "Yes Man",
+            "3": 2008,
+            "4": "7.325",
+            "5": "1 ч 44 мин",
+            "6": "http://hdrezka0ddqyq.org/films/comedy/1484-vsegda-govori-da-2008.html",
+            "7": "https://www.imdb.com/title/tt1068680/",
+            "8": "https://www.kinopoisk.ru/film/391772/"
         },
         "181": {
             "1": "Фанатик",
@@ -2670,35 +2790,15 @@
             "7": "https://www.imdb.com/title/tt0120915/",
             "8": "https://www.kinopoisk.ru/film/6695/"
         },
-        "611": {
-            "1": "Пингвины мистера Поппера",
-            "2": "Mr. Popper's Penguins",
-            "3": 2011,
-            "4": "6.487",
-            "5": "1 ч 34 мин",
-            "6": "http://hdrezka0ddqyq.org/films/comedy/443-pingviny-mistera-poppera-2011.html",
-            "7": "https://www.imdb.com/title/tt1396218/",
-            "8": "https://www.kinopoisk.ru/film/463577/"
-        },
-        "612": {
-            "1": "Эйс Вентура: Розыск домашних животных",
-            "2": "Ace Ventura: Pet Detective",
-            "3": 1994,
-            "4": "7.283",
-            "5": "1 ч 26 мин",
-            "6": "http://hdrezka0ddqyq.org/films/comedy/7278-eys-ventura-rozysk-domashnih-zhivotnyh-1993.html",
-            "7": "https://www.imdb.com/title/tt0109040/",
-            "8": "https://www.kinopoisk.ru/film/2868/"
-        },
-        "517": {
-            "1": "Всегда говори «ДА»",
-            "2": "Yes Man",
+        "1147": {
+            "1": "После прочтения сжечь",
+            "2": "Burn After Reading",
             "3": 2008,
-            "4": "7.325",
-            "5": "1 ч 44 мин",
-            "6": "http://hdrezka0ddqyq.org/films/comedy/1484-vsegda-govori-da-2008.html",
-            "7": "https://www.imdb.com/title/tt1068680/",
-            "8": "https://www.kinopoisk.ru/film/391772/"
+            "4": "6.974",
+            "5": "1 ч 36 мин",
+            "6": "http://hdrezka0ddqyq.org/films/drama/4702-posle-prochteniya-szhech-2008.html",
+            "7": "https://www.imdb.com/title/tt0887883/",
+            "8": "https://www.kinopoisk.ru/film/309423/"
         },
         "186": {
             "1": "Zомбилэнд: Контрольный Выстрел",
@@ -3170,6 +3270,26 @@
             "7": "https://www.imdb.com/title/tt0887912/",
             "8": "https://www.kinopoisk.ru/film/281040/"
         },
+        "1038": {
+            "1": "Пипец",
+            "2": "Kick-Ass",
+            "3": 2010,
+            "4": "7.377",
+            "5": "1 ч 57 мин",
+            "6": "http://hdrezka0ddqyq.org/films/action/614-pipec-2010.html",
+            "7": "https://www.imdb.com/title/tt1250777/",
+            "8": "https://www.kinopoisk.ru/film/419200/"
+        },
+        "225": {
+            "1": "1917",
+            "2": "1917",
+            "3": 2019,
+            "4": "8.156",
+            "5": "1 ч 59 мин",
+            "6": "http://hdrezka0ddqyq.org/films/drama/32828-1917-2019-latest.html",
+            "7": "https://www.imdb.com/title/tt8579674/",
+            "8": "https://www.kinopoisk.ru/film/1171976/"
+        },
         "803": {
             "1": "Чёрный Адам",
             "2": "Black Adam",
@@ -3340,6 +3460,16 @@
             "7": "https://www.imdb.com/title/tt1155076/",
             "8": "https://www.kinopoisk.ru/film/412162/"
         },
+        "288": {
+            "1": "Властелин колец: Братство кольца",
+            "2": "The Lord of the Rings: The Fellowship of the Ring",
+            "3": 2001,
+            "4": "8.756",
+            "5": "2 ч 58 мин",
+            "6": "http://hdrezka0ddqyq.org/films/action/968-vlastelin-kolec-bratstvo-kolca-2001-latest.html",
+            "7": "https://www.imdb.com/title/tt0120737/",
+            "8": "https://www.kinopoisk.ru/film/328/"
+        },
         "965": {
             "1": "После. Глава 3",
             "2": "After We Fell",
@@ -3476,7 +3606,7 @@
             "3": 2024,
             "4": "6.269",
             "5": "2 ч 5 мин",
-            "6": "http://hdrezka0ddqyq.org/films/horror/74102-uzhasayuschiy-3-2024.html",
+            "6": "http://hdrezka0ddqyq.org/films/horror/74102-uzhasayuschiy-3-2024-latest.html",
             "7": "https://www.imdb.com/title/tt27911000/",
             "8": "https://www.kinopoisk.ru/film/5411536/"
         },
@@ -3486,7 +3616,7 @@
             "3": 2022,
             "4": "6.190",
             "5": "2 ч 18 мин",
-            "6": "http://hdrezka0ddqyq.org/films/horror/51189-uzhasayuschiy-2-2022.html",
+            "6": "http://hdrezka0ddqyq.org/films/horror/51189-uzhasayuschiy-2-2022-latest.html",
             "7": "https://www.imdb.com/title/tt10403420/",
             "8": "https://www.kinopoisk.ru/film/1273140/"
         },
@@ -3496,7 +3626,7 @@
             "3": 2016,
             "4": "5.717",
             "5": "1 ч 25 мин",
-            "6": "http://hdrezka0ddqyq.org/films/thriller/28928-uzhasayuschiy-2016.html",
+            "6": "http://hdrezka0ddqyq.org/films/thriller/28928-uzhasayuschiy-2016-latest.html",
             "7": "https://www.imdb.com/title/tt4281724/",
             "8": "https://www.kinopoisk.ru/film/860537/"
         },
@@ -3690,6 +3820,16 @@
             "7": "https://www.imdb.com/title/tt2752772/",
             "8": "https://www.kinopoisk.ru/film/744668/"
         },
+        "636": {
+            "1": "До встречи с тобой",
+            "2": "Me Before You",
+            "3": 2016,
+            "4": "7.395",
+            "5": "1 ч 50 мин",
+            "6": "http://hdrezka0ddqyq.org/films/drama/11697-do-vstrechi-s-toboy-2016.html",
+            "7": "https://www.imdb.com/title/tt2674426/",
+            "8": "https://www.kinopoisk.ru/film/807318/"
+        },
         "607": {
             "1": "Пацанская история",
             "2": "A Guys' Story",
@@ -3739,16 +3879,6 @@
             "7": "https://www.imdb.com/title/tt1666185/",
             "8": "https://www.kinopoisk.ru/film/586239/"
         },
-        "225": {
-            "1": "1917",
-            "2": "1917",
-            "3": 2019,
-            "4": "8.156",
-            "5": "1 ч 59 мин",
-            "6": "http://hdrezka0ddqyq.org/films/drama/32828-1917-2019-latest.html",
-            "7": "https://www.imdb.com/title/tt8579674/",
-            "8": "https://www.kinopoisk.ru/film/1171976/"
-        },
         "657": {
             "1": "Вышка",
             "2": "Fall",
@@ -3778,6 +3908,26 @@
             "6": "http://hdrezka0ddqyq.org/films/adventures/1432-noch-v-muzee-2006.html",
             "7": "https://www.imdb.com/title/tt0477347/",
             "8": "https://www.kinopoisk.ru/film/178580/"
+        },
+        "1149": {
+            "1": "Кровавый урожай",
+            "2": "Clown in a Cornfield",
+            "3": 2025,
+            "4": "5.669",
+            "5": "1 ч 36 мин",
+            "6": "http://hdrezka0ddqyq.org/films/horror/80022-krovavyy-urozhay-2025-latest.html",
+            "7": "https://www.imdb.com/title/tt23060698/",
+            "8": "https://www.kinopoisk.ru/film/6216872/"
+        },
+        "260": {
+            "1": "Хулиганы",
+            "2": "Green Street",
+            "3": 2005,
+            "4": "7.779",
+            "5": "1 ч 49 мин",
+            "6": "http://hdrezka0ddqyq.org/films/crime/1006-huligany-2004.html",
+            "7": "https://www.imdb.com/title/tt0385002/",
+            "8": "https://www.kinopoisk.ru/film/77444/"
         },
         "1": {
             "1": "Постучись в мою Тверь",
@@ -3844,7 +3994,7 @@
             "3": 2009,
             "4": "5.393",
             "5": "1 ч 22 мин",
-            "6": "http://hdrezka0ddqyq.org/films/thriller/674-punkt-naznacheniya-4-2009.html",
+            "6": "http://hdrezka0ddqyq.org/films/thriller/674-punkt-naznacheniya-4-2009-latest.html",
             "7": "https://www.imdb.com/title/tt1144884/",
             "8": "https://www.kinopoisk.ru/film/405753/"
         },
@@ -3854,7 +4004,7 @@
             "3": 2003,
             "4": "6.581",
             "5": "1 ч 30 мин",
-            "6": "http://hdrezka0ddqyq.org/films/thriller/668-punkt-naznacheniya-2-2002.html",
+            "6": "http://hdrezka0ddqyq.org/films/thriller/668-punkt-naznacheniya-2-2002-latest.html",
             "7": "https://www.imdb.com/title/tt0309593/",
             "8": "https://www.kinopoisk.ru/film/669/"
         },
@@ -3864,7 +4014,7 @@
             "3": 2000,
             "4": "7.024",
             "5": "1 ч 38 мин",
-            "6": "http://hdrezka0ddqyq.org/films/thriller/669-punkt-naznacheniya-2000.html",
+            "6": "http://hdrezka0ddqyq.org/films/thriller/669-punkt-naznacheniya-2000-latest.html",
             "7": "https://www.imdb.com/title/tt0195714/",
             "8": "https://www.kinopoisk.ru/film/668/"
         },
@@ -3907,16 +4057,6 @@
             "6": "http://hdrezka0ddqyq.org/films/horror/7531-povorot-ne-tuda-2003.html",
             "7": "https://www.imdb.com/title/tt0295700/",
             "8": "https://www.kinopoisk.ru/film/4901/"
-        },
-        "260": {
-            "1": "Хулиганы",
-            "2": "Green Street",
-            "3": 2005,
-            "4": "7.779",
-            "5": "1 ч 49 мин",
-            "6": "http://hdrezka0ddqyq.org/films/crime/1006-huligany-2004.html",
-            "7": "https://www.imdb.com/title/tt0385002/",
-            "8": "https://www.kinopoisk.ru/film/77444/"
         },
         "700": {
             "1": "Иван Васильевич меняет профессию",
@@ -3974,7 +4114,7 @@
             "3": 2023,
             "4": "7.634",
             "5": "2 ч 49 мин",
-            "6": "http://hdrezka0ddqyq.org/films/action/53627-dzhon-uik-4-2023.html",
+            "6": "http://hdrezka0ddqyq.org/films/action/53627-dzhon-uik-4-2023-latest.html",
             "7": "https://www.imdb.com/title/tt10366206/",
             "8": "https://www.kinopoisk.ru/film/1267348/"
         },
@@ -4568,16 +4708,6 @@
             "7": "https://www.imdb.com/title/tt0918940/",
             "8": "https://www.kinopoisk.ru/film/462491/"
         },
-        "261": {
-            "1": "Омерзительная восьмерка",
-            "2": "The Hateful Eight",
-            "3": 2015,
-            "4": "7.900",
-            "5": "2 ч 48 мин",
-            "6": "http://hdrezka0ddqyq.org/films/thriller/11352-omerzitelnaya-vosmerka-2015-latest.html",
-            "7": "https://www.imdb.com/title/tt3460252/",
-            "8": "https://www.kinopoisk.ru/film/819101/"
-        },
         "973": {
             "1": "Меч дракона",
             "2": "Tian jiang xiong shi",
@@ -4788,16 +4918,6 @@
             "7": "https://www.imdb.com/title/tt3778644/",
             "8": "https://www.kinopoisk.ru/film/841277/"
         },
-        "1038": {
-            "1": "Пипец",
-            "2": "Kick-Ass",
-            "3": 2010,
-            "4": "7.377",
-            "5": "1 ч 57 мин",
-            "6": "http://hdrezka0ddqyq.org/films/action/614-pipec-2010.html",
-            "7": "https://www.imdb.com/title/tt1250777/",
-            "8": "https://www.kinopoisk.ru/film/419200/"
-        },
         "1039": {
             "1": "Пророк",
             "2": "Next",
@@ -4868,6 +4988,76 @@
             "7": "https://www.imdb.com/title/tt1034389/",
             "8": "https://www.kinopoisk.ru/film/455353/"
         },
+        "1141": {
+            "1": "Молчание",
+            "2": "Silence",
+            "3": 2016,
+            "4": "7.178",
+            "5": "2 ч 41 мин",
+            "6": "http://hdrezka0ddqyq.org/films/drama/23318-molchanie-2016.html",
+            "7": "https://www.imdb.com/title/tt0490215/",
+            "8": "https://www.kinopoisk.ru/film/260898/"
+        },
+        "1135": {
+            "1": "Честный вор",
+            "2": "Honest Thief",
+            "3": 2020,
+            "4": "6.337",
+            "5": "1 ч 39 мин",
+            "6": "http://hdrezka0ddqyq.org/films/action/35260-chestnyy-vor-2020.html",
+            "7": "https://www.imdb.com/title/tt1838556/",
+            "8": "https://www.kinopoisk.ru/film/609931/"
+        },
+        "929": {
+            "1": "Пассажир",
+            "2": "The Commuter",
+            "3": 2018,
+            "4": "6.636",
+            "5": "1 ч 44 мин",
+            "6": "http://hdrezka0ddqyq.org/films/thriller/27308-passazhir-2018.html",
+            "7": "https://www.imdb.com/title/tt1590193/",
+            "8": "https://www.kinopoisk.ru/film/497011/"
+        },
+        "930": {
+            "1": "Заступник",
+            "2": "The Marksman",
+            "3": 2021,
+            "4": "6.221",
+            "5": "1 ч 48 мин",
+            "6": "http://hdrezka0ddqyq.org/films/action/37011-zastupnik-2021.html",
+            "7": "https://www.imdb.com/title/tt6902332/",
+            "8": "https://www.kinopoisk.ru/film/1152767/"
+        },
+        "931": {
+            "1": "Гнев Титанов",
+            "2": "Wrath of the Titans",
+            "3": 2012,
+            "4": "5.860",
+            "5": "1 ч 39 мин",
+            "6": "http://hdrezka0ddqyq.org/films/fantasy/702-gnev-titanov-2012.html",
+            "7": "https://www.imdb.com/title/tt1646987/",
+            "8": "https://www.kinopoisk.ru/film/518128/"
+        },
+        "932": {
+            "1": "Воздушный маршал",
+            "2": "Non-Stop",
+            "3": 2014,
+            "4": "7.082",
+            "5": "1 ч 46 мин",
+            "6": "http://hdrezka0ddqyq.org/films/action/1638-vozdushnyy-marshal-2014.html",
+            "7": "https://www.imdb.com/title/tt2024469/",
+            "8": "https://www.kinopoisk.ru/film/606826/"
+        },
+        "937": {
+            "1": "Ледяной драйв",
+            "2": "The Ice Road",
+            "3": 2021,
+            "4": "6.645",
+            "5": "1 ч 49 мин",
+            "6": "http://hdrezka0ddqyq.org/films/thriller/39781-ledyanoy-drayv-2021-latest.html",
+            "7": "https://www.imdb.com/title/tt3758814/",
+            "8": "https://www.kinopoisk.ru/film/968501/"
+        },
         "1099": {
             "1": "Репродукция",
             "2": "Replicas",
@@ -4894,7 +5084,7 @@
             "3": 2019,
             "4": "7.246",
             "5": "2 ч 10 мин",
-            "6": "http://hdrezka0ddqyq.org/films/action/30862-dzhon-uik-3-2019.html",
+            "6": "http://hdrezka0ddqyq.org/films/action/30862-dzhon-uik-3-2019-latest.html",
             "7": "https://www.imdb.com/title/tt6146586/",
             "8": "https://www.kinopoisk.ru/film/1009536/"
         },
@@ -4904,7 +5094,7 @@
             "3": 2017,
             "4": "7.363",
             "5": "2 ч 2 мин",
-            "6": "http://hdrezka0ddqyq.org/films/action/23576-dzhon-uik-2-2017.html",
+            "6": "http://hdrezka0ddqyq.org/films/action/23576-dzhon-uik-2-2017-latest.html",
             "7": "https://www.imdb.com/title/tt4425200/",
             "8": "https://www.kinopoisk.ru/film/885658/"
         },
@@ -4914,7 +5104,7 @@
             "3": 2014,
             "4": "7.349",
             "5": "1 ч 41 мин",
-            "6": "http://hdrezka0ddqyq.org/films/action/8174-dzhon-uik-2014.html",
+            "6": "http://hdrezka0ddqyq.org/films/action/8174-dzhon-uik-2014-latest.html",
             "7": "https://www.imdb.com/title/tt2911666/",
             "8": "https://www.kinopoisk.ru/film/762738/"
         },
@@ -5188,66 +5378,6 @@
             "7": "https://www.imdb.com/title/tt1220719/",
             "8": "https://www.kinopoisk.ru/film/409507/"
         },
-        "1135": {
-            "1": "Честный вор",
-            "2": "Honest Thief",
-            "3": 2020,
-            "4": "6.337",
-            "5": "1 ч 39 мин",
-            "6": "http://hdrezka0ddqyq.org/films/action/35260-chestnyy-vor-2020.html",
-            "7": "https://www.imdb.com/title/tt1838556/",
-            "8": "https://www.kinopoisk.ru/film/609931/"
-        },
-        "929": {
-            "1": "Пассажир",
-            "2": "The Commuter",
-            "3": 2018,
-            "4": "6.636",
-            "5": "1 ч 44 мин",
-            "6": "http://hdrezka0ddqyq.org/films/thriller/27308-passazhir-2018.html",
-            "7": "https://www.imdb.com/title/tt1590193/",
-            "8": "https://www.kinopoisk.ru/film/497011/"
-        },
-        "930": {
-            "1": "Заступник",
-            "2": "The Marksman",
-            "3": 2021,
-            "4": "6.221",
-            "5": "1 ч 48 мин",
-            "6": "http://hdrezka0ddqyq.org/films/action/37011-zastupnik-2021.html",
-            "7": "https://www.imdb.com/title/tt6902332/",
-            "8": "https://www.kinopoisk.ru/film/1152767/"
-        },
-        "931": {
-            "1": "Гнев Титанов",
-            "2": "Wrath of the Titans",
-            "3": 2012,
-            "4": "5.860",
-            "5": "1 ч 39 мин",
-            "6": "http://hdrezka0ddqyq.org/films/fantasy/702-gnev-titanov-2012.html",
-            "7": "https://www.imdb.com/title/tt1646987/",
-            "8": "https://www.kinopoisk.ru/film/518128/"
-        },
-        "932": {
-            "1": "Воздушный маршал",
-            "2": "Non-Stop",
-            "3": 2014,
-            "4": "7.082",
-            "5": "1 ч 46 мин",
-            "6": "http://hdrezka0ddqyq.org/films/action/1638-vozdushnyy-marshal-2014.html",
-            "7": "https://www.imdb.com/title/tt2024469/",
-            "8": "https://www.kinopoisk.ru/film/606826/"
-        },
-        "937": {
-            "1": "Ледяной драйв",
-            "2": "The Ice Road",
-            "3": 2021,
-            "4": "6.645",
-            "5": "1 ч 49 мин",
-            "6": "http://hdrezka0ddqyq.org/films/thriller/39781-ledyanoy-drayv-2021.html",
-            "7": "https://www.imdb.com/title/tt3758814/",
-            "8": "https://www.kinopoisk.ru/film/968501/"
-        },
         "1132": {
             "1": "Тюряга",
             "2": "Lock Up",
@@ -5297,16 +5427,6 @@
             "6": "http://hdrezka0ddqyq.org/films/action/6756-rembo-pervaya-krov-1982.html",
             "7": "https://www.imdb.com/title/tt0083944/",
             "8": "https://www.kinopoisk.ru/film/4087/"
-        },
-        "1037": {
-            "1": "Пипец 2",
-            "2": "Kick-Ass 2",
-            "3": 2013,
-            "4": "6.470",
-            "5": "1 ч 43 мин",
-            "6": "http://hdrezka0ddqyq.org/films/action/611-pipec-2-2013.html",
-            "7": "https://www.imdb.com/title/tt1650554/",
-            "8": "https://www.kinopoisk.ru/film/520648/"
         },
         "972": {
             "1": "Эйс Вентура 2: Когда зовёт природа",
@@ -5367,6 +5487,46 @@
             "6": "http://hdrezka0ddqyq.org/films/action/745-machete-ubivaet-2013.html",
             "7": "https://www.imdb.com/title/tt2002718/",
             "8": "https://www.kinopoisk.ru/film/601022/"
+        },
+        "1104": {
+            "1": "Крушение",
+            "2": "Plane",
+            "3": 2023,
+            "4": "7.040",
+            "5": "1 ч 47 мин",
+            "6": "http://hdrezka0ddqyq.org/films/action/52587-krushenie-2023.html",
+            "7": "https://www.imdb.com/title/tt5884796/",
+            "8": "https://www.kinopoisk.ru/film/1338502/"
+        },
+        "919": {
+            "1": "Беовульф и Грендель",
+            "2": "Beowulf & Grendel",
+            "3": 2005,
+            "4": "5.916",
+            "5": "1 ч 44 мин",
+            "6": "http://hdrezka0ddqyq.org/films/action/9533-beovulf-i-grendel-2005.html",
+            "7": "https://www.imdb.com/title/tt0402057/",
+            "8": "https://www.kinopoisk.ru/film/77567/"
+        },
+        "679": {
+            "1": "Аттила-завоеватель",
+            "2": "Attila",
+            "3": 2001,
+            "4": "6.875",
+            "5": "1 ч 29 мин",
+            "6": "http://hdrezka0ddqyq.org/films/adventures/6364-attila-zavoevatel-2001.html",
+            "7": "https://www.imdb.com/title/tt0259127/",
+            "8": "https://www.kinopoisk.ru/film/89589/"
+        },
+        "703": {
+            "1": "Боги Египта",
+            "2": "Gods of Egypt",
+            "3": 2016,
+            "4": "5.992",
+            "5": "2 ч 7 мин",
+            "6": "http://hdrezka0ddqyq.org/films/fantasy/10814-bogi-egipta-2016.html",
+            "7": "https://www.imdb.com/title/tt2404233/",
+            "8": "https://www.kinopoisk.ru/film/682886/"
         },
         "1113": {
             "1": "Александр",
@@ -5668,6 +5828,26 @@
             "7": "https://www.imdb.com/title/tt9198364/",
             "8": "https://www.kinopoisk.ru/film/1209527/"
         },
+        "1071": {
+            "1": "Дело храбрых",
+            "2": "Only the Brave",
+            "3": 2017,
+            "4": "8.175",
+            "5": "2 ч 14 мин",
+            "6": "http://hdrezka0ddqyq.org/films/drama/26110-delo-hrabryh-2017.html",
+            "7": "https://www.imdb.com/title/tt3829920/",
+            "8": "https://www.kinopoisk.ru/film/965754/"
+        },
+        "806": {
+            "1": "Убийца 2. Против всех",
+            "2": "Sicario: Day of the Soldado",
+            "3": 2018,
+            "4": "7.161",
+            "5": "2 ч 2 мин",
+            "6": "http://hdrezka0ddqyq.org/films/action/27970-ubiyca-2-protiv-vseh-2018.html",
+            "7": "https://www.imdb.com/title/tt5052474/",
+            "8": "https://www.kinopoisk.ru/film/938461/"
+        },
         "762": {
             "1": "Великая стена",
             "2": "The Great Wall",
@@ -5688,36 +5868,6 @@
             "7": "https://www.imdb.com/title/tt2278388/",
             "8": "https://www.kinopoisk.ru/film/683999/"
         },
-        "919": {
-            "1": "Беовульф и Грендель",
-            "2": "Beowulf & Grendel",
-            "3": 2005,
-            "4": "5.916",
-            "5": "1 ч 44 мин",
-            "6": "http://hdrezka0ddqyq.org/films/action/9533-beovulf-i-grendel-2005.html",
-            "7": "https://www.imdb.com/title/tt0402057/",
-            "8": "https://www.kinopoisk.ru/film/77567/"
-        },
-        "679": {
-            "1": "Аттила-завоеватель",
-            "2": "Attila",
-            "3": 2001,
-            "4": "6.875",
-            "5": "1 ч 29 мин",
-            "6": "http://hdrezka0ddqyq.org/films/adventures/6364-attila-zavoevatel-2001.html",
-            "7": "https://www.imdb.com/title/tt0259127/",
-            "8": "https://www.kinopoisk.ru/film/89589/"
-        },
-        "703": {
-            "1": "Боги Египта",
-            "2": "Gods of Egypt",
-            "3": 2016,
-            "4": "5.992",
-            "5": "2 ч 7 мин",
-            "6": "http://hdrezka0ddqyq.org/films/fantasy/10814-bogi-egipta-2016.html",
-            "7": "https://www.imdb.com/title/tt2404233/",
-            "8": "https://www.kinopoisk.ru/film/682886/"
-        },
         "749": {
             "1": "Гений",
             "2": "Genius",
@@ -5734,7 +5884,7 @@
             "3": 2013,
             "4": "7.917",
             "5": "2 ч 41 мин",
-            "6": "http://hdrezka0ddqyq.org/films/fantasy/1175-hobbit-pustosh-smauga-2013.html",
+            "6": "http://hdrezka0ddqyq.org/films/fantasy/1175-hobbit-pustosh-smauga-2013-latest.html",
             "7": "https://www.imdb.com/title/tt1170358/",
             "8": "https://www.kinopoisk.ru/film/408876/"
         },
@@ -6078,26 +6228,6 @@
             "7": "https://www.imdb.com/title/tt0165832/",
             "8": "https://www.kinopoisk.ru/film/3563/"
         },
-        "1071": {
-            "1": "Дело храбрых",
-            "2": "Only the Brave",
-            "3": 2017,
-            "4": "8.175",
-            "5": "2 ч 14 мин",
-            "6": "http://hdrezka0ddqyq.org/films/drama/26110-delo-hrabryh-2017.html",
-            "7": "https://www.imdb.com/title/tt3829920/",
-            "8": "https://www.kinopoisk.ru/film/965754/"
-        },
-        "806": {
-            "1": "Убийца 2. Против всех",
-            "2": "Sicario: Day of the Soldado",
-            "3": 2018,
-            "4": "7.161",
-            "5": "2 ч 2 мин",
-            "6": "http://hdrezka0ddqyq.org/films/action/27970-ubiyca-2-protiv-vseh-2018.html",
-            "7": "https://www.imdb.com/title/tt5052474/",
-            "8": "https://www.kinopoisk.ru/film/938461/"
-        },
         "755": {
             "1": "Мой парень - киллер",
             "2": "Mr. Right",
@@ -6264,7 +6394,7 @@
             "3": 2014,
             "4": "7.643",
             "5": "2 ч 24 мин",
-            "6": "http://hdrezka0ddqyq.org/films/fantasy/2525-hobbit-bitva-pyati-voinstv-2014.html",
+            "6": "http://hdrezka0ddqyq.org/films/fantasy/2525-hobbit-bitva-pyati-voinstv-2014-latest.html",
             "7": "https://www.imdb.com/title/tt2310332/",
             "8": "https://www.kinopoisk.ru/film/694633/"
         },
@@ -6304,7 +6434,7 @@
             "3": 2012,
             "4": "7.965",
             "5": "2 ч 49 мин",
-            "6": "http://hdrezka0ddqyq.org/films/fantasy/107-hobbit-nezhdannoe-puteshestvie-2012.html",
+            "6": "http://hdrezka0ddqyq.org/films/fantasy/107-hobbit-nezhdannoe-puteshestvie-2012-latest.html",
             "7": "https://www.imdb.com/title/tt0903624/",
             "8": "https://www.kinopoisk.ru/film/278522/"
         },
@@ -6687,16 +6817,6 @@
             "6": "http://hdrezka0ddqyq.org/films/adventures/16-asteriks-i-obeliks-v-britanii-2012.html",
             "7": "https://www.imdb.com/title/tt1597522/",
             "8": "https://www.kinopoisk.ru/film/501172/"
-        },
-        "288": {
-            "1": "Властелин колец: Братство кольца",
-            "2": "The Lord of the Rings: The Fellowship of the Ring",
-            "3": 2001,
-            "4": "8.756",
-            "5": "2 ч 58 мин",
-            "6": "http://hdrezka0ddqyq.org/films/action/968-vlastelin-kolec-bratstvo-kolca-2001.html",
-            "7": "https://www.imdb.com/title/tt0120737/",
-            "8": "https://www.kinopoisk.ru/film/328/"
         },
         "866": {
             "1": "Анора",
@@ -7298,6 +7418,26 @@
             "7": "https://www.imdb.com/title/tt3416742/",
             "8": "https://www.kinopoisk.ru/film/818981/"
         },
+        "449": {
+            "1": "Паразиты",
+            "2": "Gisaengchung",
+            "3": 2019,
+            "4": "8.292",
+            "5": "2 ч 12 мин",
+            "6": "http://hdrezka0ddqyq.org/films/drama/31349-parazity-2019.html",
+            "7": "https://www.imdb.com/title/tt6751668/",
+            "8": "https://www.kinopoisk.ru/film/1043758/"
+        },
+        "720": {
+            "1": "Воспоминания об убийстве",
+            "2": "Salinui chueok",
+            "3": 2003,
+            "4": "7.917",
+            "5": "2 ч 11 мин",
+            "6": "http://hdrezka0ddqyq.org/films/detective/4853-vospominaniya-ob-ubiystve-2003.html",
+            "7": "https://www.imdb.com/title/tt0353969/",
+            "8": "https://www.kinopoisk.ru/film/65770/"
+        },
         "1034": {
             "1": "Столетний старик, который вылез в окно и исчез",
             "2": "Hundraåringen som klev ut genom fönstret och försvann",
@@ -7394,7 +7534,7 @@
             "3": 2022,
             "4": "7.134",
             "5": "1 ч 49 мин",
-            "6": "http://hdrezka0ddqyq.org/films/action/53897-mazhor-v-sochi-2022.html",
+            "6": "http://hdrezka0ddqyq.org/films/action/53897-mazhor-v-sochi-2022-latest.html",
             "7": "https://www.imdb.com/title/tt22530468/",
             "8": "https://www.kinopoisk.ru/film/5078983/"
         },
@@ -7417,26 +7557,6 @@
             "6": "http://hdrezka0ddqyq.org/films/drama/16852-dvadcat-vosem-panfilovcev-2016.html",
             "7": "https://www.imdb.com/title/tt5207204/",
             "8": "https://www.kinopoisk.ru/film/764465/"
-        },
-        "449": {
-            "1": "Паразиты",
-            "2": "Gisaengchung",
-            "3": 2019,
-            "4": "8.292",
-            "5": "2 ч 12 мин",
-            "6": "http://hdrezka0ddqyq.org/films/drama/31349-parazity-2019.html",
-            "7": "https://www.imdb.com/title/tt6751668/",
-            "8": "https://www.kinopoisk.ru/film/1043758/"
-        },
-        "720": {
-            "1": "Воспоминания об убийстве",
-            "2": "Salinui chueok",
-            "3": 2003,
-            "4": "7.917",
-            "5": "2 ч 11 мин",
-            "6": "http://hdrezka0ddqyq.org/films/detective/4853-vospominaniya-ob-ubiystve-2003.html",
-            "7": "https://www.imdb.com/title/tt0353969/",
-            "8": "https://www.kinopoisk.ru/film/65770/"
         },
         "1107": {
             "1": "22 Минуты",
@@ -7868,6 +7988,16 @@
             "7": "https://www.imdb.com/title/tt6565702/",
             "8": "https://www.kinopoisk.ru/film/1012431/"
         },
+        "1144": {
+            "1": "Телепорт",
+            "2": "Jumper",
+            "3": 2008,
+            "4": "6.501",
+            "5": "1 ч 28 мин",
+            "6": "http://hdrezka0ddqyq.org/films/action/1556-teleport-2008.html",
+            "7": "https://www.imdb.com/title/tt0489099/",
+            "8": "https://www.kinopoisk.ru/film/220589/"
+        },
         "645": {
             "1": "Знакомьтесь: Дэйв",
             "2": "Meet Dave",
@@ -7894,19 +8024,9 @@
             "3": 1988,
             "4": "7.334",
             "5": "1 ч 57 мин",
-            "6": "http://hdrezka0ddqyq.org/films/drama/6633-poezdka-v-ameriku-1988.html",
+            "6": "http://hdrezka0ddqyq.org/films/drama/6633-poezdka-v-ameriku-1988-latest.html",
             "7": "https://www.imdb.com/title/tt0094898/",
             "8": "https://www.kinopoisk.ru/film/5281/"
-        },
-        "352": {
-            "1": "Тёмный рыцарь",
-            "2": "The Dark Knight",
-            "3": 2008,
-            "4": "8.874",
-            "5": "2 ч 32 мин",
-            "6": "http://hdrezka0ddqyq.org/films/action/703-temnyy-rycar-2008-latest.html",
-            "7": "https://www.imdb.com/title/tt0468569/",
-            "8": "https://www.kinopoisk.ru/film/111543/"
         },
         "192": {
             "1": "Пиксели",
@@ -8057,16 +8177,6 @@
             "6": "http://hdrezka0ddqyq.org/films/adventures/1478-poslezavtra-2004.html",
             "7": "https://www.imdb.com/title/tt0319262/",
             "8": "https://www.kinopoisk.ru/film/2053/"
-        },
-        "351": {
-            "1": "Бэтмен: Начало",
-            "2": "Batman Begins",
-            "3": 2005,
-            "4": "8.152",
-            "5": "2 ч 20 мин",
-            "6": "http://hdrezka0ddqyq.org/films/action/695-betmen-nachalo-2005-latest.html",
-            "7": "https://www.imdb.com/title/tt0372784/",
-            "8": "https://www.kinopoisk.ru/film/47237/"
         },
         "360": {
             "1": "Фантастические твари и где они обитают",
@@ -8228,6 +8338,16 @@
             "7": "https://www.imdb.com/title/tt1569465/",
             "8": "https://www.kinopoisk.ru/film/416090/"
         },
+        "571": {
+            "1": "Человек из стали",
+            "2": "Man of Steel",
+            "3": 2013,
+            "4": "7.126",
+            "5": "2 ч 23 мин",
+            "6": "http://hdrezka0ddqyq.org/films/fiction/612-chelovek-iz-stali-2013.html",
+            "7": "https://www.imdb.com/title/tt0770828/",
+            "8": "https://www.kinopoisk.ru/film/252667/"
+        },
         "1048": {
             "1": "Чёрная Молния",
             "2": "Chyornaya Molniya",
@@ -8318,6 +8438,16 @@
             "7": "https://www.imdb.com/title/tt0119643/",
             "8": "https://www.kinopoisk.ru/film/5059/"
         },
+        "1161": {
+            "1": "Особое мнение",
+            "2": "Minority Report",
+            "3": 2002,
+            "4": "7.655",
+            "5": "2 ч 25 мин",
+            "6": "http://hdrezka0ddqyq.org/films/action/7102-osoboe-mnenie-2002.html",
+            "7": "https://www.imdb.com/title/tt0181689/",
+            "8": "https://www.kinopoisk.ru/film/496/"
+        },
         "391": {
             "1": "Обливион",
             "2": "Oblivion",
@@ -8344,7 +8474,7 @@
             "3": 1986,
             "4": "7.038",
             "5": "1 ч 49 мин",
-            "6": "http://hdrezka0ddqyq.org/films/action/6246-luchshiy-strelok-1986.html",
+            "6": "http://hdrezka0ddqyq.org/films/action/6246-luchshiy-strelok-1986-latest.html",
             "7": "https://www.imdb.com/title/tt0092099/",
             "8": "https://www.kinopoisk.ru/film/7360/"
         },
@@ -8354,7 +8484,7 @@
             "3": 2022,
             "4": "8.193",
             "5": "2 ч 10 мин",
-            "6": "http://hdrezka0ddqyq.org/films/action/47946-top-gan-meverik-2022.html",
+            "6": "http://hdrezka0ddqyq.org/films/action/47946-top-gan-meverik-2022-latest.html",
             "7": "https://www.imdb.com/title/tt1745960/",
             "8": "https://www.kinopoisk.ru/film/572032/"
         },
@@ -8437,6 +8567,56 @@
             "6": "http://hdrezka0ddqyq.org/films/action/308-missiya-nevypolnima-1996.html",
             "7": "https://www.imdb.com/title/tt0117060/",
             "8": "https://www.kinopoisk.ru/film/3961/"
+        },
+        "1097": {
+            "1": "Между нами музыка",
+            "2": "Song to Song",
+            "3": 2017,
+            "4": "5.888",
+            "5": "2 ч 9 мин",
+            "6": "http://hdrezka0ddqyq.org/films/drama/24211-mezhdu-nami-muzyka-2017.html",
+            "7": "https://www.imdb.com/title/tt2062700/",
+            "8": "https://www.kinopoisk.ru/film/627255/"
+        },
+        "389": {
+            "1": "Перелом",
+            "2": "Fracture",
+            "3": 2007,
+            "4": "7.435",
+            "5": "1 ч 53 мин",
+            "6": "http://hdrezka0ddqyq.org/films/thriller/5468-perelom-2007.html",
+            "7": "https://www.imdb.com/title/tt0488120/",
+            "8": "https://www.kinopoisk.ru/film/220617/"
+        },
+        "400": {
+            "1": "Охотники на гангстеров",
+            "2": "Gangster Squad",
+            "3": 2013,
+            "4": "6.835",
+            "5": "1 ч 53 мин",
+            "6": "http://hdrezka0ddqyq.org/films/action/52-ohotniki-na-gangsterov-2013.html",
+            "7": "https://www.imdb.com/title/tt1321870/",
+            "8": "https://www.kinopoisk.ru/film/468564/"
+        },
+        "584": {
+            "1": "Серый человек",
+            "2": "The Gray Man",
+            "3": 2022,
+            "4": "6.599",
+            "5": "2 ч 2 мин",
+            "6": "http://hdrezka0ddqyq.org/films/action/49053-seryy-chelovek-2022.html",
+            "7": "https://www.imdb.com/title/tt1649418/",
+            "8": "https://www.kinopoisk.ru/film/558393/"
+        },
+        "588": {
+            "1": "Человек на Луне",
+            "2": "First Man",
+            "3": 2018,
+            "4": "7.222",
+            "5": "2 ч 21 мин",
+            "6": "http://hdrezka0ddqyq.org/films/drama/28707-chelovek-na-lune-2018.html",
+            "7": "https://www.imdb.com/title/tt1213641/",
+            "8": "https://www.kinopoisk.ru/film/463803/"
         },
         "386": {
             "1": "Последняя дуэль",
@@ -8548,66 +8728,6 @@
             "7": "https://www.imdb.com/title/tt0959337/",
             "8": "https://www.kinopoisk.ru/film/280932/"
         },
-        "1097": {
-            "1": "Между нами музыка",
-            "2": "Song to Song",
-            "3": 2017,
-            "4": "5.888",
-            "5": "2 ч 9 мин",
-            "6": "http://hdrezka0ddqyq.org/films/drama/24211-mezhdu-nami-muzyka-2017.html",
-            "7": "https://www.imdb.com/title/tt2062700/",
-            "8": "https://www.kinopoisk.ru/film/627255/"
-        },
-        "389": {
-            "1": "Перелом",
-            "2": "Fracture",
-            "3": 2007,
-            "4": "7.435",
-            "5": "1 ч 53 мин",
-            "6": "http://hdrezka0ddqyq.org/films/thriller/5468-perelom-2007.html",
-            "7": "https://www.imdb.com/title/tt0488120/",
-            "8": "https://www.kinopoisk.ru/film/220617/"
-        },
-        "400": {
-            "1": "Охотники на гангстеров",
-            "2": "Gangster Squad",
-            "3": 2013,
-            "4": "6.835",
-            "5": "1 ч 53 мин",
-            "6": "http://hdrezka0ddqyq.org/films/action/52-ohotniki-na-gangsterov-2013.html",
-            "7": "https://www.imdb.com/title/tt1321870/",
-            "8": "https://www.kinopoisk.ru/film/468564/"
-        },
-        "584": {
-            "1": "Серый человек",
-            "2": "The Gray Man",
-            "3": 2022,
-            "4": "6.599",
-            "5": "2 ч 2 мин",
-            "6": "http://hdrezka0ddqyq.org/films/action/49053-seryy-chelovek-2022.html",
-            "7": "https://www.imdb.com/title/tt1649418/",
-            "8": "https://www.kinopoisk.ru/film/558393/"
-        },
-        "588": {
-            "1": "Человек на Луне",
-            "2": "First Man",
-            "3": 2018,
-            "4": "7.222",
-            "5": "2 ч 21 мин",
-            "6": "http://hdrezka0ddqyq.org/films/drama/28707-chelovek-na-lune-2018.html",
-            "7": "https://www.imdb.com/title/tt1213641/",
-            "8": "https://www.kinopoisk.ru/film/463803/"
-        },
-        "429": {
-            "1": "Старикам тут не место",
-            "2": "No Country for Old Men",
-            "3": 2007,
-            "4": "8.057",
-            "5": "2 ч 2 мин",
-            "6": "http://hdrezka0ddqyq.org/films/thriller/3793-starikam-tut-ne-mesto-2007.html",
-            "7": "https://www.imdb.com/title/tt0477348/",
-            "8": "https://www.kinopoisk.ru/film/195434/"
-        },
         "430": {
             "1": "Три билборда на границе Эббинга, Миссури",
             "2": "Three Billboards Outside Ebbing, Missouri",
@@ -8627,6 +8747,66 @@
             "6": "http://hdrezka0ddqyq.org/films/action/11276-golodnye-igry-soyka-peresmeshnica-chast-ii-2015.html",
             "7": "https://www.imdb.com/title/tt1951266/",
             "8": "https://www.kinopoisk.ru/film/663715/"
+        },
+        "1146": {
+            "1": "Горбатая гора",
+            "2": "Brokeback Mountain",
+            "3": 2005,
+            "4": "7.688",
+            "5": "2 ч 14 мин",
+            "6": "http://hdrezka0ddqyq.org/films/western/3329-gorbataya-gora-2005.html",
+            "7": "https://www.imdb.com/title/tt0388795/",
+            "8": "https://www.kinopoisk.ru/film/77647/"
+        },
+        "1139": {
+            "1": "Под покровом ночи",
+            "2": "Nocturnal Animals",
+            "3": 2016,
+            "4": "7.366",
+            "5": "1 ч 56 мин",
+            "6": "http://hdrezka0ddqyq.org/films/thriller/20207-pod-pokrovom-nochi-2016.html",
+            "7": "https://www.imdb.com/title/tt4550098/",
+            "8": "https://www.kinopoisk.ru/film/909898/"
+        },
+        "495": {
+            "1": "Разрушение",
+            "2": "Demolition",
+            "3": 2015,
+            "4": "7.161",
+            "5": "1 ч 41 мин",
+            "6": "http://hdrezka0ddqyq.org/films/drama/11745-razrushenie-2015.html",
+            "7": "https://www.imdb.com/title/tt1172049/",
+            "8": "https://www.kinopoisk.ru/film/842493/"
+        },
+        "496": {
+            "1": "Стрингер",
+            "2": "Nightcrawler",
+            "3": 2014,
+            "4": "7.699",
+            "5": "1 ч 57 мин",
+            "6": "http://hdrezka0ddqyq.org/films/thriller/9771-stringer-2013.html",
+            "7": "https://www.imdb.com/title/tt2872718/",
+            "8": "https://www.kinopoisk.ru/film/760815/"
+        },
+        "498": {
+            "1": "Исходный код",
+            "2": "Source Code",
+            "3": 2011,
+            "4": "7.650",
+            "5": "1 ч 33 мин",
+            "6": "http://hdrezka0ddqyq.org/films/fiction/259-ishodnyy-kod-2011.html",
+            "7": "https://www.imdb.com/title/tt0945513/",
+            "8": "https://www.kinopoisk.ru/film/409295/"
+        },
+        "502": {
+            "1": "Враг",
+            "2": "Enemy",
+            "3": 2013,
+            "4": "6.810",
+            "5": "1 ч 31 мин",
+            "6": "http://hdrezka0ddqyq.org/films/thriller/1835-vrag-2013.html",
+            "7": "https://www.imdb.com/title/tt2316411/",
+            "8": "https://www.kinopoisk.ru/film/673910/"
         },
         "1122": {
             "1": "Афера по-американски",
@@ -8687,56 +8867,6 @@
             "6": "http://hdrezka0ddqyq.org/films/drama/17025-parni-so-stvolami-2016.html",
             "7": "https://www.imdb.com/title/tt2005151/",
             "8": "https://www.kinopoisk.ru/film/602749/"
-        },
-        "1139": {
-            "1": "Под покровом ночи",
-            "2": "Nocturnal Animals",
-            "3": 2016,
-            "4": "7.366",
-            "5": "1 ч 56 мин",
-            "6": "http://hdrezka0ddqyq.org/films/thriller/20207-pod-pokrovom-nochi-2016.html",
-            "7": "https://www.imdb.com/title/tt4550098/",
-            "8": "https://www.kinopoisk.ru/film/909898/"
-        },
-        "495": {
-            "1": "Разрушение",
-            "2": "Demolition",
-            "3": 2015,
-            "4": "7.161",
-            "5": "1 ч 41 мин",
-            "6": "http://hdrezka0ddqyq.org/films/drama/11745-razrushenie-2015.html",
-            "7": "https://www.imdb.com/title/tt1172049/",
-            "8": "https://www.kinopoisk.ru/film/842493/"
-        },
-        "496": {
-            "1": "Стрингер",
-            "2": "Nightcrawler",
-            "3": 2014,
-            "4": "7.699",
-            "5": "1 ч 57 мин",
-            "6": "http://hdrezka0ddqyq.org/films/thriller/9771-stringer-2013.html",
-            "7": "https://www.imdb.com/title/tt2872718/",
-            "8": "https://www.kinopoisk.ru/film/760815/"
-        },
-        "498": {
-            "1": "Исходный код",
-            "2": "Source Code",
-            "3": 2011,
-            "4": "7.650",
-            "5": "1 ч 33 мин",
-            "6": "http://hdrezka0ddqyq.org/films/fiction/259-ishodnyy-kod-2011.html",
-            "7": "https://www.imdb.com/title/tt0945513/",
-            "8": "https://www.kinopoisk.ru/film/409295/"
-        },
-        "502": {
-            "1": "Враг",
-            "2": "Enemy",
-            "3": 2013,
-            "4": "6.810",
-            "5": "1 ч 31 мин",
-            "6": "http://hdrezka0ddqyq.org/films/thriller/1835-vrag-2013.html",
-            "7": "https://www.imdb.com/title/tt2316411/",
-            "8": "https://www.kinopoisk.ru/film/673910/"
         },
         "1127": {
             "1": "Тёмные воды",
@@ -8807,6 +8937,56 @@
             "6": "http://hdrezka0ddqyq.org/films/drama/33816-bankir-2020.html",
             "7": "https://www.imdb.com/title/tt6285944/",
             "8": "https://www.kinopoisk.ru/film/1199655/"
+        },
+        "1148": {
+            "1": "Расплата",
+            "2": "The Accountant",
+            "3": 2016,
+            "4": "7.409",
+            "5": "2 ч 8 мин",
+            "6": "http://hdrezka0ddqyq.org/films/action/14521-rasplata-2016-latest.html",
+            "7": "https://www.imdb.com/title/tt2140479/",
+            "8": "https://www.kinopoisk.ru/film/662359/"
+        },
+        "1121": {
+            "1": "Армагеддон",
+            "2": "Armageddon",
+            "3": 1998,
+            "4": "7.085",
+            "5": "2 ч 31 мин",
+            "6": "http://hdrezka0ddqyq.org/films/fiction/5642-armageddon-1998.html",
+            "7": "https://www.imdb.com/title/tt0120591/",
+            "8": "https://www.kinopoisk.ru/film/2941/"
+        },
+        "1103": {
+            "1": "Операция «Арго»",
+            "2": "Argo",
+            "3": 2012,
+            "4": "7.648",
+            "5": "2 ч",
+            "6": "http://hdrezka0ddqyq.org/films/thriller/22-operaciya-argo-2012.html",
+            "7": "https://www.imdb.com/title/tt1024648/",
+            "8": "https://www.kinopoisk.ru/film/462487/"
+        },
+        "387": {
+            "1": "Глубокие воды",
+            "2": "Deep Water",
+            "3": 2022,
+            "4": "5.592",
+            "5": "1 ч 55 мин",
+            "6": "http://hdrezka0ddqyq.org/films/thriller/47004-glubokie-vody-2022.html",
+            "7": "https://www.imdb.com/title/tt2180339/",
+            "8": "https://www.kinopoisk.ru/film/663055/"
+        },
+        "569": {
+            "1": "Лига справедливости Зака Снайдера",
+            "2": "Zack Snyder's Justice League",
+            "3": 2021,
+            "4": "7.919",
+            "5": "4 ч 2 мин",
+            "6": "http://hdrezka0ddqyq.org/films/action/37486-liga-spravedlivosti-zaka-snaydera-2021.html",
+            "7": "https://www.imdb.com/title/tt12361974/",
+            "8": "https://www.kinopoisk.ru/film/1387021/"
         },
         "480": {
             "1": "Король",
@@ -8908,56 +9088,6 @@
             "7": "https://www.imdb.com/title/tt0448134/",
             "8": "https://www.kinopoisk.ru/film/102245/"
         },
-        "1121": {
-            "1": "Армагеддон",
-            "2": "Armageddon",
-            "3": 1998,
-            "4": "7.085",
-            "5": "2 ч 31 мин",
-            "6": "http://hdrezka0ddqyq.org/films/fiction/5642-armageddon-1998.html",
-            "7": "https://www.imdb.com/title/tt0120591/",
-            "8": "https://www.kinopoisk.ru/film/2941/"
-        },
-        "1103": {
-            "1": "Операция «Арго»",
-            "2": "Argo",
-            "3": 2012,
-            "4": "7.648",
-            "5": "2 ч",
-            "6": "http://hdrezka0ddqyq.org/films/thriller/22-operaciya-argo-2012.html",
-            "7": "https://www.imdb.com/title/tt1024648/",
-            "8": "https://www.kinopoisk.ru/film/462487/"
-        },
-        "387": {
-            "1": "Глубокие воды",
-            "2": "Deep Water",
-            "3": 2022,
-            "4": "5.592",
-            "5": "1 ч 55 мин",
-            "6": "http://hdrezka0ddqyq.org/films/thriller/47004-glubokie-vody-2022.html",
-            "7": "https://www.imdb.com/title/tt2180339/",
-            "8": "https://www.kinopoisk.ru/film/663055/"
-        },
-        "454": {
-            "1": "Исчезнувшая",
-            "2": "Gone Girl",
-            "3": 2014,
-            "4": "8.039",
-            "5": "2 ч 29 мин",
-            "6": "http://hdrezka0ddqyq.org/films/thriller/2270-ischeznuvshaya-2014.html",
-            "7": "https://www.imdb.com/title/tt2267998/",
-            "8": "https://www.kinopoisk.ru/film/692861/"
-        },
-        "569": {
-            "1": "Лига справедливости Зака Снайдера",
-            "2": "Zack Snyder's Justice League",
-            "3": 2021,
-            "4": "7.919",
-            "5": "4 ч 2 мин",
-            "6": "http://hdrezka0ddqyq.org/films/action/37486-liga-spravedlivosti-zaka-snaydera-2021.html",
-            "7": "https://www.imdb.com/title/tt12361974/",
-            "8": "https://www.kinopoisk.ru/film/1387021/"
-        },
         "512": {
             "1": "Бэтмен навсегда",
             "2": "Batman Forever",
@@ -9018,6 +9148,86 @@
             "7": "https://www.imdb.com/title/tt3631112/",
             "8": "https://www.kinopoisk.ru/film/928391/"
         },
+        "1152": {
+            "1": "Большая жратва",
+            "2": "Waiting...",
+            "3": 2005,
+            "4": "6.719",
+            "5": "1 ч 34 мин",
+            "6": "http://hdrezka0ddqyq.org/films/comedy/3359-bolshaya-zhratva-2005.html",
+            "7": "https://www.imdb.com/title/tt0348333/",
+            "8": "https://www.kinopoisk.ru/film/4260/"
+        },
+        "518": {
+            "1": "Хочу как ты",
+            "2": "The Change-Up",
+            "3": 2011,
+            "4": "6.498",
+            "5": "1 ч 52 мин",
+            "6": "http://hdrezka0ddqyq.org/films/comedy/432-hochu-kak-ty-2011.html",
+            "7": "https://www.imdb.com/title/tt1488555/",
+            "8": "https://www.kinopoisk.ru/film/471587/"
+        },
+        "1145": {
+            "1": "Код да Винчи",
+            "2": "The Da Vinci Code",
+            "3": 2006,
+            "4": "6.883",
+            "5": "2 ч 29 мин",
+            "6": "http://hdrezka0ddqyq.org/films/thriller/3701-kod-da-vinchi-2006.html",
+            "7": "https://www.imdb.com/title/tt0382625/",
+            "8": "https://www.kinopoisk.ru/film/77711/"
+        },
+        "1140": {
+            "1": "Элвис",
+            "2": "Elvis",
+            "3": 2022,
+            "4": "7.323",
+            "5": "2 ч 39 мин",
+            "6": "http://hdrezka0ddqyq.org/films/drama/48792-elvis-2022.html",
+            "7": "https://www.imdb.com/title/tt3704428/",
+            "8": "https://www.kinopoisk.ru/film/1179041/"
+        },
+        "1136": {
+            "1": "Аполлон 13",
+            "2": "Apollo 13",
+            "3": 1995,
+            "4": "7.709",
+            "5": "2 ч 20 мин",
+            "6": "http://hdrezka0ddqyq.org/films/adventures/2648-apollon-13-1995.html",
+            "7": "https://www.imdb.com/title/tt0112384/",
+            "8": "https://www.kinopoisk.ru/film/2217/"
+        },
+        "1137": {
+            "1": "Чудо на Гудзоне",
+            "2": "Sully",
+            "3": 2016,
+            "4": "7.449",
+            "5": "1 ч 36 мин",
+            "6": "http://hdrezka0ddqyq.org/films/drama/17107-chudo-na-gudzone-2016.html",
+            "7": "https://www.imdb.com/title/tt3263904/",
+            "8": "https://www.kinopoisk.ru/film/805650/"
+        },
+        "1138": {
+            "1": "Изгой",
+            "2": "Cast Away",
+            "3": 2000,
+            "4": "7.985",
+            "5": "2 ч 23 мин",
+            "6": "http://hdrezka0ddqyq.org/films/adventures/771-izgoy-2000.html",
+            "7": "https://www.imdb.com/title/tt0162222/",
+            "8": "https://www.kinopoisk.ru/film/627/"
+        },
+        "466": {
+            "1": "Терминал",
+            "2": "The Terminal",
+            "3": 2004,
+            "4": "7.774",
+            "5": "2 ч 8 мин",
+            "6": "http://hdrezka0ddqyq.org/films/drama/1027-terminal-2004.html",
+            "7": "https://www.imdb.com/title/tt0362227/",
+            "8": "https://www.kinopoisk.ru/film/6877/"
+        },
         "505": {
             "1": "Эквилибриум",
             "2": "Equilibrium",
@@ -9027,6 +9237,66 @@
             "6": "http://hdrezka0ddqyq.org/films/action/7419-ekvilibrium-2002.html",
             "7": "https://www.imdb.com/title/tt0238380/",
             "8": "https://www.kinopoisk.ru/film/309/"
+        },
+        "1073": {
+            "1": "Безумный Макс: Дорога ярости",
+            "2": "Mad Max: Fury Road",
+            "3": 2015,
+            "4": "8.002",
+            "5": "2 ч",
+            "6": "http://hdrezka0ddqyq.org/films/fiction/9340-bezumnyy-maks-doroga-yarosti-2015-latest.html",
+            "7": "https://www.imdb.com/title/tt1392190/",
+            "8": "https://www.kinopoisk.ru/film/453406/"
+        },
+        "735": {
+            "1": "За пропастью во ржи",
+            "2": "Rebel in the Rye",
+            "3": 2017,
+            "4": "7.068",
+            "5": "1 ч 46 мин",
+            "6": "http://hdrezka0ddqyq.org/films/drama/26500-za-propastyu-vo-rzhi-2017.html",
+            "7": "https://www.imdb.com/title/tt4986134/",
+            "8": "https://www.kinopoisk.ru/film/930962/"
+        },
+        "1074": {
+            "1": "Каникулы",
+            "2": "Vacation",
+            "3": 2015,
+            "4": "6.343",
+            "5": "1 ч 39 мин",
+            "6": "http://hdrezka0ddqyq.org/films/comedy/10798-kanikuly-2015.html",
+            "7": "https://www.imdb.com/title/tt1524930/",
+            "8": "https://www.kinopoisk.ru/film/484426/"
+        },
+        "872": {
+            "1": "Удача Логана",
+            "2": "Logan Lucky",
+            "3": 2017,
+            "4": "6.982",
+            "5": "1 ч 58 мин",
+            "6": "http://hdrezka0ddqyq.org/films/comedy/25825-udacha-logana-2017.html",
+            "7": "https://www.imdb.com/title/tt5439796/",
+            "8": "https://www.kinopoisk.ru/film/980011/"
+        },
+        "410": {
+            "1": "Девушка с татуировкой дракона",
+            "2": "The Girl with the Dragon Tattoo",
+            "3": 2011,
+            "4": "7.790",
+            "5": "2 ч 38 мин",
+            "6": "http://hdrezka0ddqyq.org/films/thriller/263-devushka-s-tatuirovkoy-drakona-2011.html",
+            "7": "https://www.imdb.com/title/tt1568346/",
+            "8": "https://www.kinopoisk.ru/film/491724/"
+        },
+        "469": {
+            "1": "Достать ножи. Стеклянная луковица",
+            "2": "Glass Onion",
+            "3": 2022,
+            "4": "7.048",
+            "5": "2 ч 19 мин",
+            "6": "http://hdrezka0ddqyq.org/films/detective/51890-dostat-nozhi-steklyannaya-lukovica-2022.html",
+            "7": "https://www.imdb.com/title/tt11564570/",
+            "8": "https://www.kinopoisk.ru/film/1343908/"
         },
         "811": {
             "1": "Зомби по имени Шон",
@@ -9058,25 +9328,15 @@
             "7": "https://www.imdb.com/title/tt2660888/",
             "8": "https://www.kinopoisk.ru/film/734349/"
         },
-        "518": {
-            "1": "Хочу как ты",
-            "2": "The Change-Up",
-            "3": 2011,
-            "4": "6.498",
-            "5": "1 ч 52 мин",
-            "6": "http://hdrezka0ddqyq.org/films/comedy/432-hochu-kak-ty-2011.html",
-            "7": "https://www.imdb.com/title/tt1488555/",
-            "8": "https://www.kinopoisk.ru/film/471587/"
-        },
-        "1112": {
-            "1": "Дюна: Часть вторая",
-            "2": "Dune: Part Two",
-            "3": 2024,
-            "4": "8.427",
-            "5": "2 ч 46 мин",
-            "6": "http://hdrezka0ddqyq.org/films/fiction/57233-dyuna-chast-vtoraya-2024.html",
-            "7": "https://www.imdb.com/title/tt15239678/",
-            "8": "https://www.kinopoisk.ru/film/4540126/"
+        "1156": {
+            "1": "Большой Лебовски",
+            "2": "The Big Lebowski",
+            "3": 1998,
+            "4": "8.005",
+            "5": "1 ч 57 мин",
+            "6": "http://hdrezka0ddqyq.org/films/comedy/4322-bolshoy-lebovski-1998.html",
+            "7": "https://www.imdb.com/title/tt0118715/",
+            "8": "https://www.kinopoisk.ru/film/555/"
         },
         "423": {
             "1": "Невидимка",
@@ -9158,36 +9418,6 @@
             "7": "https://www.imdb.com/title/tt0452608/",
             "8": "https://www.kinopoisk.ru/film/102136/"
         },
-        "1073": {
-            "1": "Безумный Макс: Дорога ярости",
-            "2": "Mad Max: Fury Road",
-            "3": 2015,
-            "4": "8.002",
-            "5": "2 ч",
-            "6": "http://hdrezka0ddqyq.org/films/fiction/9340-bezumnyy-maks-doroga-yarosti-2015.html",
-            "7": "https://www.imdb.com/title/tt1392190/",
-            "8": "https://www.kinopoisk.ru/film/453406/"
-        },
-        "735": {
-            "1": "За пропастью во ржи",
-            "2": "Rebel in the Rye",
-            "3": 2017,
-            "4": "7.068",
-            "5": "1 ч 46 мин",
-            "6": "http://hdrezka0ddqyq.org/films/drama/26500-za-propastyu-vo-rzhi-2017.html",
-            "7": "https://www.imdb.com/title/tt4986134/",
-            "8": "https://www.kinopoisk.ru/film/930962/"
-        },
-        "1074": {
-            "1": "Каникулы",
-            "2": "Vacation",
-            "3": 2015,
-            "4": "6.343",
-            "5": "1 ч 39 мин",
-            "6": "http://hdrezka0ddqyq.org/films/comedy/10798-kanikuly-2015.html",
-            "7": "https://www.imdb.com/title/tt1524930/",
-            "8": "https://www.kinopoisk.ru/film/484426/"
-        },
         "493": {
             "1": "«V» значит Вендетта",
             "2": "V for Vendetta",
@@ -9197,6 +9427,56 @@
             "6": "http://hdrezka0ddqyq.org/films/fiction/2738-v-znachit-vendetta-2006.html",
             "7": "https://www.imdb.com/title/tt0434409/",
             "8": "https://www.kinopoisk.ru/film/86208/"
+        },
+        "1120": {
+            "1": "Список Шиндлера",
+            "2": "Schindler's List",
+            "3": 1993,
+            "4": "8.878",
+            "5": "3 ч 15 мин",
+            "6": "http://hdrezka0ddqyq.org/films/biographical/823-spisok-shindlera-1993.html",
+            "7": "https://www.imdb.com/title/tt0108052/",
+            "8": "https://www.kinopoisk.ru/film/329/"
+        },
+        "395": {
+            "1": "Неизвестный",
+            "2": "Unknown",
+            "3": 2011,
+            "4": "7.036",
+            "5": "1 ч 53 мин",
+            "6": "http://hdrezka0ddqyq.org/films/action/312-neizvestnyy-2011.html",
+            "7": "https://www.imdb.com/title/tt1401152/",
+            "8": "https://www.kinopoisk.ru/film/463135/"
+        },
+        "432": {
+            "1": "Миллион способов потерять голову",
+            "2": "A Million Ways to Die in the West",
+            "3": 2014,
+            "4": "6.207",
+            "5": "1 ч 56 мин",
+            "6": "http://hdrezka0ddqyq.org/films/comedy/1788-million-sposobov-poteryat-golovu-2014.html",
+            "7": "https://www.imdb.com/title/tt2557490/",
+            "8": "https://www.kinopoisk.ru/film/722886/"
+        },
+        "592": {
+            "1": "Властелин колец: Две крепости",
+            "2": "The Lord of the Rings: The Two Towers",
+            "3": 2002,
+            "4": "8.700",
+            "5": "2 ч 59 мин",
+            "6": "http://hdrezka0ddqyq.org/films/action/970-vlastelin-kolec-dve-kreposti-2002-latest.html",
+            "7": "https://www.imdb.com/title/tt0167261/",
+            "8": "https://www.kinopoisk.ru/film/312/"
+        },
+        "593": {
+            "1": "Властелин колец: Возвращение короля",
+            "2": "The Lord of the Rings: The Return of the King",
+            "3": 2003,
+            "4": "8.849",
+            "5": "3 ч 21 мин",
+            "6": "http://hdrezka0ddqyq.org/films/action/969-vlastelin-kolec-vozvraschenie-korolya-2003-latest.html",
+            "7": "https://www.imdb.com/title/tt0167260/",
+            "8": "https://www.kinopoisk.ru/film/3498/"
         },
         "409": {
             "1": "Тоня против всех",
@@ -9258,45 +9538,15 @@
             "7": "https://www.imdb.com/title/tt1285016/",
             "8": "https://www.kinopoisk.ru/film/427198/"
         },
-        "1136": {
-            "1": "Аполлон 13",
-            "2": "Apollo 13",
-            "3": 1995,
-            "4": "7.709",
-            "5": "2 ч 20 мин",
-            "6": "http://hdrezka0ddqyq.org/films/adventures/2648-apollon-13-1995.html",
-            "7": "https://www.imdb.com/title/tt0112384/",
-            "8": "https://www.kinopoisk.ru/film/2217/"
-        },
-        "1137": {
-            "1": "Чудо на Гудзоне",
-            "2": "Sully",
-            "3": 2016,
-            "4": "7.449",
-            "5": "1 ч 36 мин",
-            "6": "http://hdrezka0ddqyq.org/films/drama/17107-chudo-na-gudzone-2016.html",
-            "7": "https://www.imdb.com/title/tt3263904/",
-            "8": "https://www.kinopoisk.ru/film/805650/"
-        },
-        "1138": {
-            "1": "Изгой",
-            "2": "Cast Away",
-            "3": 2000,
-            "4": "7.985",
-            "5": "2 ч 23 мин",
-            "6": "http://hdrezka0ddqyq.org/films/adventures/771-izgoy-2000.html",
-            "7": "https://www.imdb.com/title/tt0162222/",
-            "8": "https://www.kinopoisk.ru/film/627/"
-        },
-        "466": {
-            "1": "Терминал",
-            "2": "The Terminal",
-            "3": 2004,
-            "4": "7.774",
-            "5": "2 ч 8 мин",
-            "6": "http://hdrezka0ddqyq.org/films/drama/1027-terminal-2004.html",
-            "7": "https://www.imdb.com/title/tt0362227/",
-            "8": "https://www.kinopoisk.ru/film/6877/"
+        "416": {
+            "1": "Стажёр",
+            "2": "The Intern",
+            "3": 2015,
+            "4": "7.467",
+            "5": "2 ч 1 мин",
+            "6": "http://hdrezka0ddqyq.org/films/comedy/10989-stazher-2015.html",
+            "7": "https://www.imdb.com/title/tt2361509/",
+            "8": "https://www.kinopoisk.ru/film/677893/"
         },
         "394": {
             "1": "28 дней спустя",
@@ -9348,6 +9598,16 @@
             "7": "https://www.imdb.com/title/tt2294449/",
             "8": "https://www.kinopoisk.ru/film/672899/"
         },
+        "455": {
+            "1": "Залечь на дно в Брюгге",
+            "2": "In Bruges",
+            "3": 2008,
+            "4": "7.873",
+            "5": "1 ч 47 мин",
+            "6": "http://hdrezka0ddqyq.org/films/thriller/5958-zalech-na-dno-v-bryugge-2007.html",
+            "7": "https://www.imdb.com/title/tt0780536/",
+            "8": "https://www.kinopoisk.ru/film/276295/"
+        },
         "810": {
             "1": "Рок-н-рольщик",
             "2": "RocknRolla",
@@ -9358,15 +9618,25 @@
             "7": "https://www.imdb.com/title/tt1032755/",
             "8": "https://www.kinopoisk.ru/film/378140/"
         },
-        "872": {
-            "1": "Удача Логана",
-            "2": "Logan Lucky",
-            "3": 2017,
-            "4": "6.982",
-            "5": "1 ч 58 мин",
-            "6": "http://hdrezka0ddqyq.org/films/comedy/25825-udacha-logana-2017.html",
-            "7": "https://www.imdb.com/title/tt5439796/",
-            "8": "https://www.kinopoisk.ru/film/980011/"
+        "1150": {
+            "1": "От заката до рассвета",
+            "2": "From Dusk Till Dawn",
+            "3": 1996,
+            "4": "7.490",
+            "5": "1 ч 48 мин",
+            "6": "http://hdrezka0ddqyq.org/films/action/5290-ot-zakata-do-rassveta-1996.html",
+            "7": "https://www.imdb.com/title/tt0116367/",
+            "8": "https://www.kinopoisk.ru/film/4815/"
+        },
+        "511": {
+            "1": "Бэтмен и Робин",
+            "2": "Batman & Robin",
+            "3": 1997,
+            "4": "4.179",
+            "5": "2 ч 5 мин",
+            "6": "http://hdrezka0ddqyq.org/films/fantasy/4093-betmen-i-robin-1997.html",
+            "7": "https://www.imdb.com/title/tt0118688/",
+            "8": "https://www.kinopoisk.ru/film/3678/"
         },
         "451": {
             "1": "Чёрный клановец",
@@ -9398,33 +9668,13 @@
             "7": "https://www.imdb.com/title/tt2527336/",
             "8": "https://www.kinopoisk.ru/film/718223/"
         },
-        "592": {
-            "1": "Властелин колец: Две крепости",
-            "2": "The Lord of the Rings: The Two Towers",
-            "3": 2002,
-            "4": "8.700",
-            "5": "2 ч 59 мин",
-            "6": "http://hdrezka0ddqyq.org/films/action/970-vlastelin-kolec-dve-kreposti-2002.html",
-            "7": "https://www.imdb.com/title/tt0167261/",
-            "8": "https://www.kinopoisk.ru/film/312/"
-        },
-        "593": {
-            "1": "Властелин колец: Возвращение короля",
-            "2": "The Lord of the Rings: The Return of the King",
-            "3": 2003,
-            "4": "8.849",
-            "5": "3 ч 21 мин",
-            "6": "http://hdrezka0ddqyq.org/films/action/969-vlastelin-kolec-vozvraschenie-korolya-2003.html",
-            "7": "https://www.imdb.com/title/tt0167260/",
-            "8": "https://www.kinopoisk.ru/film/3498/"
-        },
         "393": {
             "1": "28 недель спуcтя",
             "2": "28 Weeks Later",
             "3": 2007,
             "4": "6.958",
             "5": "1 ч 40 мин",
-            "6": "http://hdrezka0ddqyq.org/films/horror/3094-28-nedel-spustya-2007.html",
+            "6": "http://hdrezka0ddqyq.org/films/horror/3094-28-nedel-spustya-2007-latest.html",
             "7": "https://www.imdb.com/title/tt0463854/",
             "8": "https://www.kinopoisk.ru/film/197615/"
         },
@@ -9468,16 +9718,6 @@
             "7": "https://www.imdb.com/title/tt0103776/",
             "8": "https://www.kinopoisk.ru/film/898/"
         },
-        "416": {
-            "1": "Стажёр",
-            "2": "The Intern",
-            "3": 2015,
-            "4": "7.467",
-            "5": "2 ч 1 мин",
-            "6": "http://hdrezka0ddqyq.org/films/comedy/10989-stazher-2015.html",
-            "7": "https://www.imdb.com/title/tt2361509/",
-            "8": "https://www.kinopoisk.ru/film/677893/"
-        },
         "425": {
             "1": "Плезантвиль",
             "2": "Pleasantville",
@@ -9487,6 +9727,16 @@
             "6": "http://hdrezka0ddqyq.org/films/drama/6152-plezantvil-1998.html",
             "7": "https://www.imdb.com/title/tt0120789/",
             "8": "https://www.kinopoisk.ru/film/2987/"
+        },
+        "1159": {
+            "1": "Горе-творец",
+            "2": "The Disaster Artist",
+            "3": 2017,
+            "4": "7.361",
+            "5": "1 ч 44 мин",
+            "6": "http://hdrezka0ddqyq.org/films/comedy/26678-gore-tvorec-2017.html",
+            "7": "https://www.imdb.com/title/tt3521126/",
+            "8": "https://www.kinopoisk.ru/film/828242/"
         },
         "94": {
             "1": "Человек-муравей и Оса: Квантомания",
@@ -9568,55 +9818,35 @@
             "7": "https://www.imdb.com/title/tt4123432/",
             "8": "https://www.kinopoisk.ru/film/843772/"
         },
-        "410": {
-            "1": "Девушка с татуировкой дракона",
-            "2": "The Girl with the Dragon Tattoo",
-            "3": 2011,
-            "4": "7.790",
-            "5": "2 ч 38 мин",
-            "6": "http://hdrezka0ddqyq.org/films/thriller/263-devushka-s-tatuirovkoy-drakona-2011.html",
-            "7": "https://www.imdb.com/title/tt1568346/",
-            "8": "https://www.kinopoisk.ru/film/491724/"
+        "1158": {
+            "1": "Гран Туризмо",
+            "2": "Gran Turismo",
+            "3": 2023,
+            "4": "7.415",
+            "5": "2 ч 14 мин",
+            "6": "http://hdrezka0ddqyq.org/films/adventures/57217-gran-turizmo-2023.html",
+            "7": "https://www.imdb.com/title/tt4495098/",
+            "8": "https://www.kinopoisk.ru/film/1044002/"
         },
-        "469": {
-            "1": "Достать ножи. Стеклянная луковица",
-            "2": "Glass Onion",
-            "3": 2022,
-            "4": "7.048",
-            "5": "2 ч 19 мин",
-            "6": "http://hdrezka0ddqyq.org/films/detective/51890-dostat-nozhi-steklyannaya-lukovica-2022.html",
-            "7": "https://www.imdb.com/title/tt11564570/",
-            "8": "https://www.kinopoisk.ru/film/1343908/"
+        "1155": {
+            "1": "Таинственная река",
+            "2": "Mystic River",
+            "3": 2003,
+            "4": "7.870",
+            "5": "2 ч 18 мин",
+            "6": "http://hdrezka0ddqyq.org/films/thriller/6419-tainstvennaya-reka-2003.html",
+            "7": "https://www.imdb.com/title/tt0327056/",
+            "8": "https://www.kinopoisk.ru/film/3730/"
         },
-        "1120": {
-            "1": "Список Шиндлера",
-            "2": "Schindler's List",
-            "3": 1993,
-            "4": "8.878",
-            "5": "3 ч 15 мин",
-            "6": "http://hdrezka0ddqyq.org/films/biographical/823-spisok-shindlera-1993.html",
-            "7": "https://www.imdb.com/title/tt0108052/",
-            "8": "https://www.kinopoisk.ru/film/329/"
-        },
-        "395": {
-            "1": "Неизвестный",
-            "2": "Unknown",
-            "3": 2011,
-            "4": "7.036",
-            "5": "1 ч 53 мин",
-            "6": "http://hdrezka0ddqyq.org/films/action/312-neizvestnyy-2011.html",
-            "7": "https://www.imdb.com/title/tt1401152/",
-            "8": "https://www.kinopoisk.ru/film/463135/"
-        },
-        "432": {
-            "1": "Миллион способов потерять голову",
-            "2": "A Million Ways to Die in the West",
-            "3": 2014,
-            "4": "6.207",
-            "5": "1 ч 56 мин",
-            "6": "http://hdrezka0ddqyq.org/films/comedy/1788-million-sposobov-poteryat-golovu-2014.html",
-            "7": "https://www.imdb.com/title/tt2557490/",
-            "8": "https://www.kinopoisk.ru/film/722886/"
+        "524": {
+            "1": "Двадцать одно",
+            "2": "21",
+            "3": 2008,
+            "4": "7.231",
+            "5": "2 ч 3 мин",
+            "6": "http://hdrezka0ddqyq.org/films/thriller/4208-dvadcat-odno-2008.html",
+            "7": "https://www.imdb.com/title/tt0478087/",
+            "8": "https://www.kinopoisk.ru/film/195847/"
         },
         "671": {
             "1": "Ручная кладь",
@@ -9668,6 +9898,16 @@
             "7": "https://www.imdb.com/title/tt5726616/",
             "8": "https://www.kinopoisk.ru/film/979148/"
         },
+        "1153": {
+            "1": "Злая: Сказка о ведьме Запада",
+            "2": "Wicked: Part I",
+            "3": 2024,
+            "4": "7.360",
+            "5": "2 ч 40 мин",
+            "6": "http://hdrezka0ddqyq.org/films/fantasy/71316-zlaya-skazka-o-vedme-zapada-2024-latest.html",
+            "7": "https://www.imdb.com/title/tt1262426/",
+            "8": "https://www.kinopoisk.ru/film/422170/"
+        },
         "473": {
             "1": "Кадры",
             "2": "The Internship",
@@ -9678,15 +9918,35 @@
             "7": "https://www.imdb.com/title/tt2234155/",
             "8": "https://www.kinopoisk.ru/film/666935/"
         },
-        "455": {
-            "1": "Залечь на дно в Брюгге",
-            "2": "In Bruges",
-            "3": 2008,
-            "4": "7.873",
-            "5": "1 ч 47 мин",
-            "6": "http://hdrezka0ddqyq.org/films/thriller/5958-zalech-na-dno-v-bryugge-2007.html",
-            "7": "https://www.imdb.com/title/tt0780536/",
-            "8": "https://www.kinopoisk.ru/film/276295/"
+        "406": {
+            "1": "Джобс: Империя соблазна",
+            "2": "Jobs",
+            "3": 2013,
+            "4": "6.307",
+            "5": "2 ч 8 мин",
+            "6": "http://hdrezka0ddqyq.org/films/drama/699-dzhobs-imperiya-soblazna-2013.html",
+            "7": "https://www.imdb.com/title/tt2357129/",
+            "8": "https://www.kinopoisk.ru/film/677798/"
+        },
+        "589": {
+            "1": "Одержимость",
+            "2": "Whiplash",
+            "3": 2014,
+            "4": "8.441",
+            "5": "1 ч 46 мин",
+            "6": "http://hdrezka0ddqyq.org/films/drama/2265-oderzhimost-2014.html",
+            "7": "https://www.imdb.com/title/tt2582802/",
+            "8": "https://www.kinopoisk.ru/film/725190/"
+        },
+        "1160": {
+            "1": "Резня",
+            "2": "Carnage",
+            "3": 2011,
+            "4": "7.219",
+            "5": "1 ч 20 мин",
+            "6": "http://hdrezka0ddqyq.org/films/comedy/5385-reznya-2011.html",
+            "7": "https://www.imdb.com/title/tt1692486/",
+            "8": "https://www.kinopoisk.ru/film/557837/"
         },
         "652": {
             "1": "Славные парни",
@@ -9698,15 +9958,15 @@
             "7": "https://www.imdb.com/title/tt0099685/",
             "8": "https://www.kinopoisk.ru/film/350/"
         },
-        "524": {
-            "1": "Двадцать одно",
-            "2": "21",
-            "3": 2008,
-            "4": "7.231",
-            "5": "2 ч 3 мин",
-            "6": "http://hdrezka0ddqyq.org/films/thriller/4208-dvadcat-odno-2008.html",
-            "7": "https://www.imdb.com/title/tt0478087/",
-            "8": "https://www.kinopoisk.ru/film/195847/"
+        "1101": {
+            "1": "Гренландия",
+            "2": "Greenland",
+            "3": 2020,
+            "4": "6.754",
+            "5": "1 ч 59 мин",
+            "6": "http://hdrezka0ddqyq.org/films/drama/34891-grenlandiya-2020.html",
+            "7": "https://www.imdb.com/title/tt7737786/",
+            "8": "https://www.kinopoisk.ru/film/1164520/"
         },
         "450": {
             "1": "Под Сильвер-Лэйк",
@@ -9718,13 +9978,23 @@
             "7": "https://www.imdb.com/title/tt5691670/",
             "8": "https://www.kinopoisk.ru/film/980327/"
         },
+        "1151": {
+            "1": "Громовержцы*",
+            "2": "Thunderbolts*",
+            "3": 2025,
+            "4": "7.284",
+            "5": "2 ч 7 мин",
+            "6": "http://hdrezka0ddqyq.org/films/fiction/73911-gromoverzhcy-2025-latest.html",
+            "7": "https://www.imdb.com/title/tt20969586/",
+            "8": "https://www.kinopoisk.ru/film/5001443/"
+        },
         "484": {
             "1": "Игра в имитацию",
             "2": "The Imitation Game",
             "3": 2014,
             "4": "7.951",
             "5": "1 ч 54 мин",
-            "6": "http://hdrezka0ddqyq.org/films/thriller/7755-igra-v-imitaciyu-2014.html",
+            "6": "http://hdrezka0ddqyq.org/films/thriller/7755-igra-v-imitaciyu-2014-latest.html",
             "7": "https://www.imdb.com/title/tt2084970/",
             "8": "https://www.kinopoisk.ru/film/635772/"
         },
@@ -9737,26 +10007,6 @@
             "6": "http://hdrezka0ddqyq.org/films/thriller/30492-kladbische-domashnih-zhivotnyh-2019.html",
             "7": "https://www.imdb.com/title/tt0837563/",
             "8": "https://www.kinopoisk.ru/film/279095/"
-        },
-        "571": {
-            "1": "Человек из стали",
-            "2": "Man of Steel",
-            "3": 2013,
-            "4": "7.126",
-            "5": "2 ч 23 мин",
-            "6": "http://hdrezka0ddqyq.org/films/fiction/612-chelovek-iz-stali-2013.html",
-            "7": "https://www.imdb.com/title/tt0770828/",
-            "8": "https://www.kinopoisk.ru/film/252667/"
-        },
-        "511": {
-            "1": "Бэтмен и Робин",
-            "2": "Batman & Robin",
-            "3": 1997,
-            "4": "4.179",
-            "5": "2 ч 5 мин",
-            "6": "http://hdrezka0ddqyq.org/films/fantasy/4093-betmen-i-robin-1997.html",
-            "7": "https://www.imdb.com/title/tt0118688/",
-            "8": "https://www.kinopoisk.ru/film/3678/"
         },
         "595": {
             "1": "Адвокат дьявола",
@@ -9797,16 +10047,6 @@
             "6": "http://hdrezka0ddqyq.org/films/comedy/3089-sorokaletniy-devstvennik-2005.html",
             "7": "https://www.imdb.com/title/tt0405422/",
             "8": "https://www.kinopoisk.ru/film/81976/"
-        },
-        "1101": {
-            "1": "Гренландия",
-            "2": "Greenland",
-            "3": 2020,
-            "4": "6.754",
-            "5": "1 ч 59 мин",
-            "6": "http://hdrezka0ddqyq.org/films/drama/34891-grenlandiya-2020.html",
-            "7": "https://www.imdb.com/title/tt7737786/",
-            "8": "https://www.kinopoisk.ru/film/1164520/"
         },
         "594": {
             "1": "Далласский клуб покупателей",
@@ -9858,26 +10098,6 @@
             "7": "https://www.imdb.com/title/tt8323668/",
             "8": "https://www.kinopoisk.ru/film/4499782/"
         },
-        "406": {
-            "1": "Джобс: Империя соблазна",
-            "2": "Jobs",
-            "3": 2013,
-            "4": "6.307",
-            "5": "2 ч 8 мин",
-            "6": "http://hdrezka0ddqyq.org/films/drama/699-dzhobs-imperiya-soblazna-2013.html",
-            "7": "https://www.imdb.com/title/tt2357129/",
-            "8": "https://www.kinopoisk.ru/film/677798/"
-        },
-        "589": {
-            "1": "Одержимость",
-            "2": "Whiplash",
-            "3": 2014,
-            "4": "8.441",
-            "5": "1 ч 46 мин",
-            "6": "http://hdrezka0ddqyq.org/films/drama/2265-oderzhimost-2014.html",
-            "7": "https://www.imdb.com/title/tt2582802/",
-            "8": "https://www.kinopoisk.ru/film/725190/"
-        },
         "403": {
             "1": "Тетрис",
             "2": "Tetris",
@@ -9918,15 +10138,25 @@
             "7": "https://www.imdb.com/title/tt1790864/",
             "8": "https://www.kinopoisk.ru/film/575613/"
         },
-        "1104": {
-            "1": "Крушение",
-            "2": "Plane",
-            "3": 2023,
-            "4": "7.040",
-            "5": "1 ч 47 мин",
-            "6": "http://hdrezka0ddqyq.org/films/action/52587-krushenie-2023.html",
-            "7": "https://www.imdb.com/title/tt5884796/",
-            "8": "https://www.kinopoisk.ru/film/1338502/"
+        "1123": {
+            "1": "Быть Джоном Малковичем",
+            "2": "Being John Malkovich",
+            "3": 1999,
+            "4": "7.647",
+            "5": "1 ч 53 мин",
+            "6": "http://hdrezka0ddqyq.org/films/fantasy/3976-byt-dzhonom-malkovichem-1999.html",
+            "7": "https://www.imdb.com/title/tt0120601/",
+            "8": "https://www.kinopoisk.ru/film/462/"
+        },
+        "392": {
+            "1": "Птичий короб",
+            "2": "Bird Box",
+            "3": 2018,
+            "4": "6.664",
+            "5": "2 ч 4 мин",
+            "6": "http://hdrezka0ddqyq.org/films/fiction/29403-ptichiy-korob-2018.html",
+            "7": "https://www.imdb.com/title/tt2737304/",
+            "8": "https://www.kinopoisk.ru/film/741214/"
         },
         "487": {
             "1": "Никто",
@@ -9998,25 +10228,15 @@
             "7": "https://www.imdb.com/title/tt0083866/",
             "8": "https://www.kinopoisk.ru/film/544/"
         },
-        "1123": {
-            "1": "Быть Джоном Малковичем",
-            "2": "Being John Malkovich",
-            "3": 1999,
-            "4": "7.647",
-            "5": "1 ч 53 мин",
-            "6": "http://hdrezka0ddqyq.org/films/fantasy/3976-byt-dzhonom-malkovichem-1999.html",
-            "7": "https://www.imdb.com/title/tt0120601/",
-            "8": "https://www.kinopoisk.ru/film/462/"
-        },
-        "392": {
-            "1": "Птичий короб",
-            "2": "Bird Box",
-            "3": 2018,
-            "4": "6.664",
-            "5": "2 ч 4 мин",
-            "6": "http://hdrezka0ddqyq.org/films/fiction/29403-ptichiy-korob-2018.html",
-            "7": "https://www.imdb.com/title/tt2737304/",
-            "8": "https://www.kinopoisk.ru/film/741214/"
+        "434": {
+            "1": "Невыносимая тяжесть огромного таланта",
+            "2": "The Unbearable Weight of Massive Talent",
+            "3": 2022,
+            "4": "7.070",
+            "5": "1 ч 47 мин",
+            "6": "http://hdrezka0ddqyq.org/films/action/44983-nevynosimaya-tyazhest-ogromnogo-talanta-2022.html",
+            "7": "https://www.imdb.com/title/tt11291274/",
+            "8": "https://www.kinopoisk.ru/film/1345617/"
         },
         "961": {
             "1": "Бешеные псы",
@@ -10038,26 +10258,6 @@
             "7": "https://www.imdb.com/title/tt1683526/",
             "8": "https://www.kinopoisk.ru/film/535337/"
         },
-        "441": {
-            "1": "Приключения Паддингтона 2",
-            "2": "Paddington 2",
-            "3": 2017,
-            "4": "8.145",
-            "5": "1 ч 43 мин",
-            "6": "http://hdrezka0ddqyq.org/films/comedy/26873-priklyucheniya-paddingtona-2-2017-latest.html",
-            "7": "https://www.imdb.com/title/tt4468740/",
-            "8": "https://www.kinopoisk.ru/film/906042/"
-        },
-        "1126": {
-            "1": "Грешники",
-            "2": "Sinners",
-            "3": 2025,
-            "4": "7.722",
-            "5": "2 ч 17 мин",
-            "6": "http://hdrezka0ddqyq.org/films/drama/76368-greshniki-2025-latest.html",
-            "7": "https://www.imdb.com/title/tt31193180/",
-            "8": "https://www.kinopoisk.ru/film/5499518/"
-        },
         "419": {
             "1": "Крид: Наследие Рокки",
             "2": "Creed",
@@ -10067,6 +10267,16 @@
             "6": "http://hdrezka0ddqyq.org/films/drama/10806-krid-nasledie-rokki-2015-latest.html",
             "7": "https://www.imdb.com/title/tt3076658/",
             "8": "https://www.kinopoisk.ru/film/782932/"
+        },
+        "441": {
+            "1": "Приключения Паддингтона 2",
+            "2": "Paddington 2",
+            "3": 2017,
+            "4": "8.145",
+            "5": "1 ч 43 мин",
+            "6": "http://hdrezka0ddqyq.org/films/comedy/26873-priklyucheniya-paddingtona-2-2017-latest.html",
+            "7": "https://www.imdb.com/title/tt4468740/",
+            "8": "https://www.kinopoisk.ru/film/906042/"
         },
         "534": {
             "1": "Ослепленный желаниями",
@@ -10118,6 +10328,26 @@
             "7": "https://www.imdb.com/title/tt1132620/",
             "8": "https://www.kinopoisk.ru/film/402099/"
         },
+        "1142": {
+            "1": "Нефть",
+            "2": "There Will Be Blood",
+            "3": 2007,
+            "4": "8.107",
+            "5": "2 ч 38 мин",
+            "6": "http://hdrezka0ddqyq.org/films/drama/3907-neft-2007.html",
+            "7": "https://www.imdb.com/title/tt0469494/",
+            "8": "https://www.kinopoisk.ru/film/196604/"
+        },
+        "424": {
+            "1": "Всё везде и сразу",
+            "2": "Everything Everywhere All at Once",
+            "3": 2022,
+            "4": "7.477",
+            "5": "2 ч 19 мин",
+            "6": "http://hdrezka0ddqyq.org/films/fiction/44981-vse-vezde-i-srazu-2022-latest.html",
+            "7": "https://www.imdb.com/title/tt6710474/",
+            "8": "https://www.kinopoisk.ru/film/1322324/"
+        },
         "1056": {
             "1": "Остров доктора Моро",
             "2": "The Island of Dr. Moreau",
@@ -10137,16 +10367,6 @@
             "6": "http://hdrezka0ddqyq.org/films/thriller/4982-vykup-1996.html",
             "7": "https://www.imdb.com/title/tt0117438/",
             "8": "https://www.kinopoisk.ru/film/8136/"
-        },
-        "434": {
-            "1": "Невыносимая тяжесть огромного таланта",
-            "2": "The Unbearable Weight of Massive Talent",
-            "3": 2022,
-            "4": "7.070",
-            "5": "1 ч 47 мин",
-            "6": "http://hdrezka0ddqyq.org/films/action/44983-nevynosimaya-tyazhest-ogromnogo-talanta-2022.html",
-            "7": "https://www.imdb.com/title/tt11291274/",
-            "8": "https://www.kinopoisk.ru/film/1345617/"
         },
         "408": {
             "1": "Богемская рапсодия",
@@ -10178,16 +10398,6 @@
             "7": "https://www.imdb.com/title/tt9243946/",
             "8": "https://www.kinopoisk.ru/film/1209193/"
         },
-        "424": {
-            "1": "Всё везде и сразу",
-            "2": "Everything Everywhere All at Once",
-            "3": 2022,
-            "4": "7.477",
-            "5": "2 ч 19 мин",
-            "6": "http://hdrezka0ddqyq.org/films/fiction/44981-vse-vezde-i-srazu-2022-latest.html",
-            "7": "https://www.imdb.com/title/tt6710474/",
-            "8": "https://www.kinopoisk.ru/film/1322324/"
-        },
         "1128": {
             "1": "Голодные игры: Баллада о змеях и певчих птицах",
             "2": "The Hunger Games: The Ballad of Songbirds & Snakes",
@@ -10214,9 +10424,19 @@
             "3": 2006,
             "4": "6.066",
             "5": "1 ч 33 мин",
-            "6": "http://hdrezka0ddqyq.org/films/detective/670-punkt-naznacheniya-3-2006.html",
+            "6": "http://hdrezka0ddqyq.org/films/detective/670-punkt-naznacheniya-3-2006-latest.html",
             "7": "https://www.imdb.com/title/tt0414982/",
             "8": "https://www.kinopoisk.ru/film/89674/"
+        },
+        "1157": {
+            "1": "Голый пистолет",
+            "2": "The Naked Gun: From the Files of Police Squad!",
+            "3": 1988,
+            "4": "7.546",
+            "5": "1 ч 25 мин",
+            "6": "http://hdrezka0ddqyq.org/films/comedy/1469-golyy-pistolet-1988.html",
+            "7": "https://www.imdb.com/title/tt0095705/",
+            "8": "https://www.kinopoisk.ru/film/4067/"
         },
         "670": {
             "1": "Проект X: Дорвались",
@@ -10375,6 +10595,7 @@
         "49627": "Крис Эванс",
         "1300401": "Крис Хемсворт",
         "3903": "Скарлетт Йоханссон",
+        "21495": "Кристиан Бэйл",
         "659495": "Майкл Фассбендер",
         "8816": "Сильвестр Сталлоне",
         "33823": "Талия Шайр",
@@ -10386,7 +10607,6 @@
         "7639": "Карл Уэзерс",
         "8213": "Хью Джекман",
         "22692": "Джейк Джилленхол",
-        "21495": "Кристиан Бэйл",
         "553143": "Том Хиддлстон",
         "34549": "Бенедикт Камбербэтч",
         "605731": "Тай Симпкинс",
@@ -10395,9 +10615,14 @@
         "6795": "Дон Чидл",
         "43284": "Оскар Айзек",
         "797": "Мэттью Макконахи",
+        "3711": "Майкл Кейн",
         "725": "Вера Фармига",
         "10020": "Хоакин Феникс",
         "23724": "Джек Блэк",
+        "14668": "Джош Бролин",
+        "2317683": "Зендея",
+        "498650": "Ребекка Фергюсон",
+        "42009": "Николас Холт",
         "675391": "Ребекка Холл",
         "20262": "Мартин Шин",
         "34225": "Роуз Бирн",
@@ -10413,19 +10638,26 @@
         "7886": "Винс Вон",
         "24821": "Сэм Нил",
         "554576": "Джейсон Момоа",
+        "22670": "Рэйф Файнс",
         "12039": "Брендан Глисон",
         "8886": "Кеннет Брана",
         "10022": "Ричард Харрис",
         "1171284": "Дэйв Батиста",
+        "2145": "Тим Рот",
         "1656": "Терренс Ховард",
         "678": "Лесли Бибб",
         "573710": "Кэри Маллиган",
         "816210": "Ана де Армас",
-        "3711": "Майкл Кейн",
         "245737": "Кристоф Вальц",
         "34754": "Дайан Крюгер",
         "718": "Роберт Де Ниро",
+        "3360189": "Аня Тейлор-Джой",
         "12086": "Джерард Батлер",
+        "7163": "Томми Ли Джонс",
+        "14799": "Хавьер Бардем",
+        "10620": "Бен Аффлек",
+        "1665224": "Тимоти Шаламе",
+        "47646": "Майкл Б. Джордан",
         "3061538": "Тэрон Эджертон",
         "16464": "Колин Фёрт",
         "3220": "Жан-Клод Ван Дамм",
@@ -10446,18 +10678,15 @@
         "12928": "Джейсон Кларк",
         "7165": "Гай Пирс",
         "30056": "Джек Николсон",
-        "498650": "Ребекка Фергюсон",
         "34506": "Энгус Сэмпсон",
         "3435612": "Флоренс Пью",
         "1156574": "Эндрю Гарфилд",
-        "42009": "Николас Холт",
         "24285": "Натали Портман",
         "32208": "Энтони Маки",
         "13330": "Пол Радд",
         "10094": "Майкл Дуглас",
         "605598": "Эванджелин Лилли",
         "28968": "Майкл Пенья",
-        "2317683": "Зендея",
         "3268094": "Маргарет Куолли",
         "11360": "Уильям Х. Мэйси",
         "10974": "Джош Лукас",
@@ -10471,7 +10700,6 @@
         "7590": "Юэн Макгрегор",
         "24683": "Джеффри Раш",
         "41575": "Бернар Фарси",
-        "7163": "Томми Ли Джонс",
         "6317": "Пол Уокер",
         "5679": "Харрисон Форд",
         "20302": "Том Круз",
@@ -10483,10 +10711,11 @@
         "48134": "Идрис Эльба",
         "665419": "Джон Сина",
         "47679": "Джордана Брюстер",
-        "22670": "Рэйф Файнс",
         "8214": "Патрик Стюарт",
         "568152": "Александра Даддарио",
         "906113": "Джейден Смит",
+        "29859": "Аарон Тейлор-Джонсон",
+        "8215": "Иэн Маккеллен",
         "4096670": "Джозефин Лэнгфорд",
         "1520175": "Хиро Файнс Тиффин",
         "56347": "Элдис Ходж",
@@ -10498,7 +10727,6 @@
         "9144": "Том Хэнкс",
         "23716": "Марк Хэмилл",
         "8459": "Кэрри Фишер",
-        "14799": "Хавьер Бардем",
         "6240": "Джуди Денч",
         "30875": "Орландо Блум",
         "24302": "Кира Найтли",
@@ -10533,6 +10761,7 @@
         "6479": "Джон Траволта",
         "4630": "Итан Хоук",
         "223643": "Джеймс Рэнсон",
+        "17467": "Джанет Мактир",
         "551260": "Джон Бернтал",
         "5032": "Шарлотта Генсбур",
         "2926793": "Стэйси Мартин",
@@ -10548,6 +10777,10 @@
         "11658": "Алессандро Нивола",
         "20087": "Робин Уильямс",
         "22527": "Бонни Хант",
+        "568564": "Хлоя Грейс Морец",
+        "1147414": "Кристофер Минц-Плассе",
+        "22619": "Кевин Дюран",
+        "20287": "Элайджа Вуд",
         "1681168": "Павел Прилучный",
         "904648": "Павел Ворожцов",
         "45018": "Луиза Ломбард",
@@ -10560,7 +10793,6 @@
         "1054956": "Данила Козловский",
         "1258708": "Мария Андреева",
         "224384": "Светлана Ходченкова",
-        "8215": "Иэн Маккеллен",
         "1562166": "Галь Гадот",
         "5": "Элиза Душку",
         "10077": "Сэм Шепард",
@@ -10634,8 +10866,6 @@
         "2704915": "Виктор Хориняк",
         "31319": "Скотт Эдкинс",
         "6742": "Крис Такер",
-        "29859": "Аарон Тейлор-Джонсон",
-        "14668": "Джош Бролин",
         "21496": "Сэм Рокуэлл",
         "2523": "Эдриан Броуди",
         "27320": "Линда Карделлини",
@@ -10664,6 +10894,7 @@
         "34316": "Анна Кендрик",
         "21444": "Дженнифер Энистон",
         "38078": "Томас Кречман",
+        "37652": "Курт Рассел",
         "1179": "Холли Берри",
         "251186": "Андрей Смоляков",
         "41644": "Омар Си",
@@ -10678,6 +10909,7 @@
         "10079": "Билл Мюррей",
         "738217": "Кен Жонг",
         "16766": "Франсуа Берлеан",
+        "3905": "Тони Голдуин",
         "231512": "Константин Хабенский",
         "238525": "Иван Янковский",
         "11362": "Дональд Сазерленд",
@@ -10690,7 +10922,6 @@
         "52483": "Уилл Арнетт",
         "3377828": "Александра Бортич",
         "40159": "Евгений Миронов",
-        "568564": "Хлоя Грейс Морец",
         "224620": "Сергей Безруков",
         "2696943": "Риналь Мухаметов",
         "1258688": "Екатерина Вилкова",
@@ -10719,9 +10950,7 @@
         "50455": "Пол Хоган",
         "50458": "Линда Козловски",
         "21361": "Джина Дэвис",
-        "2145": "Тим Рот",
         "83523": "Катя Риман",
-        "37652": "Курт Рассел",
         "2428725": "Мила Сивацкая",
         "281405": "Константин Лавроненко",
         "252270": "Ричард Армитедж",
@@ -10744,6 +10973,8 @@
         "242662": "Тайка Вайтити",
         "4810": "Винсент Риган",
         "1492": "Дэвид Уэнэм",
+        "14969": "Уолтон Гоггинс",
+        "266060": "Сон Кан-хо",
         "11215": "Эрик Бана",
         "7988": "Конни Нильсен",
         "414673": "Йенс Хультен",
@@ -10784,11 +11015,12 @@
         "50626": "Эмма Робертс",
         "585": "Джон Ортис",
         "11438": "Коул Хаузер",
+        "1833677": "Адам Драйвер",
+        "14570": "Киран Хайндс",
         "2294822": "Павел Чинарёв",
         "3702552": "Стася Милославская",
         "1956601": "Азамат Нигманов",
         "453960": "Оливия Уайлд",
-        "266060": "Сон Кан-хо",
         "373": "Колин Фаррелл",
         "38714": "Кевин МакКидд",
         "14493": "Дэвид Моррисси",
@@ -10819,7 +11051,6 @@
         "8766": "Дженнифер Лопес",
         "6721": "Айс Кьюб",
         "1580": "Кит Дэвид",
-        "1147414": "Кристофер Минц-Плассе",
         "34484": "Джессика Бил",
         "1115855": "Аня Чиповская",
         "681410": "Иван Ургант",
@@ -10837,7 +11068,6 @@
         "730970": "Маркус Колома",
         "1959675": "Эрин Кэхилл",
         "56319": "Джиллиан Андерсон",
-        "14969": "Уолтон Гоггинс",
         "32388": "Карл Урбан",
         "3704929": "Александр Кузнецов",
         "231449": "Павел Деревянко",
@@ -10850,7 +11080,6 @@
         "1112835": "Бен Барнс",
         "97242": "Уильям Моусли",
         "4666": "Анна Попплуэлл",
-        "3905": "Тони Голдуин",
         "916094": "Тимофей Трибунцев",
         "231397": "Игорь Петренко",
         "54872": "Марк Иванир",
@@ -10899,7 +11128,6 @@
         "3196": "Саммо Хун",
         "1714108": "Линн Хун",
         "35496": "Фрэнк Грилло",
-        "20287": "Элайджа Вуд",
         "3016071": "Дейзи Ридли",
         "65213": "Родди Макдауэлл",
         "41569": "Кристиан Клавье",
@@ -10926,6 +11154,7 @@
         "1595041": "Ма Дон-сок",
         "1891345": "Ким Му-ёль",
         "1491": "Хьюго Уивинг",
+        "21037": "Джордж Клуни",
         "1331292": "Кая Скоделарио",
         "28012": "Линда Хэмилтон",
         "41961": "Саймон Пегг",
@@ -10938,22 +11167,21 @@
         "6470": "Билл Пуллман",
         "1590391": "Сергей Светлаков",
         "24190": "Ерун Краббе",
+        "7938": "Дайан Лэйн",
         "256837": "Виктор Вержбицкий",
         "393645": "Мэри Элизабет Уинстэд",
-        "10620": "Бен Аффлек",
-        "1833677": "Адам Драйвер",
-        "1665224": "Тимоти Шаламе",
+        "8552": "Дж.К. Симмонс",
         "28630": "Эми Адамс",
-        "21037": "Джордж Клуни",
         "28426": "Шон Эстин",
         "22383": "Лив Тайлер",
         "30099": "Тофер Грейс",
-        "8552": "Дж.К. Симмонс",
         "9867": "Джозеф Гордон-Левитт",
+        "7939": "Кевин Бейкон",
         "3506": "Майкл Шеннон",
         "1414": "Мишель Монахэн",
         "730": "Шарлиз Терон",
         "1669945": "Майлз Теллер",
+        "51126": "Сет Роген",
         "21324": "Уилл Феррелл",
         "1130276": "Закари Куинто",
         "6451": "Дрю Бэрримор",
@@ -10962,8 +11190,6 @@
         "836": "Алан Аркин",
         "37058": "Виола Дэвис",
         "8090": "Хью Грант",
-        "7939": "Кевин Бейкон",
-        "47646": "Майкл Б. Джордан",
         "6794": "Теа Леони",
         "985": "Билл Пэкстон",
         "27045": "Бен Уишоу",
@@ -10972,10 +11198,14 @@
         "48397": "Майкл Стулбарг",
         "297": "Шонн Уильям Скотт",
         "1193762": "Михаил Галустян",
+        "23406": "Луис Гусман",
         "11614": "Микаэл Нюквист",
-        "51126": "Сет Роген",
+        "43219": "Пол Дано",
         "3572736": "Ки Хон Ли",
         "228325": "Томас Сэнгстер",
+        "3775": "Марша Гэй Харден",
+        "22838": "Джон Си Райли",
+        "14363": "Пол Беттани",
         "41169": "Виктор Гарбер",
         "8516": "Вэл Килмер",
         "1816446": "Райли Кио",
@@ -11001,7 +11231,10 @@
         "60258": "Мелани Лоран",
         "3457582": "София Лиллис",
         "962568": "Билл Хейдер",
-        "3360189": "Аня Тейлор-Джой",
+        "14033": "Келли Макдоналд",
+        "1183": "Хит Леджер",
+        "6752": "Аарон Экхарт",
+        "9943": "Кэти Холмс",
         "28674": "Трэйси Леттс",
         "21391": "Джесси Племонс",
         "33119": "Энтони Эдвардс",
@@ -11018,10 +11251,12 @@
         "1509087": "Риз Дэрби",
         "26241": "Деннис Куэйд",
         "1142215": "Зои Кравиц",
+        "7222": "Фрэнсис Макдорманд",
         "41171": "Элизабет Шу",
         "29746": "Диего Луна",
         "7230": "Зои Дешанель",
         "1089891": "Рами Малек",
+        "27169": "Моника Беллуччи",
         "12759": "Дэвид Морс",
         "5300": "Дэвид Ойелоуо",
         "1906": "Питер Динклэйдж",
@@ -11034,20 +11269,23 @@
         "299": "Эдди Кэй Томас",
         "2721": "Лоррейн Бракко",
         "1817815": "Томас Манн",
-        "23406": "Луис Гусман",
         "1830611": "Эмилия Кларк",
         "13413": "Алисия Сильверстоун",
         "2028846": "Джоди Комер",
         "403609": "Ник Фрост",
         "12719": "Эдди Гриффин",
         "30364": "Дженнифер Гарнер",
-        "9943": "Кэти Холмс",
-        "6752": "Аарон Экхарт",
-        "43219": "Пол Дано",
+        "1891": "Джеффри Тэмбор",
         "1604": "Дэш Майок",
         "23137": "Джей О. Сэндерс",
         "1472797": "Декстер Дарден",
         "292": "Элисон Хэннигэн",
+        "1293": "Шон Пенн",
+        "9271": "Стив Бушеми",
+        "1600": "Харви Кейтель",
+        "3777": "Джульетт Льюис",
+        "63924": "Уайатт Рассел",
+        "22340": "Ричард Роксбург",
         "3100": "Гэри Синиз",
         "9146": "Хелен Хант",
         "21893": "Эмбет Дэвидц",
@@ -11057,20 +11295,16 @@
         "905667": "Руни Мара",
         "1193736": "Гарик Харламов",
         "916729": "Билл Скарсгард",
-        "14363": "Пол Беттани",
         "1320398": "Калеб Лэндри Джонс",
         "5033": "Теренс Стэмп",
         "6651": "Джоан Аллен",
         "10633": "Эштон Кутчер",
-        "22838": "Джон Си Райли",
-        "14033": "Келли Макдоналд",
         "10784": "Дайан Лэдд",
         "210": "Хью Бонневилль",
         "40919": "Салли Хокинс",
         "1121926": "Арми Хаммер",
         "544885": "Макс Мингелла",
         "22240": "Кэтрин Зета-Джонс",
-        "3775": "Марша Гей Харден",
         "3725760": "Джастис Смит",
         "6145": "Крис Купер",
         "10305": "Крис О’Доннелл",
@@ -11792,6 +12026,16 @@
                     "81",
                     "80"
                 ],
+                "7164": [
+                    "27",
+                    "87",
+                    "261",
+                    "446",
+                    "61",
+                    "75",
+                    "477",
+                    "73"
+                ],
                 "49627": [
                     "71",
                     "74",
@@ -11822,15 +12066,6 @@
                     "89",
                     "1061"
                 ],
-                "7164": [
-                    "27",
-                    "87",
-                    "446",
-                    "61",
-                    "75",
-                    "477",
-                    "73"
-                ],
                 "1300401": [
                     "71",
                     "74",
@@ -11858,6 +12093,14 @@
                     "58",
                     "605",
                     "63"
+                ],
+                "21495": [
+                    "352",
+                    "591",
+                    "201",
+                    "351",
+                    "40",
+                    "109"
                 ]
             },
             "5": {
@@ -11912,6 +12155,12 @@
                 ]
             },
             "4": {
+                "5005": [
+                    "33",
+                    "351",
+                    "215",
+                    "113"
+                ],
                 "6458": [
                     "4",
                     "33",
@@ -11996,12 +12245,6 @@
                     "75",
                     "102"
                 ],
-                "21495": [
-                    "591",
-                    "201",
-                    "40",
-                    "109"
-                ],
                 "553143": [
                     "69",
                     "56",
@@ -12033,14 +12276,19 @@
                     "115",
                     "114"
                 ],
+                "8968": [
+                    "188",
+                    "56",
+                    "60"
+                ],
+                "9839": [
+                    "429",
+                    "100",
+                    "114"
+                ],
                 "227068": [
                     "33",
                     "112",
-                    "113"
-                ],
-                "5005": [
-                    "33",
-                    "215",
                     "113"
                 ],
                 "25775": [
@@ -12052,6 +12300,11 @@
                     "106",
                     "69",
                     "105"
+                ],
+                "6650": [
+                    "352",
+                    "80",
+                    "97"
                 ],
                 "224358": [
                     "62",
@@ -12093,6 +12346,11 @@
                     "30",
                     "103"
                 ],
+                "3711": [
+                    "29",
+                    "591",
+                    "351"
+                ],
                 "226963": [
                     "23",
                     "222",
@@ -12117,6 +12375,26 @@
                     "476",
                     "125",
                     "126"
+                ],
+                "14668": [
+                    "1112",
+                    "429",
+                    "38"
+                ],
+                "2317683": [
+                    "1112",
+                    "85",
+                    "75"
+                ],
+                "498650": [
+                    "1112",
+                    "38",
+                    "8"
+                ],
+                "42009": [
+                    "50",
+                    "1143",
+                    "51"
                 ],
                 "675391": [
                     "591",
@@ -12225,10 +12503,6 @@
                     "115",
                     "114"
                 ],
-                "9839": [
-                    "100",
-                    "114"
-                ],
                 "4370557": [
                     "112",
                     "113"
@@ -12269,9 +12543,9 @@
                     "82",
                     "77"
                 ],
-                "6650": [
+                "22670": [
                     "80",
-                    "97"
+                    "1143"
                 ],
                 "12039": [
                     "79",
@@ -12301,6 +12575,10 @@
                     "26",
                     "54"
                 ],
+                "2145": [
+                    "261",
+                    "54"
+                ],
                 "1656": [
                     "503",
                     "53"
@@ -12316,10 +12594,6 @@
                 "816210": [
                     "110",
                     "41"
-                ],
-                "3711": [
-                    "29",
-                    "591"
                 ],
                 "245737": [
                     "87",
@@ -12341,9 +12615,33 @@
                     "3",
                     "483"
                 ],
+                "3360189": [
+                    "485",
+                    "1143"
+                ],
                 "12086": [
                     "119",
                     "681"
+                ],
+                "7163": [
+                    "429",
+                    "57"
+                ],
+                "14799": [
+                    "1112",
+                    "429"
+                ],
+                "10620": [
+                    "454",
+                    "790"
+                ],
+                "1665224": [
+                    "1112",
+                    "38"
+                ],
+                "47646": [
+                    "1126",
+                    "70"
                 ],
                 "3061538": [
                     "446",
@@ -12425,10 +12723,6 @@
                     "4",
                     "118"
                 ],
-                "498650": [
-                    "38",
-                    "8"
-                ],
                 "34506": [
                     "16",
                     "17"
@@ -12441,15 +12735,7 @@
                     "44",
                     "45"
                 ],
-                "42009": [
-                    "50",
-                    "51"
-                ],
                 "24285": [
-                    "56",
-                    "60"
-                ],
-                "8968": [
                     "56",
                     "60"
                 ],
@@ -12472,10 +12758,6 @@
                 "28968": [
                     "64",
                     "72"
-                ],
-                "2317683": [
-                    "85",
-                    "75"
                 ],
                 "3268094": [
                     "89",
@@ -12572,6 +12854,15 @@
                 ]
             },
             "7": {
+                "6141": [
+                    "363",
+                    "194",
+                    "517",
+                    "195",
+                    "612",
+                    "611",
+                    "1037"
+                ],
                 "10143": [
                     "39",
                     "41",
@@ -12618,13 +12909,13 @@
                     "1088",
                     "179"
                 ],
-                "6141": [
-                    "363",
-                    "194",
-                    "517",
-                    "195",
-                    "612",
-                    "611"
+                "25584": [
+                    "26",
+                    "88",
+                    "89",
+                    "176",
+                    "193",
+                    "1147"
                 ],
                 "9839": [
                     "180",
@@ -12697,13 +12988,6 @@
                     "311",
                     "264",
                     "312"
-                ],
-                "25584": [
-                    "26",
-                    "88",
-                    "89",
-                    "176",
-                    "193"
                 ],
                 "6967": [
                     "249",
@@ -12827,6 +13111,12 @@
                     "101",
                     "770"
                 ],
+                "22670": [
+                    "619",
+                    "80",
+                    "1143",
+                    "618"
+                ],
                 "58": [
                     "46",
                     "47",
@@ -12863,6 +13153,12 @@
                     "773",
                     "230"
                 ],
+                "4067": [
+                    "225",
+                    "117",
+                    "1038",
+                    "96"
+                ],
                 "31969": [
                     "254",
                     "230",
@@ -12895,6 +13191,11 @@
                 ]
             },
             "3": {
+                "42009": [
+                    "50",
+                    "1143",
+                    "778"
+                ],
                 "966648": [
                     "180",
                     "778",
@@ -12965,13 +13266,18 @@
                     "101",
                     "9"
                 ],
-                "22670": [
-                    "619",
-                    "80",
-                    "618"
+                "12039": [
+                    "557",
+                    "79",
+                    "117"
                 ],
                 "3181": [
                     "53",
+                    "59",
+                    "55"
+                ],
+                "6795": [
+                    "117",
                     "59",
                     "55"
                 ],
@@ -13054,6 +13360,16 @@
                     "655",
                     "654",
                     "135"
+                ],
+                "29859": [
+                    "1038",
+                    "1037",
+                    "775"
+                ],
+                "8215": [
+                    "288",
+                    "802",
+                    "358"
                 ],
                 "4096670": [
                     "967",
@@ -13170,10 +13486,6 @@
                     "101",
                     "195"
                 ],
-                "42009": [
-                    "50",
-                    "778"
-                ],
                 "887222": [
                     "224",
                     "778"
@@ -13221,6 +13533,10 @@
                 "5526": [
                     "91",
                     "180"
+                ],
+                "6793": [
+                    "1038",
+                    "435"
                 ],
                 "52900": [
                     "229",
@@ -13314,10 +13630,6 @@
                     "82",
                     "77"
                 ],
-                "12039": [
-                    "557",
-                    "79"
-                ],
                 "202": [
                     "76",
                     "79"
@@ -13325,10 +13637,6 @@
                 "224358": [
                     "62",
                     "200"
-                ],
-                "6795": [
-                    "59",
-                    "55"
                 ],
                 "25774": [
                     "26",
@@ -13381,6 +13689,10 @@
                 "223643": [
                     "157",
                     "158"
+                ],
+                "17467": [
+                    "636",
+                    "1143"
                 ],
                 "7371": [
                     "259",
@@ -13470,10 +13782,6 @@
                     "89",
                     "130"
                 ],
-                "4067": [
-                    "225",
-                    "96"
-                ],
                 "694506": [
                     "96",
                     "657"
@@ -13497,6 +13805,22 @@
                 "22527": [
                     "183",
                     "124"
+                ],
+                "568564": [
+                    "1038",
+                    "1037"
+                ],
+                "1147414": [
+                    "1038",
+                    "1037"
+                ],
+                "22619": [
+                    "216",
+                    "1149"
+                ],
+                "20287": [
+                    "288",
+                    "260"
                 ],
                 "1681168": [
                     "1",
@@ -13545,10 +13869,6 @@
                 "224384": [
                     "801",
                     "656"
-                ],
-                "8215": [
-                    "802",
-                    "358"
                 ],
                 "8216": [
                     "802",
@@ -13951,6 +14271,16 @@
                     "445",
                     "704"
                 ],
+                "6534": [
+                    "1141",
+                    "932",
+                    "543",
+                    "937",
+                    "929",
+                    "1135",
+                    "930",
+                    "931"
+                ],
                 "7836": [
                     "196",
                     "921",
@@ -14080,15 +14410,6 @@
                     "763",
                     "909"
                 ],
-                "6534": [
-                    "932",
-                    "543",
-                    "937",
-                    "929",
-                    "1135",
-                    "930",
-                    "931"
-                ],
                 "8816": [
                     "685",
                     "1132",
@@ -14131,6 +14452,14 @@
                     "276",
                     "977",
                     "1078"
+                ],
+                "12086": [
+                    "119",
+                    "681",
+                    "1104",
+                    "679",
+                    "703",
+                    "919"
                 ],
                 "8968": [
                     "56",
@@ -14239,6 +14568,13 @@
                     "311",
                     "271"
                 ],
+                "14668": [
+                    "1112",
+                    "1071",
+                    "38",
+                    "298",
+                    "806"
+                ],
                 "9274": [
                     "479",
                     "369",
@@ -14266,13 +14602,6 @@
                     "125",
                     "126",
                     "1025"
-                ],
-                "12086": [
-                    "119",
-                    "681",
-                    "679",
-                    "703",
-                    "919"
                 ],
                 "16464": [
                     "465",
@@ -14430,12 +14759,6 @@
                     "293",
                     "295"
                 ],
-                "14668": [
-                    "1071",
-                    "38",
-                    "298",
-                    "806"
-                ],
                 "39984": [
                     "25",
                     "92",
@@ -14495,6 +14818,12 @@
                     "97",
                     "476",
                     "100"
+                ],
+                "498650": [
+                    "1112",
+                    "38",
+                    "494",
+                    "665"
                 ],
                 "3061538": [
                     "446",
@@ -14591,6 +14920,12 @@
                     "689",
                     "1022",
                     "888"
+                ],
+                "8215": [
+                    "288",
+                    "291",
+                    "290",
+                    "289"
                 ],
                 "238527": [
                     "1008",
@@ -14747,12 +15082,6 @@
                     "327",
                     "328",
                     "373"
-                ],
-                "8215": [
-                    "288",
-                    "291",
-                    "290",
-                    "289"
                 ]
             },
             "3": {
@@ -14931,6 +15260,16 @@
                     "1039",
                     "782"
                 ],
+                "37652": [
+                    "699",
+                    "261",
+                    "508"
+                ],
+                "2145": [
+                    "261",
+                    "755",
+                    "99"
+                ],
                 "2669": [
                     "932",
                     "445",
@@ -14965,11 +15304,6 @@
                     "30",
                     "278",
                     "1085"
-                ],
-                "498650": [
-                    "38",
-                    "494",
-                    "665"
                 ],
                 "7163": [
                     "57",
@@ -15020,6 +15354,11 @@
                     "131",
                     "1013",
                     "989"
+                ],
+                "568564": [
+                    "1038",
+                    "899",
+                    "1037"
                 ],
                 "9331": [
                     "674",
@@ -15091,6 +15430,11 @@
                     "250",
                     "308"
                 ],
+                "3905": [
+                    "886",
+                    "1104",
+                    "273"
+                ],
                 "231512": [
                     "1130",
                     "1003",
@@ -15150,11 +15494,6 @@
                     "725",
                     "1042",
                     "739"
-                ],
-                "568564": [
-                    "1038",
-                    "899",
-                    "1037"
                 ],
                 "224620": [
                     "1027",
@@ -15301,20 +15640,10 @@
                     "766",
                     "317"
                 ],
-                "2145": [
-                    "261",
-                    "755",
-                    "99"
-                ],
                 "83523": [
                     "758",
                     "757",
                     "756"
-                ],
-                "37652": [
-                    "699",
-                    "261",
-                    "508"
                 ],
                 "2428725": [
                     "723",
@@ -15571,6 +15900,26 @@
                     "681",
                     "786"
                 ],
+                "14969": [
+                    "261",
+                    "991"
+                ],
+                "1665224": [
+                    "1112",
+                    "38"
+                ],
+                "2317683": [
+                    "1112",
+                    "75"
+                ],
+                "14799": [
+                    "1112",
+                    "324"
+                ],
+                "266060": [
+                    "449",
+                    "720"
+                ],
                 "11215": [
                     "697",
                     "281"
@@ -15747,6 +16096,14 @@
                     "131",
                     "1001"
                 ],
+                "1147414": [
+                    "1038",
+                    "1037"
+                ],
+                "20287": [
+                    "288",
+                    "734"
+                ],
                 "1107477": [
                     "922",
                     "662"
@@ -15835,6 +16192,10 @@
                     "508",
                     "221"
                 ],
+                "1156574": [
+                    "224",
+                    "1141"
+                ],
                 "1858": [
                     "232",
                     "947"
@@ -15859,6 +16220,14 @@
                     "266",
                     "252"
                 ],
+                "1833677": [
+                    "540",
+                    "1141"
+                ],
+                "14570": [
+                    "1141",
+                    "732"
+                ],
                 "1681168": [
                     "1129",
                     "1045"
@@ -15878,10 +16247,6 @@
                 "453960": [
                     "1125",
                     "1124"
-                ],
-                "266060": [
-                    "449",
-                    "720"
                 ],
                 "373": [
                     "745",
@@ -16007,10 +16372,6 @@
                     "266",
                     "1036"
                 ],
-                "1147414": [
-                    "1038",
-                    "1037"
-                ],
                 "34484": [
                     "693",
                     "1039"
@@ -16083,10 +16444,6 @@
                     "401",
                     "988"
                 ],
-                "14969": [
-                    "261",
-                    "991"
-                ],
                 "32388": [
                     "267",
                     "995"
@@ -16138,10 +16495,6 @@
                 "3514": [
                     "699",
                     "885"
-                ],
-                "3905": [
-                    "886",
-                    "273"
                 ],
                 "916094": [
                     "709",
@@ -16346,10 +16699,6 @@
                 "35496": [
                     "726",
                     "727"
-                ],
-                "20287": [
-                    "288",
-                    "734"
                 ],
                 "3016071": [
                     "540",
@@ -16577,6 +16926,13 @@
                     "293",
                     "295"
                 ],
+                "25584": [
+                    "26",
+                    "28",
+                    "523",
+                    "193",
+                    "1147"
+                ],
                 "11437": [
                     "62",
                     "67",
@@ -16604,6 +16960,13 @@
                     "51",
                     "9",
                     "357"
+                ],
+                "7164": [
+                    "87",
+                    "261",
+                    "61",
+                    "75",
+                    "1144"
                 ],
                 "181": [
                     "348",
@@ -16650,12 +17013,6 @@
                     "333",
                     "336",
                     "192"
-                ],
-                "25584": [
-                    "26",
-                    "28",
-                    "523",
-                    "193"
                 ],
                 "6750": [
                     "182",
@@ -16728,12 +17085,6 @@
                     "61",
                     "216",
                     "960"
-                ],
-                "7164": [
-                    "87",
-                    "261",
-                    "61",
-                    "75"
                 ],
                 "24683": [
                     "319",
@@ -16821,6 +17172,11 @@
                     "379",
                     "223"
                 ],
+                "14668": [
+                    "1112",
+                    "298",
+                    "205"
+                ],
                 "33503": [
                     "123",
                     "122",
@@ -16876,6 +17232,16 @@
                     "222",
                     "22"
                 ],
+                "21495": [
+                    "352",
+                    "350",
+                    "351"
+                ],
+                "2317683": [
+                    "1112",
+                    "85",
+                    "75"
+                ],
                 "1130955": [
                     "187",
                     "44",
@@ -16910,6 +17276,11 @@
                     "85",
                     "66",
                     "93"
+                ],
+                "24256": [
+                    "66",
+                    "882",
+                    "1147"
                 ],
                 "2280681": [
                     "85",
@@ -17020,11 +17391,6 @@
                     "382",
                     "316",
                     "315"
-                ],
-                "21495": [
-                    "352",
-                    "350",
-                    "351"
                 ]
             },
             "2": {
@@ -17131,10 +17497,6 @@
                 "41294": [
                     "235",
                     "236"
-                ],
-                "14668": [
-                    "298",
-                    "205"
                 ],
                 "3394604": [
                     "3",
@@ -17268,6 +17630,10 @@
                     "476",
                     "1105"
                 ],
+                "14799": [
+                    "1112",
+                    "324"
+                ],
                 "24434": [
                     "102",
                     "251"
@@ -17316,10 +17682,6 @@
                     "64",
                     "72"
                 ],
-                "24256": [
-                    "66",
-                    "882"
-                ],
                 "7837": [
                     "85",
                     "68"
@@ -17327,10 +17689,6 @@
                 "48134": [
                     "69",
                     "663"
-                ],
-                "2317683": [
-                    "85",
-                    "75"
                 ],
                 "17932": [
                     "87",
@@ -17344,13 +17702,17 @@
                     "117",
                     "1038"
                 ],
-                "375": [
-                    "241",
-                    "332"
+                "21037": [
+                    "844",
+                    "1147"
                 ],
                 "8215": [
                     "288",
                     "358"
+                ],
+                "375": [
+                    "241",
+                    "332"
                 ],
                 "1331292": [
                     "324",
@@ -17504,6 +17866,10 @@
                     "318",
                     "317"
                 ],
+                "7938": [
+                    "571",
+                    "1144"
+                ],
                 "256837": [
                     "1048",
                     "1049"
@@ -17515,7 +17881,7 @@
             }
         },
         "Артур": {
-            "17": {
+            "18": {
                 "25584": [
                     "26",
                     "528",
@@ -17531,6 +17897,7 @@
                     "522",
                     "525",
                     "193",
+                    "1147",
                     "1061",
                     "526",
                     "521"
@@ -17539,6 +17906,7 @@
                     "556",
                     "558",
                     "557",
+                    "1161",
                     "560",
                     "559",
                     "562",
@@ -17556,6 +17924,23 @@
                 ]
             },
             "15": {
+                "10143": [
+                    "832",
+                    "39",
+                    "41",
+                    "40",
+                    "43",
+                    "587",
+                    "389",
+                    "42",
+                    "585",
+                    "588",
+                    "586",
+                    "400",
+                    "264",
+                    "584",
+                    "1097"
+                ],
                 "6458": [
                     "4",
                     "439",
@@ -17608,22 +17993,6 @@
                     "532",
                     "531"
                 ],
-                "10143": [
-                    "39",
-                    "41",
-                    "40",
-                    "43",
-                    "587",
-                    "389",
-                    "42",
-                    "585",
-                    "588",
-                    "586",
-                    "400",
-                    "264",
-                    "584",
-                    "1097"
-                ],
                 "9839": [
                     "430",
                     "429",
@@ -17639,6 +18008,23 @@
                     "179",
                     "577",
                     "114"
+                ]
+            },
+            "13": {
+                "22692": [
+                    "503",
+                    "496",
+                    "1146",
+                    "498",
+                    "605",
+                    "75",
+                    "1139",
+                    "497",
+                    "495",
+                    "366",
+                    "102",
+                    "502",
+                    "494"
                 ]
             },
             "12": {
@@ -17669,20 +18055,6 @@
                     "197",
                     "438",
                     "482"
-                ],
-                "22692": [
-                    "503",
-                    "496",
-                    "498",
-                    "605",
-                    "75",
-                    "1139",
-                    "497",
-                    "495",
-                    "366",
-                    "102",
-                    "502",
-                    "494"
                 ]
             },
             "11": {
@@ -17763,6 +18135,19 @@
                     "542",
                     "477",
                     "73"
+                ],
+                "10620": [
+                    "439",
+                    "454",
+                    "569",
+                    "1103",
+                    "520",
+                    "478",
+                    "1148",
+                    "386",
+                    "1121",
+                    "570",
+                    "387"
                 ]
             },
             "10": {
@@ -17825,18 +18210,6 @@
                     "396",
                     "57",
                     "584"
-                ],
-                "10620": [
-                    "439",
-                    "454",
-                    "569",
-                    "1103",
-                    "520",
-                    "478",
-                    "386",
-                    "1121",
-                    "570",
-                    "387"
                 ]
             },
             "9": {
@@ -17862,6 +18235,28 @@
                     "586",
                     "385"
                 ],
+                "26612": [
+                    "128",
+                    "298",
+                    "380",
+                    "415",
+                    "337",
+                    "427",
+                    "1152",
+                    "494",
+                    "518"
+                ],
+                "9144": [
+                    "183",
+                    "32",
+                    "1138",
+                    "466",
+                    "1136",
+                    "1137",
+                    "1140",
+                    "1145",
+                    "833"
+                ],
                 "21495": [
                     "352",
                     "591",
@@ -17872,6 +18267,39 @@
                     "505",
                     "109",
                     "1122"
+                ],
+                "42009": [
+                    "1073",
+                    "50",
+                    "580",
+                    "463",
+                    "1143",
+                    "735",
+                    "814",
+                    "51",
+                    "357"
+                ],
+                "1300401": [
+                    "71",
+                    "74",
+                    "1125",
+                    "58",
+                    "69",
+                    "63",
+                    "56",
+                    "60",
+                    "1074"
+                ],
+                "14188": [
+                    "110",
+                    "440",
+                    "410",
+                    "619",
+                    "617",
+                    "469",
+                    "872",
+                    "618",
+                    "620"
                 ],
                 "41961": [
                     "811",
@@ -17886,15 +18314,15 @@
                 ]
             },
             "8": {
-                "26612": [
-                    "128",
-                    "298",
-                    "380",
-                    "415",
-                    "337",
-                    "427",
-                    "494",
-                    "518"
+                "2669": [
+                    "1156",
+                    "587",
+                    "932",
+                    "445",
+                    "105",
+                    "1039",
+                    "576",
+                    "208"
                 ],
                 "14668": [
                     "1112",
@@ -17966,26 +18394,6 @@
                     "376",
                     "375"
                 ],
-                "42009": [
-                    "1073",
-                    "50",
-                    "580",
-                    "463",
-                    "735",
-                    "814",
-                    "51",
-                    "357"
-                ],
-                "1300401": [
-                    "71",
-                    "74",
-                    "58",
-                    "69",
-                    "63",
-                    "56",
-                    "60",
-                    "1074"
-                ],
                 "24285": [
                     "493",
                     "541",
@@ -18005,6 +18413,26 @@
                     "61",
                     "63",
                     "84"
+                ],
+                "6534": [
+                    "1120",
+                    "134",
+                    "932",
+                    "395",
+                    "543",
+                    "929",
+                    "218",
+                    "432"
+                ],
+                "8215": [
+                    "593",
+                    "288",
+                    "592",
+                    "291",
+                    "290",
+                    "289",
+                    "358",
+                    "1145"
                 ]
             },
             "7": {
@@ -18071,14 +18499,14 @@
                     "570",
                     "431"
                 ],
-                "9144": [
-                    "183",
-                    "32",
-                    "1138",
-                    "466",
-                    "1136",
-                    "1137",
-                    "833"
+                "38703": [
+                    "29",
+                    "350",
+                    "1127",
+                    "1146",
+                    "416",
+                    "448",
+                    "443"
                 ],
                 "5005": [
                     "33",
@@ -18097,6 +18525,15 @@
                     "426",
                     "548",
                     "338"
+                ],
+                "22670": [
+                    "1120",
+                    "479",
+                    "455",
+                    "619",
+                    "80",
+                    "1143",
+                    "618"
                 ],
                 "5530": [
                     "50",
@@ -18125,6 +18562,15 @@
                     "230",
                     "960"
                 ],
+                "21037": [
+                    "527",
+                    "844",
+                    "1150",
+                    "525",
+                    "1147",
+                    "526",
+                    "511"
+                ],
                 "1833677": [
                     "540",
                     "451",
@@ -18134,14 +18580,14 @@
                     "538",
                     "536"
                 ],
-                "8215": [
-                    "593",
-                    "288",
-                    "592",
-                    "291",
-                    "290",
-                    "289",
-                    "358"
+                "22471": [
+                    "1152",
+                    "245",
+                    "236",
+                    "238",
+                    "246",
+                    "244",
+                    "243"
                 ],
                 "5468": [
                     "504",
@@ -18186,14 +18632,6 @@
                     "981",
                     "1097"
                 ],
-                "38703": [
-                    "29",
-                    "350",
-                    "1127",
-                    "416",
-                    "448",
-                    "443"
-                ],
                 "39984": [
                     "25",
                     "350",
@@ -18210,6 +18648,14 @@
                     "497",
                     "48"
                 ],
+                "22879": [
+                    "98",
+                    "46",
+                    "47",
+                    "1159",
+                    "48",
+                    "372"
+                ],
                 "24355": [
                     "27",
                     "560",
@@ -18225,6 +18671,14 @@
                     "22",
                     "550",
                     "336"
+                ],
+                "659495": [
+                    "50",
+                    "49",
+                    "681",
+                    "51",
+                    "1097",
+                    "357"
                 ],
                 "605598": [
                     "290",
@@ -18266,14 +18720,6 @@
                     "73",
                     "575"
                 ],
-                "14188": [
-                    "110",
-                    "440",
-                    "410",
-                    "617",
-                    "469",
-                    "872"
-                ],
                 "31969": [
                     "254",
                     "125",
@@ -18281,14 +18727,6 @@
                     "230",
                     "506",
                     "116"
-                ],
-                "6534": [
-                    "1120",
-                    "134",
-                    "395",
-                    "543",
-                    "218",
-                    "432"
                 ],
                 "23716": [
                     "545",
@@ -18306,6 +18744,14 @@
                     "538",
                     "536"
                 ],
+                "30875": [
+                    "593",
+                    "319",
+                    "290",
+                    "320",
+                    "321",
+                    "1158"
+                ],
                 "466032": [
                     "198",
                     "248",
@@ -18314,6 +18760,14 @@
                     "1074",
                     "482"
                 ],
+                "9838": [
+                    "353",
+                    "1155",
+                    "524",
+                    "390",
+                    "200",
+                    "428"
+                ],
                 "1858": [
                     "478",
                     "329",
@@ -18321,14 +18775,6 @@
                     "232",
                     "671",
                     "518"
-                ],
-                "22471": [
-                    "245",
-                    "236",
-                    "238",
-                    "246",
-                    "244",
-                    "243"
                 ]
             },
             "5": {
@@ -18339,12 +18785,12 @@
                     "809",
                     "97"
                 ],
-                "2669": [
-                    "587",
-                    "445",
-                    "105",
-                    "576",
-                    "208"
+                "36310": [
+                    "832",
+                    "282",
+                    "66",
+                    "474",
+                    "447"
                 ],
                 "29859": [
                     "522",
@@ -18388,6 +18834,13 @@
                     "108",
                     "443"
                 ],
+                "1396": [
+                    "106",
+                    "69",
+                    "1153",
+                    "105",
+                    "488"
+                ],
                 "7886": [
                     "224",
                     "474",
@@ -18402,13 +18855,6 @@
                     "117",
                     "394"
                 ],
-                "22879": [
-                    "98",
-                    "46",
-                    "47",
-                    "48",
-                    "372"
-                ],
                 "5679": [
                     "545",
                     "546",
@@ -18422,6 +18868,20 @@
                     "426",
                     "584",
                     "387"
+                ],
+                "8552": [
+                    "589",
+                    "39",
+                    "1148",
+                    "356",
+                    "406"
+                ],
+                "21709": [
+                    "36",
+                    "590",
+                    "532",
+                    "1160",
+                    "428"
                 ],
                 "30162": [
                     "176",
@@ -18451,6 +18911,13 @@
                     "126",
                     "1105"
                 ],
+                "12086": [
+                    "119",
+                    "810",
+                    "681",
+                    "1104",
+                    "1101"
+                ],
                 "11380": [
                     "528",
                     "214",
@@ -18479,12 +18946,12 @@
                     "437",
                     "45"
                 ],
-                "659495": [
-                    "50",
-                    "49",
-                    "51",
-                    "1097",
-                    "357"
+                "571711": [
+                    "65",
+                    "61",
+                    "409",
+                    "1151",
+                    "57"
                 ],
                 "34549": [
                     "85",
@@ -18521,26 +18988,12 @@
                     "322",
                     "324"
                 ],
-                "30875": [
-                    "593",
-                    "319",
-                    "290",
-                    "320",
-                    "321"
-                ],
                 "6264": [
                     "354",
                     "185",
                     "355",
                     "356",
                     "511"
-                ],
-                "9838": [
-                    "353",
-                    "524",
-                    "390",
-                    "200",
-                    "428"
                 ],
                 "7836": [
                     "353",
@@ -18563,12 +19016,12 @@
                     "309",
                     "501"
                 ],
-                "21037": [
-                    "527",
-                    "844",
-                    "525",
-                    "526",
-                    "511"
+                "25495": [
+                    "1152",
+                    "314",
+                    "566",
+                    "316",
+                    "315"
                 ]
             },
             "4": {
@@ -18577,6 +19030,12 @@
                     "374",
                     "529",
                     "1121"
+                ],
+                "1433": [
+                    "31",
+                    "1146",
+                    "115",
+                    "114"
                 ],
                 "32312": [
                     "40",
@@ -18601,6 +19060,12 @@
                     "263",
                     "577",
                     "576"
+                ],
+                "373": [
+                    "455",
+                    "1161",
+                    "360",
+                    "745"
                 ],
                 "1371": [
                     "128",
@@ -18638,16 +19103,22 @@
                     "1139",
                     "474"
                 ],
+                "966648": [
+                    "180",
+                    "1159",
+                    "547",
+                    "179"
+                ],
                 "41294": [
                     "235",
                     "236",
                     "833",
                     "420"
                 ],
-                "1396": [
+                "24821": [
                     "106",
-                    "69",
-                    "105",
+                    "929",
+                    "104",
                     "488"
                 ],
                 "554576": [
@@ -18661,12 +19132,6 @@
                     "442",
                     "95",
                     "512"
-                ],
-                "22670": [
-                    "1120",
-                    "479",
-                    "455",
-                    "80"
                 ],
                 "3181": [
                     "528",
@@ -18710,18 +19175,6 @@
                     "1106",
                     "372"
                 ],
-                "8552": [
-                    "589",
-                    "39",
-                    "356",
-                    "406"
-                ],
-                "21709": [
-                    "36",
-                    "590",
-                    "532",
-                    "428"
-                ],
                 "797": [
                     "29",
                     "30",
@@ -18734,11 +19187,29 @@
                     "351",
                     "506"
                 ],
+                "245737": [
+                    "87",
+                    "88",
+                    "1160",
+                    "618"
+                ],
                 "13176": [
                     "98",
                     "97",
                     "476",
                     "100"
+                ],
+                "14799": [
+                    "1112",
+                    "429",
+                    "619",
+                    "324"
+                ],
+                "36557": [
+                    "454",
+                    "389",
+                    "189",
+                    "401"
                 ],
                 "3061538": [
                     "446",
@@ -18752,11 +19223,23 @@
                     "42",
                     "571"
                 ],
+                "551260": [
+                    "201",
+                    "876",
+                    "176",
+                    "1148"
+                ],
                 "553143": [
                     "69",
                     "56",
                     "60",
                     "477"
+                ],
+                "7317": [
+                    "1156",
+                    "1103",
+                    "477",
+                    "482"
                 ],
                 "11661": [
                     "439",
@@ -18782,17 +19265,23 @@
                     "459",
                     "399"
                 ],
+                "3435612": [
+                    "33",
+                    "1151",
+                    "204",
+                    "84"
+                ],
                 "10779": [
                     "593",
                     "288",
                     "592",
                     "35"
                 ],
-                "571711": [
-                    "65",
-                    "61",
-                    "409",
-                    "57"
+                "7939": [
+                    "1155",
+                    "49",
+                    "1136",
+                    "423"
                 ],
                 "13330": [
                     "64",
@@ -18806,17 +19295,17 @@
                     "390",
                     "72"
                 ],
-                "36310": [
-                    "282",
-                    "66",
-                    "474",
-                    "447"
-                ],
                 "33496": [
                     "291",
                     "290",
                     "289",
                     "70"
+                ],
+                "783882": [
+                    "1151",
+                    "391",
+                    "620",
+                    "84"
                 ],
                 "1174520": [
                     "92",
@@ -18830,11 +19319,11 @@
                     "1139",
                     "571"
                 ],
-                "12086": [
-                    "119",
-                    "810",
-                    "1104",
-                    "1101"
+                "24508": [
+                    "1123",
+                    "508",
+                    "1147",
+                    "392"
                 ],
                 "34227": [
                     "569",
@@ -18854,6 +19343,12 @@
                     "347",
                     "487"
                 ],
+                "6240": [
+                    "440",
+                    "619",
+                    "444",
+                    "620"
+                ],
                 "1331292": [
                     "491",
                     "324",
@@ -18866,17 +19361,17 @@
                     "320",
                     "321"
                 ],
+                "7987": [
+                    "182",
+                    "1155",
+                    "1127",
+                    "191"
+                ],
                 "10079": [
                     "331",
                     "187",
                     "343",
                     "342"
-                ],
-                "36557": [
-                    "454",
-                    "389",
-                    "189",
-                    "401"
                 ],
                 "1414": [
                     "498",
@@ -18950,17 +19445,17 @@
                     "316",
                     "315"
                 ],
-                "25495": [
-                    "314",
-                    "566",
-                    "316",
-                    "315"
-                ],
                 "1669945": [
                     "589",
                     "556",
                     "426",
                     "873"
+                ],
+                "51126": [
+                    "812",
+                    "1159",
+                    "329",
+                    "397"
                 ],
                 "21324": [
                     "1109",
@@ -18991,11 +19486,6 @@
                     "1120",
                     "31",
                     "236"
-                ],
-                "1433": [
-                    "31",
-                    "115",
-                    "114"
                 ],
                 "3420": [
                     "468",
@@ -19032,15 +19522,15 @@
                     "361",
                     "575"
                 ],
-                "373": [
-                    "455",
-                    "360",
-                    "745"
-                ],
                 "1507394": [
                     "189",
                     "356",
                     "312"
+                ],
+                "26070": [
+                    "188",
+                    "1160",
+                    "770"
                 ],
                 "6451": [
                     "456",
@@ -19087,10 +19577,10 @@
                     "215",
                     "461"
                 ],
-                "966648": [
-                    "180",
-                    "547",
-                    "179"
+                "6793": [
+                    "434",
+                    "1039",
+                    "435"
                 ],
                 "1735": [
                     "1109",
@@ -19127,6 +19617,11 @@
                     "415",
                     "392"
                 ],
+                "41821": [
+                    "619",
+                    "394",
+                    "114"
+                ],
                 "9329": [
                     "330",
                     "809",
@@ -19136,11 +19631,6 @@
                     "330",
                     "1103",
                     "518"
-                ],
-                "24821": [
-                    "106",
-                    "104",
-                    "488"
                 ],
                 "1111242": [
                     "29",
@@ -19202,6 +19692,31 @@
                     "471",
                     "476"
                 ],
+                "38078": [
+                    "476",
+                    "402",
+                    "1039"
+                ],
+                "3360189": [
+                    "485",
+                    "1143",
+                    "873"
+                ],
+                "4545": [
+                    "351",
+                    "810",
+                    "399"
+                ],
+                "2317683": [
+                    "1112",
+                    "85",
+                    "75"
+                ],
+                "47646": [
+                    "1126",
+                    "419",
+                    "70"
+                ],
                 "16464": [
                     "465",
                     "446",
@@ -19221,16 +19736,6 @@
                     "556",
                     "214",
                     "486"
-                ],
-                "551260": [
-                    "201",
-                    "876",
-                    "176"
-                ],
-                "7317": [
-                    "1103",
-                    "477",
-                    "482"
                 ],
                 "240700": [
                     "547",
@@ -19257,16 +19762,6 @@
                     "441",
                     "519"
                 ],
-                "3435612": [
-                    "33",
-                    "204",
-                    "84"
-                ],
-                "7939": [
-                    "49",
-                    "1136",
-                    "423"
-                ],
                 "1491": [
                     "353",
                     "493",
@@ -19286,16 +19781,6 @@
                     "440",
                     "813",
                     "66"
-                ],
-                "47646": [
-                    "1126",
-                    "419",
-                    "70"
-                ],
-                "2317683": [
-                    "1112",
-                    "85",
-                    "75"
                 ],
                 "14251": [
                     "533",
@@ -19332,6 +19817,11 @@
                     "654",
                     "135"
                 ],
+                "20287": [
+                    "593",
+                    "288",
+                    "592"
+                ],
                 "70021": [
                     "348",
                     "349",
@@ -19357,11 +19847,6 @@
                     "442",
                     "617"
                 ],
-                "14799": [
-                    "1112",
-                    "429",
-                    "324"
-                ],
                 "6847": [
                     "368",
                     "322",
@@ -19371,11 +19856,6 @@
                     "440",
                     "574",
                     "498"
-                ],
-                "7987": [
-                    "182",
-                    "1127",
-                    "191"
                 ],
                 "2347339": [
                     "735",
@@ -19442,20 +19922,15 @@
                     "342",
                     "566"
                 ],
-                "24508": [
-                    "1123",
-                    "508",
-                    "392"
+                "23406": [
+                    "1152",
+                    "551",
+                    "506"
                 ],
                 "11614": [
                     "875",
                     "562",
                     "369"
-                ],
-                "20287": [
-                    "593",
-                    "288",
-                    "592"
                 ],
                 "252270": [
                     "291",
@@ -19472,15 +19947,10 @@
                     "316",
                     "315"
                 ],
-                "51126": [
-                    "812",
-                    "329",
-                    "397"
-                ],
-                "4545": [
-                    "351",
-                    "810",
-                    "399"
+                "43219": [
+                    "1142",
+                    "574",
+                    "365"
                 ],
                 "3572736": [
                     "491",
@@ -19491,6 +19961,31 @@
                     "491",
                     "370",
                     "490"
+                ],
+                "3775": [
+                    "1155",
+                    "471",
+                    "568"
+                ],
+                "22838": [
+                    "530",
+                    "1160",
+                    "412"
+                ],
+                "10920": [
+                    "424",
+                    "1153",
+                    "396"
+                ],
+                "11505": [
+                    "457",
+                    "565",
+                    "1145"
+                ],
+                "14363": [
+                    "384",
+                    "468",
+                    "1145"
                 ],
                 "41169": [
                     "1103",
@@ -19551,6 +20046,18 @@
                     "374",
                     "472"
                 ],
+                "3311": [
+                    "31",
+                    "1161"
+                ],
+                "10077": [
+                    "832",
+                    "497"
+                ],
+                "34316": [
+                    "1148",
+                    "296"
+                ],
                 "2007922": [
                     "29",
                     "292"
@@ -19566,10 +20073,6 @@
                 "2982053": [
                     "219",
                     "312"
-                ],
-                "26070": [
-                    "188",
-                    "770"
                 ],
                 "532": [
                     "188",
@@ -19631,10 +20134,6 @@
                     "448",
                     "531"
                 ],
-                "6793": [
-                    "434",
-                    "435"
-                ],
                 "28734": [
                     "462",
                     "379"
@@ -19665,10 +20164,6 @@
                 ],
                 "584298": [
                     "115",
-                    "114"
-                ],
-                "41821": [
-                    "394",
                     "114"
                 ],
                 "4370557": [
@@ -19707,6 +20202,10 @@
                     "101",
                     "329"
                 ],
+                "223309": [
+                    "95",
+                    "929"
+                ],
                 "28949": [
                     "90",
                     "588"
@@ -19735,6 +20234,10 @@
                     "705",
                     "76"
                 ],
+                "6652": [
+                    "1156",
+                    "53"
+                ],
                 "1656": [
                     "503",
                     "53"
@@ -19759,13 +20262,13 @@
                     "36",
                     "532"
                 ],
-                "245737": [
-                    "87",
-                    "88"
-                ],
                 "60258": [
                     "88",
                     "502"
+                ],
+                "242467": [
+                    "88",
+                    "1125"
                 ],
                 "34754": [
                     "88",
@@ -19795,13 +20298,29 @@
                     "476",
                     "495"
                 ],
-                "38078": [
-                    "476",
-                    "402"
+                "37652": [
+                    "261",
+                    "508"
                 ],
-                "3360189": [
-                    "485",
-                    "873"
+                "14969": [
+                    "261",
+                    "431"
+                ],
+                "14033": [
+                    "429",
+                    "412"
+                ],
+                "1183": [
+                    "352",
+                    "1146"
+                ],
+                "6752": [
+                    "352",
+                    "1137"
+                ],
+                "9943": [
+                    "351",
+                    "872"
                 ],
                 "24434": [
                     "102",
@@ -19830,6 +20349,10 @@
                 "38702": [
                     "30",
                     "663"
+                ],
+                "1067193": [
+                    "30",
+                    "932"
                 ],
                 "117084": [
                     "34",
@@ -19867,6 +20390,10 @@
                     "588",
                     "64"
                 ],
+                "24256": [
+                    "66",
+                    "1147"
+                ],
                 "10315": [
                     "480",
                     "73"
@@ -19879,8 +20406,8 @@
                     "75",
                     "190"
                 ],
-                "783882": [
-                    "391",
+                "544909": [
+                    "1158",
                     "84"
                 ],
                 "3268094": [
@@ -19955,6 +20482,10 @@
                     "574",
                     "135"
                 ],
+                "7222": [
+                    "430",
+                    "1147"
+                ],
                 "375": [
                     "241",
                     "332"
@@ -20003,6 +20534,14 @@
                     "408",
                     "617"
                 ],
+                "1108971": [
+                    "617",
+                    "618"
+                ],
+                "27169": [
+                    "458",
+                    "618"
+                ],
                 "12227": [
                     "322",
                     "444"
@@ -20010,10 +20549,6 @@
                 "3695": [
                     "319",
                     "320"
-                ],
-                "6240": [
-                    "440",
-                    "444"
                 ],
                 "12759": [
                     "183",
@@ -20095,6 +20630,10 @@
                     "365",
                     "240"
                 ],
+                "17233": [
+                    "1157",
+                    "246"
+                ],
                 "1096253": [
                     "248",
                     "418"
@@ -20102,6 +20641,10 @@
                 "2721": [
                     "652",
                     "257"
+                ],
+                "453960": [
+                    "1125",
+                    "518"
                 ],
                 "41938": [
                     "1109",
@@ -20131,13 +20674,13 @@
                     "670",
                     "920"
                 ],
+                "725": [
+                    "498",
+                    "929"
+                ],
                 "24190": [
                     "375",
                     "335"
-                ],
-                "23406": [
-                    "551",
-                    "506"
                 ],
                 "1830611": [
                     "537",
@@ -20146,10 +20689,6 @@
                 "13413": [
                     "533",
                     "511"
-                ],
-                "37652": [
-                    "261",
-                    "508"
                 ],
                 "41569": [
                     "458",
@@ -20162,10 +20701,6 @@
                 "2028846": [
                     "386",
                     "337"
-                ],
-                "14969": [
-                    "261",
-                    "431"
                 ],
                 "485092": [
                     "875",
@@ -20203,17 +20738,9 @@
                     "594",
                     "338"
                 ],
-                "9943": [
-                    "351",
-                    "872"
-                ],
-                "6752": [
-                    "352",
-                    "1137"
-                ],
-                "43219": [
-                    "574",
-                    "365"
+                "1891": [
+                    "1148",
+                    "338"
                 ],
                 "1604": [
                     "366",
@@ -20230,6 +20757,30 @@
                 "292": [
                     "381",
                     "422"
+                ],
+                "1293": [
+                    "1155",
+                    "400"
+                ],
+                "9271": [
+                    "961",
+                    "1156"
+                ],
+                "1600": [
+                    "961",
+                    "1150"
+                ],
+                "3777": [
+                    "1150",
+                    "437"
+                ],
+                "63924": [
+                    "1151",
+                    "548"
+                ],
+                "22340": [
+                    "1140",
+                    "564"
                 ],
                 "3100": [
                     "1136",
@@ -20251,10 +20802,6 @@
                     "1123",
                     "397"
                 ],
-                "10920": [
-                    "424",
-                    "396"
-                ],
                 "4093": [
                     "735",
                     "1101"
@@ -20270,10 +20817,6 @@
                 "916729": [
                     "578",
                     "814"
-                ],
-                "14363": [
-                    "384",
-                    "468"
                 ],
                 "1320398": [
                     "430",
@@ -20291,14 +20834,6 @@
                     "407",
                     "406"
                 ],
-                "22838": [
-                    "530",
-                    "412"
-                ],
-                "14033": [
-                    "429",
-                    "412"
-                ],
                 "10784": [
                     "567",
                     "438"
@@ -20315,10 +20850,6 @@
                     "452",
                     "507"
                 ],
-                "11505": [
-                    "457",
-                    "565"
-                ],
                 "1121926": [
                     "481",
                     "460"
@@ -20330,10 +20861,6 @@
                 "22240": [
                     "466",
                     "526"
-                ],
-                "3775": [
-                    "471",
-                    "568"
                 ],
                 "3725760": [
                     "519",
@@ -20379,8 +20906,8 @@
         }
     },
     "users": [
-        "Денис",
         "Артур",
+        "Денис",
         "Никита",
         "Ваня",
         "Федя",
