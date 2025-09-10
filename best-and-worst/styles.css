@@ -243,6 +243,7 @@ body {
   margin-top: calc(100 / 428 * 4 * var(--vw));
   width: 100%;
   height: calc(100 / 428 * 36 * var(--vw));
+  font-family: 'Sf Pro Display Medium', Arial, sans-serif;
 }
 
 .movie-ratings div {
@@ -266,7 +267,6 @@ body {
   font-size: calc(100 / 428 * 20 * var(--vw));
   border: calc(100 / 428 * 1 * var(--vw)) solid #795e0b;
   color: #F2BB15;
-  font-family: 'Sf Pro Display Bold', Arial, sans-serif;
 }
 
 .movie-rating-imdb,
@@ -274,7 +274,6 @@ body {
   font-size: calc(100 / 428 * 12 * var(--vw));
   border: calc(100 / 428 * 1 * var(--vw)) solid #4c4c4f;
   color: #97979D;
-  font-family: 'Sf Pro Display Medium', Arial, sans-serif;
 }
 
 .movie-rating-imdb span,
