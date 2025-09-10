@@ -180,8 +180,8 @@ body {
 }
 
 .movie-img {
-  height: 100%;
-  width: calc(100 / 428 * 96 * var(--vw));
+  height: calc(100 / 428 * 135 * var(--vw));
+  width: calc(100 / 428 * 90 * var(--vw));
   display: flex;
 }
 
@@ -189,7 +189,7 @@ body {
   width: 100%;
   object-fit: cover;
   border-radius: calc(100 / 428 * 8 * var(--vw));
-  border: calc(100 / 428 * 1 * var(--vw)) solid #78787D;
+  /* border: calc(100 / 428 * 1 * var(--vw)) solid #78787D; */
   background-color: #78787D;
 }
 
