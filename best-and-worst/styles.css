@@ -180,16 +180,13 @@ body {
 }
 
 .movie-img {
-  height: calc(100 / 428 * 132 * var(--vw));
-  /* max-width: calc(100 / 428 * 132 * var(--vw)); */
+  height: 100%;
+  width: calc(100 / 428 * 96 * var(--vw));
   display: flex;
-  /* height: 100%; */
-  /* flex: 1; */
 }
 
 .movie-img img {
-  height: 100%;
-  max-width: calc(100 / 428 * 132 * var(--vw));
+  width: 100%;
   object-fit: cover;
   border-radius: calc(100 / 428 * 8 * var(--vw));
   border: calc(100 / 428 * 1 * var(--vw)) solid #78787D;
