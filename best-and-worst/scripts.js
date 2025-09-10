@@ -234,24 +234,26 @@ function applySortingFromURL() {
     let tagsHTML = "";
     if (movie["9"] || movie["10"] || movie["11"]) {
       tagsHTML = '<div class="movie-tags">';
-      if (movie["9"]) tagsHTML += `<span onclick='hapticFeedback("soft", "${movie["9"]}")'>HDREZKA</span>`;
-      if (movie["10"]) tagsHTML += `<span onclick='hapticFeedback("soft", "${movie["10"]}")'>IMDb</span>`;
-      if (movie["11"]) tagsHTML += `<span onclick='hapticFeedback("soft", "${movie["11"]}")'>КП</span>`;
+      if (movie["10"]) tagsHTML += `<span onclick='hapticFeedback("soft", "${movie["10"]}")'>HDREZKA</span>`;
+      if (movie["11"]) tagsHTML += `<span onclick='hapticFeedback("soft", "${movie["11"]}")'>IMDb</span>`;
+      if (movie["12"]) tagsHTML += `<span onclick='hapticFeedback("soft", "${movie["12"]}")'>КП</span>`;
       tagsHTML += "</div>";
     }
     card.innerHTML = `
-      <div class="movie-number">${index + 1}</div>
+      <div class="movie-img">
+        <img src="${movie["1"]}">
+      </div>
       <div class="movie-info">
-        <div class="movie-title">${movie["1"]}</div>
-        <span class="movie-title-en">${movie["2"]}</span>
-        <span class="movie-meta">${movie["3"]}</span>
+        <div class="movie-title">${index + 1}. ${movie["2"]}</div>
+        <span class="movie-title-en">${movie["3"]}</span>
+        <span class="movie-meta">${movie["4"]}</span>
         <div class="movie-rating-row">
           <div class="movie-score">
             <svg class="score-icon"><use href="#icon-star"/></svg>
-            <span>${movie["4"]}</span>
+            <span>${movie["5"]}</span>
           </div>
-          <div class="movie-ratings"><span>IMDb: ${movie["5"]}</span><span>${movie["6"]}</span></div>
-          <div class="movie-ratings"><span>КП: ${movie["7"]}</span><span>${movie["8"]}</span></div>
+          <div class="movie-ratings"><span>IMDb: ${movie["6"]}</span><span>${movie["7"]}</span></div>
+          <div class="movie-ratings"><span>КП: ${movie["8"]}</span><span>${movie["9"]}</span></div>
         </div>
         ${tagsHTML}
       </div>

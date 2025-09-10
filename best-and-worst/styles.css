@@ -160,7 +160,7 @@ body {
 
 .movie-card {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   gap: calc(100 / 428 * 8 * var(--vw));
   font-family: 'SF Pro Display', Arial, sans-serif;
   color: #fff;
@@ -178,6 +178,24 @@ body {
   font-family: 'Sf Pro Display Bold', Arial, sans-serif;
   color: #97979D;
 }
+
+.movie-img {
+  height: calc(100 / 428 * 132 * var(--vw));
+  /* max-width: calc(100 / 428 * 132 * var(--vw)); */
+  display: flex;
+  /* height: 100%; */
+  /* flex: 1; */
+}
+
+.movie-img img {
+  height: 100%;
+  max-width: calc(100 / 428 * 132 * var(--vw));
+  object-fit: cover;
+  border-radius: calc(100 / 428 * 8 * var(--vw));
+  border: calc(100 / 428 * 1 * var(--vw)) solid #78787D;
+  background-color: #78787D;
+}
+
 
 .movie-info {
   flex: 1;
@@ -218,7 +236,7 @@ body {
 .movie-score {
   display: inline-flex;
   align-items: center;
-  gap: calc(100 / 428 * 8 * var(--vw));
+  gap: calc(100 / 428 * 4 * var(--vw));
   font-size: calc(100 / 428 * 24 * var(--vw));
   color: #FFD43B;
   font-family: 'Sf Pro Display Medium', Arial, sans-serif;
