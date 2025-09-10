@@ -231,17 +231,27 @@ function applySortingFromURL() {
     const card = document.createElement("div");
     card.className = "movie-card";
 
-    let movieRatingsHTML = "";
-    if (movie["10"] || movie["11"] || movie["12"]) {
-      movieRatingsHTML = '<div class="movie-ratings">';
-      if (movie["10"]) movieRatingsHTML += `<div class="movie-rating-total" onclick='hapticFeedback("soft", "${movie["10"]}")'><span>${movie["5"]}</span></div>`;
-      else movieRatingsHTML += `<div class="movie-rating-total"><span>${movie["5"]}</span></div>`;
-      if (movie["11"]) movieRatingsHTML += `<div class="movie-rating-imdb" onclick='hapticFeedback("soft", "${movie["11"]}")'><span>IMDb: ${movie["6"]}</span><span>${movie["7"]}</span></div>`;
-      else movieRatingsHTML += `<div class="movie-rating-imdb"><span>IMDb: ${movie["6"]}</span><span>${movie["7"]}</span></div>`;
-      if (movie["12"]) movieRatingsHTML += `<div class="movie-rating-kp" onclick='hapticFeedback("soft", "${movie["12"]}")'><span>КП: ${movie["8"]}</span><span>${movie["9"]}</span></div>`;
-      else movieRatingsHTML += `<div class="movie-rating-kp"><span>КП: ${movie["8"]}</span><span>${movie["9"]}</span></div>`;
-      movieRatingsHTML += "</div>";
-    }
+
+
+    let movieRatingsHTML = '<div class="movie-ratings">';
+
+    const ratingTotal = movie["5"];
+    const ratingTotalLeft = ratingTotal.slice(0, 4);
+    const ratingTotalRight = ratingTotal.slice(4);
+
+    if (movie["10"]) movieRatingsHTML += `<div class="movie-rating-total" onclick='hapticFeedback("soft", "${movie["10"]}")'><span class="left">${ratingTotalLeft}</span><span class="right">${ratingTotalRight}</span></div>`;
+    else movieRatingsHTML += `<div class="movie-rating-total"><span class="left">${ratingTotalLeft}</span><span class="right">${ratingTotalRight}</span></div>`;
+
+    if (movie["11"]) movieRatingsHTML += `<div class="movie-rating-imdb" onclick='hapticFeedback("soft", "${movie["11"]}")'><span>IMDb: ${movie["6"]}</span><span>${movie["7"]}</span></div>`;
+    else movieRatingsHTML += `<div class="movie-rating-imdb"><span>IMDb: ${movie["6"]}</span><span>${movie["7"]}</span></div>`;
+
+    if (movie["12"]) movieRatingsHTML += `<div class="movie-rating-kp" onclick='hapticFeedback("soft", "${movie["12"]}")'><span>КП: ${movie["8"]}</span><span>${movie["9"]}</span></div>`;
+    else movieRatingsHTML += `<div class="movie-rating-kp"><span>КП: ${movie["8"]}</span><span>${movie["9"]}</span></div>`;
+
+    movieRatingsHTML += "</div>";
+
+
+
     card.innerHTML = `
       <div class="movie-img">
         <img src="${movie["1"]}">
@@ -741,3 +751,6 @@ function searchClear() {
 //   const clear = document.querySelector('.keyboard-clear');
 //   clear.classList.remove('active');
 // }
+
+
+

@@ -191,12 +191,11 @@ body {
 }
 
 .movie-img img {
-  height: 100%;
-  object-fit: cover;
+  width: 100%;
+  object-fit: contain;
   border-radius: calc(100 / 428 * 8 * var(--vw));
-  /* border: calc(100 / 428 * 1 * var(--vw)) solid #78787D; */
-  border: calc(100 / 428 * 1 * var(--vw)) solid #4c4c4f;
-  background-color: #4c4c4f;
+  /* border: calc(100 / 428 * 1 * var(--vw)) solid #4c4c4f; */
+  /* background-color: #4c4c4f; */
 }
 
 
@@ -256,7 +255,6 @@ body {
   cursor: pointer;
 
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 
@@ -266,11 +264,17 @@ body {
 .movie-rating-total {
   font-size: calc(100 / 428 * 20 * var(--vw));
   border: calc(100 / 428 * 1 * var(--vw)) solid #795e0b;
+}
+.movie-rating-total .left {
   color: #F2BB15;
+}
+.movie-rating-total .right {
+  color: #795e0b;
 }
 
 .movie-rating-imdb,
 .movie-rating-kp {
+  flex-direction: column;
   font-size: calc(100 / 428 * 12 * var(--vw));
   border: calc(100 / 428 * 1 * var(--vw)) solid #4c4c4f;
   color: #97979D;
@@ -654,3 +658,16 @@ body {
   background-color: red;
   z-index: 100000;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
