@@ -231,13 +231,16 @@ function applySortingFromURL() {
     const card = document.createElement("div");
     card.className = "movie-card";
 
-    let tagsHTML = "";
-    if (movie["9"] || movie["10"] || movie["11"]) {
-      tagsHTML = '<div class="movie-tags">';
-      if (movie["10"]) tagsHTML += `<span onclick='hapticFeedback("soft", "${movie["10"]}")'>HDREZKA</span>`;
-      if (movie["11"]) tagsHTML += `<span onclick='hapticFeedback("soft", "${movie["11"]}")'>IMDb</span>`;
-      if (movie["12"]) tagsHTML += `<span onclick='hapticFeedback("soft", "${movie["12"]}")'>КП</span>`;
-      tagsHTML += "</div>";
+    let movieRatingsHTML = "";
+    if (movie["10"] || movie["11"] || movie["12"]) {
+      movieRatingsHTML = '<div class="movie-ratings">';
+      if (movie["10"]) movieRatingsHTML += `<div class="movie-rating-total" onclick='hapticFeedback("soft", "${movie["10"]}")'><span>${movie["5"]}</span></div>`;
+      else movieRatingsHTML += `<div class="movie-rating-total"><span>${movie["5"]}</span></div>`;
+      if (movie["11"]) movieRatingsHTML += `<div class="movie-rating-imdb" onclick='hapticFeedback("soft", "${movie["11"]}")'><span>IMDb: ${movie["6"]}</span><span>${movie["7"]}</span></div>`;
+      else movieRatingsHTML += `<div class="movie-rating-imdb"><span>IMDb: ${movie["6"]}</span><span>${movie["7"]}</span></div>`;
+      if (movie["12"]) movieRatingsHTML += `<div class="movie-rating-kp" onclick='hapticFeedback("soft", "${movie["12"]}")'><span>КП: ${movie["8"]}</span><span>${movie["9"]}</span></div>`;
+      else movieRatingsHTML += `<div class="movie-rating-kp"><span>КП: ${movie["8"]}</span><span>${movie["9"]}</span></div>`;
+      movieRatingsHTML += "</div>";
     }
     card.innerHTML = `
       <div class="movie-img">
@@ -247,15 +250,7 @@ function applySortingFromURL() {
         <div class="movie-title">${index + 1}. ${movie["2"]}</div>
         <span class="movie-title-en">${movie["3"]}</span>
         <span class="movie-meta">${movie["4"]}</span>
-        <div class="movie-rating-row">
-          <div class="movie-score">
-            <svg class="score-icon"><use href="#icon-star"/></svg>
-            <span>${movie["5"]}</span>
-          </div>
-          <div class="movie-ratings"><span>IMDb: ${movie["6"]}</span><span>${movie["7"]}</span></div>
-          <div class="movie-ratings"><span>КП: ${movie["8"]}</span><span>${movie["9"]}</span></div>
-        </div>
-        ${tagsHTML}
+        ${movieRatingsHTML}
       </div>
     `;
     container.appendChild(card);

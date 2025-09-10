@@ -179,9 +179,14 @@ body {
   color: #97979D;
 }
 
+
+
+
+
+
 .movie-img {
-  height: calc(100 / 428 * 135 * var(--vw));
-  width: calc(100 / 428 * 90 * var(--vw));
+  height: calc(100 / 428 * 102.5 * var(--vw));
+  width: calc(100 / 428 * 68 * var(--vw));
   display: flex;
 }
 
@@ -192,6 +197,11 @@ body {
   /* border: calc(100 / 428 * 1 * var(--vw)) solid #78787D; */
   background-color: #78787D;
 }
+
+
+
+
+
 
 
 .movie-info {
@@ -221,66 +231,49 @@ body {
   font-family: 'Sf Pro Display Redular', Arial, sans-serif;
 }
 
-.movie-rating-row {
+
+
+
+
+
+.movie-ratings {
   display: flex;
   align-items: flex-start;
   align-items: center;
+  gap: calc(100 / 428 * 4 * var(--vw));;
   margin-top: calc(100 / 428 * 4 * var(--vw));
+
   width: 100%;
   opacity: .75;
 }
 
-.movie-score {
-  display: inline-flex;
-  align-items: center;
-  gap: calc(100 / 428 * 4 * var(--vw));
-  font-size: calc(100 / 428 * 24 * var(--vw));
-  color: #FFD43B;
-  font-family: 'Sf Pro Display Medium', Arial, sans-serif;
-}
-
-.score-icon {
-  height: calc(100 / 428 * 22 * var(--vw));
-  width: calc(100 / 428 * 22 * var(--vw));
-}
-
-.movie-ratings {
-  font-size: calc(100 / 428 * 12 * var(--vw));
-  border-left: calc(100 / 428 * 1 * var(--vw)) solid #C6A635;
-  color: #C6A635;
-  font-family: 'Sf Pro Display Bold', Arial, sans-serif;
-}
-
-.movie-ratings span {
-  display: block;
-}
-
-.movie-rating-row div {
+.movie-ratings div {
   flex: 1;
   text-align: center;
   max-width: calc(100% / 3);
-}
-
-.movie-tags {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: calc(100 / 428 * 8 * var(--vw));
-  margin-top: calc(100 / 428 * 8 * var(--vw));
-  width: 100%;
-  font-size: calc(100 / 428 * 12 * var(--vw));
-  font-family: 'Sf Pro Display Medium', Arial, sans-serif;
-  color: #78787D;
-}
-
-.movie-tags span {
-  flex: 1;
-  text-align: center;
-  max-width: calc((100% / 3) - calc(100 / 428 * 16 * var(--vw)));
-  padding: calc(100 / 428 * 4 * var(--vw));
   border-radius: calc(100 / 428 * 8 * var(--vw));
-  border: calc(100 / 428 * 1 * var(--vw)) solid #78787D;
   cursor: pointer;
+}
+
+.movie-rating-total {
+  align-items: center;
+  font-size: calc(100 / 428 * 24 * var(--vw));
+  background-color: #F2BB15;
+  color: white;
+  font-family: 'Sf Pro Display Medium', Arial, sans-serif;
+}
+
+.movie-rating-imdb,
+.movie-rating-kp {
+  font-size: calc(100 / 428 * 12 * var(--vw));
+  background-color: #97979D;
+  color: white;
+  font-family: 'Sf Pro Display Bold', Arial, sans-serif;
+}
+
+.movie-rating-imdb span,
+.movie-rating-kp span {
+  display: block;
 }
 
 
