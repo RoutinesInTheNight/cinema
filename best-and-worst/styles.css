@@ -186,7 +186,7 @@ body {
 }
 
 .movie-img img {
-  width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: calc(100 / 428 * 8 * var(--vw));
   /* border: calc(100 / 428 * 1 * var(--vw)) solid #78787D; */
