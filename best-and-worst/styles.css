@@ -185,8 +185,8 @@ body {
 
 
 .movie-img {
-  height: calc(100 / 428 * 102.5 * var(--vw));
-  width: calc(100 / 428 * 68 * var(--vw));
+  height: calc(100 / 428 * 106.5 * var(--vw));
+  width: calc(100 / 428 * 71 * var(--vw));
   display: flex;
 }
 
