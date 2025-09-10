@@ -195,6 +195,7 @@ body {
   object-fit: cover;
   border-radius: calc(100 / 428 * 8 * var(--vw));
   /* border: calc(100 / 428 * 1 * var(--vw)) solid #78787D; */
+  border: calc(100 / 428 * 1 * var(--vw)) solid #78787D;
   background-color: #78787D;
 }
 
@@ -258,16 +259,17 @@ body {
 .movie-rating-total {
   align-items: center;
   font-size: calc(100 / 428 * 24 * var(--vw));
-  background-color: #F2BB15;
-  color: white;
+  /* background-color: #F2BB15; */
+  border: calc(100 / 428 * 1 * var(--vw)) solid #795e0b;
+  color: #F2BB15;
   font-family: 'Sf Pro Display Medium', Arial, sans-serif;
 }
 
 .movie-rating-imdb,
 .movie-rating-kp {
   font-size: calc(100 / 428 * 12 * var(--vw));
-  background-color: #97979D;
-  color: white;
+  border: calc(100 / 428 * 1 * var(--vw)) solid #78787D;
+  color: #97979D;
   font-family: 'Sf Pro Display Bold', Arial, sans-serif;
 }
 
