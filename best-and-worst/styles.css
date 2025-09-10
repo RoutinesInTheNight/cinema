@@ -161,8 +161,8 @@ body {
 .movie-card {
   display: flex;
   /* align-items: stretch; */
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
   gap: calc(100 / 428 * 8 * var(--vw));
   font-family: 'SF Pro Display', Arial, sans-serif;
   color: #fff;
@@ -187,8 +187,8 @@ body {
 
 
 .movie-img {
-  height: calc(100 / 428 * 114.83333 * var(--vw));
-  width: calc(100 / 428 * 76.55555 * var(--vw));
+  height: calc(100 / 428 * 116 * var(--vw));
+  width: calc(100 / 428 * 77.33333 * var(--vw));
   display: flex;
 }
 
@@ -197,7 +197,7 @@ body {
   object-fit: contain;
   border-radius: calc(100 / 428 * 8 * var(--vw));
   /* border: calc(100 / 428 * 1 * var(--vw)) solid #4c4c4f; */
-  /* background-color: #4c4c4f; */
+  background-color: black;
 }
 
 
