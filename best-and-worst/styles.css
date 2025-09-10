@@ -160,7 +160,9 @@ body {
 
 .movie-card {
   display: flex;
-  align-items: stretch;
+  /* align-items: stretch; */
+  align-items: center;
+  justify-content: center;
   gap: calc(100 / 428 * 8 * var(--vw));
   font-family: 'SF Pro Display', Arial, sans-serif;
   color: #fff;
@@ -185,8 +187,8 @@ body {
 
 
 .movie-img {
-  height: calc(100 / 428 * 112.8333 * var(--vw));
-  width: calc(100 / 428 * 75.2222 * var(--vw));
+  height: calc(100 / 428 * 114.83333 * var(--vw));
+  width: calc(100 / 428 * 76.55555 * var(--vw));
   display: flex;
 }
 
