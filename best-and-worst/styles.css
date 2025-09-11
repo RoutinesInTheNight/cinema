@@ -669,7 +669,67 @@ body {
 
 
 
+.choice-bet-container-vertical {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: #382020;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 100;
+}
 
+.choice-bet-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: calc(100 / 1284 * 50 * var(--dynamic-vw));
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  padding: calc(50 * var(--dynamic-vw)) 0; /* паддинг сверху и снизу */
+  transition: opacity 0.2s;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.choice-bet-vertical::-webkit-scrollbar {
+  display: none;
+}
+
+.bet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(100 / 1284 * 6 * var(--dynamic-vw));
+  background-color: #4c3636;
+  padding:
+    calc(100 / 1284 * 44 * var(--dynamic-vw))
+    calc(100 / 1284 * 50 * var(--dynamic-vw));
+  border-radius: calc(100 / 1284 * 50 * var(--dynamic-vw));
+  scroll-snap-align: center;
+  text-align: center;
+  opacity: 0.5;
+}
+
+.bet img {
+  height: calc(100 / 1284 * 60 * var(--dynamic-vw));
+}
+
+.bet p {
+  color: white;
+  font-family: 'Sf Pro Display Bold', Arial, sans-serif;
+  font-size: calc(100 / 1284 * 60 * var(--dynamic-vw));
+  margin: 0;
+  white-space: nowrap;
+}
+
+.bet.selected {
+  opacity: 1;
+}
 
 
 

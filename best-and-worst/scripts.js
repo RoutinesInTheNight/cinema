@@ -754,3 +754,115 @@ function searchClear() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const betsData = [
+    { bet: 100, text: '100' },
+    { bet: 200, text: '200' },
+    { bet: 300, text: '300' },
+    { bet: 400, text: '400' },
+    { bet: 500, text: '500' },
+    { bet: 1000, text: '1K' },
+    { bet: 10000, text: '10K' },
+    { bet: 100000, text: '100K' },
+    { bet: 1000000, text: '1M' },
+    { bet: 100, text: '100' },
+    { bet: 200, text: '200' },
+    { bet: 300, text: '300' },
+    { bet: 400, text: '400' },
+    { bet: 500, text: '500' },
+    { bet: 1000, text: '1K' },
+    { bet: 10000, text: '10K' },
+    { bet: 100000, text: '100K' },
+    { bet: 1000000, text: '1M' },
+  ];
+
+  const choiceBet = document.getElementById('choice-bet-vertical');
+
+  betsData.forEach(item => {
+    const betDiv = document.createElement('div');
+    betDiv.classList.add('bet');
+    betDiv.setAttribute('data-bet', item.bet);
+
+    const img = document.createElement('img');
+    img.src = '../../images/coin.png';
+
+    const p = document.createElement('p');
+    p.textContent = item.text;
+
+    betDiv.appendChild(img);
+    betDiv.appendChild(p);
+    choiceBet.appendChild(betDiv);
+  });
+
+  const bets = document.querySelectorAll('.bet');
+
+  const highlightBet = (betElement) => {
+    bets.forEach(bet => bet.classList.remove('selected'));
+    betElement.classList.add('selected');
+    localStorage.setItem('current_bet', betElement.dataset.bet);
+    currentBetValue = Number(betElement.dataset.bet);
+  };
+
+  const getCenterBet = () => {
+    const center = choiceBet.scrollTop + choiceBet.clientHeight / 2;
+    return Array.from(bets).reduce((closest, bet) => {
+      const betCenter = bet.offsetTop + bet.offsetHeight / 2;
+      const distance = Math.abs(center - betCenter);
+      return distance < closest.distance ? { bet, distance } : closest;
+    }, { bet: null, distance: Infinity }).bet;
+  };
+
+  let lastBet = null;
+  choiceBet.addEventListener('scroll', () => {
+    const centerBet = getCenterBet();
+    if (centerBet && centerBet !== lastBet) {
+      highlightBet(centerBet);
+      lastBet = centerBet;
+    }
+  });
+
+  bets.forEach(bet => {
+    bet.addEventListener('click', () => {
+      const offset = bet.offsetTop - choiceBet.offsetHeight / 2 + bet.offsetHeight / 2;
+      choiceBet.scrollTo({
+        top: offset,
+        behavior: 'smooth',
+      });
+      highlightBet(bet);
+    });
+  });
+
+  // Инициализация
+  if (bets.length > 0) {
+    choiceBet.scrollTo({
+      top: bets[0].offsetTop - choiceBet.offsetHeight / 2 + bets[0].offsetHeight / 2,
+      behavior: 'auto'
+    });
+    highlightBet(bets[0]);
+  }
+});
