@@ -684,14 +684,15 @@ body {
 }
 
 .choice-bet-vertical {
+  height: 100%; /* ← фикс! чтобы скролл работал */
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: calc(100 / 1284 * 50 * var(--dynamic-vw));
+  gap: calc(100 / 1284 * 20 * var(--dynamic-vw)); /* сделал меньше, чтобы больше влезало */
   overflow-y: auto;
   overflow-x: hidden;
   scroll-snap-type: y mandatory;
-  padding: calc(50 * var(--dynamic-vw)) 0; /* паддинг сверху и снизу */
-  transition: opacity 0.2s;
+  padding: calc(50 * var(--dynamic-vw)) 0;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
