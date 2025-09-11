@@ -158,10 +158,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     searchTopCollaps.style.marginTop = topValue;
-    
 
 
-    
+
+
 
     moviesContainer.style.marginTop = topValue;
     moviesContainer.style.marginBottom = bottom === 0 ? 'calc(0.5rem + 124.5px + 2.5vw)' : `calc(${bottom}px + 124.5px + 2.5vw)`
@@ -223,6 +223,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const choiceBet = document.getElementById('choice-bet-vertical');
 
+  // Блокируем скролл страницы при свайпе по списку
+  choiceBet.addEventListener('touchmove', (e) => {
+    const atTop = choiceBet.scrollTop === 0;
+    const atBottom = choiceBet.scrollTop + choiceBet.clientHeight >= choiceBet.scrollHeight;
+
+    // если не в самом верху и не в самом низу — не даём странице скроллиться
+    if (!(atTop && e.touches[0].clientY > 0) && !(atBottom && e.touches[0].clientY < 0)) {
+      e.stopPropagation();
+    }
+  }, { passive: false });
+
+
+  
   betsData.forEach(item => {
     const betDiv = document.createElement('div');
     betDiv.classList.add('bet');
@@ -256,7 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return distance < closest.distance ? { bet, distance } : closest;
     }, { bet: null, distance: Infinity }).bet;
   };
-  
+
   let lastBet = null;
   choiceBet.addEventListener('scroll', () => {
     const centerBet = getCenterBet();
@@ -266,7 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
       lastBet = centerBet;
     }
   });
-  
+
   bets.forEach(bet => {
     bet.addEventListener('click', () => {
       const offset = bet.offsetTop - choiceBet.offsetHeight / 2 + bet.offsetHeight / 2;
