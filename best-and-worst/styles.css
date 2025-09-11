@@ -699,8 +699,8 @@ body {
   -webkit-overflow-scrolling: touch;
   overscroll-behavior: contain;
 
-  padding-top: 50%;
-  padding-bottom: 50%;
+  /* padding-top: 50%; */
+  /* padding-bottom: 50%; */
 }
 
 .choice-bet-vertical::-webkit-scrollbar {
