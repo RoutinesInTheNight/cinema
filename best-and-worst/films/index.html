@@ -58,14 +58,14 @@
 
 
     <div id="movies-container">
-        <div class="movie-card visible">
-            <div class="movie-img">
-                <img src="600x900 (1).webp">
+        <div class="movie visible">
+            <div class="poster">
+                <img src="https://avatars.mds.yandex.net/get-kinopoisk-image/4716873/0a07a903-9025-4aff-bf7c-46bbb175888c/300x450">
             </div>
-            <div class="movie-info">
-                <div class="movie-title">1. Криминальное чтиво</div>
-                <span class="movie-title-en">Pulp Fiction</span>
-                <span class="movie-meta">1994 • 2 ч 34 мин</span>
+            <div class="info">
+                <div class="title-ru">1. Криминальное чтиво</div>
+                <span class="title-en">Pulp Fiction</span>
+                <span class="meta">1994 • 2 ч 34 мин</span>
                 <div class="movie-ratings">
                     <div class="movie-rating-total">
                         <span>8.743</span>
@@ -73,39 +73,30 @@
                     <div class="movie-rating-imdb"><span>IMDb: 8.775</span><span>2 299 095</span></div>
                     <div class="movie-rating-kp"><span>КП: 8.653</span><span>806 782</span></div>
                 </div>
-            </div>
-        </div>
-
-        <div class="movie-card visible">
-            <div class="movie-img">
-                <img src="600x900 (1).webp">
-            </div>
-            <div class="movie-info">
-                <div class="movie-title">1. Криминальное чтиво</div>
-                <span class="movie-title-en">Pulp Fiction</span>
-                <span class="movie-meta">1994 • 2 ч 34 мин</span>
-                <div class="movie-ratings">
-                    <div class="movie-rating-total">
-                        <span>8.74321</span>
-                    </div>
-                    <div class="movie-rating-imdb"><span>IMDb: 8.775</span><span>2 299 095</span></div>
-                    <div class="movie-rating-kp"><span>КП: 8.653</span><span>806 782</span></div>
+                <div class="who-viewed">
+                    <span class="user">Артур</span>
+                    <span class="user">Никита</span>
+                    <span class="user">Федя</span>
+                    <span class="user">Денис</span>
+                    <span class="user">Ваня</span>
+                    <span class="user">Вика</span>
                 </div>
             </div>
         </div>
 
 
+
     </div>
 
 
 
 
-    <div class="choice-bet-container-vertical">
+    <!-- <div class="choice-bet-container-vertical">
         <div class="choice-bet-vertical" id="choice-bet-vertical"></div>
-    </div>
+    </div> -->
 
 
-    <!-- <div class="sorting">
+    <div class="sorting">
         <div class="sorting-users-scroll" id="sort1">
             <div class="sorting-user"><span style="color: #2e3e2b;">-</span></div>
             <div class="sorting-user"><span style="color: #2e3e2b;">-</span></div>
@@ -115,25 +106,25 @@
 
         <div class="sorting-row" id="sort2">
             <div class="sorting-item" id="all" onclick="change('sort2', 'all')">
-                <span>По всем</span>
+                <span>IMDb + КП</span>
             </div>
             <div class="sorting-item" id="imdb" onclick="change('sort2', 'imdb')">
-                <span>По IMDb</span>
+                <span>IMDb</span>
             </div>
             <div class="sorting-item" id="kp" onclick="change('sort2', 'kp')">
-                <span>По КП</span>
+                <span>КП</span>
             </div>
         </div>
 
         <div class="sorting-row" id="sort3">
             <div class="sorting-item" id="best" onclick="change('sort3', 'best')">
-                <span>Лучшие фильмы</span>
+                <span>Сначала лучшие</span>
             </div>
             <div class="sorting-item" id="worst" onclick="change('sort3', 'worst')">
-                <span>Худшие фильмы</span>
+                <span>Сначала худшие</span>
             </div>
         </div>
-    </div> -->
+    </div>
 
     <div class="keyboards">
 
