@@ -19,11 +19,6 @@ if (telegram.isVersionAtLeast("8.0")) {
 
 
 
-function capitalizeFirstLetter(str) {
-  if (!str) return '';
-  return str[0].toUpperCase() + str.slice(1);
-}
-
 
 
 
@@ -158,10 +153,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     searchTopCollaps.style.marginTop = topValue;
-    
 
 
-    
+
+
 
     moviesContainer.style.marginTop = topValue;
     moviesContainer.style.marginBottom = bottom === 0 ? 'calc(0.5rem + 124.5px + 2.5vw)' : `calc(${bottom}px + 124.5px + 2.5vw)`
@@ -193,8 +188,6 @@ function populateUserSorting(userList) {
     container.appendChild(userDiv);
   });
 }
-
-
 
 // Выделение кнопки с именем и добавление фильмов / сериалов из json
 function applySortingFromURL() {
@@ -320,9 +313,44 @@ function applySortingFromURL() {
     }
   });
 
+
+
+
+
+
+  const container = document.querySelector('.who-viewed');
+  const fadeLeft = document.querySelector('.fade-left');
+  const fadeRight = document.querySelector('.fade-right');
+
+  function updateFades() {
+    const scrollLeft = container.scrollLeft;
+    const scrollWidth = container.scrollWidth;
+    const clientWidth = container.clientWidth;
+    const tolerance = 2; // пикселей запаса, чтобы избежать "мигания"
+
+    // если в начале
+    if (scrollLeft <= tolerance) {
+      fadeLeft.classList.add('hidden');
+    } else {
+      fadeLeft.classList.remove('hidden');
+    }
+
+    // если в конце
+    if (scrollLeft + clientWidth >= scrollWidth - tolerance) {
+      fadeRight.classList.add('hidden');
+    } else {
+      fadeRight.classList.remove('hidden');
+    }
+  }
+
+  // следим за скроллом
+  container.addEventListener('scroll', updateFades);
+  // следим за ресайзом (вдруг ширина окна изменилась)
+  window.addEventListener('resize', updateFades);
+
+  // инициализация
+  updateFades();
 }
-
-
 
 // Выделение кнопок 2-й и 3-й сортировок
 function updateSortButtonsFromURL() {
@@ -421,514 +449,40 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 
-// Нижнее меню сортировки убирается при поиске на телефонах
-// const input = document.getElementById('input');
-// const sorting = document.querySelector('.sorting');
-// input.addEventListener('focus', () => {
-//   if (DEVICE_TYPE === 'android' || DEVICE_TYPE === 'ios') {
-//     sorting?.classList.add('hidden');
+
+
+
+
+
+// const container = document.querySelector('.who-viewed');
+// const fadeLeft = document.querySelector('.fade-left');
+// const fadeRight = document.querySelector('.fade-right');
+
+// function updateFades() {
+//   const scrollLeft = container.scrollLeft;
+//   const scrollWidth = container.scrollWidth;
+//   const clientWidth = container.clientWidth;
+//   const tolerance = 2; // пикселей запаса, чтобы избежать "мигания"
+
+//   // если в начале
+//   if (scrollLeft <= tolerance) {
+//     fadeLeft.classList.add('hidden');
+//   } else {
+//     fadeLeft.classList.remove('hidden');
 //   }
-// });
-// input.addEventListener('blur', () => {
-//   if (document.activeElement !== input) {
-//     if (DEVICE_TYPE === 'android' || DEVICE_TYPE === 'ios') {
-//       sorting?.classList.remove('hidden');
-//     }
+
+//   // если в конце
+//   if (scrollLeft + clientWidth >= scrollWidth - tolerance) {
+//     fadeRight.classList.add('hidden');
+//   } else {
+//     fadeRight.classList.remove('hidden');
 //   }
-// });
-
-
-
-// Фокус с input пропадает при клике вне его области
-// const overlay = document.getElementById('overlay');
-// input.addEventListener('focus', () => {
-//   overlay.style.display = 'block';
-// });
-// overlay.addEventListener('click', () => {
-//   hapticFeedback('medium');
-//   input.blur();
-//   overlay.style.display = 'none';
-// });
-// input.addEventListener('blur', () => {
-//   overlay.style.display = 'none';
-// });
-
-
-
-
-
-const sorting = document.querySelector('.sorting');
-
-const searchCollaps = document.querySelector('.search-collaps');
-const searchCollapsSvg = document.querySelector('.search-collaps-svg');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// ПОИСК
-// const searchInput = document.querySelector('#input');
-
-// searchInput.addEventListener('input', () => {
-//   const query = searchInput.value.trim().toLowerCase();
-//   const cards = document.querySelectorAll('.movie');
-
-//   cards.forEach(card => {
-//     const title = card.querySelector('.movie-title')?.textContent.toLowerCase() || '';
-//     const titleEn = card.querySelector('.movie-title-en')?.textContent.toLowerCase() || '';
-
-//     if (query && !(title.includes(query) || titleEn.includes(query))) {
-//       card.classList.add('hidden');
-//     } else {
-//       card.classList.remove('hidden');
-//     }
-//   });
-// });
-
-
-
-
-// Открытие клавиатуры
-function showKeyboard() {
-  hapticFeedback("medium");
-  const keyboards = document.querySelector('.keyboards');
-  const overlay = document.querySelector('#overlay');
-  keyboards.classList.add('active');
-  overlay.classList.add('active');
-  const url = new URL(window.location);
-  const search = url.searchParams.get("search");
-  if (search !== null) {
-    url.searchParams.delete('search');
-    window.history.replaceState({}, '', url)
-  }
-}
-
-// Повторное открытие клавиатуры из верхнего поиска
-function showKeyboardAgain() {
-  hapticFeedback("medium");
-  const keyboards = document.querySelector('.keyboards');
-  const searchTopCollaps = document.querySelector('.search-top-collaps');
-  const searchCollaps = document.querySelector('.search-collaps');
-  const overlay = document.querySelector('#overlay');
-  searchTopCollaps.classList.remove('active');
-  keyboards.classList.add('active');
-  searchCollaps.classList.add('active');
-  overlay.classList.add('active');
-}
-
-// Закрытие клавиатуры
-function closeKeyboard() {
-  hapticFeedback("medium");
-  const keyboards = document.querySelector('.keyboards');
-  keyboards.classList.remove('active');
-  const url = new URL(window.location);
-  url.searchParams.delete('search');
-  window.history.replaceState({}, '', url)
-  overlay.classList.remove('active');
-  const input = document.querySelector('.keyboards .input span');
-  const inputTop = document.querySelector('.search-top-collaps .input span');
-  input.textContent = 'Поиск...';
-  inputTop.textContent = 'Поиск...';
-  const clear = document.querySelector('.keyboard-clear');
-  clear.classList.remove('active');
-  const searchCollaps = document.querySelector('.search-collaps');
-  searchCollaps.classList.remove('hide');
-}
-
-function keyboardCollapseClose() {
-  hapticFeedback("medium");
-  const searchTopCollaps = document.querySelector('.search-top-collaps');
-  const searchCollaps = document.querySelector('.search-collaps');
-  searchTopCollaps.classList.remove('active');
-  searchCollaps.classList.remove('hide');
-  const url = new URL(window.location);
-  url.searchParams.delete('search');
-  window.history.replaceState({}, '', url)
-  const input = document.querySelector('.keyboards .input span');
-  const inputTop = document.querySelector('.search-top-collaps .input span');
-  input.textContent = 'Поиск...';
-  inputTop.textContent = 'Поиск...';
-  const clear = document.querySelector('.keyboard-clear');
-  clear.classList.remove('active');
-}
-
-
-// Сворачивание клавиатуры (если поиск пустой - клавиатура и поиск закрываются)
-function keyboardCollapse() {
-  hapticFeedback("medium");
-  const searchCollaps = document.querySelector('.search-collaps');
-  const keyboards = document.querySelector('.keyboards');
-  const searchTopCollaps = document.querySelector('.search-top-collaps');
-  const overlay = document.querySelector('#overlay');
-  const url = new URL(window.location);
-  const search = url.searchParams.get("search");
-  if (search == null) {
-    keyboards.classList.remove('active');
-  } else {
-    searchCollaps.classList.add('hide');
-    keyboards.classList.remove('active');
-    searchTopCollaps.classList.add('active');
-  }
-  overlay.classList.remove('active');
-}
-
-
-
-
-
-// Переключение языков клавиатуры
-function keyboardChangeLang() {
-  hapticFeedback("light");
-  const keyboardRowsRu = document.querySelectorAll('.keyboard .ru');
-  const keyboardRowsEn = document.querySelectorAll('.keyboard .en');
-  if (keyboardRowsRu) {
-    keyboardRowsRu.forEach((row) => {
-      row.classList.toggle('hidden');
-    });
-  }
-  if (keyboardRowsEn) {
-    keyboardRowsEn.forEach((row) => {
-      row.classList.toggle('hidden');
-    });
-  }
-}
-
-// Открытие / закрытие ряда с цифрами
-function showHideNumbers() {
-  hapticFeedback("light");
-  const numbers = document.querySelector('.keyboard .numbers');
-  const actionButtons = document.querySelectorAll('.show-hide-numbers');
-  if (numbers) numbers.classList.toggle('hidden');
-  if (actionButtons) {
-    actionButtons.forEach((actionButton) => {
-      actionButton.classList.toggle('active');
-    });
-  }
-}
-
-
-
-
-
-function searchAdd(char, element) {
-  hapticFeedback("light");
-  const url = new URL(window.location);
-  const search = url.searchParams.get("search");
-  if (search !== null) {
-    if (search.length === 0 && char === ' ') return;
-    url.searchParams.set("search", search + char);
-  } else {
-    if (char !== ' ') {
-      url.searchParams.set("search", char);
-      const clear = document.querySelector('.keyboard-clear');
-      clear.classList.add('active');
-    } else return;
-  }
-  window.history.replaceState({}, '', url)
-  const input = document.querySelector('.keyboards .input span');
-  const inputTop = document.querySelector('.search-top-collaps .input span');
-  input.textContent = capitalizeFirstLetter(url.searchParams.get("search"));
-  inputTop.textContent = capitalizeFirstLetter(url.searchParams.get("search"));
-
-
-
-
-  // const rect = element.getBoundingClientRect();
-  // const centerX = rect.left + rect.width / 2;
-  // const centerY = rect.top + rect.height / 2;
-  // console.log(`Буква: ${char}, центр: x=${centerX}, y=${centerY}`)
-
-  // const zoom = document.querySelector('.keyboard-button-zoom');
-  // zoom.style.left = (centerX - 25) + 'px';
-  // zoom.style.top = (centerY - 25) + 'px';
-  // zoom.style.display = 'block';
-
-  // function hideOrRelease() {
-  //   zoom.style.display = 'block';
-  // }
-  // const targer = document.getElementById  
-
-  // function removeSquare() {
-  //   square.remove();
-  //   document.removeEventListener('mouseup', removeSquare);
-  //   document.removeEventListener('touchend', removeSquare);
-  // }
-
-  // document.addEventListener('mouseup', removeSquare);
-  // document.addEventListener('touchend', removeSquare);
-
-  
-
-
-
-}
-
-const zoomEl = document.querySelector('.keyboard-button-zoom');
-
-// Показываем, пока палец/мышь нажаты
-function handleStart(e) {
-  const span = e.currentTarget;
-  const rect = span.getBoundingClientRect();
-  const centerX = rect.left + rect.width / 2 + window.scrollX;
-  const centerY = rect.top + rect.height / 2 + window.scrollY;
-
-  const char = span.textContent.trim(); // или data-char, если хочешь
-
-  zoomEl.textContent = char;
-  zoomEl.style.left = (centerX - 25) + 'px';
-  zoomEl.style.top = (centerY - 60) + 'px';
-  zoomEl.style.display = 'block';
-}
-
-function handleEnd() {
-  zoomEl.style.display = 'none';
-}
-
-// Вешаем на все буквы с searchAdd
-document.querySelectorAll('span[onclick^="searchAdd"]').forEach(span => {
-  span.addEventListener('mousedown', handleStart);
-  span.addEventListener('touchstart', handleStart);
-
-  // mouseup и touchend не надо вешать на спан — они идут на документ
-});
-
-document.addEventListener('mouseup', handleEnd);
-document.addEventListener('touchend', handleEnd);
-
-
-
-
-
-
-function searchDelete() {
-  hapticFeedback("light");
-  const url = new URL(window.location);
-  const search = url.searchParams.get("search");
-  const input = document.querySelector('.keyboards .input span');
-  const inputTop = document.querySelector('.search-top-collaps .input span');
-  if (search !== null) {
-    if (search.length <= 1) {
-      url.searchParams.delete('search');
-      input.textContent = 'Поиск...';
-      inputTop.textContent = 'Поиск...';
-      const clear = document.querySelector('.keyboard-clear');
-      clear.classList.remove('active');
-    } else {
-      const newSearch = search.slice(0, -1);
-      url.searchParams.set("search", newSearch);
-      input.textContent = capitalizeFirstLetter(newSearch);
-      inputTop.textContent = capitalizeFirstLetter(newSearch);
-    }
-  } else return;
-  window.history.replaceState({}, '', url)
-}
-
-function searchClear() {
-  hapticFeedback("light");
-  const url = new URL(window.location);
-  const input = document.querySelector('.keyboards .input span');
-  const inputTop = document.querySelector('.search-top-collaps .input span');
-  url.searchParams.delete('search');
-  window.history.replaceState({}, '', url);
-  input.textContent = 'Поиск...';
-  inputTop.textContent = 'Поиск...';
-  const clear = document.querySelector('.keyboard-clear');
-  clear.classList.remove('active');
-}
-
-
-
-
-// function search(action, char) {
-//   hapticFeedback("light");
-
-
-//   const url = new URL(window.location);
-//   const input = document.querySelector('.keyboards .input span');
-//   const inputTop = document.querySelector('.search-top-collaps .input span');
-
-  
-//   url.searchParams.delete('search');
-//   window.history.replaceState({}, '', url);
-//   input.textContent = 'Поиск...';
-//   inputTop.textContent = 'Поиск...';
-//   const clear = document.querySelector('.keyboard-clear');
-//   clear.classList.remove('active');
 // }
 
+// // следим за скроллом
+// container.addEventListener('scroll', updateFades);
+// // следим за ресайзом (вдруг ширина окна изменилась)
+// window.addEventListener('resize', updateFades);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
-  const betsData = [
-    { bet: 100, text: '100' },
-    { bet: 200, text: '200' },
-    { bet: 300, text: '300' },
-    { bet: 400, text: '400' },
-    { bet: 500, text: '500' },
-    { bet: 1000, text: '1K' },
-    { bet: 10000, text: '10K' },
-    { bet: 100000, text: '100K' },
-    { bet: 1000000, text: '1M' },
-    { bet: 100, text: '100' },
-    { bet: 200, text: '200' },
-    { bet: 300, text: '300' },
-    { bet: 400, text: '400' },
-    { bet: 500, text: '500' },
-    { bet: 1000, text: '1K' },
-    { bet: 10000, text: '10K' },
-    { bet: 100000, text: '100K' },
-    { bet: 1000000, text: '1M' },
-  ];
-
-  const choiceBet = document.getElementById('choice-bet-vertical');
-
-  betsData.forEach(item => {
-    const betDiv = document.createElement('div');
-    betDiv.classList.add('bet');
-    betDiv.setAttribute('data-bet', item.bet);
-
-    const img = document.createElement('img');
-    img.src = '../../images/coin.png';
-
-    const p = document.createElement('p');
-    p.textContent = item.text;
-
-    betDiv.appendChild(img);
-    betDiv.appendChild(p);
-    choiceBet.appendChild(betDiv);
-  });
-
-  const bets = document.querySelectorAll('.bet');
-
-  const highlightBet = (betElement) => {
-    bets.forEach(bet => bet.classList.remove('selected'));
-    betElement.classList.add('selected');
-    localStorage.setItem('current_bet', betElement.dataset.bet);
-    currentBetValue = Number(betElement.dataset.bet);
-  };
-
-  const getCenterBet = () => {
-    const center = choiceBet.scrollTop + choiceBet.clientHeight / 2;
-    return Array.from(bets).reduce((closest, bet) => {
-      const betCenter = bet.offsetTop + bet.offsetHeight / 2;
-      const distance = Math.abs(center - betCenter);
-      return distance < closest.distance ? { bet, distance } : closest;
-    }, { bet: null, distance: Infinity }).bet;
-  };
-
-  let lastBet = null;
-  choiceBet.addEventListener('scroll', () => {
-    const centerBet = getCenterBet();
-    if (centerBet && centerBet !== lastBet) {
-      highlightBet(centerBet);
-      lastBet = centerBet;
-    }
-  });
-
-  bets.forEach(bet => {
-    bet.addEventListener('click', () => {
-      const offset = bet.offsetTop - choiceBet.offsetHeight / 2 + bet.offsetHeight / 2;
-      choiceBet.scrollTo({
-        top: offset,
-        behavior: 'smooth',
-      });
-      highlightBet(bet);
-    });
-  });
-
-  // Инициализация
-  if (bets.length > 0) {
-    choiceBet.scrollTo({
-      top: bets[0].offsetTop - choiceBet.offsetHeight / 2 + bets[0].offsetHeight / 2,
-      behavior: 'auto'
-    });
-    highlightBet(bets[0]);
-  }
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function initWhoViewedFades(wrapper) {
-  const container = wrapper.querySelector('.who-viewed');
-  const fadeLeft = wrapper.querySelector('.fade-left');
-  const fadeRight = wrapper.querySelector('.fade-right');
-
-  function updateFades() {
-    const scrollLeft = container.scrollLeft;
-    const scrollWidth = container.scrollWidth;
-    const clientWidth = container.clientWidth;
-    const tolerance = 2;
-
-    if (scrollLeft <= tolerance) {
-      fadeLeft.classList.add('hidden');
-    } else {
-      fadeLeft.classList.remove('hidden');
-    }
-
-    if (scrollLeft + clientWidth >= scrollWidth - tolerance) {
-      fadeRight.classList.add('hidden');
-    } else {
-      fadeRight.classList.remove('hidden');
-    }
-  }
-
-  container.addEventListener('scroll', updateFades);
-  window.addEventListener('resize', updateFades);
-
-  updateFades(); // вызвать сразу
-}
-
-document.querySelectorAll('who-viewed-wrapper').forEach(initWhoViewedFades)
+// // инициализация
+// updateFades();
