@@ -330,16 +330,16 @@ function applySortingFromURL() {
 
     // если в начале
     if (scrollLeft <= tolerance) {
-      fadeLeft.classList.add('hidden');
+      fadeLeft.classList.add('hidden2');
     } else {
-      fadeLeft.classList.remove('hidden');
+      fadeLeft.classList.remove('hidden2');
     }
 
     // если в конце
     if (scrollLeft + clientWidth >= scrollWidth - tolerance) {
-      fadeRight.classList.add('hidden');
+      fadeRight.classList.add('hidden2');
     } else {
-      fadeRight.classList.remove('hidden');
+      fadeRight.classList.remove('hidden2');
     }
   }
 

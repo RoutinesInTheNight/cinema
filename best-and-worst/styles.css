@@ -172,7 +172,7 @@ body {
   right: 0;
   background: linear-gradient(to left, #1C1C1C, transparent);
 }
-.fade.hidden {
+.fade.hidden2 {
   opacity: 0;
 }
 
