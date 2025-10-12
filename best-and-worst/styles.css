@@ -175,16 +175,16 @@ body {
   font-size: calc(100 / 428 * 16 * var(--vw));
   font-family: 'Sf Pro Display Medium', Arial, sans-serif;
   cursor: pointer;
-  background-color: #4c4c4f;
-  color: #97979D;
+  background-color: #2e3e2b;
+  color: #749C6C;
   padding: calc(100 / 428 * 2 * var(--vw)) calc(100 / 428 * 8 * var(--vw)) calc(100 / 428 * 2 * var(--vw)) calc(100 / 428 * 8 * var(--vw));
   border-radius: calc(100 / 428 * 8 * var(--vw));
 }
 
-.who-viewed .user {
+/* .who-viewed .user {
   flex: 0 0 auto;
   min-width: 25%;
-}
+} */
 
 
 
@@ -239,8 +239,8 @@ body {
 
 
 .movie .poster {
-  height: calc(100 / 428 * 140 * var(--vw));
-  width: calc(100 / 428 * (140 / 1.5) * var(--vw));
+  height: calc(100 / 1284 * 435 * var(--vw));
+  width: calc(100 / 1284 * (435 / 450 * 300) * var(--vw));
   display: flex;
 }
 
