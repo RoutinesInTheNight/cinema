@@ -260,7 +260,7 @@ body {
 
 .movie .info {
   flex: 1;
-  width: calc(100% - (100 / 428 * (140 / 1.5) * var(--vw)));
+  width: calc(100% - (100 / 1284 * (435 / 450 * 300) * var(--vw)));
 }
 
 .movie .title-ru {
