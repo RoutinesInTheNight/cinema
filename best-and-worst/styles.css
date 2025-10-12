@@ -179,6 +179,7 @@ body {
   color: #749C6C;
   padding: calc(100 / 428 * 2 * var(--vw)) calc(100 / 428 * 8 * var(--vw)) calc(100 / 428 * 2 * var(--vw)) calc(100 / 428 * 8 * var(--vw));
   border-radius: calc(100 / 428 * 8 * var(--vw));
+  opacity: 0.75;
 }
 
 /* .who-viewed .user {
