@@ -318,14 +318,14 @@ function applySortingFromURL() {
 
 
 
-  const container = document.querySelector('.who-viewed');
+  const whoViewed = document.querySelector('.who-viewed');
   const fadeLeft = document.querySelector('.fade-left');
   const fadeRight = document.querySelector('.fade-right');
 
   function updateFades() {
-    const scrollLeft = container.scrollLeft;
-    const scrollWidth = container.scrollWidth;
-    const clientWidth = container.clientWidth;
+    const scrollLeft = whoViewed.scrollLeft;
+    const scrollWidth = whoViewed.scrollWidth;
+    const clientWidth = whoViewed.clientWidth;
     const tolerance = 2; // пикселей запаса, чтобы избежать "мигания"
 
     // если в начале
@@ -344,7 +344,7 @@ function applySortingFromURL() {
   }
 
   // следим за скроллом
-  container.addEventListener('scroll', updateFades);
+  whoViewed.addEventListener('scroll', updateFades);
   // следим за ресайзом (вдруг ширина окна изменилась)
   window.addEventListener('resize', updateFades);
 
