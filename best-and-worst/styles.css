@@ -240,7 +240,7 @@ body {
 
 .movie .poster {
   height: calc(100 / 428 * 140 * var(--vw));
-  width: calc(100 / 428 * (140 / 1.5f) * var(--vw));
+  width: calc(100 / 428 * (140 / 1.5) * var(--vw));
   display: flex;
 }
 
@@ -260,7 +260,7 @@ body {
 
 .movie .info {
   flex: 1;
-  width: 0%;
+  /* width: 0%; */
 }
 
 .movie .title-ru {
