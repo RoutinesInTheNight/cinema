@@ -897,7 +897,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
 const container = document.querySelector('.who-viewed');
 const fadeLeft = document.querySelector('.fade-left');
 const fadeRight = document.querySelector('.fade-right');
@@ -906,24 +905,27 @@ function updateFades() {
   const scrollLeft = container.scrollLeft;
   const scrollWidth = container.scrollWidth;
   const clientWidth = container.clientWidth;
+  const tolerance = 2; // пикселей запаса, чтобы избежать "мигания"
 
-  // Если в начале — скрываем левый градиент
-  if (scrollLeft <= 0) {
+  // если в начале
+  if (scrollLeft <= tolerance) {
     fadeLeft.classList.add('hidden');
   } else {
     fadeLeft.classList.remove('hidden');
   }
 
-  // Если в конце — скрываем правый градиент
-  if (scrollLeft + clientWidth >= scrollWidth - 1) {
+  // если в конце
+  if (scrollLeft + clientWidth >= scrollWidth - tolerance) {
     fadeRight.classList.add('hidden');
   } else {
     fadeRight.classList.remove('hidden');
   }
 }
 
-// Следим за скроллом
+// следим за скроллом
 container.addEventListener('scroll', updateFades);
+// следим за ресайзом (вдруг ширина окна изменилась)
+window.addEventListener('resize', updateFades);
 
-// Инициализация при загрузке
+// инициализация
 updateFades();
