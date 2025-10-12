@@ -153,12 +153,64 @@ body {
 
 
 
+.who-viewed {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  /* max-width: 50%; */
+  /* margin-left: 5%; */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  gap: calc(100 / 428 * 4 * var(--vw));
+  margin-top: calc(100 / 428 * 8 * var(--vw));
+}
+
+.who-viewed::-webkit-scrollbar {
+  display: none;
+}
+
+.who-viewed .user {
+  /* flex: 1; */
+  text-align: center;
+  font-size: calc(100 / 428 * 16 * var(--vw));
+  font-family: 'Sf Pro Display Medium', Arial, sans-serif;
+  cursor: pointer;
+  background-color: #4c4c4f;
+  color: #97979D;
+  padding: calc(100 / 428 * 2 * var(--vw)) calc(100 / 428 * 8 * var(--vw)) calc(100 / 428 * 2 * var(--vw)) calc(100 / 428 * 8 * var(--vw));
+  border-radius: calc(100 / 428 * 8 * var(--vw));
+}
+
+.who-viewed .user {
+  flex: 0 0 auto;
+  min-width: 25%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #movies-container div:first-child {
   margin-top: 0;
 }
 
-.movie-card {
+.movie {
   display: flex;
   /* align-items: stretch; */
   /* align-items: center; */
@@ -186,13 +238,13 @@ body {
 
 
 
-.movie-img {
-  height: calc(100 / 428 * 116 * var(--vw));
-  width: calc(100 / 428 * 77.33333 * var(--vw));
+.movie .poster {
+  height: calc(100 / 428 * 140 * var(--vw));
+  width: calc(100 / 428 * (140 / 1.5f) * var(--vw));
   display: flex;
 }
 
-.movie-img img {
+.movie .poster img {
   width: 100%;
   object-fit: contain;
   border-radius: calc(100 / 428 * 8 * var(--vw));
@@ -206,18 +258,19 @@ body {
 
 
 
-.movie-info {
+.movie .info {
   flex: 1;
+  width: 0%;
 }
 
-.movie-title {
+.movie .title-ru {
   display: inline-block;
   font-size: calc(100 / 428 * 20 * var(--vw));
   font-family: 'Sf Pro Display Bold', Arial, sans-serif;
 }
 
-.movie-title-en,
-.movie-meta {
+.movie .title-en,
+.movie .meta {
   display: block;
   font-size: calc(100 / 428 * 16 * var(--vw));
   font-family: 'Sf Pro Display Bold', Arial, sans-serif;
@@ -225,11 +278,11 @@ body {
   color: #97979D;
 }
 
-.movie-title-en {
+.movie .title-en {
   font-family: 'Sf Pro Display Medium', Arial, sans-serif;
 }
 
-.movie-meta {
+.movie .meta {
   font-family: 'Sf Pro Display Redular', Arial, sans-serif;
 }
 
@@ -665,78 +718,6 @@ body {
 
 
 
-
-
-
-
-.choice-bet-container-vertical {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 200px;
-  background: #382020;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  z-index: 100;
-}
-
-.choice-bet-vertical {
-  height: 100%; /* ← фикс! чтобы скролл работал */
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: calc(100 / 1284 * 20 * var(--dynamic-vw)); /* сделал меньше, чтобы больше влезало */
-  overflow-y: auto;
-  overflow-x: hidden;
-  scroll-snap-type: y mandatory;
-  padding: calc(50 * var(--dynamic-vw)) 0;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior: contain;
-
-  /* padding-top: 50%; */
-  /* padding-bottom: 50%; */
-}
-
-.choice-bet-vertical::-webkit-scrollbar {
-  display: none;
-}
-
-.bet {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: calc(100 / 1284 * 6 * var(--dynamic-vw));
-  background-color: #4c3636;
-  padding:
-    calc(100 / 1284 * 44 * var(--dynamic-vw))
-    calc(100 / 1284 * 50 * var(--dynamic-vw));
-  border-radius: calc(100 / 1284 * 50 * var(--dynamic-vw));
-  scroll-snap-align: center;
-  text-align: center;
-  opacity: 0.5;
-}
-
-.bet img {
-  height: calc(100 / 1284 * 60 * var(--dynamic-vw));
-}
-
-.bet p {
-  color: white;
-  font-family: 'Sf Pro Display Bold', Arial, sans-serif;
-  font-size: calc(100 / 1284 * 60 * var(--dynamic-vw));
-  margin: 0;
-  white-space: nowrap;
-}
-
-.bet.selected {
-  opacity: 1;
-}
 
 
 
