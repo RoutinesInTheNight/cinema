@@ -261,13 +261,17 @@ function applySortingFromURL() {
         <span class="title-en">${movie["3"]}</span>
         <span class="meta">${movie["4"]}</span>
         ${movieRatingsHTML}
-        <div class="who-viewed">
-          <span class="user">Артур</span>
-          <span class="user">Никита</span>
-          <span class="user">Федя</span>
-          <span class="user">Денис</span>
-          <span class="user">Ваня</span>
-          <span class="user">Вика</span>
+        <div class="who-viewed-wrapper">
+          <div class="who-viewed">
+            <span class="user">Артур</span>
+            <span class="user">Никита</span>
+            <span class="user">Федя</span>
+            <span class="user">Денис</span>
+            <span class="user">Ваня</span>
+            <span class="user">Вика</span>
+          </div>
+          <div class="fade fade-left"></div>
+          <div class="fade fade-right"></div>
         </div>
       </div>
     `;
@@ -874,3 +878,52 @@ document.addEventListener('DOMContentLoaded', () => {
     highlightBet(bets[0]);
   }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const container = document.querySelector('.who-viewed');
+const fadeLeft = document.querySelector('.fade-left');
+const fadeRight = document.querySelector('.fade-right');
+
+function updateFades() {
+  const scrollLeft = container.scrollLeft;
+  const scrollWidth = container.scrollWidth;
+  const clientWidth = container.clientWidth;
+
+  // Если в начале — скрываем левый градиент
+  if (scrollLeft <= 0) {
+    fadeLeft.classList.add('hidden');
+  } else {
+    fadeLeft.classList.remove('hidden');
+  }
+
+  // Если в конце — скрываем правый градиент
+  if (scrollLeft + clientWidth >= scrollWidth - 1) {
+    fadeRight.classList.add('hidden');
+  } else {
+    fadeRight.classList.remove('hidden');
+  }
+}
+
+// Следим за скроллом
+container.addEventListener('scroll', updateFades);
+
+// Инициализация при загрузке
+updateFades();
