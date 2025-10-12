@@ -194,6 +194,8 @@ function populateUserSorting(userList) {
   });
 }
 
+
+
 // Выделение кнопки с именем и добавление фильмов / сериалов из json
 function applySortingFromURL() {
   if (!movieData || !movieData.movies_data || !movieData.sort) return;
@@ -317,7 +319,10 @@ function applySortingFromURL() {
       observer.observe(child);
     }
   });
+
 }
+
+
 
 // Выделение кнопок 2-й и 3-й сортировок
 function updateSortButtonsFromURL() {
@@ -896,36 +901,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+function initWhoViewedFades(wrapper) {
+  const container = wrapper.querySelector('.who-viewed');
+  const fadeLeft = wrapper.querySelector('.fade-left');
+  const fadeRight = wrapper.querySelector('.fade-right');
 
-const container = document.querySelector('.who-viewed');
-const fadeLeft = document.querySelector('.fade-left');
-const fadeRight = document.querySelector('.fade-right');
+  function updateFades() {
+    const scrollLeft = container.scrollLeft;
+    const scrollWidth = container.scrollWidth;
+    const clientWidth = container.clientWidth;
+    const tolerance = 2;
 
-function updateFades() {
-  const scrollLeft = container.scrollLeft;
-  const scrollWidth = container.scrollWidth;
-  const clientWidth = container.clientWidth;
-  const tolerance = 2; // пикселей запаса, чтобы избежать "мигания"
+    if (scrollLeft <= tolerance) {
+      fadeLeft.classList.add('hidden');
+    } else {
+      fadeLeft.classList.remove('hidden');
+    }
 
-  // если в начале
-  if (scrollLeft <= tolerance) {
-    fadeLeft.classList.add('hidden');
-  } else {
-    fadeLeft.classList.remove('hidden');
+    if (scrollLeft + clientWidth >= scrollWidth - tolerance) {
+      fadeRight.classList.add('hidden');
+    } else {
+      fadeRight.classList.remove('hidden');
+    }
   }
 
-  // если в конце
-  if (scrollLeft + clientWidth >= scrollWidth - tolerance) {
-    fadeRight.classList.add('hidden');
-  } else {
-    fadeRight.classList.remove('hidden');
-  }
+  container.addEventListener('scroll', updateFades);
+  window.addEventListener('resize', updateFades);
+
+  updateFades(); // вызвать сразу
 }
 
-// следим за скроллом
-container.addEventListener('scroll', updateFades);
-// следим за ресайзом (вдруг ширина окна изменилась)
-window.addEventListener('resize', updateFades);
-
-// инициализация
-updateFades();
+document.querySelectorAll('who-viewed-wrapper').forEach(initWhoViewedFades)
