@@ -254,8 +254,8 @@ body {
   padding: calc(100 / 428 * 8 * var(--vw));
   margin: calc(2.5 * var(--vw)) auto;
   border-radius: calc(100 / 428 * 16 * var(--vw));
-  border-top: calc(100 / 428 * 2 * var(--vw)) solid #3D3C3F;
-  border-bottom: calc(100 / 428 * 2 * var(--vw)) solid #3D3C3F;
+  /* border-top: calc(100 / 428 * 2 * var(--vw)) solid #3D3C3F; */
+  /* border-bottom: calc(100 / 428 * 2 * var(--vw)) solid #3D3C3F; */
 }
 
 .movie-number {
