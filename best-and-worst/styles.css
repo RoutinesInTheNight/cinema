@@ -114,6 +114,14 @@ body {
   min-width: 25%;
 }
 
+
+.sorting-users-scroll-wrapper {
+  position: relative;
+  overflow: hidden;
+  /* margin-top: calc(100 / 428 * 8 * var(--vw)); */
+}
+
+
 .sorting-users-scroll {
   display: flex;
   overflow-x: auto;
@@ -129,6 +137,32 @@ body {
 .sorting-users-scroll::-webkit-scrollbar {
   display: none;
 }
+
+.fade {
+  position: absolute;
+  top: 0;
+  width: calc(100 / 428 * 32 * var(--vw));
+  height: 100%;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+.fade-left {
+  left: 5%;
+  background: linear-gradient(to right, #1C1C1C, transparent);
+}
+.fade-right {
+  right: 5%;
+  background: linear-gradient(to left, #1C1C1C, transparent);
+}
+.fade.hidden2 {
+  opacity: 0;
+}
+
+
+
+
+
+
 
 .selected {
   background-color: #749C6C;
@@ -201,10 +235,12 @@ body {
   gap: calc(100 / 428 * 8 * var(--vw));
   font-family: 'SF Pro Display', Arial, sans-serif;
   color: #fff;
-  background-color: #1C1C1D;
+  /* background-color: #1C1C1D; */
   padding: calc(100 / 428 * 8 * var(--vw));
-  margin: calc(2.5 * var(--vw)) auto;
-  border-radius: calc(100 / 428 * 16 * var(--vw));
+  /* margin: calc(2.5 * var(--vw)) auto; */
+  /* border-radius: calc(100 / 428 * 16 * var(--vw)); */
+  border-bottom: calc(100 / 428 * 1.5 * var(--vw)) solid #3D3C3F;
+  border-top: calc(100 / 428 * 1.5 * var(--vw)) solid #3D3C3F;
 }
 
 .movie-number {

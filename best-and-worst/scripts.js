@@ -322,41 +322,41 @@ function applySortingFromURL() {
 
 
 
-// const whoViewedElements = document.querySelectorAll('.who-viewed');
+const whoViewedElements = document.querySelectorAll('.sorting-users-scroll');
 
-// whoViewedElements.forEach(whoViewed => {
-//   const fadeLeft = whoViewed.parentElement.querySelector('.fade-left');
-//   const fadeRight = whoViewed.parentElement.querySelector('.fade-right');
+whoViewedElements.forEach(whoViewed => {
+  const fadeLeft = whoViewed.parentElement.querySelector('.fade-left');
+  const fadeRight = whoViewed.parentElement.querySelector('.fade-right');
 
-//   function updateFades() {
-//     const scrollLeft = whoViewed.scrollLeft;
-//     const scrollWidth = whoViewed.scrollWidth;
-//     const clientWidth = whoViewed.clientWidth;
-//     const tolerance = 2;
+  function updateFades() {
+    const scrollLeft = whoViewed.scrollLeft;
+    const scrollWidth = whoViewed.scrollWidth;
+    const clientWidth = whoViewed.clientWidth;
+    const tolerance = 2;
 
-//     // если в начале
-//     if (scrollLeft <= tolerance) {
-//       fadeLeft.classList.add('hidden2');
-//     } else {
-//       fadeLeft.classList.remove('hidden2');
-//     }
+    // если в начале
+    if (scrollLeft <= tolerance) {
+      fadeLeft.classList.add('hidden2');
+    } else {
+      fadeLeft.classList.remove('hidden2');
+    }
 
-//     // если в конце
-//     if (scrollLeft + clientWidth >= scrollWidth - tolerance) {
-//       fadeRight.classList.add('hidden2');
-//     } else {
-//       fadeRight.classList.remove('hidden2');
-//     }
-//   }
+    // если в конце
+    if (scrollLeft + clientWidth >= scrollWidth - tolerance) {
+      fadeRight.classList.add('hidden2');
+    } else {
+      fadeRight.classList.remove('hidden2');
+    }
+  }
 
-//   // следим за скроллом
-//   whoViewed.addEventListener('scroll', updateFades);
-//   // следим за ресайзом
-//   window.addEventListener('resize', updateFades);
+  // следим за скроллом
+  whoViewed.addEventListener('scroll', updateFades);
+  // следим за ресайзом
+  window.addEventListener('resize', updateFades);
 
-//   // инициализация
-//   updateFades();
-// });
+  // инициализация
+  updateFades();
+});
 
 // }
 
