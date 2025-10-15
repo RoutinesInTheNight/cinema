@@ -189,6 +189,13 @@ function populateUserSorting(userList) {
   });
 }
 
+
+
+
+
+
+
+
 // Выделение кнопки с именем и добавление фильмов / сериалов из json
 function applySortingFromURL() {
   if (!movieData || !movieData.movies_data || !movieData.sort) return;
@@ -198,7 +205,7 @@ function applySortingFromURL() {
   const sort2 = urlParams.get("sort2");
   const sort3 = urlParams.get("sort3");
 
-  // === ДОБАВЛЯЕМ: выделение пользователя ===
+  // === Выделение кнопки с именем юзера ===
   if (sort1) {
     const userItems = document.querySelectorAll("#sort1 .sorting-user");
     userItems.forEach((item) => {
@@ -218,140 +225,140 @@ function applySortingFromURL() {
   const container = document.getElementById("movies-container");
   container.innerHTML = '';
 
-  if (!movieIds || movieIds.length === 0) return;
-
-  movieIds.forEach((id, index) => {
-    const movie = movieData.movies_data[id];
-    if (!movie) return;
-    const card = document.createElement("div");
-    card.className = "movie";
+  // === lazy render параметры ===
+  const BATCH_SIZE = 10; // сколько фильмов рендерить за один раз
+  let renderedCount = 0;
 
 
+// sentinel создаем один раз
+  const sentinel = document.createElement('div');
+  sentinel.id = 'lazy-sentinel';
+  container.appendChild(sentinel);
 
-    let movieRatingsHTML = '<div class="movie-ratings">';
+  function renderNextBatch() {
+    const nextBatch = movieIds.slice(renderedCount, renderedCount + BATCH_SIZE);
 
-    const ratingTotal = movie["5"];
-    const ratingTotalLeft = ratingTotal.slice(0, 4);
-    const ratingTotalRight = ratingTotal.slice(4);
+    nextBatch.forEach((id, index) => {
+      const movie = movieData.movies_data[id];
+      if (!movie) return;
+      const card = document.createElement("div");
+      card.className = "movie";
 
-    if (movie["11"]) movieRatingsHTML += `<div class="movie-rating-total" onclick='hapticFeedback("soft", "${movie["11"]}")'><span class="left">${ratingTotalLeft}</span><span class="right">${ratingTotalRight}</span></div>`;
-    else movieRatingsHTML += `<div class="movie-rating-total"><span class="left">${ratingTotalLeft}</span><span class="right">${ratingTotalRight}</span></div>`;
+      let movieRatingsHTML = '<div class="movie-ratings">';
+      const ratingTotal = movie["5"];
+      const ratingTotalLeft = ratingTotal.slice(0, 4);
+      const ratingTotalRight = ratingTotal.slice(4);
 
-    if (movie["12"]) movieRatingsHTML += `<div class="movie-rating-imdb" onclick='hapticFeedback("soft", "${movie["12"]}")'><span>IMDb: ${movie["6"]}</span><span>${movie["7"]}</span></div>`;
-    else movieRatingsHTML += `<div class="movie-rating-imdb"><span>IMDb: ${movie["6"]}</span><span>${movie["7"]}</span></div>`;
+      movieRatingsHTML += `<div class="movie-rating-total"><span class="left">${ratingTotalLeft}</span><span class="right">${ratingTotalRight}</span></div>`;
+      movieRatingsHTML += `<div class="movie-rating-imdb"><span>IMDb: ${movie["6"]}</span><span>${movie["7"]}</span></div>`;
+      movieRatingsHTML += `<div class="movie-rating-kp"><span>КП: ${movie["8"]}</span><span>${movie["9"]}</span></div>`;
+      movieRatingsHTML += "</div>";
 
-    if (movie["13"]) movieRatingsHTML += `<div class="movie-rating-kp" onclick='hapticFeedback("soft", "${movie["13"]}")'><span>КП: ${movie["8"]}</span><span>${movie["9"]}</span></div>`;
-    else movieRatingsHTML += `<div class="movie-rating-kp"><span>КП: ${movie["8"]}</span><span>${movie["9"]}</span></div>`;
+      const whoViewedHTML = movie["10"]
+        .map(name => `<span class="user">${name}</span>`)
+        .join('');
 
-    movieRatingsHTML += "</div>";
-
-    const whoViewedHTML = movie["10"]
-      .map(name => `<span class="user">${name}</span>`)
-      .join('');
-
-    card.innerHTML = `
-      <div class="poster">
-        <img src="${movie["1"]}">
-      </div>
-      <div class="info">
-        <div class="title-ru">${index + 1}. ${movie["2"]}</div>
-        <span class="title-en">${movie["3"]}</span>
-        <span class="meta">${movie["4"]}</span>
-        ${movieRatingsHTML}
-        <div class="who-viewed-wrapper">
-          <div class="who-viewed">
-            ${whoViewedHTML}
-          </div>
-          <div class="fade fade-left"></div>
-          <div class="fade fade-right"></div>
+      card.innerHTML = `
+        <div class="poster">
+          <img src="${movie["1"]}" loading="lazy">
         </div>
-      </div>
-    `;
-    container.appendChild(card);
-  });
+        <div class="info">
+          <div class="title-ru">${renderedCount + index + 1}. ${movie["2"]}</div>
+          <span class="title-en">${movie["3"]}</span>
+          <span class="meta">${movie["4"]}</span>
+          ${movieRatingsHTML}
+          <div class="who-viewed">${whoViewedHTML}</div>
+        </div>
+      `;
 
-  const children = container.querySelectorAll(':scope > *');
-  const hasNewLoad = urlParams.get('new-load') === 'true';
+      // вставляем карточку перед sentinel
+      container.insertBefore(card, sentinel);
+    });
 
-  if (hasNewLoad) {
-    urlParams.delete('new-load');
-    const newUrl = `${window.location.pathname}?${urlParams.toString()}`;
-    window.history.replaceState({}, '', newUrl);
+    renderedCount += nextBatch.length;
+
+    // если больше нет фильмов — убираем sentinel
+    if (renderedCount >= movieIds.length) {
+      observer.disconnect();
+      sentinel.remove();
+    }
   }
 
-  children.forEach((child, index) => {
-    if (index < 10) {
-      if (hasNewLoad) {
-        setTimeout(() => {
-          child.classList.add('visible');
-        }, index * 25);
-      } else {
-        child.classList.add('visible');
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const last = entries[0];
+      if (last.isIntersecting) {
+        renderNextBatch();
       }
+    },
+    {
+      rootMargin: '200px', // 🔥 подгружает заранее, пока sentinel не виден
     }
-  });
+  );
 
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-  });
+  observer.observe(sentinel);
 
-  children.forEach((child, index) => {
-    if (index >= 10) {
-      observer.observe(child);
-    }
-  });
+  // рендерим первую порцию сразу
+  renderNextBatch();
 
-
-
-
-
-
-  const whoViewedElements = document.querySelectorAll('.who-viewed');
-
-  whoViewedElements.forEach(whoViewed => {
-    const fadeLeft = whoViewed.parentElement.querySelector('.fade-left');
-    const fadeRight = whoViewed.parentElement.querySelector('.fade-right');
-
-    function updateFades() {
-      const scrollLeft = whoViewed.scrollLeft;
-      const scrollWidth = whoViewed.scrollWidth;
-      const clientWidth = whoViewed.clientWidth;
-      const tolerance = 2;
-
-      // если в начале
-      if (scrollLeft <= tolerance) {
-        fadeLeft.classList.add('hidden2');
-      } else {
-        fadeLeft.classList.remove('hidden2');
-      }
-
-      // если в конце
-      if (scrollLeft + clientWidth >= scrollWidth - tolerance) {
-        fadeRight.classList.add('hidden2');
-      } else {
-        fadeRight.classList.remove('hidden2');
-      }
-    }
-
-    // следим за скроллом
-    whoViewed.addEventListener('scroll', updateFades);
-    // следим за ресайзом
-    window.addEventListener('resize', updateFades);
-
-    // инициализация
-    updateFades();
-  });
 
 }
+
+
+// const children = container.querySelectorAll(':scope > *');
+// const hasNewLoad = urlParams.get('new-load') === 'true';
+
+// if (hasNewLoad) {
+//   urlParams.delete('new-load');
+//   const newUrl = `${window.location.pathname}?${urlParams.toString()}`;
+//   window.history.replaceState({}, '', newUrl);
+// }
+
+
+
+
+
+
+
+
+
+// const whoViewedElements = document.querySelectorAll('.who-viewed');
+
+// whoViewedElements.forEach(whoViewed => {
+//   const fadeLeft = whoViewed.parentElement.querySelector('.fade-left');
+//   const fadeRight = whoViewed.parentElement.querySelector('.fade-right');
+
+//   function updateFades() {
+//     const scrollLeft = whoViewed.scrollLeft;
+//     const scrollWidth = whoViewed.scrollWidth;
+//     const clientWidth = whoViewed.clientWidth;
+//     const tolerance = 2;
+
+//     // если в начале
+//     if (scrollLeft <= tolerance) {
+//       fadeLeft.classList.add('hidden2');
+//     } else {
+//       fadeLeft.classList.remove('hidden2');
+//     }
+
+//     // если в конце
+//     if (scrollLeft + clientWidth >= scrollWidth - tolerance) {
+//       fadeRight.classList.add('hidden2');
+//     } else {
+//       fadeRight.classList.remove('hidden2');
+//     }
+//   }
+
+//   // следим за скроллом
+//   whoViewed.addEventListener('scroll', updateFades);
+//   // следим за ресайзом
+//   window.addEventListener('resize', updateFades);
+
+//   // инициализация
+//   updateFades();
+// });
+
+// }
 
 
 

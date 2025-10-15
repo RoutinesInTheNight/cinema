@@ -51,17 +51,6 @@ body {
 
 
 
-/* Появление всех элементов при загрузке страницы */
-#movies-container>* {
-  transform: scale(0.9);
-  opacity: 0;
-  transition: transform 0.25s ease-out, opacity 0.25s ease-out;
-}
-
-#movies-container>*.visible {
-  transform: scale(1);
-  opacity: 1;
-}
 
 
 .hidden {
@@ -162,49 +151,17 @@ body {
 
 
 
-.who-viewed-wrapper {
-  position: relative;
-  overflow: hidden;
-  margin-top: calc(100 / 428 * 8 * var(--vw));
-}
-.fade {
-  position: absolute;
-  top: 0;
-  width: calc(100 / 428 * 16 * var(--vw));
-  height: 100%;
-  transition: opacity 0.1s ease;
-  opacity: 1;
-}
-.fade-left {
-  left: 0;
-  background: linear-gradient(to right, #1C1C1C, transparent);
-}
-.fade-right {
-  right: 0;
-  background: linear-gradient(to left, #1C1C1C, transparent);
-}
-.fade.hidden2 {
-  opacity: 0;
-}
 
 
 .who-viewed {
   display: flex;
-  overflow-x: auto;
-  overflow-y: hidden;
-  /* max-width: 50%; */
-  /* margin-left: 5%; */
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  flex-wrap: wrap;
   gap: calc(100 / 428 * 4 * var(--vw));
-}
-
-.who-viewed::-webkit-scrollbar {
-  display: none;
+  margin-top: calc(100 / 428 * 8 * var(--vw));
+  width: 100%;
 }
 
 .who-viewed .user {
-  /* flex: 1; */
   text-align: center;
   font-size: calc(100 / 428 * 16 * var(--vw));
   font-family: 'Sf Pro Display Medium', Arial, sans-serif;
@@ -215,12 +172,6 @@ body {
   border-radius: calc(100 / 428 * 8 * var(--vw));
   opacity: 0.75;
 }
-
-/* .who-viewed .user {
-  flex: 0 0 auto;
-  min-width: 25%;
-} */
-
 
 
 
@@ -254,8 +205,6 @@ body {
   padding: calc(100 / 428 * 8 * var(--vw));
   margin: calc(2.5 * var(--vw)) auto;
   border-radius: calc(100 / 428 * 16 * var(--vw));
-  /* border-top: calc(100 / 428 * 2 * var(--vw)) solid #3D3C3F; */
-  /* border-bottom: calc(100 / 428 * 2 * var(--vw)) solid #3D3C3F; */
 }
 
 .movie-number {
@@ -514,238 +463,6 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-.keyboards {
-  position: fixed;
-  bottom: 0;
-  margin: 0 auto;
-  width: calc(100 * var(--vw));
-  background-color: #2B2B2B;
-  box-shadow: 0 0 calc(100 / 428 * 16 * var(--vw)) calc(100 / 428 * 4 * var(--vw)) rgba(0, 0, 0, 1);
-  touch-action: none;
-  color: white;
-  border-top-left-radius: calc(100 / 1284 * 51.5 * var(--vw));
-  border-top-right-radius: calc(100 / 1284 * 51.5 * var(--vw));
-  z-index: 15;
-  transition: transform 0.15s ease-in-out;
-  transform: translateY(150%);
-}
-
-.keyboards.active {
-  transform: translateY(0%);
-}
-
-.search {
-  display: flex;
-  align-items: center;
-  width: calc(100 * var(--vw));
-  background-color: #1C1C1D;
-  padding: calc(100 / 1284 * 18.5 * var(--vw)) 0 calc(100 / 1284 * 18.5 * var(--vw)) 0;
-  border-top: calc(100 / 1284 * 5 * var(--vw)) solid #2E2E31;
-  border-top-left-radius: calc(100 / 1284 * 51.5 * var(--vw));
-  border-top-right-radius: calc(100 / 1284 * 51.5 * var(--vw));
-}
-
-.search-icon {
-  width: calc(100 / 1284 * 126 * var(--vw));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.search .input {
-  background-color: #2B2B2B;
-  width: calc(100% - calc(100 / 1284 * 126 * 2 * var(--vw)));
-  min-height: calc(100 / 1284 * 103 * var(--vw));
-  display: flex;
-  align-items: center;
-  border-radius: calc(100 / 1284 * 51.5 * var(--vw));
-  border: calc(100 / 1284 * var(--vw)) solid #262628;
-  overflow-wrap: break-word;
-  word-break: break-word;
-}
-
-
-
-.search .input span {
-  font-size: calc(100 / 1284 * 50 * var(--vw));
-  font-family: 'Sf Pro Display Medium', Arial, sans-serif;
-  color: #6B6B6B;
-  margin: calc(100 / 1284 * 21.5 * var(--vw)) calc(100 / 1284 * 43 * var(--vw)) calc(100 / 1284 * 21.5 * var(--vw)) calc(100 / 1284 * 43 * var(--vw));
-  display: block;
-  width: 100%;
-  line-height: 1.2;
-  word-wrap: break-word;
-  word-break: break-word;
-  white-space: normal;
-}
-
-.keyboard-clear {
-  width: calc(100 / 1284 * 103 * var(--vw));
-  align-items: center;
-  justify-content: center;
-  transition: opacity 0.15s ease-in-out;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.keyboard-clear.active {
-  opacity: 1;
-}
-
-.keyboard-collaps-close,
-.keyboard-collapse {
-  width: calc(100 / 1284 * 126 * var(--vw));
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.search-icon,
-.input,
-.keyboard-clear,
-.keyboard-collapse {
-  display: flex;
-}
-
-.search-top-collaps svg,
-.search svg {
-  width: calc(100 / 1284 * 50 * var(--vw));
-}
-
-
-
-
-
-
-
-.keyboard {
-  width: calc(100 / 1284 * 1260 * var(--vw));
-  margin: calc(100 / 428 * 8 * var(--vw)) auto 0 auto;
-}
-
-.keyboard .ru,
-.keyboard .en,
-.keyboard .numbers,
-.keyboard .bottom-row {
-  display: flex;
-  gap: calc(100 / 1284 * 18 * var(--vw));
-  margin-top: calc(100 / 1284 * 33 * var(--vw));
-}
-
-.keyboard span,
-.keyboard .delete,
-.keyboard .change-lang {
-  text-align: center;
-  width: calc(((100 / 1284 * 1260) - (100 / 1284 * 11 * 18)) / 12 * var(--vw));
-  background-color: #6B6B6B;
-  font-size: calc(100 / 1284 * 65 * var(--vw));
-  font-family: 'Sf Pro Display Regular', Arial, sans-serif;
-  border-radius: calc(100 / 1284 * 18 * var(--vw));
-  height: calc(100 / 1284 * 134 * var(--vw));
-  line-height: calc(100 / 1284 * 134 * var(--vw));
-  border-bottom: calc(100 / 1284 * 5 * var(--vw)) solid #1A1A1A;
-  cursor: pointer;
-}
-
-/* Ширина у клавиш англ клавиатуры немного больше */
-.keyboard .en span {
-  width: calc(((100 / 1284 * 1260) - (100 / 1284 * 9 * 18)) / 10 * var(--vw));
-}
-
-.keyboard .delete,
-.keyboard .change-lang {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.keyboard .close-keyboard,
-.keyboard .change-lang {
-  margin: 0;
-  width: calc(100 / 1284 * 307 * var(--vw));
-  background-color: #464646;
-  font-size: calc(100 / 1284 * 50 * var(--vw));
-}
-
-.keyboard .space {
-  flex: 1;
-  font-size: calc(100 / 428 * 16 * var(--vw));
-}
-
-.keyboard .delete svg,
-.keyboard .change-lang svg {
-  width: calc(100 / 1284 * 70 * var(--vw));
-}
-
-.keyboard .show-hide-numbers,
-.keyboard .delete {
-  width: calc(((100 / 1284 * 1260) - ((100 / 1284 * 10 * 18) + (((100 / 1284 * 1260) - (100 / 1284 * 11 * 18)) / 12 * 9))) / 2 * var(--vw));
-  background-color: #464646;
-  font-size: calc(100 / 1284 * 50 * var(--vw));
-}
-
-/* На англ клавиатуре эти клавиши квадратные */
-.keyboard .en .show-hide-numbers,
-.keyboard .en .keyboard-delete {
-  width: calc(100 / 1284 * 134 * var(--vw));
-}
-
-.keyboard .en .show-hide-numbers {
-  margin-right: calc(100 / 1284 * 39.711 * var(--vw));
-}
-.keyboard .en .delete {
-  margin-left: calc(100 / 1284 * 39.711 * var(--vw));
-}
-
-
-
-.keyboard .show-hide-numbers.active {
-  font-family: 'Sf Pro Display Medium', Arial, sans-serif;
-  background-color: #D4D4D4;
-  color: black;
-}
-
-
-.keyboard .numbers span {
-  width: calc(((100 / 1284 * 1260) - (100 / 1284 * 9 * 18)) / 10 * var(--vw));
-  background-color: #464646;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-.keyboard-button-zoom {
-  display: none;
-  position: absolute;
-  width: calc(100 / 428 * 50 * var(--vw));
-  height: calc(100 / 428 * 50 * var(--vw));
-  /* left: 0;
-  top: 0; */
-  background-color: red;
-  z-index: 100000;
-}
 
 
 
