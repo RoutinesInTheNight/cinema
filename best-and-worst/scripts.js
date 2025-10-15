@@ -234,18 +234,20 @@ function applySortingFromURL() {
     const ratingTotalLeft = ratingTotal.slice(0, 4);
     const ratingTotalRight = ratingTotal.slice(4);
 
-    if (movie["10"]) movieRatingsHTML += `<div class="movie-rating-total" onclick='hapticFeedback("soft", "${movie["10"]}")'><span class="left">${ratingTotalLeft}</span><span class="right">${ratingTotalRight}</span></div>`;
+    if (movie["11"]) movieRatingsHTML += `<div class="movie-rating-total" onclick='hapticFeedback("soft", "${movie["11"]}")'><span class="left">${ratingTotalLeft}</span><span class="right">${ratingTotalRight}</span></div>`;
     else movieRatingsHTML += `<div class="movie-rating-total"><span class="left">${ratingTotalLeft}</span><span class="right">${ratingTotalRight}</span></div>`;
 
-    if (movie["11"]) movieRatingsHTML += `<div class="movie-rating-imdb" onclick='hapticFeedback("soft", "${movie["11"]}")'><span>IMDb: ${movie["6"]}</span><span>${movie["7"]}</span></div>`;
+    if (movie["12"]) movieRatingsHTML += `<div class="movie-rating-imdb" onclick='hapticFeedback("soft", "${movie["12"]}")'><span>IMDb: ${movie["6"]}</span><span>${movie["7"]}</span></div>`;
     else movieRatingsHTML += `<div class="movie-rating-imdb"><span>IMDb: ${movie["6"]}</span><span>${movie["7"]}</span></div>`;
 
-    if (movie["12"]) movieRatingsHTML += `<div class="movie-rating-kp" onclick='hapticFeedback("soft", "${movie["12"]}")'><span>КП: ${movie["8"]}</span><span>${movie["9"]}</span></div>`;
+    if (movie["13"]) movieRatingsHTML += `<div class="movie-rating-kp" onclick='hapticFeedback("soft", "${movie["13"]}")'><span>КП: ${movie["8"]}</span><span>${movie["9"]}</span></div>`;
     else movieRatingsHTML += `<div class="movie-rating-kp"><span>КП: ${movie["8"]}</span><span>${movie["9"]}</span></div>`;
 
     movieRatingsHTML += "</div>";
 
-
+    const whoViewedHTML = movie["10"]
+      .map(name => `<span class="user">${name}</span>`)
+      .join('');
 
     card.innerHTML = `
       <div class="poster">
@@ -258,12 +260,7 @@ function applySortingFromURL() {
         ${movieRatingsHTML}
         <div class="who-viewed-wrapper">
           <div class="who-viewed">
-            <span class="user">Артур</span>
-            <span class="user">Никита</span>
-            <span class="user">Федя</span>
-            <span class="user">Денис</span>
-            <span class="user">Ваня</span>
-            <span class="user">Вика</span>
+            ${whoViewedHTML}
           </div>
           <div class="fade fade-left"></div>
           <div class="fade fade-right"></div>
@@ -318,39 +315,48 @@ function applySortingFromURL() {
 
 
 
-  const whoViewed = document.querySelector('.who-viewed');
-  const fadeLeft = document.querySelector('.fade-left');
-  const fadeRight = document.querySelector('.fade-right');
+  const whoViewedElements = document.querySelectorAll('.who-viewed');
 
-  function updateFades() {
-    const scrollLeft = whoViewed.scrollLeft;
-    const scrollWidth = whoViewed.scrollWidth;
-    const clientWidth = whoViewed.clientWidth;
-    const tolerance = 2; // пикселей запаса, чтобы избежать "мигания"
+  whoViewedElements.forEach(whoViewed => {
+    const fadeLeft = whoViewed.parentElement.querySelector('.fade-left');
+    const fadeRight = whoViewed.parentElement.querySelector('.fade-right');
 
-    // если в начале
-    if (scrollLeft <= tolerance) {
-      fadeLeft.classList.add('hidden2');
-    } else {
-      fadeLeft.classList.remove('hidden2');
+    function updateFades() {
+      const scrollLeft = whoViewed.scrollLeft;
+      const scrollWidth = whoViewed.scrollWidth;
+      const clientWidth = whoViewed.clientWidth;
+      const tolerance = 2;
+
+      // если в начале
+      if (scrollLeft <= tolerance) {
+        fadeLeft.classList.add('hidden2');
+      } else {
+        fadeLeft.classList.remove('hidden2');
+      }
+
+      // если в конце
+      if (scrollLeft + clientWidth >= scrollWidth - tolerance) {
+        fadeRight.classList.add('hidden2');
+      } else {
+        fadeRight.classList.remove('hidden2');
+      }
     }
 
-    // если в конце
-    if (scrollLeft + clientWidth >= scrollWidth - tolerance) {
-      fadeRight.classList.add('hidden2');
-    } else {
-      fadeRight.classList.remove('hidden2');
-    }
-  }
+    // следим за скроллом
+    whoViewed.addEventListener('scroll', updateFades);
+    // следим за ресайзом
+    window.addEventListener('resize', updateFades);
 
-  // следим за скроллом
-  whoViewed.addEventListener('scroll', updateFades);
-  // следим за ресайзом (вдруг ширина окна изменилась)
-  window.addEventListener('resize', updateFades);
+    // инициализация
+    updateFades();
+  });
 
-  // инициализация
-  updateFades();
 }
+
+
+
+
+
 
 // Выделение кнопок 2-й и 3-й сортировок
 function updateSortButtonsFromURL() {
