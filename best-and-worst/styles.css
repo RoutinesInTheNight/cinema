@@ -656,5 +656,5 @@ body {
   transition: margin-bottom .25s ease;
 }
 .users-row.add-margin-bottom {
-  margin-bottom: var(--tg-safe-area-inset-bottom);
+  margin-bottom: calc(var(--tg-safe-area-inset-bottom) / 2);
 }
