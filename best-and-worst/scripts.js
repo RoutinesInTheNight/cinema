@@ -451,9 +451,6 @@ function openSearch() {
   closeSearchEl.style.width = "calc(100 / 428 * 32 * var(--vw))";
   searchOverlay.style.display = "block";
   inputField.focus();
-  // requestAnimationFrame(() => {
-  //   inputField.focus();
-  // });
   if (DEVICE_TYPE === 'android' || DEVICE_TYPE === 'ios') {
     sorting.classList.add('hidden');
   }
@@ -462,6 +459,7 @@ function openSearch() {
 function closeSearch() {
   hapticFeedback('medium');
   inputField.blur();
+  inputField.value = "";
   searchEl.style.width = "calc(100 / 428 * 32 * var(--vw))";
   inputSearchEl.style.width = "0";
   closeSearchEl.style.width = "0";
