@@ -156,6 +156,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function openCloseSorting() {
   const closingSorting = document.querySelector('.closing-sorting');
+  const openCloseSorting = document.querySelector('.open-close-sorting');
+  const allSpan = openCloseSorting.querySelectorAll('span');
+  const allSvg = openCloseSorting.querySelectorAll('svg');
+  allSpan.forEach(span => {
+    span.classList.toggle('hidden');
+  });
+  allSvg.forEach(svg => {
+    svg.classList.toggle('hidden');
+  });
   closingSorting.classList.toggle('close');
 }
 
