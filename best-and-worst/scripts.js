@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     search.style.marginTop = topValue;
 
-    moviesContainer.style.marginTop = topValue;
+    moviesContainer.style.marginTop = `calc(${topValue} + ((100 / 428) * (32 + 4 + 12) * var(--vw)))`;
     moviesContainer.style.marginBottom = bottom === 0 ? 'calc(0.5rem + 124.5px + 2.5vw)' : `calc(${bottom}px + 124.5px + 2.5vw)`
   };
   SafeAreaManager.init();
@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 function openCloseSorting() {
-  hapticFeedback('change');
+  hapticFeedback('rigid');
   const closingSorting = document.querySelector('.closing-sorting');
   const svg = document.querySelector('.open-close-sorting svg');
   closingSorting.classList.toggle('close');
@@ -446,13 +446,13 @@ isSearchOpen = false;
 
 function openSearch() {
   hapticFeedback('medium');
-  requestAnimationFrame(() => {
-    inputField.focus();
-  });
-  searchEl.style.width = "calc(90 * var(--vw))";
+  searchEl.style.width = "calc((100 * var(--vw)) - (100 / 428 * 32 * var(--vw)))";
   inputSearchEl.style.width = "calc(100% - (100 / 428 * (32 + 32) * var(--vw)))";
   closeSearchEl.style.width = "calc(100 / 428 * 32 * var(--vw))";
   searchOverlay.style.display = "block";
+  requestAnimationFrame(() => {
+    inputField.focus();
+  });
   if (DEVICE_TYPE === 'android' || DEVICE_TYPE === 'ios') {
     sorting.classList.add('hidden');
   }

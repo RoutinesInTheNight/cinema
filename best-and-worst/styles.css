@@ -229,7 +229,7 @@ body {
   color: #fff;
   background-color: #1C1C1D;
   padding: calc(100 / 428 * 8 * var(--vw));
-  margin: calc(2.5 * var(--vw)) auto;
+  margin: calc(100 / 428 * 12 * var(--vw)) 0;
   border-radius: calc(100 / 428 * 16 * var(--vw));
   /* border-bottom: calc(100 / 428 * 1.5 * var(--vw)) solid #3D3C3F; */
   /* border-top: calc(100 / 428 * 1.5 * var(--vw)) solid #3D3C3F; */
@@ -410,7 +410,7 @@ body {
   border-radius: calc(100 / 428 * 12 * var(--vw));
   width: calc(100 / 428 * 32 * var(--vw));
   height: calc(100 / 428 * 32 * var(--vw));
-  margin-left: calc(5 * var(--vw));
+  margin-left: calc(100 / 428 * 16 * var(--vw));
   position: fixed;
   display: flex;
   top: 0;
@@ -560,7 +560,7 @@ body {
   width: calc(100 / 428 * 20 * var(--vw));
   height: calc(100 / 428 * 20 * var(--vw));
   fill: #749C6C;
-  transition: transform .5s ease;
+  transition: transform .25s ease;
 }
 .open-close-sorting svg.rotate {
   transform: rotate(180deg);
@@ -569,7 +569,7 @@ body {
 .closing-sorting {
   overflow: hidden;
   max-height: calc(100 / 428 * 80 * var(--vw));
-  transition: max-height .5s ease;
+  transition: max-height .25s ease;
 }
 .closing-sorting.close {
   max-height: 0;
