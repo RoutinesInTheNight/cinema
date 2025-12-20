@@ -156,16 +156,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function openCloseSorting() {
   const closingSorting = document.querySelector('.closing-sorting');
-  const openCloseSorting = document.querySelector('.open-close-sorting');
-  const allSpan = openCloseSorting.querySelectorAll('span');
-  const allSvg = openCloseSorting.querySelectorAll('svg');
-  allSpan.forEach(span => {
-    span.classList.toggle('hidden');
-  });
-  allSvg.forEach(svg => {
-    svg.classList.toggle('hidden');
-  });
+  const usersRow = document.querySelector('.users-row');
+  const svg1 = document.querySelector('.open-close-sorting .svg-1');
+  const svg2 = document.querySelector('.open-close-sorting .svg-2');
   closingSorting.classList.toggle('close');
+  usersRow.classList.toggle('add-margin-bottom');
+  svg1.classList.toggle('hidden');
+  svg2.classList.toggle('hidden');
 }
 
 

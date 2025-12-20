@@ -601,16 +601,13 @@ body {
 
 
 
-.hhhhu {
-  display: flex;
-}
 
-.open-close-sorting-container {
+.open-close-sorting {
   /* background-color: #3D3C3F; */
-  /* border: calc(100 / 428 * 2 * var(--vw)) solid #2e3e2b; */
-  /* border-radius: calc(100 / 428 * 8 * var(--vw)); */
-  /* width: calc(100 / 428 * 100 * var(--vw)); */
-  /* height: calc(100 / 428 * 23 * var(--vw)); */
+  border: calc(100 / 428 * 2 * var(--vw)) solid #2e3e2b;
+  border-radius: calc(100 / 428 * 8 * var(--vw));
+  width: calc(100 / 428 * 23 * var(--vw));
+  height: calc(100 / 428 * 23 * var(--vw));
   /* margin-left: calc(5 * var(--vw)); */
   /* position: fixed; */
   display: flex;
@@ -622,12 +619,12 @@ body {
   /* z-index: 15; */
   /* transition: width 0.25s ease; */
 
-  font-family: 'Sf Pro Display Medium', Arial, sans-serif;
-  font-size: calc(100 / 428 * 14 * var(--vw));
-  margin-top: calc(100 / 428 * 8 * var(--vw));
+  /* font-family: 'Sf Pro Display Medium', Arial, sans-serif; */
+  /* font-size: calc(100 / 428 * 14 * var(--vw)); */
+  /* margin-top: calc(100 / 428 * 8 * var(--vw)); */
 }
 
-.open-close-sorting {
+/* .open-close-sorting {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -635,20 +632,29 @@ body {
   border: calc(100 / 428 * 2 * var(--vw)) solid #2e3e2b;
   border-radius: calc(100 / 428 * 8 * var(--vw));
   padding: calc(100 / 428 * 1 * var(--vw)) calc(100 / 428 * 16 * var(--vw));
-}
+} */
 
 .open-close-sorting svg {
-  width: calc(100 / 428 * 14 * var(--vw));
-  height: calc(100 / 428 * 14 * var(--vw));
+  width: calc(100 / 428 * 16 * var(--vw));
+  height: calc(100 / 428 * 16 * var(--vw));
   fill: #749C6C;
   /* transition: transform .25s ease; */
 }
 
 .closing-sorting {
   overflow: hidden;
-  max-height: calc(100 / 428 * 100 * var(--vw));
+  max-height: calc(100 / 428 * 80 * var(--vw));
   transition: max-height .5s ease;
 }
 .closing-sorting.close {
   max-height: 0;
+}
+
+
+.users-row {
+  margin-bottom: 0;
+  transition: margin-bottom .25s ease;
+}
+.users-row.add-margin-bottom {
+  margin-bottom: var(--tg-safe-area-inset-bottom);
 }
