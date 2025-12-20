@@ -465,6 +465,7 @@ function closeSearch() {
   closeSearchEl.style.width = "0";
   searchOverlay.style.display = "none";
   sorting.classList.remove('hidden');
+  addUsersCards();
 }
 
 
