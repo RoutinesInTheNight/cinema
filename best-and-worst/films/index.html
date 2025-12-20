@@ -7,43 +7,38 @@
     <meta
         content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height"
         name="viewport" />
-    <title>Банда «Псы»: Лучшие и худшие фильмы</title>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <title>Лучшие и худшие фильмы</title>
+    <!-- <script src="https://telegram.org/js/telegram-web-app.js"></script> -->
+    <script src="telegram-web-app.js"></script>
+    <script src="../fuse.basic.js"></script>
     <link href="../styles.css" rel="stylesheet" />
     <link href="../../img/favicon.png" rel="icon" type="image/png" />
 </head>
 
 <body>
 
-    <div class="keyboard-button-zoom"></div>
-
-
-    <svg style="display: none;">
-        <symbol id="icon-star" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#FFD43B"
-                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z" />
-    </svg>
-
-
-    <div class="search-collaps" onclick="showKeyboard()">
-        <svg class="search-collaps-svg" viewBox="0 0 512 512" fill="#6B6B6B">
-            <path
-                d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6 .1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
-        </svg>
-    </div>
-
-    <div onclick="showKeyboardAgain()" class="search-top-collaps">
-        <div class="search-icon">
-            <svg viewBox="0 0 512 512" fill="#6B6B6B">
+    <!-- <div class="open-sort" onclick="openSort()">
+        <span>Сортировка</span>
+        <div class="open">
+            <svg viewBox="0 0 512 512" fill="#749C6C">
                 <path
                     d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6 .1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
             </svg>
         </div>
-        <div class="input">
-            <span>Поиск...</span>
+    </div> -->
+
+    <div id="search">
+        <div class="open" onclick="openSearch()">
+            <svg viewBox="0 0 512 512" fill="#749C6C">
+                <path
+                    d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6 .1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
+            </svg>
         </div>
-        <div onclick="event.stopPropagation(); keyboardCollapseClose()" class="keyboard-collaps-close">
-            <svg viewBox="0 0 512 512">
+        <div class="input" onclick="openSearch()">
+            <input id="input" type="text" placeholder="Поиск..." />
+        </div>
+        <div class="close" onclick="closeSearch()">
+            <svg viewBox="0 0 512 512" fill="#749C6C">
                 <path
                     d="M242.7 256l100.1-100.1c12.3-12.3 12.3-32.2 0-44.5l-22.2-22.2c-12.3-12.3-32.2-12.3-44.5 0L176 189.3 75.9 89.2c-12.3-12.3-32.2-12.3-44.5 0L9.2 111.5c-12.3 12.3-12.3 32.2 0 44.5L109.3 256 9.2 356.1c-12.3 12.3-12.3 32.2 0 44.5l22.2 22.2c12.3 12.3 32.2 12.3 44.5 0L176 322.7l100.1 100.1c12.3 12.3 32.2 12.3 44.5 0l22.2-22.2c12.3-12.3 12.3-32.2 0-44.5L242.7 256z" />
             </svg>
@@ -51,113 +46,72 @@
     </div>
 
 
+    <div id="search-overlay" onclick="keyboardCollapse()"></div>
 
-    <div id="overlay" onclick="keyboardCollapse()"></div>
-
-
-
-
-    <div id="movies-container">
-        <div class="movie">
-            <div class="poster">
-                <img
-                    src="https://avatars.mds.yandex.net/get-kinopoisk-image/4716873/0a07a903-9025-4aff-bf7c-46bbb175888c/300x450">
-            </div>
-            <div class="info">
-                <div class="title-ru">1. Криминальное чтиво</div>
-                <span class="title-en">Pulp Fiction</span>
-                <span class="meta">1994 • 2 ч 34 мин</span>
-                <div class="movie-ratings">
-                    <div class="movie-rating-total">
-                        <span>8.743</span>
-                    </div>
-                    <div class="movie-rating-imdb"><span>IMDb: 8.775</span><span>2 299 095</span></div>
-                    <div class="movie-rating-kp"><span>КП: 8.653</span><span>806 782</span></div>
-                </div>
-                <div class="who-viewed">
-                    <span class="user">Артур</span>
-                    <span class="user">Никита</span>
-                    <span class="user">Федя</span>
-                    <span class="user">Денис</span>
-                    <span class="user">Ваня</span>
-                    <span class="user">Вика</span>
-                </div>
-            </div>
-        </div>
-
-
-
-    </div>
-
-
-
-
-    <!-- <div class="choice-bet-container-vertical">
-        <div class="choice-bet-vertical" id="choice-bet-vertical"></div>
-    </div> -->
+    <div id="movies-container"></div>
 
 
     <div class="sorting">
-        <div class="sorting-users-scroll-wrapper">
-            <div class="sorting-users-scroll" id="sort1">
-                <div class="sorting-user"><span style="color: #2e3e2b;">-</span></div>
-                <div class="sorting-user"><span style="color: #2e3e2b;">-</span></div>
-                <div class="sorting-user"><span style="color: #2e3e2b;">-</span></div>
-                <div class="sorting-user"><span style="color: #2e3e2b;">-</span></div>
+
+
+
+        <div class="sorting-row">
+            <div class="open-sort">
+                <svg viewBox="0 0 640 640">
+                    <path
+                        d="M278.6 438.6L182.6 534.6C170.1 547.1 149.8 547.1 137.3 534.6L41.3 438.6C28.8 426.1 28.8 405.8 41.3 393.3C53.8 380.8 74.1 380.8 86.6 393.3L128 434.7L128 128C128 110.3 142.3 96 160 96C177.7 96 192 110.3 192 128L192 434.7L233.4 393.3C245.9 380.8 266.2 380.8 278.7 393.3C291.2 405.8 291.2 426.1 278.7 438.6zM352 544C334.3 544 320 529.7 320 512C320 494.3 334.3 480 352 480L384 480C401.7 480 416 494.3 416 512C416 529.7 401.7 544 384 544L352 544zM352 416C334.3 416 320 401.7 320 384C320 366.3 334.3 352 352 352L448 352C465.7 352 480 366.3 480 384C480 401.7 465.7 416 448 416L352 416zM352 288C334.3 288 320 273.7 320 256C320 238.3 334.3 224 352 224L512 224C529.7 224 544 238.3 544 256C544 273.7 529.7 288 512 288L352 288zM352 160C334.3 160 320 145.7 320 128C320 110.3 334.3 96 352 96L576 96C593.7 96 608 110.3 608 128C608 145.7 593.7 160 576 160L352 160z" />
+                </svg>
             </div>
-            <div class="fade fade-left"></div>
-            <div class="fade fade-right"></div>
+
+            <div class="sorting-users-scroll-wrapper">
+                <div class="sorting-users-scroll" id="sort1">
+                    <div class="sorting-user"><span style="color: #2e3e2b;">-</span></div>
+                    <div class="sorting-user"><span style="color: #2e3e2b;">-</span></div>
+                    <div class="sorting-user"><span style="color: #2e3e2b;">-</span></div>
+                    <div class="sorting-user"><span style="color: #2e3e2b;">-</span></div>
+                </div>
+                <div class="fade fade-left"></div>
+                <div class="fade fade-right"></div>
+            </div>
+
+            <!-- <div class="open-sort">
+                <svg viewBox="0 0 512 512" fill="#749C6C">
+                    <path
+                        d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6 .1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
+                </svg>
+            </div> -->
         </div>
 
+
         <div class="sorting-row" id="sort2">
-            <div class="sorting-item" id="all" onclick="change('sort2', 'all')">
-                <span>IMDb + КП</span>
+            <div class="sorting-item" id="all" onclick="changeSorting('sort2', 'all')">
+                <span>Все</span>
             </div>
-            <div class="sorting-item" id="imdb" onclick="change('sort2', 'imdb')">
+            <div class="sorting-item" id="imdb" onclick="changeSorting('sort2', 'imdb')">
                 <span>IMDb</span>
             </div>
-            <div class="sorting-item" id="kp" onclick="change('sort2', 'kp')">
-                <span>КП</span>
+            <div class="sorting-item" id="letterboxd" onclick="changeSorting('sort2', 'letterboxd')">
+                <span>Letterboxd</span>
+            </div>
+            <div class="sorting-item" id="kp" onclick="changeSorting('sort2', 'kp')">
+                <span>Кинопоиск</span>
             </div>
         </div>
 
         <div class="sorting-row" id="sort3">
-            <div class="sorting-item" id="best" onclick="change('sort3', 'best')">
+            <div class="sorting-item" id="best" onclick="changeSorting('sort3', 'best')">
                 <span>Сначала лучшие</span>
             </div>
-            <div class="sorting-item" id="worst" onclick="change('sort3', 'worst')">
+            <div class="sorting-item" id="worst" onclick="changeSorting('sort3', 'worst')">
                 <span>Сначала худшие</span>
             </div>
+            <!-- <div class="sorting-item" id="worst" onclick="changeSorting('sort3', 'worst')">
+                <span>Популярные</span>
+            </div>
+            <div class="sorting-item" id="worst" onclick="changeSorting('sort3', 'worst')">
+                <span>Непопулярные</span>
+            </div> -->
         </div>
-    </div>
-
-    <div class="keyboards">
-
-        <div class="search">
-            <div class="search-icon">
-                <svg viewBox="0 0 512 512" fill="#6B6B6B">
-                    <path
-                        d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6 .1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
-                </svg>
-            </div>
-            <div class="input">
-                <span>Поиск...</span>
-                <div onclick="searchClear()" class="keyboard-clear">
-                    <svg viewBox="0 0 512 512" fill="#6B6B6B">
-                        <path
-                            d="M242.7 256l100.1-100.1c12.3-12.3 12.3-32.2 0-44.5l-22.2-22.2c-12.3-12.3-32.2-12.3-44.5 0L176 189.3 75.9 89.2c-12.3-12.3-32.2-12.3-44.5 0L9.2 111.5c-12.3 12.3-12.3 32.2 0 44.5L109.3 256 9.2 356.1c-12.3 12.3-12.3 32.2 0 44.5l22.2 22.2c12.3 12.3 32.2 12.3 44.5 0L176 322.7l100.1 100.1c12.3 12.3 32.2 12.3 44.5 0l22.2-22.2c12.3-12.3 12.3-32.2 0-44.5L242.7 256z" />
-                    </svg>
-                </div>
-            </div>
-            <div onclick="keyboardCollapse()" class="keyboard-collapse">
-                <svg viewBox="0 0 512 512" fill="#6B6B6B">
-                    <path
-                        d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
-                </svg>
-            </div>
-        </div>
-
-
     </div>
 
     <script src="../scripts.js"></script>

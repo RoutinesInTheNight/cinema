@@ -142,21 +142,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const bottomValue = bottom === 0 ? 'calc((100 / 428) * 8 * var(--vw))' : `${bottom}px`;
     const topValue = top === 0 ? 'calc(2.5 * var(--vw))' : `${top}px`;
     bottomMenu.style.paddingBottom = bottomValue;
-    keyboards.style.paddingBottom = bottom === 0 ? '0.5rem' : `${bottom * 2}px`;
-
-    if (bottom === 0) {
-      // searchTopCollaps.style.transform = 'translateY(calc(((100 / 428) * (32 + 32) * var(--vw) + 2.5 * var(--vw)) * 1))';
-      searchCollaps.style.marginBottom = `calc((100 / 428) * (125 + 8 + 8) * var(--vw))`;
-    } else {
-      // searchTopCollaps.style.transform = `translateY(calc((100 / 428) * (32 + 32 + ${top}) * -1 * var(--vw)))`;
-      searchCollaps.style.marginBottom = `calc((100 / 428) * (125 + 8 + ${bottom}) * var(--vw))`;
-    }
-
-    searchTopCollaps.style.marginTop = topValue;
-
-
-
-
 
     moviesContainer.style.marginTop = topValue;
     moviesContainer.style.marginBottom = bottom === 0 ? 'calc(0.5rem + 124.5px + 2.5vw)' : `calc(${bottom}px + 124.5px + 2.5vw)`
@@ -169,23 +154,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// Добавление кнопок с именами из json
-function populateUserSorting(userList) {
+// Добавление кнопок с именами
+function addNameButtons(usersList) {
   const container = document.getElementById("sort1");
-  container.innerHTML = ''; // на всякий случай очищаем
-  // Вставляем кнопку "Все"
-  const allDiv = document.createElement("div");
-  allDiv.className = "sorting-user";
-  allDiv.setAttribute("onclick", `change('sort1', 'Все')`);
-  allDiv.innerHTML = `<span>Все</span>`;
-  container.appendChild(allDiv);
-  // Вставляем имена
-  userList.forEach(user => {
+  container.innerHTML = `<div class="sorting-user" onclick="changeSorting('sort1', 'Все')"><span>Все</span></div>`;
+  usersList.forEach(user => {
     const userDiv = document.createElement("div");
     userDiv.className = "sorting-user";
-    userDiv.setAttribute("onclick", `change('sort1', '${user}')`);
+    userDiv.setAttribute("onclick", `changeSorting('sort1', '${user}')`);
     userDiv.innerHTML = `<span>${user}</span>`;
     container.appendChild(userDiv);
+  });
+}
+
+
+// Выделение кнопок в сортировке
+function selectButtonsInSorting() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const sort1 = urlParams.get("sort1");
+  const sort2 = urlParams.get("sort2");
+  const sort3 = urlParams.get("sort3");
+
+  const userItems = document.querySelectorAll("#sort1 .sorting-user");
+  userItems.forEach((item) => {
+    const name = item.textContent.trim();
+    if (name === sort1) {
+      item.classList.add("selected");
+      item.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+    } else item.classList.remove("selected");
+  });
+
+  const sort2Container = document.getElementById("sort2");
+  sort2Container.querySelectorAll("div").forEach((div) => {
+    div.classList.toggle("selected", div.id === sort2);
+  });
+
+  const sort3Container = document.getElementById("sort3");
+  sort3Container.querySelectorAll("div").forEach((div) => {
+    div.classList.toggle("selected", div.id === sort3);
   });
 }
 
@@ -194,52 +200,23 @@ function populateUserSorting(userList) {
 
 
 
-
-
-// Выделение кнопки с именем и добавление фильмов / сериалов из json
-function applySortingFromURL() {
-  if (!movieData || !movieData.movies_data || !movieData.sort) return;
-
-  const urlParams = new URLSearchParams(window.location.search);
-  const sort1 = urlParams.get("sort1");
-  const sort2 = urlParams.get("sort2");
-  const sort3 = urlParams.get("sort3");
-
-  // === Выделение кнопки с именем юзера ===
-  if (sort1) {
-    const userItems = document.querySelectorAll("#sort1 .sorting-user");
-    userItems.forEach((item) => {
-      const name = item.textContent.trim();
-      if (name === sort1) {
-        item.classList.add("selected");
-        item.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
-      } else {
-        item.classList.remove("selected");
-      }
-    });
-  }
-
-  const key = `${sort1}/${sort2}/${sort3}`;
-  const movieIds = movieData.sort[key];
-
-  const container = document.getElementById("movies-container");
-  container.innerHTML = '';
-
-  // === lazy render параметры ===
-  const BATCH_SIZE = 10; // сколько фильмов рендерить за один раз
+// РЕНДЕР КАРТОЧЕК
+function renderCards(movieIDs, movieIDsFromSearch = null) {
+  const BATCH_SIZE = 10; // по сколько карточек рендерить
   let renderedCount = 0;
 
-
-// sentinel создаем один раз
+  const container = document.getElementById("movies-container");
+  container.innerHTML = "";
   const sentinel = document.createElement('div');
   sentinel.id = 'lazy-sentinel';
   container.appendChild(sentinel);
 
   function renderNextBatch() {
-    const nextBatch = movieIds.slice(renderedCount, renderedCount + BATCH_SIZE);
+    let nextBatch = movieIDs.slice(renderedCount, renderedCount + BATCH_SIZE);
+    if (movieIDsFromSearch) nextBatch = movieIDsFromSearch.slice(renderedCount, renderedCount + BATCH_SIZE);
 
     nextBatch.forEach((id, index) => {
-      const movie = movieData.movies_data[id];
+      const movie = moviesDataJson.movies_data[id];
       if (!movie) return;
       const card = document.createElement("div");
       card.className = "movie";
@@ -263,7 +240,7 @@ function applySortingFromURL() {
           <img src="${movie["1"]}" loading="lazy">
         </div>
         <div class="info">
-          <div class="title-ru">${renderedCount + index + 1}. ${movie["2"]}</div>
+          <div class="title-ru">${movieIDs.indexOf(id) + 1}. ${movie["2"]}</div>
           <span class="title-en">${movie["3"]}</span>
           <span class="meta">${movie["4"]}</span>
           ${movieRatingsHTML}
@@ -271,14 +248,13 @@ function applySortingFromURL() {
         </div>
       `;
 
-      // вставляем карточку перед sentinel
-      container.insertBefore(card, sentinel);
+      container.insertBefore(card, sentinel); // вставка карточки перед sentinel
     });
 
     renderedCount += nextBatch.length;
 
-    // если больше нет фильмов — убираем sentinel
-    if (renderedCount >= movieIds.length) {
+    // удаление sentinel, когда все карточки отрендерены
+    if (renderedCount >= movieIDs.length) {
       observer.disconnect();
       sentinel.remove();
     }
@@ -292,38 +268,71 @@ function applySortingFromURL() {
       }
     },
     {
-      rootMargin: '200px', // 🔥 подгружает заранее, пока sentinel не виден
+      rootMargin: '200px',
     }
   );
 
   observer.observe(sentinel);
 
-  // рендерим первую порцию сразу
+  // рендер первых карточек
   renderNextBatch();
-
-
 }
 
 
-// const children = container.querySelectorAll(':scope > *');
-// const hasNewLoad = urlParams.get('new-load') === 'true';
-
-// if (hasNewLoad) {
-//   urlParams.delete('new-load');
-//   const newUrl = `${window.location.pathname}?${urlParams.toString()}`;
-//   window.history.replaceState({}, '', newUrl);
-// }
 
 
 
 
+function addUsersCards(searcText = null) {
+  const urlParams = new URLSearchParams(window.location.search);
+  const sort1 = urlParams.get("sort1");
+  const sort2 = urlParams.get("sort2");
+  const sort3 = urlParams.get("sort3");
+  const key = `${sort1}/${sort2}/${sort3}`;
+  const movieIDs = moviesDataJson.sort[key];
+  if (!searcText) renderCards(movieIDs);
+  else {
+    movieIDsFromSearch = [];
+
+    // Собираем данные для Fuse
+    const moviesArray = movieIDs.map(id => {
+      const m = moviesDataJson.movies_data[id];
+      return {
+        id: id,
+        titleRu: String(m["2"] ?? ""),
+        titleEn: String(m["3"] ?? "")
+      };
+    });
+
+    // Настройки Fuse
+    const options = {
+      keys: ["titleRu", "titleEn"],
+      includeScore: true,
+      threshold: 0.3, // чувствительность: меньше = строже, больше = мягче
+      ignoreLocation: true,
+      ignoreFieldNorm: true
+    };
+
+    // Создаём Fuse
+    const fuse = new Fuse(moviesArray, options);
+
+    // Поиск
+    const results = fuse.search(searcText);
+
+    // Берём только id найденных фильмов
+    movieIDsFromSearch = results.map(r => r.item.id);
+
+    renderCards(movieIDs, movieIDsFromSearch);
+  }
+}
 
 
 
 
 
+
+// Плавное затенение скролла с именами
 const whoViewedElements = document.querySelectorAll('.sorting-users-scroll');
-
 whoViewedElements.forEach(whoViewed => {
   const fadeLeft = whoViewed.parentElement.querySelector('.fade-left');
   const fadeRight = whoViewed.parentElement.querySelector('.fade-right');
@@ -358,84 +367,42 @@ whoViewedElements.forEach(whoViewed => {
   updateFades();
 });
 
-// }
 
 
 
 
 
 
-// Выделение кнопок 2-й и 3-й сортировок
-function updateSortButtonsFromURL() {
-  const params = new URLSearchParams(window.location.search);
 
-  // === STEP 2: sort2 – таблица по ID ===
-  const sort2 = params.get("sort2");
-  if (sort2) {
-    const sort2Container = document.getElementById("sort2");
-    if (sort2Container) {
-      sort2Container.querySelectorAll("div").forEach((div) => {
-        div.classList.toggle("selected", div.id === sort2);
-      });
-    }
-  }
 
-  // === STEP 3: sort3 – аналогично sort2 ===
-  const sort3 = params.get("sort3");
-  if (sort3) {
-    const sort3Container = document.getElementById("sort3");
-    if (sort3Container) {
-      sort3Container.querySelectorAll("div").forEach((div) => {
-        div.classList.toggle("selected", div.id === sort3);
-      });
-    }
-  }
-}
 
-// Загрузка json
-let movieData = null;
+
+
+let moviesDataJson = null;
 async function loadMoviesJson() {
   try {
     const response = await fetch('data.json');
-    movieData = await response.json();
-    populateUserSorting(movieData.users);
-    applySortingFromURL();
+    moviesDataJson = await response.json();
+    addNameButtons(moviesDataJson.users);
+    selectButtonsInSorting();
+    addUsersCards();
   } catch (e) {
-    console.error('Ошибка при загрузке JSON:', e);
+    console.error('Ошибка при загрузке "data.json":', e);
   }
 }
 
-function change(sortKey, value) {
+function changeSorting(sortKey, value) {
   hapticFeedback('change')
   const url = new URL(window.location);
   url.searchParams.set(sortKey, value);
   window.history.replaceState({}, '', url);
-
-  updateSortButtonsFromURL();
-  applySortingFromURL();
+  selectButtonsInSorting();
+  addUsersCards();
   window.scrollTo({ top: 0, behavior: 'auto' });
-  // window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-
-
-/**
- * 
- * 1) Последний элемент конструкции DOMContentLoaded запускает loadMoviesJson и @see updateSortButtonsFromURL
- * --- 1) @see loadMoviesJson загружает json и запускает @see populateUserSorting с @see applySortingFromURL
- * --- --- 1) @see populateUserSorting в нижнее меню с сортировкой добавляет кнопки с именами
- * --- --- 2) @see applySortingFromURL выделяет нужную кнопку с именем и добавляет фильмы / сериалы из json
- * --- 2) @see updateSortButtonsFromURL выделяет нужные кнопки 2-й и 3-й сортировки
- * Функция @see change запускат @see updateSortButtonsFromURL и @see applySortingFromURL
- * 
- * 
- * 
- * 
-*/
-
 
 window.addEventListener("DOMContentLoaded", () => {
   loadMoviesJson();
-  updateSortButtonsFromURL();
 });
 
 
@@ -454,6 +421,185 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 
+
+
+
+
+// Нижнее меню сортировки убирается при поиске на телефонах
+// const input = document.getElementById('input');
+// const sorting = document.querySelector('.sorting');
+
+
+
+
+// Фокус с input пропадает при клике вне его области
+// const overlay = document.getElementById('overlay');
+// input.addEventListener('focus', () => {
+//   overlay.style.display = 'block';
+// });
+// overlay.addEventListener('click', () => {
+//   hapticFeedback('medium');
+//   input.blur();
+//   overlay.style.display = 'none';
+// });
+// input.addEventListener('blur', () => {
+//   overlay.style.display = 'none';
+// });
+
+
+
+
+
+
+
+const sorting = document.querySelector('.sorting');
+
+const searchEl = document.getElementById('search');
+const openSearchEl = document.querySelector('#search .open');
+const inputSearchEl = document.querySelector('#search .input');
+const closeSearchEl = document.querySelector('#search .close');
+const searchOverlay = document.getElementById('search-overlay');
+const inputField = inputSearchEl.querySelector('input');
+
+const searchInput = document.querySelector('#input');
+
+
+isSearchOpen = false;
+
+function openSearch() {
+  hapticFeedback('medium');
+  requestAnimationFrame(() => {
+    inputField.focus();
+  });
+  searchEl.style.width = "calc(90 * var(--vw))";
+  inputSearchEl.style.width = "calc(100% - (100 / 428 * (32 + 32) * var(--vw)))";
+  closeSearchEl.style.width = "calc(100 / 428 * 32 * var(--vw))";
+  searchOverlay.style.display = "block";
+  if (DEVICE_TYPE === 'android' || DEVICE_TYPE === 'ios') {
+    sorting.classList.add('hidden');
+  }
+}
+
+function closeSearch() {
+  hapticFeedback('medium');
+  inputField.blur();
+  searchEl.style.width = "calc(100 / 428 * 32 * var(--vw))";
+  inputSearchEl.style.width = "0";
+  closeSearchEl.style.width = "0";
+  searchOverlay.style.display = "none";
+  sorting.classList.remove('hidden');
+}
+
+
+
+
+function keyboardCollapse() {
+  hapticFeedback('medium');
+  inputField.blur();
+  searchOverlay.style.display = "none";
+  sorting.classList.remove('hidden');
+}
+
+
+inputField.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    keyboardCollapse();
+  }
+});
+
+
+
+
+// inputField.addEventListener('focus', () => {
+//   const searchInput = document.querySelector('#input');
+// });
+
+
+// inputField.addEventListener('blur', () => {
+//   sorting.classList.remove('hidden');
+
+//   // if (document.activeElement !== input) {
+//   //   if (DEVICE_TYPE === 'android' || DEVICE_TYPE === 'ios') {
+//   //     sorting?.classList.remove('hidden');
+//   //   }
+//   // }
+// });
+
+
+
+
+
+
+
+
+
+
+// При нажатии на свёрнутую иконку поиска открывается клавиатура
+// searchCollaps.addEventListener('click', () => {
+//   hapticFeedback('medium');
+
+//   searchCollaps.classList.add('expanded');
+//   searchCollapsSvg.classList.add('faded');
+
+//   search.style.display = 'flex';
+
+//   const input = search.querySelector('input');
+//   if (input) input.focus();
+
+//   requestAnimationFrame(() => {
+//     search.classList.add('visible');
+//   });
+// });
+
+
+
+
+
+// close.addEventListener('click', () => {
+//   hapticFeedback('medium');
+
+//   // Скрываем строку поиска
+//   search.classList.remove('visible');
+
+//   requestAnimationFrame(() => {
+//     searchCollaps.classList.remove('expanded');
+//     searchCollapsSvg.classList.remove('faded');
+//   });
+
+//   setTimeout(() => {
+//     search.style.display = 'none';
+//   }, 250);
+
+//   // Сброс поиска
+//   const searchInput = document.querySelector('#input');
+//   searchInput.value = '';
+
+//   document.querySelectorAll('.movie-card').forEach(card => {
+//     card.classList.remove('hidden');
+//   });
+
+//   // Обновляем safe area
+//   SafeAreaManager.onChange = ({ top, bottom }) => {
+//     moviesContainer.style.marginTop = top === 0 ? '2.5vw' : `${top}px`;
+//   };
+//   SafeAreaManager.init();
+// });
+
+
+
+
+
+
+
+
+
+
+// ПОИСК
+searchInput.addEventListener('input', () => {
+  const searchText = searchInput.value.trim().toLowerCase();
+  if (!searchText) return;
+  addUsersCards(searchText);
+});
 
 
 
