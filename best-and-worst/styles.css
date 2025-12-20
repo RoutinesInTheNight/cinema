@@ -84,7 +84,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 90%;
+  width: calc(100% - (100 / 428 * (16 + 16) * var(--vw)));
   /* gap: calc(100 / 428 * 8 * var(--vw)); */
   margin: calc(100 / 428 * 8 * var(--vw)) auto 0 auto;
   /* border-top: calc(100 / 428 * 1 * var(--vw)) solid #3D3C3F; */
@@ -127,7 +127,7 @@ body {
 .sorting-users-scroll-wrapper {
   position: relative;
   overflow: hidden;
-  width: calc(100% - calc(100 / 428 * (36 + 8) * var(--vw)));
+  width: calc(100% - calc(100 / 428 * (32 + 8) * var(--vw)));
   /* margin-top: calc(100 / 428 * 8 * var(--vw)); */
 }
 
@@ -525,10 +525,11 @@ body {
 
 .open-close-sorting {
   /* background-color: #3D3C3F; */
+  margin-left: calc(100 / 428 * 8 * var(--vw));
   border: calc(100 / 428 * 2 * var(--vw)) solid #2e3e2b;
-  border-radius: calc(100 / 428 * 8 * var(--vw));
-  width: calc(100 / 428 * 32 * var(--vw));
-  height: calc(100 / 428 * 32 * var(--vw));
+  border-radius: calc(100 / 428 * 12 * var(--vw));
+  width: calc(100 / 428 * 28 * var(--vw));
+  height: calc(100 / 428 * 28 * var(--vw));
   /* margin-left: calc(5 * var(--vw)); */
   /* position: fixed; */
   display: flex;
@@ -556,10 +557,13 @@ body {
 } */
 
 .open-close-sorting svg {
-  width: calc(100 / 428 * 24 * var(--vw));
-  height: calc(100 / 428 * 24 * var(--vw));
+  width: calc(100 / 428 * 20 * var(--vw));
+  height: calc(100 / 428 * 20 * var(--vw));
   fill: #749C6C;
-  /* transition: transform .25s ease; */
+  transition: transform .5s ease;
+}
+.open-close-sorting svg.rotate {
+  transform: rotate(180deg);
 }
 
 .closing-sorting {

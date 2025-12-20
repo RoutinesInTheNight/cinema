@@ -155,14 +155,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 function openCloseSorting() {
+  hapticFeedback('change');
   const closingSorting = document.querySelector('.closing-sorting');
-  const usersRow = document.querySelector('.users-row');
-  const svg1 = document.querySelector('.open-close-sorting .svg-1');
-  const svg2 = document.querySelector('.open-close-sorting .svg-2');
+  const svg = document.querySelector('.open-close-sorting svg');
   closingSorting.classList.toggle('close');
-  usersRow.classList.toggle('add-margin-bottom');
-  svg1.classList.toggle('hidden');
-  svg2.classList.toggle('hidden');
+  svg.classList.toggle('rotate');
 }
 
 
@@ -346,41 +343,7 @@ function addUsersCards(searcText = null) {
 
 
 
-// Плавное затенение скролла с именами
-const whoViewedElements = document.querySelectorAll('.sorting-users-scroll');
-whoViewedElements.forEach(whoViewed => {
-  const fadeLeft = whoViewed.parentElement.querySelector('.fade-left');
-  const fadeRight = whoViewed.parentElement.querySelector('.fade-right');
 
-  function updateFades() {
-    const scrollLeft = whoViewed.scrollLeft;
-    const scrollWidth = whoViewed.scrollWidth;
-    const clientWidth = whoViewed.clientWidth;
-    const tolerance = 2;
-
-    // если в начале
-    if (scrollLeft <= tolerance) {
-      fadeLeft.classList.add('hidden2');
-    } else {
-      fadeLeft.classList.remove('hidden2');
-    }
-
-    // если в конце
-    if (scrollLeft + clientWidth >= scrollWidth - tolerance) {
-      fadeRight.classList.add('hidden2');
-    } else {
-      fadeRight.classList.remove('hidden2');
-    }
-  }
-
-  // следим за скроллом
-  whoViewed.addEventListener('scroll', updateFades);
-  // следим за ресайзом
-  window.addEventListener('resize', updateFades);
-
-  // инициализация
-  updateFades();
-});
 
 
 
@@ -407,7 +370,7 @@ async function loadMoviesJson() {
 }
 
 function changeSorting(sortKey, value) {
-  hapticFeedback('change')
+  hapticFeedback('change');
   const url = new URL(window.location);
   url.searchParams.set(sortKey, value);
   window.history.replaceState({}, '', url);
