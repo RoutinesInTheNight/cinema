@@ -133,15 +133,15 @@ const SafeAreaManager = (() => {
 // Выставление пддингов и маргинов в зависимости от безопасной зоны
 document.addEventListener('DOMContentLoaded', () => {
   const bottomMenu = document.querySelector('.sorting');
-  const searchCollaps = document.querySelector('.search-collaps');
-  const searchTopCollaps = document.querySelector('.search-top-collaps');
+  const search = document.getElementById('search');
   const moviesContainer = document.getElementById('movies-container');
-  const keyboards = document.querySelector('.keyboards');
 
   SafeAreaManager.onChange = ({ top, bottom }) => {
     const bottomValue = bottom === 0 ? 'calc((100 / 428) * 8 * var(--vw))' : `${bottom}px`;
     const topValue = top === 0 ? 'calc(2.5 * var(--vw))' : `${top}px`;
     bottomMenu.style.paddingBottom = bottomValue;
+
+    search.style.marginTop = topValue;
 
     moviesContainer.style.marginTop = topValue;
     moviesContainer.style.marginBottom = bottom === 0 ? 'calc(0.5rem + 124.5px + 2.5vw)' : `calc(${bottom}px + 124.5px + 2.5vw)`
@@ -149,6 +149,15 @@ document.addEventListener('DOMContentLoaded', () => {
   SafeAreaManager.init();
 });
 
+
+
+
+
+
+function openCloseSorting() {
+  const closingSorting = document.querySelector('.closing-sorting');
+  closingSorting.classList.toggle('close');
+}
 
 
 
