@@ -450,9 +450,10 @@ function openSearch() {
   inputSearchEl.style.width = "calc(100% - (100 / 428 * (32 + 32) * var(--vw)))";
   closeSearchEl.style.width = "calc(100 / 428 * 32 * var(--vw))";
   searchOverlay.style.display = "block";
-  requestAnimationFrame(() => {
-    inputField.focus();
-  });
+  inputField.focus();
+  // requestAnimationFrame(() => {
+  //   inputField.focus();
+  // });
   if (DEVICE_TYPE === 'android' || DEVICE_TYPE === 'ios') {
     sorting.classList.add('hidden');
   }
