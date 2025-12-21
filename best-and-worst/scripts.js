@@ -252,7 +252,7 @@ function renderCards(movieIDs, movieIDsFromSearch = null) {
           <img src="${movie["1"]}" loading="lazy">
         </div>
         <div class="info">
-          <div class="title-ru">${movieIDs.indexOf(id) + 1}. ${movie["2"]}</div>
+          <span class="title-ru">${movieIDs.indexOf(id) + 1}. ${movie["2"]}</span>
           <span class="title-en">${movie["3"]}</span>
           <span class="meta">${movie["4"]}</span>
           ${movieRatingsHTML}
@@ -623,3 +623,15 @@ searchInput.addEventListener('input', () => {
 
 // // инициализация
 // updateFades();
+
+
+
+// Сворачивание и показ текста в карточке фильма
+const TRUNCATE_SELECTOR = '.title-ru, .title-en, .meta';
+document.addEventListener('click', (e) => {
+  const el = e.target.closest(TRUNCATE_SELECTOR);
+  if (!el) return;
+  const isOpen = el.classList.contains('is-open');
+  if (!isOpen && el.scrollWidth <= el.clientWidth) return;
+  el.classList.toggle('is-open');
+});

@@ -274,10 +274,26 @@ body {
 }
 
 .movie .title-ru {
-  display: inline-block;
   font-size: calc(100 / 428 * 20 * var(--vw));
   font-family: 'Sf Pro Display Bold', Arial, sans-serif;
 }
+
+.movie .title-ru,
+.movie .title-en,
+.movie .meta {
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.movie .title-ru.is-open,
+.movie .title-en.is-open,
+.movie .meta.is-open {
+  white-space: normal;
+}
+
 
 .movie .title-en,
 .movie .meta {
@@ -562,6 +578,7 @@ body {
   fill: #749C6C;
   transition: transform .25s ease;
 }
+
 .open-close-sorting svg.rotate {
   transform: rotate(180deg);
 }
@@ -571,8 +588,7 @@ body {
   max-height: calc(100 / 428 * 80 * var(--vw));
   transition: max-height .25s ease;
 }
+
 .closing-sorting.close {
   max-height: 0;
 }
-
-
