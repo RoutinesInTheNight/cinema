@@ -281,7 +281,7 @@ body {
 .movie .title-ru,
 .movie .title-en,
 .movie .meta {
-  display: inline-block;
+  display: block;
   max-width: 100%;
   white-space: nowrap;
   overflow: hidden;
@@ -297,10 +297,8 @@ body {
 
 .movie .title-en,
 .movie .meta {
-  display: block;
   font-size: calc(100 / 428 * 16 * var(--vw));
   font-family: 'Sf Pro Display Bold', Arial, sans-serif;
-  /* margin-top: calc(100 / 428 * 4 * var(--vw)); */
   color: #97979D;
 }
 
