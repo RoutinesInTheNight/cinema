@@ -250,7 +250,7 @@ body {
 
 .movie .poster {
   height: calc(100 / 1284 * 515 * var(--vw));
-  /* width: calc(100 / 1284 * (427 / 450 * 300) * var(--vw)); */
+  width: calc(100 / 1284 * (427 / 450 * 300) * var(--vw));
   display: flex;
 }
 
