@@ -183,7 +183,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: calc(100 / 428 * 4 * var(--vw));
-  margin-top: calc(100 / 428 * 4 * var(--vw));
+  margin-top: calc(100 / 428 * 8 * var(--vw));
   width: 100%;
 }
 
