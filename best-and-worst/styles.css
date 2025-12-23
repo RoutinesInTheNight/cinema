@@ -640,10 +640,10 @@ body {
   padding: calc(100 / 428 * 4 * var(--vw)) calc(100 / 428 * 8 * var(--vw));
   /* color: #97979D; */
   border-radius: calc(100 / 428 * 8 * var(--vw));
-  border: calc(100 / 428 * 2 * var(--vw)) solid #4c4c4f;
+  border: calc(100 / 428 * 1 * var(--vw)) solid #4c4c4f;
 }
 .iwejfnw.wefewfwf {
-  border: calc(100 / 428 * 2 * var(--vw)) solid #795e0b;
+  border: calc(100 / 428 * 1 * var(--vw)) solid #795e0b;
 }
 .iwejfnw.wefewfwf .wfwfwf {
   color: #795e0b;
@@ -657,7 +657,7 @@ body {
   align-items: center;
   font-family: 'Sf Pro Display Regular', Arial, sans-serif;
   /* font-size: calc(100 / 428 * 12 * var(--vw)); */
-  margin-top: calc(100 / 428 * 8 * var(--vw));
+  margin-top: calc(100 / 428 * 4 * var(--vw));
   /* width: 55%; */
   /* border-radius: calc(100 / 428 * 4 * var(--vw)); */
   /* border-radius: calc(100 / 428 * 8 * var(--vw)); */
