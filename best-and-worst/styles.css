@@ -660,7 +660,7 @@ body {
   /* align-items: center; */
   font-family: 'Sf Pro Display Regular', Arial, sans-serif;
   /* font-size: calc(100 / 428 * 12 * var(--vw)); */
-  margin-top: calc(100 / 428 * 4 * var(--vw));
+  margin-top: calc(100 / 428 * 2 * var(--vw));
   /* width: 55%; */
   /* border-radius: calc(100 / 428 * 4 * var(--vw)); */
   /* border-radius: calc(100 / 428 * 8 * var(--vw)); */
