@@ -249,8 +249,8 @@ body {
 
 
 .movie .poster {
-  height: calc(100 / 1284 * 468 * var(--vw));
-  width: calc(100 / 1284 * (468 / 450 * 300) * var(--vw));
+  height: calc(100 / 1284 * 423 * var(--vw));
+  width: calc(100 / 1284 * (423 / 450 * 300) * var(--vw));
   display: flex;
 }
 
