@@ -249,8 +249,8 @@ body {
 
 
 .movie .poster {
-  height: calc(100 / 1284 * 423 * var(--vw));
-  width: calc(100 / 1284 * (423 / 450 * 300) * var(--vw));
+  height: calc(100 / 1284 * 420 * var(--vw));
+  width: calc(100 / 1284 * (420 / 450 * 300) * var(--vw));
   display: flex;
 }
 
@@ -646,10 +646,10 @@ body {
   /* height: 100%; */
 }
 .iwejfnw.wefewfwf {
-  border: calc(100 / 428 * 1 * var(--vw)) solid rgba(242, 187, 21, .75);
+  border: calc(100 / 428 * 1 * var(--vw)) solid rgba(242, 187, 21, .5);
 }
 .iwejfnw.wefewfwf .wfwfwf {
-  color: rgba(242, 187, 21, .75);
+  color: rgba(242, 187, 21, .5);
   font-size: calc(100 / 428 * 12 * var(--vw));
   font-family: 'Sf Pro Display Medium', Arial, sans-serif;
 }
@@ -710,7 +710,7 @@ body {
   font-family: 'Sf Pro Display Bold', Arial, sans-serif;
 }
 .weifhewfhewhf.rrrggf .llll2 {
-  color: rgba(242, 187, 21, .75);
+  color: rgba(242, 187, 21, .5);
 }
 .weifhewfhewhf.rrrggf svg {
   fill: #F2BB15;
