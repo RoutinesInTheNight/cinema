@@ -183,7 +183,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: calc(100 / 428 * 4 * var(--vw));
-  margin-top: calc(100 / 428 * 8 * var(--vw));
+  margin-top: calc(100 / 428 * 5 * var(--vw));
   width: 100%;
 }
 
@@ -249,8 +249,8 @@ body {
 
 
 .movie .poster {
-  height: calc(100 / 1284 * 515 * var(--vw));
-  width: calc(100 / 1284 * (427 / 450 * 300) * var(--vw));
+  height: calc(100 / 1284 * 468 * var(--vw));
+  width: calc(100 / 1284 * (468 / 450 * 300) * var(--vw));
   display: flex;
 }
 
