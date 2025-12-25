@@ -1,4 +1,4 @@
-fetch('data/films.json')
+fetch('data/main_page_films.json')
   .then(response => response.json())
   .then(data => {
     const container = document.getElementById('t-1');
