@@ -132,7 +132,9 @@ body {
 
 
 
-.single-button {
+
+.single-button,
+.toggle-buttons {
   width: calc(95% - calc(100 / 428 * (8 + 8 + 1 + 1) * var(--vw)));
   display: flex;
   align-items: center;
@@ -164,4 +166,91 @@ body {
 
 .single-button:hover svg {
   fill: #d5e1d3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.toggle-buttons {
+  padding: 0;
+  width: calc(95% - calc(100 / 428 * (1 + 1) * var(--vw)));
+}
+
+.toggle-buttons div {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(100 / 428 * 4 * var(--vw)) 0;
+  border-radius: calc(100 / 428 * 10 * var(--vw));
+  transition: color .25s;
+}
+
+.toggle-buttons .current {
+  background-color: #749C6C;
+  color: #d5e1d3;
+}
+
+.toggle-buttons div:hover {
+  color: #d5e1d3;
+}
+
+
+
+
+
+
+
+
+
+
+.toggle-switch {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: calc(90% + 1rem);
+  gap: 0.5rem;
+  margin: 0.5rem auto 0 auto;
+  font-size: calc(100 / 428 * 16 * var(--vw));
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  width: calc(100 / 428 * 35 * var(--vw));
+  height: calc(100 / 428 * 20 * var(--vw));
+  border-radius: calc(100 / 428 * 12.5 * var(--vw));
+  /* background: #2e3e2b; */
+  border: calc(100 / 428 * 1 * var(--vw)) solid #d5e1d3;
+  cursor: pointer;
+  transition: background-color .1s;
+}
+.switch.active {
+  background-color: #749C6C;
+}
+
+.circle {
+  margin-left: calc(100 / 428 * 2.5 * var(--vw));
+  /* margin-left: calc(100 / 428 * 17.5 * var(--vw)); */
+  background: #d5e1d3;
+  width: calc(100 / 428 * 15 * var(--vw));
+  height: calc(100 / 428 * 15 * var(--vw));
+  border-radius: calc(100 / 428 * 10 * var(--vw));
+  transition: margin-left .1s;
+}
+
+.switch.active .circle {
+  margin-left: calc(100 / 428 * 17.5 * var(--vw));
 }
