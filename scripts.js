@@ -1,6 +1,6 @@
 let data;
-let showFiveDecimals = false;
-let currentT2Key = 'total'; // что сейчас показано во второй таблице
+let table2showFiveDecimals = false;
+let table2currentKey = 'total'; // что сейчас показано во второй таблице
 
 // Функция для мгновенной отрисовки таблицы без анимации
 function renderT2Table(dataKey) {
@@ -28,8 +28,8 @@ function renderT2Table(dataKey) {
     innerDiv.style.width = (info.size) + '%';
 
     const valueSpan = document.createElement('span');
-    currentT2Key = dataKey;
-    const decimals = showFiveDecimals ? 5 : 2;
+    table2currentKey = dataKey;
+    const decimals = table2showFiveDecimals ? 5 : 2;
     if (dataKey === 'total') {
       valueSpan.textContent = info.rating.toFixed(decimals);
     } else {
@@ -180,6 +180,7 @@ fetch('data/main_page_films.json')
       ];
 
       t2Buttons.forEach(btnData => {
+        hapticFeedback('change');
         const btn = document.getElementById(btnData.id);
         if (!btn) return;
 
@@ -198,18 +199,14 @@ fetch('data/main_page_films.json')
         });
       });
 
+      const table2toggleSwitch = document.getElementById('t-2-switch');
+      table2toggleSwitch.addEventListener('click', () => {
+        hapticFeedback('change');
+        table2showFiveDecimals = !table2showFiveDecimals;
+        table2toggleSwitch.classList.toggle('active', table2showFiveDecimals);
+        renderT2Table(table2currentKey);
+      });
 
-
-
-      const toggleSwitch = document.getElementById('t-2-switch');
-
-      if (toggleSwitch) {
-        toggleSwitch.addEventListener('click', () => {
-          showFiveDecimals = !showFiveDecimals;
-          toggleSwitch.classList.toggle('active', showFiveDecimals);
-          renderT2Table(currentT2Key);
-        });
-      }
 
 
     }

@@ -9,8 +9,7 @@
         name="viewport" />
     <title>Лучшие и худшие фильмы</title>
     <!-- <script src="https://telegram.org/js/telegram-web-app.js"></script> -->
-    <!-- <script src="telegram-web-app.js"></script> -->
-    <!-- <script src="new_main_page/scripts.js"></script> -->
+    <script src="telegram-web-app.js"></script>
     <link href="styles.css" rel="stylesheet" />
     <link href="img/favicon.png" rel="icon" type="image/png" />
 </head>
@@ -30,15 +29,7 @@
     </div>
 
     <div class="table" id="t-1"></div>
-
-
-
-
-    <div class="notice">
-        <span>Нажми на столбик участника, чтобы увидеть его лучшие и худшие фильмы</span>
-    </div>
-
-
+    <div class="notice"><span>Нажми на столбик участника, чтобы увидеть его лучшие и худшие фильмы</span></div>
     <div class="single-button"
         onclick="hapticFeedback('soft', 'best-and-worst/films?sort1=Все&amp;sort2=all&amp;sort3=best&amp;new-load=true')">
         <span>Топ лучших фильмов</span>
@@ -51,30 +42,23 @@
         <span>Средний рейтинг</span>
     </div>
     <div class="table" id="t-2"></div>
-
     <div class="toggle-buttons">
-        <div class="current" id="t-2-total">
-            <span>Общий</span>
-        </div>
-        <div id="t-2-imdb">
-            <span>IMDb</span>
-        </div>
-        <div id="t-2-letterboxd">
-            <span>Letteboxd</span>
-        </div>
-        <div id="t-2-kp">
-            <span>Кинопоиск</span>
-        </div>
+        <div class="current" id="t-2-total"><span>Общий</span></div>
+        <div id="t-2-imdb"><span>IMDb</span></div>
+        <div id="t-2-letterboxd"><span>Letterboxd</span></div>
+        <div id="t-2-kp"><span>Кинопоиск</span></div>
     </div>
-
     <div class="toggle-switch">
         <div class="switch" id="t-2-switch">
             <div class="circle"></div>
         </div>
         <span class="label">Показывать 5 цифр после точки вместо 2</span>
     </div>
+    <div class="notice">
+        <span>Нажми на столбик участника, чтобы увидеть, как менялся его рейтинг</span>
+    </div>
 
-
+    <script src="telegram_scripts.js"></script>
     <script src="scripts.js"></script>
 
 </body>
