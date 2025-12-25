@@ -180,11 +180,11 @@ fetch('data/main_page_films.json')
       ];
 
       t2Buttons.forEach(btnData => {
-        hapticFeedback('change');
         const btn = document.getElementById(btnData.id);
         if (!btn) return;
 
         btn.addEventListener('click', () => {
+          hapticFeedback('change');
           // Снимаем current со всех кнопок
           t2Buttons.forEach(b => {
             const otherBtn = document.getElementById(b.id);
