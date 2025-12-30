@@ -25,18 +25,20 @@
     </svg>
 
     <div class="table-title">
-        <span>Просмотренно фильмов</span>
+        <span>Просмотрено фильмов</span>
     </div>
 
     <div class="table" id="t-1"></div>
     <div class="notice"><span>Нажми на столбик участника, чтобы увидеть его лучшие и худшие фильмы</span></div>
-    <div class="single-button"
-        onclick="hapticFeedback('soft', 'best-and-worst/films?sort1=Все&amp;sort2=all&amp;sort3=best&amp;new-load=true')">
-        <span>Топ лучших фильмов</span>
+    <div class="single-button" onclick="hapticFeedback('soft', 'best-worst/films?sort1=Все&sort2=all&sort3=best')">
+        <span>Самые лучшие фильмы</span>
         <svg>
             <use href="#arrow-right"></use>
         </svg>
     </div>
+
+
+
 
     <div class="table-title">
         <span>Средний рейтинг</span>
@@ -55,11 +57,109 @@
         <span class="label">Показывать 5 цифр после точки вместо 2</span>
     </div>
     <div class="notice">
-        <span>Нажми на столбик участника, чтобы увидеть, как менялся его рейтинг</span>
+        <span>Нажми на столбик участника, чтобы увидеть, как менялся его рейтинг за последние 100 фильмов</span>
     </div>
+
+
+
+
+
+    <div class="table-title">
+        <span>Среднее кол-во оценок у фильма</span>
+    </div>
+    <div class="table" id="t-3"></div>
+    <div class="toggle-buttons">
+        <div class="current" id="t-3-total"><span>Общее</span></div>
+        <div id="t-3-imdb"><span>IMDb</span></div>
+        <div id="t-3-letterboxd"><span>Letterboxd</span></div>
+        <div id="t-3-kp"><span>Кинопоиск</span></div>
+    </div>
+    <div class="toggle-switch">
+        <div class="switch" id="t-3-switch">
+            <div class="circle"></div>
+        </div>
+        <span class="label">Показывать точные значения</span>
+    </div>
+    <div class="notice">
+        <span>Нажми на столбик участника, чтобы увидеть его самые популярные и непопулярные фильмы</span>
+    </div>
+    <div class="single-button" onclick="hapticFeedback('soft', 'popularity/films?sort1=Все&sort2=all&sort3=popular')">
+        <span>Самые популярные фильмы</span>
+        <svg>
+            <use href="#arrow-right"></use>
+        </svg>
+    </div>
+
+
+
+
+    <div class="table-title">
+        <span>Потрачено времени на фильмы</span>
+    </div>
+    <div class="table" id="t-4"></div>
+    <div class="toggle-buttons">
+        <div class="current" id="t-4-hours"><span>Часы</span></div>
+        <div id="t-4-days"><span>Дни</span></div>
+    </div>
+
+
+
+
+    <div class="table-title">
+        <span>Средняя длина фильма</span>
+    </div>
+    <div class="table" id="t-5"></div>
+    <div class="toggle-switch">
+        <div class="switch" id="t-5-switch">
+            <div class="circle"></div>
+        </div>
+        <span class="label">Показывать секунды</span>
+    </div>
+    <div class="notice">
+        <span>Нажми на столбик участника, чтобы увидеть его самые длинные фильмы</span>
+    </div>
+    <div class="single-button" onclick="hapticFeedback('soft', 'runtime/films?sort1=Все&sort2=long')">
+        <span>Самые длинные фильмы</span>
+        <svg>
+            <use href="#arrow-right"></use>
+        </svg>
+    </div>
+
+
+
+
+    <div class="table-title">
+        <span>Общие просмотренные фильмы</span>
+    </div>
+    <div class="table general-views" id="t-6"></div>
+    <div class="notice">
+        <span>Нажми на столбик участников, чтобы увидеть их общие фильмы</span>
+    </div>
+
+
+
+    <div class="table-title">
+        <span>Распределение фильмов по годам</span>
+    </div>
+
+    <div class="horizontal-scroll" id="hor-scr-t-7">
+        <div class="horizontal-table" id="t-7"></div>
+    </div>
+
+    <div class="horizontal-scroll">
+        <div class="toggle-buttons" id="tog-btb-t-7"></div>
+    </div>
+
+
+    <div class="notice">
+        <span>Нажми на столбик с количеством фильмов за год, чтобы увидеть все фильмы за этот год</span>
+    </div>
+
+
 
     <script src="telegram_scripts.js"></script>
     <script src="scripts.js"></script>
+
 
 </body>
 
