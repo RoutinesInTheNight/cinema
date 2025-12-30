@@ -2,15 +2,15 @@ const telegram = window.Telegram.WebApp;
 const DEVICE_TYPE = telegram.platform;
 
 telegram.expand();
-if (telegram.isVersionAtLeast("6.1")) {
-  telegram.BackButton.show()
-  const currentUrl = window.location.href;
-  let targetBackLink = '../../';
-  if (currentUrl.includes('series')) {
-    targetBackLink = '../../series';
-  }
-  telegram.BackButton.onClick(() => hapticFeedback('soft', targetBackLink));
-}
+// if (telegram.isVersionAtLeast("6.1")) {
+//   telegram.BackButton.show()
+//   const currentUrl = window.location.href;
+//   let targetBackLink = '../../';
+//   if (currentUrl.includes('series')) {
+//     targetBackLink = '../../series';
+//   }
+//   telegram.BackButton.onClick(() => hapticFeedback('soft', targetBackLink));
+// }
 if (telegram.isVersionAtLeast("7.7")) telegram.disableVerticalSwipes();
 if (telegram.isVersionAtLeast("8.0")) {
   telegram.requestFullscreen();

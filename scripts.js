@@ -13,13 +13,13 @@ function formatValueTable3(value) {
       .replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
   }
   const kValue = value / 1000;
-  if (kValue < 1000) return Math.round(kValue) + 'k';
+  if (kValue < 1000) return Math.round(kValue) + 'K';
   const mValue = kValue / 1000;
   return (
     mValue
       .toFixed(3)
       .replace(/\.?0+$/, '')
-    + 'm'
+    + 'M'
   );
 }
 
